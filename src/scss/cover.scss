@@ -1,0 +1,115 @@
+main{
+	min-height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	h1{
+		display: none;	
+	}
+	&>p{
+		display: block;
+		width: 24vw;
+	}
+	.target{
+		text-transform: uppercase;
+		color: #4240FB;
+		span{
+			color: rgb(185, 96, 209);
+		}
+	}
+	section{
+		background: linear-gradient(to bottom, rgba(12, 194, 255, 0.4) 1%, rgba(199,128,219, 0.4) 100%);
+		width: 70vw;
+		display: flex;
+		position: relative;
+		justify-content: center;
+		transform:  translateX(6vw);
+		height: 35vw;
+		border-radius: 1.5vw;
+		box-shadow: 0.7vw 0.7vw 2vw 1.5vw rgba(3, 26, 36, 0.6);
+		.tagline{
+			display: inline-block;
+			font-size: 3.5vw;
+			width: 35vw;
+			line-height: 5vw;
+			align-self: flex-end;
+			margin-bottom: 1vw;
+			text-transform: uppercase;
+			font-family: 'Barrio', cursive;
+		}
+		.button{
+			color: #4240FB;
+			border: 0.2vw solid rgb(247, 91, 71);
+			padding: 0.5vw 1.5vw;
+			border-radius: 3vw;
+			transform-origin: center top;
+			transform: scale(0.1vw);
+		}
+		.matrica{
+			font-size: 2vw;
+			margin-left: 22vw;
+		}
+	}
+}
+.Font1 {
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform-origin: center center;
+	transform: translate(-50%, -50%) scaleX(0);
+	width: 20vw;
+	height: 10vw;
+	font-size: 7vw;
+	line-height: 6vw;
+	display: block;
+	font-family: 'Londrina Shadow', cursive;
+	transition: 2s;
+	opacity: 0;
+}
+
+.Font2 {
+	position: absolute;
+	top:25%;
+	left: 50%;
+	transform-origin: center center;
+	transform: translate(-50%, -50%) scaleX(0);
+	width: 25vw;
+	height: 10vw;
+	font-size: 6vw;
+	line-height: 5vw;
+	display: block;
+	font-family: 'Barrio', cursive;
+	transition: 2s;
+	opacity: 0;
+}
+
+.Font3 {
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform-origin: center center;
+	transform: translate(-50%, -50%) scaleX(0);
+	width: 25vw;
+	height: 10vw;
+	font-size: 4vw;
+	line-height: 5vw;
+	display: block;
+	font-family: 'Sonsie One', cursive;
+	transition: 2s;
+	opacity: 0;
+}
+
+.visible {
+	opacity: 1;
+	transform-origin: center center;
+	transform: translate(-50%,-50%) scaleX(1);
+	transition: 2.7s;
+	// transition: 1s rotate, 0.5s opacity,  2s scale;
+}
+// @keyframes rotate {
+// 	from {transform: translate(-50%, -80%) scaleY();}
+// 	50% {transform: translate(-50%, -80%) rotate(10deg);}
+// 	to {transform:  translate(-50%, -80%) rotate(-10deg);}
+// }

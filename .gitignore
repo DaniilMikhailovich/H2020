@@ -1,0 +1,8 @@
+/node_modules/
+/gulpfile.js
+/package-lock.json
+/package.json
+/dist/css/
+/dist/js/
+/psd/
+/src/img/
