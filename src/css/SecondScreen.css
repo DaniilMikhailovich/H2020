@@ -1,0 +1,160 @@
+.BackNumber{
+	color: azure;
+	transform: rotate(-64deg);
+	font-size: 70vw;
+	color: #000;
+	opacity: 0.1;
+	position: absolute;
+	z-index: 0;
+}
+.humanity, .arrow{
+	display: none;
+}
+.description{
+	display: none;
+}
+main{
+	flex-direction: row;
+}
+.canvas{
+	width: 65vw;
+	height: 100%;
+}
+.submenu{
+	text-align: center;
+	width: 35vw;
+	color: #E0FFFF;
+	font-family: "Source", sans-serif;
+}
+.submenu h2{
+	font-size: 7vw;
+	font-weight: 300;
+	margin-bottom: 2vw;
+}
+.evolve{
+	outline: none;
+	position: relative;
+	display: inline-block;
+	border: none;
+	overflow: hidden;
+	border-radius: 4vw;
+	padding: 0.5vw 3vw;
+	font-size: 5.5vw;
+	font-weight: 400;
+	color: #E0FFFF;
+	background-color: #ac40f1;
+	cursor: pointer;
+	box-shadow: 1vw 1vw 5vw #000;
+}
+.evolve::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+	filter: blur(2vw);
+	width: 9vw;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: translateX(-3vw) skewX(-45deg);
+  animation: move-light 1.7s infinite;
+}
+
+header{
+	justify-content: center;
+	align-items: flex-end;
+	height: 50vw;
+}
+.war, .politics, .fun{
+	background: none;
+	border: none;
+	color: #E0FFFF;
+	margin: 2vw 2vw 0 0;
+	font-family: 'Source', sans-serif;
+	font-size: 7vw;
+	outline: none;
+}
+hr{
+	height: 8vw;
+	border: 0;
+	width: 0.4vw;
+	background-color: #E0FFFF;
+}
+@media screen and (min-width: 760px) and (max-width: 999px){
+	.BackNumber{
+		transform: rotate(-58deg);
+		font-size: 62vw;
+	}
+	header{
+		height: 34vw;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	.BackNumber{
+		transform: rotate(-10deg);
+		font-size: 45vw;
+	}
+	.war, .politics, .fun{
+		font-size: 4vw
+	}
+	header{
+		height: 10vw;
+	}
+	hr{
+	height: 4.5vw;
+	width: 0.2vw;
+	}
+	.canvas, .submenu{
+		display: none;
+	}
+	.humanity, .arrow{
+		display: block;
+	}
+	.humanity{
+		width: 95vw;
+	}
+	.arrow{
+		width: 75vw;
+	}
+	main{
+		flex-direction: column;
+	}
+	.description{
+		color: #E0FFFF;
+		font-family: 'Source', sans-serif;
+		font-size: 2vw;
+		align-self: flex-start;
+		margin-bottom: 2vw;
+		display: inline;
+	}
+	span:first-of-type{
+		margin-left: 4.5vw;
+		margin-right: 4vw;
+	}
+	span:nth-of-type(2){
+		margin-right: 3vw;
+	}
+	span:nth-of-type(3){
+		margin-right: 4vw;
+	}
+	span:nth-of-type(3){
+		margin-right: 4.5vw;
+	}
+	span:nth-of-type(4){
+		margin-right: 7.5vw;
+	}
+	span:nth-of-type(5){
+		margin-right: 7vw;
+	}
+	span:nth-of-type(6){
+		margin-right: 7vw;
+	}
+	span:nth-of-type(7){
+		margin-right: 4vw;
+	}
+	.BottomQuote_button{
+		padding: 0vw 2vw;
+		font-size: 2vw;
+		line-height: 3vw;
+	}
+}
