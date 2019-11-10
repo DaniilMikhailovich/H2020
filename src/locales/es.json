@@ -1,0 +1,32 @@
+{
+  "firstPage": {
+    "h1": "human 2020",
+    "topQuote": "«Todo comienza ",
+    "with": "con ",
+    "choice": "la elección",
+    "autor": "Morfeo",
+    "date":{
+      "days": "Dias",
+      "hours": "Horas",
+      "mins": "Minutos"
+    }
+  },
+  "secondPage": {
+    "header": {
+      "war": "No a la guerra!",
+      "politics": "No política!",
+      "fun": "Solo diversión!"
+    },
+    "evolution": {
+      "greek": "Griegos",
+      "aristocrat": "Aristocrats",
+      "bourgeois": "Aristócratas",
+      "mafia": "Mafia",
+      "hippie": "Hippie",
+      "punk": "Punks",
+      "hipsters": "Hipsters",
+      "evolve": "Reenviar",
+      "create": "Crear"
+    }
+  }
+}

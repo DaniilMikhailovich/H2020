@@ -1,0 +1,43 @@
+{
+  "firstPage": {
+    "h1" : "human 2020",
+    "topQuote" : "«Everything begins ",
+    "with" : "with ",
+    "choice" : "choice",
+    "autor" : "Morpheus",
+    "date": {
+      "days": "Days",
+      "hours": "Hours",
+      "mins": "Mins"
+    }
+  },
+  "secondPage": {
+    "header": {
+      "war": "No War!",
+      "politics": "No Politics!",
+      "fun": "Just Fun!"
+    },
+    "evolution":{
+      "greek": "Greeks",
+      "aristocrat":"Aristocrats",
+      "bourgeois":"Bourgeois",
+      "mafia":"Mafia",
+      "hippie":"Hippie",
+      "punk":"Punks",
+      "hipsters":"Hipsters",
+      "evolve":"Evolve",
+      "create":"Create"
+    }
+  },
+  "thirdPage": {
+    "gender": {
+      "male": "Male",
+      "female": "Female",
+      "gender": "Gender"
+    },
+    "name":{
+      "name":"Name",
+      "next":"Next"
+    }
+  }
+}

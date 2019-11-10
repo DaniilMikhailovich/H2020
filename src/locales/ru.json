@@ -1,0 +1,43 @@
+{
+  "firstPage": {
+    "h1": "human 2020",
+    "topQuote": "«Все начинается ",
+    "with": "с ",
+    "choice" : "выбора",
+    "autor": "Морфеус",
+    "date": {
+      "days": "Дни",
+      "hours": "Часы",
+      "mins": "Минуты"
+    }
+  },
+  "secondPage": {
+    "header": {
+      "war": "Нет войне!",
+      "politics": "Нет политике!",
+      "fun": "Улыбнись:)"
+    },
+    "evolution": {
+      "greek": "Греки",
+      "aristocrat": "Аристократы",
+      "bourgeois": "Буржуазия",
+      "mafia": "Мафия",
+      "hippie": "Хиппи",
+      "punk": "Панки",
+      "hipsters": "Хипстеры",
+      "evolve": "Вперед",
+      "create": "Создать"
+    }
+  },
+  "thirdPage": {
+    "gender": {
+      "male": "Мужчина",
+      "female": "Женщина",
+      "gender": "Пол"
+    },
+    "name": {
+      "name": "Имя",
+      "next": "Далее"
+    }
+  }
+}
