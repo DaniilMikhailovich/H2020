@@ -41,6 +41,9 @@
 		},
 		created(){
 			window.addEventListener('resize', this.updateWidth)
+		},
+		beforeDestroy(){
+			window.removeEventListener('resize', this.updateWidth)
 		}
 	}
 </script>

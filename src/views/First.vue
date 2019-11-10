@@ -9,7 +9,7 @@
     </header>
     <img class="earth" src="~@/assets/Earth.png" alt="OurEarth">
     <main>
-      <h1 class="title">{{ $t("firstPage.h1")}}</h1>
+      <h1 class="title">{{ $t("firstPage.h1") }}</h1>
       <p class="TopQuote">{{ $t("firstPage.topQuote")}}<span id="trigger" class="invisible" :class="{ruTopQuote:(this.$i18n.locale==='ru')}">{{ $t("firstPage.with")}} <router-link is="button" @click="goToEvolve" class="BottomQuote_button">{{ $t('firstPage.choice')}}</router-link> »</span></p>
       <p class="BottomQuote" :class="{ruBottomQuote:(this.$i18n.locale==='ru')}">{{ $t("firstPage.with")}}  <router-link is="button" @click="goToEvolve" class="BottomQuote_button">{{ $t("firstPage.choice")}} </router-link> »</p>
       <p class="autor">-{{ $t('firstPage.autor')}}</p>

@@ -76,7 +76,7 @@ export default {
 	},
 	methods: {
 		goToBack(){
-			this.$router.push('/evolve')
+			this.$router.push('/evolve/1')
 		},
 		newImage(){
 			const image = new window.Image()

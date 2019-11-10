@@ -20,7 +20,27 @@ export default {
 	name:'MobileSecond',
 	methods: {
 		goToBack(){
-			this.$router.push('/')
+			if (this.$route.path === '/evolve'){
+				this.$router.push('/')
+			} else if(this.$route.path === '/evolve/1'){
+				this.$router.push('/')
+			} else if(this.$route.path === '/evolve/2'){
+				this.$router.push('/evolve/1')
+			} else if(this.$route.path === '/evolve/3'){
+				this.$router.push('/evolve/2')
+			} else if (this.$route.path === '/evolve/4'){
+				this.$router.push('/evolve/3')
+			} else if(this.$route.path === '/evolve/5'){
+				this.$router.push('/evolve/4')
+			} else if(this.$route.path === '/evolve/6'){
+				this.$router.push('/evolve/5')
+			} else if(this.$route.path === '/evolve/7'){
+				this.$router.push('/evolve/6')
+			} else if (this.$route.path === '/evolve/8'){
+				this.$router.push('/evolve/7')
+			}
+
+			
 		},
 	}
 }

@@ -1,6 +1,7 @@
 <template>
 	<section>
 		<input type="text" maxlength="25" v-model="humanName" placeholder="Enter the name...">
+		<span>{{ humanName }}</span>
 		<!-- Роутер линк обязательно запилить вариативным в зависимости от гендера, просто пушим разные роуты в зависимости от значения gender -->
 		<router-link is="button" class="Next_Button" @click="goToNext">{{$t('thirdPage.name.next')}}</router-link>
 	</section>
