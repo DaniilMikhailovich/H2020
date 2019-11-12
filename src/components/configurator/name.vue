@@ -21,12 +21,19 @@ export default {
 	},
 	methods: {
 		goToNext(){
-			this.$router.push('/create/clothes')
+			if(this.$store.getters.GENDER==='male') {
+				this.$router.push('/create/man_clothes')
+			} else if(this.$store.getters.GENDER==='female'){
+				this.$router.push('/create/women_clothes')
+			} else alert('Set gender of you human2020')
 		},
 	}
 }
 </script>
 <style scoped>
+		span{
+			font-size: 60px;
+		}
 		input{
 			background-color: transparent;
 			width: 40vw;

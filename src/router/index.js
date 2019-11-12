@@ -68,10 +68,16 @@ const routes = [
         component: () => import(/* webpackChunkName: "personalisation", webpackPrefetch: true */'../components/configurator/personalisation.vue')
       },
       {
-        path: 'clothes',
-        name: 'clothes',
-        component: () => import(/* webpackChunkName: "clothes", webpackPrefetch: true */'../components/configurator/clothes.vue')
-      }
+        path: 'man_clothes',
+        name: 'man_clothes',
+        component: () => import(/* webpackChunkName: "clothes", webpackPrefetch: true */'../components/configurator/manClothes.vue')
+      },
+      {
+        path: 'women_clothes',
+        name: 'women_clothes',
+        component: () => import(/* webpackChunkName: "clothes", webpackPrefetch: true */'../components/configurator/womenClothes.vue')
+      },
+      
     ]
   }
 ]

@@ -26,7 +26,7 @@ export default {
 	// ]
 	methods:{
 		drawOnCanvas(elem){
-			this.$store.dispatch('PUSH_'+type, elem)
+			this.$store.dispatch('PUSH_'+this.type, elem)
 		}
 	}
 }
