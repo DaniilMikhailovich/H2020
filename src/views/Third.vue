@@ -5,9 +5,9 @@
 		<main>
 			<section class="workSpace">
 				<section class="progressBar">
-					<personsvg class="personSVG"></personsvg>
-					<arrowsvg class="arrowSVG"></arrowsvg>
-					<hangersvg class="hangerSVG"></hangersvg>
+					<personsvg class="personSVG" :class="[{'active':this.$route.path === firstStep}, {'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW}]"></personsvg>
+					<arrowsvg class="arrowSVG" :class="[{'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW}]"></arrowsvg>
+					<hangersvg class="hangerSVG" :class="[{'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW}]"></hangersvg>
 					<arrowsvg class="arrowSVG"></arrowsvg>
 					<seekersvg class="seekerSVG"></seekersvg>
 					<arrowsvg class="arrowSVG"></arrowsvg>
@@ -20,7 +20,7 @@
 			<section class="canvascontainer" ref="canvascontainer">
 				<v-stage ref="stage" :config="stage">
 					<v-layer>
-						<v-text :config="{text: this.$store.getters.HUMAN_NAME, fontSize:60, x:300, y:50}"></v-text>
+						<v-text :config="{text: humanName, fontSize:60, x:posX, y:50}"></v-text>
 						<v-image :config="{image:podium, x: 330, y:1040, scale:{x:1.8,y:1.8}}"></v-image>
 						<v-image :config="{image:question, x: 380, y:450, scale:{x:.8,y:.8}}"></v-image>
 						<v-image :config="{image:human, x: 350, y:200, scale:{x:1.8,y:1.8}}"></v-image>
@@ -51,6 +51,10 @@ export default {
 			podium:null,
 			question:null,
 			canvascontainer:'',
+			posX:'',
+			firstStep: '/create/personalisation',
+			secondStepM: '/create/man_clothes',
+			secondStepW: '/create/women_clothes',
 		}
 	},
 	computed:{
@@ -59,12 +63,21 @@ export default {
 				return require('../assets/boy.png')
 			} else if(this.$store.getters.GENDER ==='female'){
 				return require('../assets/girl.png')
-			} return null
+			} else return null
+		},
+		humanName(){
+			return this.$store.getters.HUMAN_NAME
+		},
+		humanNameLenght(){
+			return this.$store.getters.HUMAN_NAME.length
 		}
 	},
 	watch:{
 		humanLink: function(){
 			this.newImage()
+		},
+		humanName: function(){
+			this.posX = this.calcPosName()
 		}
 	},
 	components:{
@@ -97,6 +110,9 @@ export default {
 			this.stage.height = this.stageHeight*scale
 			this.stage.scaleX = scale
 			this.stage.scaleY = scale
+		},
+		calcPosName(){
+			return (this.stageWidth/2 - (this.humanNameLenght * 24)/2)
 		}
 	},
 	created(){
@@ -139,6 +155,9 @@ footer{
 	justify-content: space-around;
 	align-items: center;
 	fill: rgb(189, 189, 189);
+}
+.active{
+	fill: #fff;
 }
 .configurator{
 	height: 30vw;

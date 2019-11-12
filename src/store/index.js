@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import hairArrayMale from './modules/hairArrayMale';
 
 Vue.use(Vuex)
 
@@ -11,7 +12,7 @@ export default new Vuex.Store({
     humanShirt:'',
     humanPants:'',
     humanShoes:'',
-    // скорее всего HumanAcces будет объектом в котором по мимо сылки прокидываем scale, x, y
+    // скорее всего все элементы будут объектом в котором по мимо сылки прокидываем scale, x, y
     humanAccessories:''
     },
   getters:{
@@ -20,6 +21,21 @@ export default new Vuex.Store({
     },
     HUMAN_NAME: state => {
       return state.humanName
+    },
+    HUMAN_HEAD: state => {
+      return state.humanHead
+    },
+    HUMAN_SHIRT: state => {
+      return state.humanShirt
+    },
+    HUMAN_PANTS: state => {
+      return state.humanPants
+    },
+    HUMAN_SHOES: state => {
+      return state.humanShoes
+    },
+    HUMAN_ACCESSORIES: state => {
+      return state.humanAccessories
     }
   },
   mutations: {
@@ -37,5 +53,8 @@ export default new Vuex.Store({
     PUSH_NAME: async (context, payload) =>{
       context.commit('SET_NAME', payload)
     }
-  }
+  },
+  modules:{
+    hairArrayMale,
+  },
 })
