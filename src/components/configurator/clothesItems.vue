@@ -5,7 +5,6 @@
 			v-bind:key="item.id"
 			v-on:click="drawOnCanvas(item.src)">
 			<img :src="item.src" alt="">
-			<!-- src = ~@/assets/2020.png запихнуть в виде пропса--> 
 		</button>
 	</section>
 </template>
@@ -13,17 +12,7 @@
 <script>
 export default {
 	props: ['items','type'],
-	// прототип массива items в стейте стора
-	// items:[
-	// 	{
-	// 	id: '1',
-	// 	src: '~@/assets/2020.png',
-	// 	},
-	// 	{
-	// 	id: '2',
-	// 	src: '~@/assets/2021.png',
-	// 	}
-	// ]
+	name:'clothesitems',
 	methods:{
 		drawOnCanvas(elem){
 			this.$store.dispatch('PUSH_'+this.type, elem)

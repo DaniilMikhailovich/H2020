@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import hairArrayMale from './modules/hairArrayMale';
+import hairArrayMale from './modules/hairArrayMale'
+import hairArrayFemale from './modules/hairArrayFemale'
 
 Vue.use(Vuex)
 
@@ -56,5 +57,6 @@ export default new Vuex.Store({
   },
   modules:{
     hairArrayMale,
+    hairArrayFemale,
   },
 })
