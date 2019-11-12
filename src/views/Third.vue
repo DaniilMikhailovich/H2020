@@ -24,6 +24,7 @@
 						<v-image :config="{image:podium, x: 330, y:1040, scale:{x:1.8,y:1.8}}"></v-image>
 						<v-image :config="{image:question, x: 380, y:450, scale:{x:.8,y:.8}}"></v-image>
 						<v-image :config="{image:human, x: 350, y:200, scale:{x:1.8,y:1.8}}"></v-image>
+						<v-image :config="{image:hair, x:this.$store.getters.HUMAN_HEAD.posX,y:this.$store.getters.HUMAN_HEAD.posY, scale:{x:4,y:4}}"></v-image>
 					</v-layer>
 				</v-stage>
 			</section>
@@ -50,6 +51,8 @@ export default {
 			human:null,
 			podium:null,
 			question:null,
+			hair:null,
+			hairPos:null,
 			canvascontainer:'',
 			posX:'',
 			firstStep: '/create/personalisation',
@@ -70,14 +73,20 @@ export default {
 		},
 		humanNameLenght(){
 			return this.$store.getters.HUMAN_NAME.length
+		},
+		hairSrc(){
+			return this.$store.getters.HUMAN_HEAD.src
 		}
 	},
 	watch:{
 		humanLink: function(){
-			this.newImage()
+			this.newGender()
 		},
 		humanName: function(){
 			this.posX = this.calcPosName()
+		},
+		hairSrc:function(){
+			this.newHair()
 		}
 	},
 	components:{
@@ -91,12 +100,19 @@ export default {
 		goToBack(){
 			this.$router.push('/evolve/1')
 		},
-		newImage(){
+		newGender(){
 			const image = new window.Image()
 			image.src =  this.humanLink
 			image.onload = () =>{
 			this.human=image
 			this.question=null
+			}
+		},
+		newHair(){
+			const image = new window.Image()
+			image.src = this.hairSrc
+			image.onload = () =>{
+				this.hair=image
 			}
 		},
 		changeCanvas(){
@@ -129,7 +145,10 @@ export default {
 		}
 	},
 	mounted(){
-		this.changeCanvas()
+		this.changeCanvas(),
+		this.newGender(),
+		this.posX = this.calcPosName(),
+		this.newHair()
 	}
 }
 </script>

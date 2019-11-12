@@ -24,7 +24,7 @@ export default {
     data(){
         return{
             currentColor:'black',
-            type:'HAIR',
+            type:'HEAD',
             array:this.$store.state.hairArrayMale.hairBlackMale,
             colors:[
                 {

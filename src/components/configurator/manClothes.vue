@@ -29,7 +29,7 @@ export default {
 		return{
 			currentTab: 'hairstyle',
 			tabs:[
-				{id:1, name:'hairstyle', svg:'hairstylesvg',getter:''},
+				{id:1, name:'hairstyle', svg:'hairstylesvg'},
 				{id:2, name:'shirts', svg:'shirtsvg'},
 				{id:3, name:'pants', svg:'pantssvg'},
 				{id:4, name:'suits', svg:'suitsvg'},

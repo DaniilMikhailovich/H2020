@@ -45,7 +45,10 @@ export default new Vuex.Store({
     },
     SET_NAME: (state, payload) =>{
       state.humanName = payload
-    }
+    },
+    SET_HEAD: (state, payload) =>{
+      state.humanHead = payload
+    },
   },
   actions: {
     GET_GENDER: async (context, payload) => {
@@ -53,7 +56,10 @@ export default new Vuex.Store({
     },
     PUSH_NAME: async (context, payload) =>{
       context.commit('SET_NAME', payload)
-    }
+    },
+    PUSH_HEAD: async (context, payload) =>{
+      context.commit('SET_HEAD', payload)
+    }    
   },
   modules:{
     hairArrayMale,
