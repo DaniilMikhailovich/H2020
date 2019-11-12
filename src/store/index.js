@@ -13,7 +13,6 @@ export default new Vuex.Store({
     humanShirt:'',
     humanPants:'',
     humanShoes:'',
-    // скорее всего все элементы будут объектом в котором по мимо сылки прокидываем scale, x, y
     humanAccessories:''
     },
   getters:{
