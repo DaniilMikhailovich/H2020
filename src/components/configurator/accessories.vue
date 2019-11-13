@@ -19,7 +19,7 @@ export default {
         }
     },
     components:{
-        clothesitems:() => import(/* webpackChunkName: "accessoriesitems", webpackPrefetch: true */ '../configurator/clothesItems.vue')
+        clothesitems:() => import(/* webpackChunkName: "accessoriesitems", webpackPrefetch: true */ '../configurator/accessoriesItems.vue')
     }
     
 }
