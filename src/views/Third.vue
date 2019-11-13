@@ -20,15 +20,18 @@
 			<section class="canvascontainer" ref="canvascontainer">
 				<v-stage ref="stage" :config="stage">
 					<v-layer>
-						<v-text :config="{text: humanName, fontSize:60, x:posX, y:50}"></v-text>
+						<v-text :config="{text: name, fontSize:60, x:posX, y:50}"></v-text>
 						<v-image :config="{image:podium, x: 330, y:1040, scale:{x:1.8,y:1.8}}"></v-image>
 						<v-image :config="{image:question, x: 380, y:450, scale:{x:.8,y:.8}}"></v-image>
 						<v-image :config="{image:human, x: 350, y:200, scale:{x:1.8,y:1.8}}"></v-image>
 						<v-image 
-							:config="{image:hair, x:this.$store.getters.HUMAN_HEAD.posX,y:this.$store.getters.HUMAN_HEAD.posY, scale:{x:4,y:4}}">
+							:config="{image:hair, x:this.$store.getters.HUMAN_HEAD.posX,y:this.$store.getters.HUMAN_HEAD.posY, scale:{x:.3,y:.3}}">
 						</v-image>
 						<v-image
 							:config="{image:shirt, x:this.$store.getters.HUMAN_SHIRT.posX,y:this.$store.getters.HUMAN_SHIRT.posY, scale:{x:.2,y:.2}}">
+						</v-image>
+						<v-image
+							:config="{image:shoes, x:this.$store.getters.HUMAN_SHOES.posX,y:this.$store.getters.HUMAN_SHOES.posY, scale:{x:.2,y:.2}}">
 						</v-image>
 						<v-image
 							:config="{image:pants, x:this.$store.getters.HUMAN_PANTS.posX,y:this.$store.getters.HUMAN_PANTS.posY, scale:{x:.2,y:.2}}">
@@ -63,6 +66,7 @@ export default {
 			stageWidth:1000,
 			stageHeight:1233,
 			human:null,
+			name:'',
 			podium:null,
 			question:null,
 			hair:null,
@@ -70,6 +74,7 @@ export default {
 			shirt:null,
 			pants:null,
 			accessories:null,
+			shoes:null,
 			canvascontainer:'',
 			posX:'',
 			firstStep: '/create/personalisation',
@@ -105,13 +110,23 @@ export default {
 		},
 		accessoriesSrc(){
 			return this.$store.getters.HUMAN_ACCESSORIES.src
+		},
+		shoesSrc(){
+			return this.$store.getters.HUMAN_SHOES.src
 		}
 	},
 	watch:{
 		humanLink: function(){
 			this.newGender()
+			this.hair = null,
+			this.jacket = null,
+			this.shirt = null,
+			this.pants = null,
+			this.shoes = null,
+			this.accessories = null
 		},
 		humanName: function(){
+			this.name = this.humanName
 			this.posX = this.calcPosName()
 		},
 		hairSrc:function(){
@@ -128,6 +143,9 @@ export default {
 		},
 		accessoriesSrc: function(){
 			this.newAccessories()
+		},
+		shoesSrc: function(){
+			this.newShoes()
 		}
 	},
 	components:{
@@ -184,6 +202,13 @@ export default {
 				this.accessories=image
 			}
 		},
+		newShoes(){
+			const image = new window.Image()
+			image.src = this.shoesSrc
+			image.onload = () =>{
+				this.shoes=image
+			}
+		},
 		changeCanvas(){
 			this.canvascontainer = this.$refs.canvascontainer
 			if (!this.canvascontainer){
@@ -217,7 +242,13 @@ export default {
 		this.changeCanvas(),
 		this.newGender(),
 		this.posX = this.calcPosName(),
-		this.newHair()
+		this.newHair(),
+		this.newAccessories(),
+		this.newPants(),
+		this.newShirt(),
+		this.newJacket(),
+		this.name = this.humanName,
+		this.newShoes()
 	}
 }
 </script>

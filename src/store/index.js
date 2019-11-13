@@ -68,6 +68,9 @@ export default new Vuex.Store({
     },
     SET_ACCESSORIES: (state, payload) =>{
       state.humanAccessories = payload
+    },
+    SET_SHOES: (state, payload) =>{
+      state.humanShoes = payload
     }
   },
   actions: {
@@ -92,6 +95,9 @@ export default new Vuex.Store({
     PUSH_ACCESSORIES: async (context, payload) =>{
       context.commit('SET_ACCESSORIES', payload)
     },
+    PUSH_SHOES: async (context, payload) =>{
+      context.commit('SET_SHOES', payload)
+    }
   },
   modules:{
     hairArrayMale,

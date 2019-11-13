@@ -89,11 +89,11 @@ export default {
     .black{
         background-color: #202020;
     }
-    .brown{
-        background-color: #b58e66;
+    .bordo{
+        background-color: #6b2c26;
     }
-    .darkbrown{
-        background-color: #473726;
+    .brown{
+        background-color: #967869;
     }
     .ginger{
         background-color: #e48e37;
@@ -101,7 +101,7 @@ export default {
     .green{
         background-color: #417334;
     }
-    .grey{
+    .lightbrown{
         background-color: #8c7e70;
     }
     .red{
