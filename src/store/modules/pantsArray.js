@@ -1,161 +1,155 @@
 export default {
     state: {
-        jacketsMale: [
+        pantsMale: [
             {
                 id:1,
-                src:require('../../assets/Textures/Jackets/male/1.png'),
+                src:require('../../assets/Textures/Pants/male/1.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:2,
-                src:require('../../assets/Textures/Jackets/male/2.png'),
+                src:require('../../assets/Textures/Pants/male/2.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:3,
-                src:require('../../assets/Textures/Jackets/male/3.png'),
+                src:require('../../assets/Textures/Pants/male/3.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:4,
-                src:require('../../assets/Textures/Jackets/male/4.png'),
+                src:require('../../assets/Textures/Pants/male/4.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:5,
-                src:require('../../assets/Textures/Jackets/male/5.png'),
+                src:require('../../assets/Textures/Pants/male/5.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:6,
-                src:require('../../assets/Textures/Jackets/male/6.png'),
+                src:require('../../assets/Textures/Pants/male/6.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:7,
-                src:require('../../assets/Textures/Jackets/male/7.png'),
+                src:require('../../assets/Textures/Pants/male/7.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:8,
-                src:require('../../assets/Textures/Jackets/male/8.png'),
+                src:require('../../assets/Textures/Pants/male/8.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:9,
-                src:require('../../assets/Textures/Jackets/male/9.png'),
+                src:require('../../assets/Textures/Pants/male/9.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:10,
-                src:require('../../assets/Textures/Jackets/male/10.png'),
+                src:require('../../assets/Textures/Pants/male/10.png'),
                 posX:200,
                 posY:200
             },
         ],
-        jacketsFemale: [
+        pantsFemale: [
             {
                 id:1,
-                src:require('../../assets/Textures/Jackets/female/1.png'),
+                src:require('../../assets/Textures/Pants/female/1.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:2,
-                src:require('../../assets/Textures/Jackets/female/2.png'),
+                src:require('../../assets/Textures/Pants/female/2.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:3,
-                src:require('../../assets/Textures/Jackets/female/3.png'),
+                src:require('../../assets/Textures/Pants/female/3.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:4,
-                src:require('../../assets/Textures/Jackets/female/4.png'),
+                src:require('../../assets/Textures/Pants/female/4.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:5,
-                src:require('../../assets/Textures/Jackets/female/5.png'),
+                src:require('../../assets/Textures/Pants/female/5.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:6,
-                src:require('../../assets/Textures/Jackets/female/6.png'),
+                src:require('../../assets/Textures/Pants/female/6.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:7,
-                src:require('../../assets/Textures/Jackets/female/7.png'),
+                src:require('../../assets/Textures/Pants/female/7.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:8,
-                src:require('../../assets/Textures/Jackets/female/8.png'),
+                src:require('../../assets/Textures/Pants/female/8.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:9,
-                src:require('../../assets/Textures/Jackets/female/9.png'),
+                src:require('../../assets/Textures/Pants/female/9.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:10,
-                src:require('../../assets/Textures/Jackets/female/10.png'),
+                src:require('../../assets/Textures/Pants/female/10.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:11,
-                src:require('../../assets/Textures/Jackets/female/11.png'),
+                src:require('../../assets/Textures/Pants/female/11.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:12,
-                src:require('../../assets/Textures/Jackets/female/12.png'),
+                src:require('../../assets/Textures/Pants/female/12.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:13,
-                src:require('../../assets/Textures/Jackets/female/13.png'),
+                src:require('../../assets/Textures/Pants/female/13.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:14,
-                src:require('../../assets/Textures/Jackets/female/14.png'),
+                src:require('../../assets/Textures/Pants/female/14.png'),
                 posX:200,
                 posY:200
             },
             {
                 id:15,
-                src:require('../../assets/Textures/Jackets/female/15.png'),
-                posX:200,
-                posY:200
-            },
-            {
-                id:16,
-                src:require('../../assets/Textures/Jackets/female/16.png'),
+                src:require('../../assets/Textures/Pants/female/15.png'),
                 posX:200,
                 posY:200
             },

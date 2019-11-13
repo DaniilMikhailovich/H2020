@@ -24,7 +24,21 @@
 						<v-image :config="{image:podium, x: 330, y:1040, scale:{x:1.8,y:1.8}}"></v-image>
 						<v-image :config="{image:question, x: 380, y:450, scale:{x:.8,y:.8}}"></v-image>
 						<v-image :config="{image:human, x: 350, y:200, scale:{x:1.8,y:1.8}}"></v-image>
-						<v-image :config="{image:hair, x:this.$store.getters.HUMAN_HEAD.posX,y:this.$store.getters.HUMAN_HEAD.posY, scale:{x:4,y:4}}"></v-image>
+						<v-image 
+							:config="{image:hair, x:this.$store.getters.HUMAN_HEAD.posX,y:this.$store.getters.HUMAN_HEAD.posY, scale:{x:4,y:4}}">
+						</v-image>
+						<v-image
+							:config="{image:shirt, x:this.$store.getters.HUMAN_SHIRT.posX,y:this.$store.getters.HUMAN_SHIRT.posY, scale:{x:.2,y:.2}}">
+						</v-image>
+						<v-image
+							:config="{image:pants, x:this.$store.getters.HUMAN_PANTS.posX,y:this.$store.getters.HUMAN_PANTS.posY, scale:{x:.2,y:.2}}">
+						</v-image>
+						<v-image
+							:config="{image:jacket, x:this.$store.getters.HUMAN_JACKET.posX,y:this.$store.getters.HUMAN_JACKET.posY, scale:{x:.2,y:.2}}">
+						</v-image>
+						<v-image
+							:config="{image:accessories, x:this.$store.getters.HUMAN_ACCESSORIES.posX,y:this.$store.getters.HUMAN_ACCESSORIES.posY, scale:{x:.2,y:.2}}">
+						</v-image>
 					</v-layer>
 				</v-stage>
 			</section>
@@ -52,7 +66,10 @@ export default {
 			podium:null,
 			question:null,
 			hair:null,
-			hairPos:null,
+			jacket:null,
+			shirt:null,
+			pants:null,
+			accessories:null,
 			canvascontainer:'',
 			posX:'',
 			firstStep: '/create/personalisation',
@@ -76,6 +93,18 @@ export default {
 		},
 		hairSrc(){
 			return this.$store.getters.HUMAN_HEAD.src
+		},
+		jacketSrc(){
+			return this.$store.getters.HUMAN_JACKET.src
+		},
+		shirtSrc(){
+			return this.$store.getters.HUMAN_SHIRT.src
+		},
+		pantsSrc(){
+			return this.$store.getters.HUMAN_PANTS.src
+		},
+		accessoriesSrc(){
+			return this.$store.getters.HUMAN_ACCESSORIES.src
 		}
 	},
 	watch:{
@@ -87,6 +116,18 @@ export default {
 		},
 		hairSrc:function(){
 			this.newHair()
+		},
+		jacketSrc: function(){
+			this.newJacket()
+		},
+		shirtSrc: function(){
+			this.newShirt()
+		},
+		pantsSrc: function(){
+			this.newPants()
+		},
+		accessoriesSrc: function(){
+			this.newAccessories()
 		}
 	},
 	components:{
@@ -113,6 +154,34 @@ export default {
 			image.src = this.hairSrc
 			image.onload = () =>{
 				this.hair=image
+			}
+		},
+		newJacket(){
+			const image = new window.Image()
+			image.src = this.jacketSrc
+			image.onload = () =>{
+				this.jacket=image
+			}
+		},
+		newShirt(){
+			const image = new window.Image()
+			image.src = this.shirtSrc
+			image.onload = () =>{
+				this.shirt=image
+			}
+		},
+		newPants(){
+			const image = new window.Image()
+			image.src = this.pantsSrc
+			image.onload = () =>{
+				this.pants=image
+			}
+		},
+		newAccessories(){
+			const image = new window.Image()
+			image.src = this.accessoriesSrc
+			image.onload = () =>{
+				this.accessories=image
 			}
 		},
 		changeCanvas(){
