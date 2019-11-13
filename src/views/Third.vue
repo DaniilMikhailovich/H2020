@@ -237,7 +237,7 @@ footer{
 }
 .progressBar{
 	height: 6vw;
-	width: 60vw;
+	width: 55vw;
 	border-radius: .3vw;
 	display: flex;
 	justify-content: space-around;
@@ -248,21 +248,23 @@ footer{
 	fill: #fff;
 }
 .configurator{
-	height: 30vw;
-	width: 60vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	height: 35vw;
+	width: 55vw;
 	border-radius: .5vw;
 	background-color: rgba(0, 0, 0, 0.25);
 }
 .canvascontainer{
-	height: 37vw;
-	width: 30vw;
+	height: 41vw;
+	width: 32vw;
 	border-radius: .5vw;
 	background-color: rgb(255, 255, 255);
 }
 .workSpace{
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
 }
 #app{
 	display: flex;

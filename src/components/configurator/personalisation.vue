@@ -38,6 +38,7 @@ export default {
 		justify-content: space-around;
 		flex-wrap: wrap;
 		padding: 1vw;
+		margin-top: 1vw;
 	}
 	.button{
 		outline: none;
@@ -52,7 +53,8 @@ export default {
 		font-size: 1.5vw;
 		cursor: pointer;
 		box-shadow: 3vw 3vw 10vw #000;
-		width: 23vw;
+		width: 25vw;
+		height: 4vw;
 	}
 	.currentTab{
 		flex-basis: 100%;

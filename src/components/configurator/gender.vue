@@ -44,6 +44,8 @@ button{
 	border-radius: 0.5vw;
 	padding: 0.5vw;
 	cursor: pointer;
+	height: 25vw;
+	width: 25vw;
 }
 p{
 	position: absolute;

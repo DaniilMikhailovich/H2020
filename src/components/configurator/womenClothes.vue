@@ -88,7 +88,7 @@ export default {
 		padding: 0.5vw 0.5vw;
 		font-size: 1.5vw;
 		cursor: pointer;
-		width: 9.65vw;
+		width: 8.8vw;
 	}
 	.button:hover{
 		background-color: #ac40f1;

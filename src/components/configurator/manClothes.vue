@@ -49,6 +49,7 @@ export default {
 	section{
 		display: flex;
 		justify-content: flex-start;
+		align-items: flex-start;
 		flex-wrap: wrap;
 		padding: 1vw;
 	}
@@ -88,7 +89,8 @@ export default {
 		padding: 0.5vw 0.5vw;
 		font-size: 1.5vw;
 		cursor: pointer;
-		width: 9.65vw;
+		width: 8.8vw;
+		height: 4vw;
 	}
 	.button:hover{
 		background-color: #ac40f1;
