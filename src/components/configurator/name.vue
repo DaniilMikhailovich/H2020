@@ -35,6 +35,8 @@ export default {
 			font-size: 60px;
 		}
 		input{
+			user-select: all;
+			outline: none;
 			background-color: transparent;
 			width: 40vw;
 			height: 4vw;

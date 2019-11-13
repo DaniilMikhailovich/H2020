@@ -11,7 +11,7 @@
 		<transition appear mode="out-in">
 		<router-view/>
 		</transition>
-		<footer><router-link is="button" @click="goToBack" class="GoBack_button">Go back</router-link></footer> 
+		<footer><router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg> back</router-link></footer> 
 	</div>
 </template>
 
@@ -38,10 +38,11 @@ export default {
 				this.$router.push('/evolve/6')
 			} else if (this.$route.path === '/evolve/8'){
 				this.$router.push('/evolve/7')
-			}
-
-			
-		},
+			}	
+		}
+	},
+	components:{
+		arrowsvg:() => import(/* webpackChunkName: "arrowsvg" */ '../components/SVG/arrowSVG.vue')
 	}
 }
 </script>
@@ -88,6 +89,11 @@ header{
 .ruFun, .ruWar, .ruPolitics{
 	line-height: 6vw;
 }
+.arrowbutton{
+	width: 1.5vw;
+	fill: #fff;
+	margin-right: 0.5vw;
+}
 hr{
 	height: 8vw;
 	border: 0.1vw solid #20252a;
@@ -114,15 +120,9 @@ footer{
 	padding: 0.3vw 2.5vw 0.6vw 2.5vw;
 	border-radius: 3vw;
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	margin-bottom: 2vw;
 }
-.GoBack_button::before{
-	content: "←";
-	font-size: 8vw;
-	line-height: 1vw;
-	text-decoration: none;
-	}
 @media screen and (min-width: 760px) and (max-width: 999px){
 	.BackNumber{
 		transform: rotate(-58deg);

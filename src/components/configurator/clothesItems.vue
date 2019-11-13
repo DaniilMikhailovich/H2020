@@ -16,7 +16,6 @@ export default {
 	methods:{
 		drawOnCanvas(elem){
 			this.$store.dispatch('PUSH_'+this.type, elem)
-
 		}
 	}
 }
@@ -31,12 +30,12 @@ export default {
 	}
 	.button{
 		width: 8vw;
-		height: 8vw;
+		height: 7vw;
 		flex-basis: 20%;
 		cursor: pointer;
 	}
 	img{
-		width: 100%;
+		height: 100%;
 	}
 
 </style>

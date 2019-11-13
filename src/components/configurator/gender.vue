@@ -38,6 +38,7 @@ export default {
 	fill: #f5a9a9
 }
 button{
+	background-color: #fff;
 	position: relative;
 	border: none;
 	border-radius: 0.5vw;

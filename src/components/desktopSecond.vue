@@ -21,7 +21,7 @@
 			<router-link is="button" @click="goToConstruct"  class="BottomQuote_button">#2020</router-link></p>
 			<img class="arrow" id="arrow" src="~@/assets/Arrow.png" alt="arrow">
 		</main>
-		<footer><router-link is="button" @click="goToBack" class="GoBack_button">Go back</router-link></footer> 
+		<footer><router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg> Go back</router-link></footer> 
 	</div>
 </template>
 
@@ -35,6 +35,9 @@ export default {
 		goToBack(){
 			this.$router.push('/')
 		},
+	},
+	components:{
+		arrowsvg:() => import(/* webpackChunkName: "arrowsvg" */ '../components/SVG/arrowSVG.vue')
 	}
 }
 </script>
@@ -195,15 +198,15 @@ hr{
 		cursor: pointer;
 		z-index: 100;
 		box-shadow: 0vw 0vw 15vw 1vw #000;
-		padding: 0.1vw 2vw 0.3vw 2vw;
+		padding: 0.3vw 2vw;
 		border-radius: 3vw;
 		display: flex;
-		align-items: baseline;
+		align-items: center;
 	}
-	.GoBack_button::before{
-		content: "←";
-		font-size: 2vw;
-		text-decoration: none;
+	.arrowbutton{
+		width: 1.5vw;
+		fill: #fff;
+		margin-right: 0.5vw;
 	}
 	span.ruAristocrats{
 		margin-right: 2vw;

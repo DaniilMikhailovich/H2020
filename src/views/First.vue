@@ -185,16 +185,16 @@ main{
 	overflow: hidden;
 }
 .snout{
-	background: url(~@/assets/HUMAN.png) 0% 120% no-repeat, url(~@/assets/morpheus.png) 93% 100%  no-repeat;
+	background: url(~@/assets/HUMAN.png) 0vw 10vw no-repeat, url(~@/assets/morpheus.png) 93% 100%  no-repeat;
 	background-size: 23vw, 17vw;
 }
 .hand{
 	position: absolute;
 	width: 23vw;
-	left: -0.2%;
-	top: 18.1%;
+	left: -0.2vw;
+	top: 10vw;
 	animation: rotate 1.5s infinite linear;
-	transform-origin: 275px 523px;
+	transform-origin: 310px 430px;
 }
 .title{
 	z-index: 1;
@@ -316,7 +316,7 @@ main{
 		transform: rotate(0deg);
 	}
 	75%{
-		transform: rotate(1.8deg);
+		transform: rotate(3deg);
 	}
 	100%{
 		transform: rotate(0deg);
