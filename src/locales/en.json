@@ -38,6 +38,9 @@
     "name":{
       "name":"Name",
       "next":"Next"
+    },
+    "clothes":{
+      "clothes":"Clothes"
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<h1 class="clothesTitle">Clothes</h1>
+		<h1 class="clothesTitle">{{$t('thirdPage.clothes.clothes')}}</h1>
 		<hr class="separate">
 		<button
 			v-for="tab in tabs"
@@ -43,7 +43,7 @@ export default {
 <style scoped>
 	section{
 		display: flex;
-		justify-content: space-around;
+		justify-content: flex-start;
 		flex-wrap: wrap;
 		padding: 1vw;
 	}
@@ -76,20 +76,26 @@ export default {
 		display: inline-block;
 		color: #E0FFFF;
 		overflow: hidden;
-		background-color: #cdcdcd;
-		border-radius: 0.5vw;
+		background-color: rgba(68, 68, 68, 0.493);
+		box-shadow: 0vw 0vw 1vw#000;
 		border: none;
-		padding: 0.5vw .5vw;
+		transition: 0.3s;
+		padding: 0.5vw 0.5vw;
 		font-size: 1.5vw;
 		cursor: pointer;
-		box-shadow: 3vw 3vw 10vw #000;
-		width: 5vw;
+		width: 9.65vw;
 	}
 	.button:hover{
 		background-color: #ac40f1;
 	}
 	.button.active{
 		background-color: #ac40f1;
+		border: 0.1vw solid #fff;
+		border-bottom: none;
+		box-shadow: 0vw 0vw 2vw#000;
+	}
+	.button:not(.active){
+		border-bottom: 0.1vw solid #fff;
 	}
 	.v-enter-active, .v-leave-active{
 		transition: opacity .2s;

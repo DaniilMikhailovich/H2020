@@ -8,14 +8,15 @@
       <button @click="changeLocRu" class="Ru">Русский</button>
     </header>
     <img class="earth" src="~@/assets/Earth.png" alt="OurEarth">
-    <main>
+    <main class="snout">
       <h1 class="title">{{ $t("firstPage.h1") }}</h1>
       <p class="TopQuote">{{ $t("firstPage.topQuote")}}<span id="trigger" class="invisible" :class="{ruTopQuote:(this.$i18n.locale==='ru')}">{{ $t("firstPage.with")}} <router-link is="button" @click="goToEvolve" class="BottomQuote_button">{{ $t('firstPage.choice')}}</router-link> »</span></p>
       <p class="BottomQuote" :class="{ruBottomQuote:(this.$i18n.locale==='ru')}">{{ $t("firstPage.with")}}  <router-link is="button" @click="goToEvolve" class="BottomQuote_button">{{ $t("firstPage.choice")}} </router-link> »</p>
       <p class="autor">-{{ $t('firstPage.autor')}}</p>
       <p id="timer"></p>
       <p class="date" :class="{enDate:(this.$i18n.locale==='en'), ruDate:(this.$i18n.locale==='ru'), esDate:(this.$i18n.locale==='es') }"> <span> {{ $t('firstPage.date.days')}}</span> <span>{{ $t('firstPage.date.hours')}}</span> <span>{{ $t('firstPage.date.mins')}}</span>  </p>
-    </main>
+			<img class="hand" src="~@/assets/HAND.png" alt="Hand">
+		</main>
     <footer></footer>
 		</div>
 </template>
@@ -183,6 +184,18 @@ main{
 	font-weight: 400;
 	overflow: hidden;
 }
+.snout{
+	background: url(~@/assets/HUMAN.png) 0% 120% no-repeat, url(~@/assets/morpheus.png) 93% 100%  no-repeat;
+	background-size: 23vw, 17vw;
+}
+.hand{
+	position: absolute;
+	width: 23vw;
+	left: -0.2%;
+	top: 18.1%;
+	animation: rotate 1.5s infinite linear;
+	transform-origin: 275px 523px;
+}
 .title{
 	z-index: 1;
 	color: #E0FFFF;
@@ -290,6 +303,23 @@ main{
 	}
 	to{
 		transform: rotate(360deg);
+	}
+}
+@keyframes rotate{
+	0% {
+		transform: rotate(0deg);
+	}
+	25%{
+		transform: rotate(-0.8deg);
+	}
+	50%{
+		transform: rotate(0deg);
+	}
+	75%{
+		transform: rotate(1.8deg);
+	}
+	100%{
+		transform: rotate(0deg);
 	}
 }
 @keyframes move-light{

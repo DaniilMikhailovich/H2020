@@ -27,6 +27,23 @@
       "hipsters": "Hipsters",
       "evolve": "Reenviar",
       "create": "Crear"
+    },
+    "clothes": {
+      "clothes": "Ropa"
+    }
+  },
+  "thirdPage": {
+    "gender": {
+      "male": "Masculino",
+      "female": "Masculina",
+      "gender": "Género"
+    },
+    "name": {
+      "name": "Nombre",
+      "next": "Luego"
+    },
+    "clothes": {
+      "clothes": "Ropa"
     }
   }
 }
