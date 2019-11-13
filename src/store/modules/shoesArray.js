@@ -18,7 +18,7 @@ export default {
             {
                 id:3,
                 src:require('../../assets/Textures/Shoes/male/3.png'),
-                icon:require('../../assets/Textures/Shoes/male/icons/2.png'),
+                icon:require('../../assets/Textures/Shoes/male/icons/3.png'),
                 posX:200,
                 posY:200
             },
