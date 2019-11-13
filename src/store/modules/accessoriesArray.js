@@ -85,6 +85,12 @@ export default {
                 posX:200,
                 posY:200
             },
+            {
+                id: 15,
+                src: null,
+                posX: 200,
+                posY: 200
+            },
         ],
         accessoriesFemale: [
             {

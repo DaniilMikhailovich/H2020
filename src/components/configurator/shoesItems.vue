@@ -30,10 +30,18 @@ export default {
 		padding: 1vw;
 	}
 	.button{
-		width: 8vw;
-		height: 8vw;
-		flex-basis: 20%;
+		margin-bottom: 0.2vw;
+		width: 12.5vw;
+		height: 11vw;
 		cursor: pointer;
+		transition: 0.5s;
+		background: linear-gradient(rgba(250, 238, 253, 0.001), rgba(247, 158, 255, 0.5));
+		border: none;
+	}
+	.button:hover {
+		transform: scale(1.1);
+		background: none;
+		transition: 0.3s;
 	}
 	img{
 		width: 100%;
