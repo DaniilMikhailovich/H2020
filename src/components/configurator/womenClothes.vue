@@ -23,17 +23,22 @@ export default {
 		suitsvg:() => import(/* webpackChunkName: "suitsvg", webpackPrefetch: true */ '../SVG/suitSVG.vue'),
 		shoessvg:() => import(/* webpackChunkName: "shoessvg", webpackPrefetch: true */ '../SVG/shoesSVG.vue'),
 		accessoriessvg:() => import(/* webpackChunkName: "accessoriessvg", webpackPrefetch: true */ '../SVG/accessoriesSVG.vue'),
+		hairstyle: () => import(/* webpackChunkName: "hairstyle", webpackPrefetch: true */ '../configurator/hairstyleFemale.vue'),
+		jackets: () => import(/* webpackChunkName: "jackets", webpackPrefetch: true */ '../configurator/jackets.vue'),
+		shirts: () => import(/* webpackChunkName: "shirts", webpackPrefetch: true */ '../configurator/shirts.vue'),
+		pants: () => import(/* webpackChunkName: "pants", webpackPrefetch: true */ '../configurator/pants.vue'),
+		accessories: () => import(/* webpackChunkName: "accessories", webpackPrefetch: true */ '../configurator/accessories.vue'),
 	},
 	data(){
 		return{
-			currentTab: 'Hairstyle',
+			currentTab: 'hairstyle',
 			tabs:[
-				{id:1, name:'Hairstyle', svg:'hairstylesvg',getter:''},
-				{id:2, name:'Shirts', svg:'shirtsvg'},
-				{id:3, name:'Pants', svg:'pantssvg'},
-				{id:4, name:'Suits', svg:'suitsvg'},
-				{id:5, name:'Shoes', svg:'shoessvg'},
-				{id:6, name:'Accessories', svg:'accessoriessvg'}
+				{id:1, name:'hairstyle', svg:'hairstylesvg'},
+				{id:2, name:'shirts', svg:'shirtsvg'},
+				{id:3, name:'pants', svg:'pantssvg'},
+				{id:4, name:'jackets', svg:'suitsvg'},
+				{id:5, name:'shoes', svg:'shoessvg'},
+				{id:6, name:'accessories', svg:'accessoriessvg'}
 				]
 		}
 	}

@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import hairArrayMale from './modules/hairArrayMale';
+import hairArrayMale from './modules/hairArrayMale'
+import hairArrayFemale from './modules/hairArrayFemale'
+import jacketsArray from './modules/jacketsArray'
+import shirtsArray from './modules/shirtsArray'
+import pantsArray from './modules/pantsArray'
+import accessoriesArray from './modules/accessoriesArray'
+import shoesArray from './modules/shoesArray'
 
 Vue.use(Vuex)
 
@@ -10,9 +16,9 @@ export default new Vuex.Store({
     humanName:'',
     humanHead:'',
     humanShirt:'',
+    humanJackets:'',
     humanPants:'',
     humanShoes:'',
-    // скорее всего все элементы будут объектом в котором по мимо сылки прокидываем scale, x, y
     humanAccessories:''
     },
   getters:{
@@ -36,6 +42,9 @@ export default new Vuex.Store({
     },
     HUMAN_ACCESSORIES: state => {
       return state.humanAccessories
+    },
+    HUMAN_JACKET: state => {
+      return state.humanJackets
     }
   },
   mutations: {
@@ -44,6 +53,21 @@ export default new Vuex.Store({
     },
     SET_NAME: (state, payload) =>{
       state.humanName = payload
+    },
+    SET_HEAD: (state, payload) =>{
+      state.humanHead = payload
+    },
+    SET_JACKET: (state, payload) =>{
+      state.humanJackets = payload
+    },
+    SET_SHIRT: (state, payload) =>{
+      state.humanShirt = payload
+    },
+    SET_PANTS: (state, payload) =>{
+      state.humanPants = payload
+    },
+    SET_ACCESSORIES: (state, payload) =>{
+      state.humanAccessories = payload
     }
   },
   actions: {
@@ -52,9 +76,30 @@ export default new Vuex.Store({
     },
     PUSH_NAME: async (context, payload) =>{
       context.commit('SET_NAME', payload)
-    }
+    },
+    PUSH_HEAD: async (context, payload) =>{
+      context.commit('SET_HEAD', payload)
+    },
+    PUSH_JACKETS: async (context, payload) =>{
+      context.commit('SET_JACKET', payload)
+    },
+    PUSH_SHIRTS: async (context, payload) =>{
+      context.commit('SET_SHIRT', payload)
+    },
+    PUSH_PANTS: async (context, payload) =>{
+      context.commit('SET_PANTS', payload)
+    },
+    PUSH_ACCESSORIES: async (context, payload) =>{
+      context.commit('SET_ACCESSORIES', payload)
+    },
   },
   modules:{
     hairArrayMale,
+    hairArrayFemale,
+    jacketsArray,
+    shirtsArray,
+    pantsArray,
+    accessoriesArray,
+    shoesArray,
   },
 })
