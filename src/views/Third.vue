@@ -25,7 +25,7 @@
 						<v-image :config="{image:question, x: 380, y:450, scale:{x:.8,y:.8}}"></v-image>
 						<v-image :config="{image:human, x: 350, y:200, scale:{x:1.8,y:1.8}}"></v-image>
 						<v-image 
-							:config="{image:hair, x:this.$store.getters.HUMAN_HEAD.posX,y:this.$store.getters.HUMAN_HEAD.posY, scale:{x:4,y:4}}">
+							:config="{image:hair, x:this.$store.getters.HUMAN_HEAD.posX,y:this.$store.getters.HUMAN_HEAD.posY, scale:{x:.3,y:.3}}">
 						</v-image>
 						<v-image
 							:config="{image:shirt, x:this.$store.getters.HUMAN_SHIRT.posX,y:this.$store.getters.HUMAN_SHIRT.posY, scale:{x:.2,y:.2}}">
@@ -118,6 +118,12 @@ export default {
 	watch:{
 		humanLink: function(){
 			this.newGender()
+			this.hair = null,
+			this.jacket = null,
+			this.shirt = null,
+			this.pants = null,
+			this.shoes = null,
+			this.accessories = null
 		},
 		humanName: function(){
 			this.name = this.humanName
