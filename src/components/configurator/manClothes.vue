@@ -23,7 +23,7 @@ export default {
 		suitsvg:() => import(/* webpackChunkName: "suitsvg", webpackPrefetch: true */ '../SVG/suitSVG.vue'),
 		shoessvg:() => import(/* webpackChunkName: "shoessvg", webpackPrefetch: true */ '../SVG/shoesSVG.vue'),
 		accessoriessvg:() => import(/* webpackChunkName: "accessoriessvg", webpackPrefetch: true */ '../SVG/accessoriesSVG.vue'),
-		hairstyle: () => import(/* webpackChunkName: "hairstyle", webpackPrefetch: true */ '../configurator/hairstyle.vue')
+		hairstyle: () => import(/* webpackChunkName: "hairstyle", webpackPrefetch: true */ '../configurator/hairstyleMale.vue')
 	},
 	data(){
 		return{
