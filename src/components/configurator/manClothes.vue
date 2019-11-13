@@ -28,6 +28,7 @@ export default {
 		shirts: () => import(/* webpackChunkName: "shirts", webpackPrefetch: true */ '../configurator/shirts.vue'),
 		pants: () => import(/* webpackChunkName: "pants", webpackPrefetch: true */ '../configurator/pants.vue'),
 		accessories: () => import(/* webpackChunkName: "accessories", webpackPrefetch: true */ '../configurator/accessories.vue'),
+		shoes: () => import(/* webpackChunkName: "shoes", webpackPrefetch: true */ '../configurator/shoes.vue'),
 	},
 	data(){
 		return{
