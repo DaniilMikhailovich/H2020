@@ -76,12 +76,6 @@ export default {
                 posY:200
             },
             {
-                id:3,
-                src:require('../../assets/Textures/Jackets/female/3.png'),
-                posX:200,
-                posY:200
-            },
-            {
                 id:4,
                 src:require('../../assets/Textures/Jackets/female/4.png'),
                 posX:200,

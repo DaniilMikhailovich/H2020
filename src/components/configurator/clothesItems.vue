@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section :class="{scroll:items.length >=11}">
 		<button class="button"
 			v-for="item in items"
 			v-bind:key="item.id"
@@ -26,11 +26,14 @@ export default {
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
-		padding: 1vw;
+		height: 23vw;
+	}
+	.scroll{
+		overflow-y: scroll;
 	}
 	.button{
 		margin-bottom: 0.2vw;
-		width: 9.9vw;
+		width: 10.2vw;
 		height: 11vw;
 		cursor: pointer;
 		transition: 0.3s;

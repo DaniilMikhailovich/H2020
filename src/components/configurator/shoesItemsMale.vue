@@ -4,7 +4,7 @@
 			v-for="item in items"
 			v-bind:key="item.id"
 			v-on:click="drawOnCanvas(item)">
-			<img :src="item.src" alt="">
+			<img :src="item.icon" alt="">
 		</button>
 	</section>
 </template>
@@ -12,7 +12,7 @@
 <script>
 export default {
 	props: ['items','type'],
-	name:'hairitems',
+	name:'clothesitems',
 	methods:{
 		drawOnCanvas(elem){
 			this.$store.dispatch('PUSH_'+this.type, elem)
@@ -31,8 +31,8 @@ export default {
 	}
 	.button{
 		margin-bottom: 0.2vw;
-		width: 9.6vw;
-		height: 8.5vw;
+		width: 12.5vw;
+		height: 11vw;
 		cursor: pointer;
 		transition: 0.5s;
 		background: linear-gradient(rgba(250, 238, 253, 0.001), rgba(247, 158, 255, 0.5));
@@ -43,11 +43,7 @@ export default {
 		background: none;
 		transition: 0.3s;
 	}
-	.button:nth-of-type(3) img{
-    height: initial;
-    width: 80%;
-	}
 	img{
-		height: 60%;
+		width: 100%;
 	}
 </style>

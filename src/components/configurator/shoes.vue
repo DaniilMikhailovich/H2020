@@ -1,5 +1,6 @@
 <template>
-<shoesitems :items="array"  :type="type"></shoesitems>    
+<shoesItemsMale v-if="this.gender==='male'" :items="array"  :type="type"/>
+<shoesItemsFemale :items="array"  :type="type" v-else/>   
 </template>
 
 <script>
@@ -16,10 +17,14 @@ export default {
             }else if(this.$store.getters.GENDER==='female') {
                 return this.$store.state.shoesArray.shoesFemale
             } return null
+        },
+        gender(){
+            return this.$store.getters.GENDER
         }
     },
     components:{
-        shoesitems:() => import(/* webpackChunkName: "shirtsitems", webpackPrefetch: true */ '../configurator/shoesItems.vue')
+        shoesItemsMale:() => import(/* webpackChunkName: "shirtsitems", webpackPrefetch: true */ '../configurator/shoesItemsMale.vue'),
+        shoesItemsFemale:() => import(/* webpackChunkName: "shirtsitems", webpackPrefetch: true */ '../configurator/shoesItemsFemale.vue')
     }
     
 }
