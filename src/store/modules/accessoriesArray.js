@@ -4,86 +4,86 @@ export default {
             {
                 id:1,
                 src:require('../../assets/Textures/Accessories/male/1.png'),
-                posX:200,
-                posY:200
+                posX:406,
+                posY:207
             },
             {
                 id:2,
                 src:require('../../assets/Textures/Accessories/male/2.png'),
-                posX:200,
-                posY:200
+                posX:420,
+                posY:220
             },
             {
                 id:3,
                 src:require('../../assets/Textures/Accessories/male/3.png'),
-                posX:200,
-                posY:200
+                posX:408,
+                posY:215
             },
             {
                 id:4,
                 src:require('../../assets/Textures/Accessories/male/4.png'),
-                posX:200,
-                posY:200
+                posX:463,
+                posY:340
             },
             {
                 id:5,
                 src:require('../../assets/Textures/Accessories/male/5.png'),
-                posX:200,
-                posY:200
+                posX:350,
+                posY:715
             },
             {
                 id:6,
                 src:require('../../assets/Textures/Accessories/male/6.png'),
-                posX:200,
-                posY:200
+                posX:641,
+                posY:714
             },
             {
                 id:7,
                 src:require('../../assets/Textures/Accessories/male/7.png'),
-                posX:200,
-                posY:200
+                posX:410,
+                posY:590
             },
             {
                 id:8,
                 src:require('../../assets/Textures/Accessories/male/8.png'),
-                posX:200,
-                posY:200
+                posX:419,
+                posY:345
             },
             {
                 id:9,
                 src:require('../../assets/Textures/Accessories/male/9.png'),
-                posX:200,
-                posY:200
+                posX:419,
+                posY:345
             },
             {
                 id:10,
                 src:require('../../assets/Textures/Accessories/male/10.png'),
-                posX:200,
-                posY:200
+                posX:622,
+                posY:650
             },
             {
                 id:11,
                 src:require('../../assets/Textures/Accessories/male/11.png'),
-                posX:200,
-                posY:200
+                posX:463,
+                posY:340
             },
             {
                 id:12,
                 src:require('../../assets/Textures/Accessories/male/12.png'),
-                posX:200,
-                posY:200
+                posX:463,
+                posY:340
             },
             {
                 id:13,
                 src:require('../../assets/Textures/Accessories/male/13.png'),
-                posX:200,
-                posY:200
+                posX:363,
+                posY:636
             },
             {
                 id:14,
                 src:require('../../assets/Textures/Accessories/male/14.png'),
-                posX:200,
-                posY:200
+                posX:620,
+                posY:650
             },
             {
                 id: 15,
@@ -96,92 +96,92 @@ export default {
             {
                 id:1,
                 src:require('../../assets/Textures/Accessories/female/1.png'),
-                posX:200,
-                posY:200
+                posX:555,
+                posY:190
             },
             {
                 id:2,
                 src:require('../../assets/Textures/Accessories/female/2.png'),
-                posX:200,
-                posY:200
+                posX:555,
+                posY:190
             },
             {
                 id:3,
                 src:require('../../assets/Textures/Accessories/female/3.png'),
-                posX:200,
-                posY:200
+                posX:494,
+                posY:327
             },
             {
                 id:4,
                 src:require('../../assets/Textures/Accessories/female/4.png'),
-                posX:200,
-                posY:200
+                posX:492,
+                posY:326
             },
             {
                 id:5,
                 src:require('../../assets/Textures/Accessories/female/5.png'),
-                posX:200,
-                posY:200
+                posX:490,
+                posY:326
             },
             {
                 id:6,
                 src:require('../../assets/Textures/Accessories/female/6.png'),
-                posX:200,
-                posY:200
+                posX:510,
+                posY:1050
             },
             {
                 id:7,
                 src:require('../../assets/Textures/Accessories/female/7.png'),
-                posX:200,
-                posY:200
+                posX:362,
+                posY:714
             },
             {
                 id:8,
                 src:require('../../assets/Textures/Accessories/female/8.png'),
-                posX:200,
-                posY:200
+                posX:660,
+                posY:710
             },
             {
                 id:9,
                 src:require('../../assets/Textures/Accessories/female/9.png'),
-                posX:200,
-                posY:200
+                posX:619,
+                posY:625
             },
             {
                 id:10,
                 src:require('../../assets/Textures/Accessories/female/10.png'),
-                posX:200,
-                posY:200
+                posX:435,
+                posY:365
             },
             {
                 id:11,
                 src:require('../../assets/Textures/Accessories/female/11.png'),
-                posX:200,
-                posY:200
+                posX:490,
+                posY:317
             },
             {
                 id:12,
                 src:require('../../assets/Textures/Accessories/female/12.png'),
-                posX:200,
-                posY:200
+                posX:490,
+                posY:325
             },
             {
                 id:13,
                 src:require('../../assets/Textures/Accessories/female/13.png'),
-                posX:200,
-                posY:200
+                posX:493,
+                posY:325
             },
             {
                 id:14,
                 src:require('../../assets/Textures/Accessories/female/14.png'),
-                posX:200,
-                posY:200
+                posX:493,
+                posY:325
             },
             {
                 id:15,
                 src:require('../../assets/Textures/Accessories/female/15.png'),
-                posX:200,
-                posY:200
+                posX:413,
+                posY:570
             },
         ],
     }
