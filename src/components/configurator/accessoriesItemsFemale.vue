@@ -46,11 +46,13 @@ export default {
 		transition: 0.3s;
 	}
 	img{
-		width: 80%;
+		width: 70%;
 	}
-	button:nth-of-type(4) img{
-		height: 80%;
-		width: initial;
+	.button:nth-of-type(3) img, .button:nth-of-type(8) img, .button:nth-of-type(4) img{
+		height: initial;
+		width: 40%;
 	}
-
+	.button:nth-of-type(7) img{
+		width: 30%;
+	}
 </style>

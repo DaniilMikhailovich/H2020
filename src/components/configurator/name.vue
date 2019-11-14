@@ -39,7 +39,7 @@ export default {
 			outline: none;
 			background-color: transparent;
 			width: 40vw;
-			height: 4vw;
+			height: 5vw;
 			text-align: center;
 			font-size: 4vw;
 			border: none;

@@ -46,7 +46,10 @@
 				</v-stage>
 			</section>
 		</main>
-		<footer><router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>Go back</router-link></footer>
+		<footer>
+			<router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>Go back</router-link>
+			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW" is="button" @click="Reset" class="GoBack_button"><resetsvg class="arrowbutton"></resetsvg>Reset</router-link>
+		</footer>
 	</div>
 </template>
 
@@ -153,11 +156,17 @@ export default {
 		arrowsvg:() => import(/* webpackChunkName: "arrowSVG" */ '../components/SVG/arrowSVG.vue'),
 		hangersvg:() => import(/* webpackChunkName: "hangerSVG" */ '../components/SVG/hangerSVG.vue'),
 		seekersvg:() => import(/* webpackChunkName: "seekerSVG" */ '../components/SVG/seekerSVG.vue'),
-		awardsvg:() => import(/* webpackChunkName: "awardSVG" */ '../components/SVG/awardSVG.vue')
+		awardsvg:() => import(/* webpackChunkName: "awardSVG" */ '../components/SVG/awardSVG.vue'),
+		resetsvg:() => import(/* webpackChunkName: "resetSVG" */ '../components/SVG/resetSVG.vue')
 	},
 	methods: {
 		goToBack(){
 			this.$router.push('/evolve/1')
+		},
+		Reset(){
+			this.$router.push('/create/personalisation'),
+			this.$store.dispatch('GET_GENDER', null),
+			this.$store.dispatch('PUSH_NAME', '')
 		},
 		newGender(){
 			const image = new window.Image()
@@ -344,6 +353,7 @@ header{
 		border-radius: 3vw;
 		display: flex;
 		align-items: center;
+		margin-left: 1vw;
 	}
 	.arrowbutton{
 		width: 1.5vw;

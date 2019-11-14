@@ -24,7 +24,7 @@ export default {
 <style scoped>
 	section{
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-detween;
 		flex-wrap: wrap;
 		height: 23vw;
 	}
@@ -33,7 +33,7 @@ export default {
 	}
 	.button{
 		margin-bottom: 0.2vw;
-		width: 10.2vw;
+		width: 9.9vw;
 		height: 11vw;
 		cursor: pointer;
 		transition: 0.3s;

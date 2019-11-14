@@ -124,6 +124,7 @@ hr{
 	height: 5vw;
 	margin-top: 2vw;
 	margin-right: calc(1vw + 0.4vw);
+	box-shadow: 0vw 0vw 0.1vw #000;
 }
 .Eng, .Ru, .Spa{
 	background: none;
@@ -134,23 +135,10 @@ hr{
 	font-size: 4vw;
 	outline: none;
 	cursor: pointer;
+	text-shadow: 0vw 0vw 0.1vw #000;
 }
 .Eng:active, .Ru:active, .Spa:active{
 	color: rgb(224, 224, 224);
-}
-@media screen and (min-width: 1000px), (orientation: landscape){
-	.Eng, .Ru, .Spa{
-	font-size: 1.5vw;
-	margin: 2vw 1vw 0 0;
-	}
-	hr{
-	border: 0.1vw solid #E0FFFF;
-	width: 0.1vw;
-	background: none;
-	height: 2vw;
-	margin-top: 2vw;
-	margin-right: calc(0.5vw + 0.4vw);
-	}
 }
 html{
 	overflow: hidden;
@@ -193,7 +181,7 @@ main{
 	width: 23vw;
 	left: -0.2vw;
 	top: 10vw;
-	animation: rotate 1.5s infinite linear;
+	animation: rotate 1.2s infinite linear;
 	transform-origin: 310px 430px;
 }
 .title{
@@ -203,7 +191,7 @@ main{
 	text-align: center;
 	width: 90vw;
 	font-size: 14.5vw;
-	text-shadow: 1vw 2vw 5vw #000;
+	text-shadow: 0vw 0vw 3vw #000;
 	font-family: 'Source', sans-serif;
 	font-weight: 700;
 	line-height: 12vw;
@@ -222,16 +210,15 @@ main{
 	color: #E0FFFF;
 	font-size: 6vw;
 	line-height: 6vw;
+	text-shadow: 0vw 0vw 0.1vw #000;
 }
 .TopQuote{
 	margin: 0 0 0 8vw;
 	align-self: flex-start;
-	text-shadow: 1vw 2vw 3vw #000;
 }
 .BottomQuote{
 	margin: 0 10vw 2vw 0;
 	align-self: flex-end;
-	text-shadow: 1vw 2vw 3vw #000;
 }
 .invisible{
 	display: none;
@@ -248,7 +235,6 @@ main{
 	padding: 0.5vw 3vw;
 	font-size: 7vw;
 	cursor: pointer;
-	box-shadow: 3vw 3vw 10vw #000;
 }
 .BottomQuote_button::before {
   content: '';
@@ -269,12 +255,12 @@ main{
   display: none;
 }
 .autor{
-	text-shadow: 1vw 2vw 4vw #000;
 	z-index: 1;
 	color: #E0FFFF;
 	font-size: 4vw;
 	align-self: flex-end;
 	margin: 0 5vw 3vw 0;
+	text-shadow: 0vw 0vw 0.1vw #000;
 }
 .date{
 	color: #E0FFFF;
@@ -282,6 +268,7 @@ main{
 	font-size: 3vw;
 	font-family: 'Source', sans-serif;
 	word-spacing: 13vw;
+	text-shadow: 0vw 0vw 0.1vw #000;
 }
 .esDate, .ruDate{
   word-spacing: 0;
@@ -307,19 +294,19 @@ main{
 }
 @keyframes rotate{
 	0% {
-		transform: rotate(0deg);
+		transform: rotate(-1deg);
 	}
 	25%{
-		transform: rotate(-0.8deg);
+		transform: rotate(0deg);
 	}
 	50%{
-		transform: rotate(0deg);
+		transform: rotate(4deg);
 	}
 	75%{
-		transform: rotate(3deg);
+		transform: rotate(0deg);
 	}
 	100%{
-		transform: rotate(0deg);
+		transform: rotate(-1deg);
 	}
 }
 @keyframes move-light{
@@ -342,13 +329,26 @@ main{
 		margin: 30vw 0 2vw 0;
 	}
 } 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1000px), (orientation: landscape){
+	.Eng, .Ru, .Spa{
+		font-size: 1.5vw;
+		margin: 2vw 1vw 0 0;
+	}
+	hr{
+		border: 0.1vw solid #E0FFFF;
+		width: 0.1vw;
+		background: none;
+		height: 2vw;
+		margin-top: 2vw;
+		margin-right: calc(0.5vw + 0.4vw);
+		box-shadow: 0vw 0vw 0.1vw #000;
+	}
 	.earth{
 	width: 45vw;
 	}
 	.title{
 		width: 90vw;
-		text-shadow: 1vw 2vw 3vw #000;
+		text-shadow: 0vw 0vw 3vw #000;
 		font-size: 11vw;
 		margin: 3.5vw 0 1vw 0;
 	}
@@ -360,7 +360,6 @@ main{
 	}
 	.TopQuote{
 		margin: 0 0 1vw 0;
-		text-shadow: 1vw 1vw 1vw #000;
 		font-size: 3vw;
 		align-self: center;
 	}
@@ -369,24 +368,26 @@ main{
 		padding: 0vw 2vw;
 		line-height: 4vw;
 		text-shadow: none;
-		box-shadow: 1.5vw 1.5vw 5vw #000;
+		box-shadow: 0vw 0vw 0.2vw #000;
+		text-shadow: 0vw 0vw 0.1vw #000;
+	}
+	.BottomQuote_button:active{
+		box-shadow: inset 0.2vw 0.2vw 0.3vw #000;
 	}
 	.autor{
-		text-shadow: 1vw 1vw 1vw #000;
 		font-size: 2vw;
 		margin: 0 25vw 0vw 0;
 	}
 	#timer{
-	font-size: 11vw;
-	line-height: 13vw;
-	margin-bottom: 0vw;
-	text-shadow: 1vw 1vw 2vw #000;
+		font-size: 11vw;
+		line-height: 13vw;
+		margin-bottom: 0vw;
+		text-shadow: 0vw 0vw 0.5vw #000;
 	}
 	.date{
 	font-size: 2vw;
 	line-height: 0vw;
 	word-spacing: 8.5vw;
-	text-shadow: 1vw 1vw 1vw #000;
 	}
 	body{
 	background: linear-gradient(rgb(0, 247, 255), rgb(100, 255, 131));
