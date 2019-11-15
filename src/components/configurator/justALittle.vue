@@ -1,8 +1,7 @@
 <template>
     <section>
-        Just a little :)
+        <p class="phrase">Left just a little 😉</p>
         <router-link is="button" class="Next_Button" @click="goToNext">{{$t('thirdPage.name.next')}}</router-link>
-        
     </section>
 </template>
 
@@ -27,6 +26,11 @@ export default {
         width: 100%;
         font-size: 3vw;
     }
+    .phrase{
+        color: #fff;
+        font-size: 7vw;
+        margin-bottom: 3vw;
+    }
     .Next_Button{
 		border-radius: 2.5vw;
 		background: #ac40f1;
@@ -35,5 +39,10 @@ export default {
 		font-size: 2.5vw;
 		padding: 0.2vw 3vw;
 		cursor: pointer;
-		}
+		box-shadow: 0vw 0vw 0.2vw #000;
+		text-shadow: 0vw 0vw 0.1vw #000;
+	}
+	.Next_Button:active{
+		box-shadow: inset 0.2vw 0.2vw 0.3vw #000;
+	}
 </style>

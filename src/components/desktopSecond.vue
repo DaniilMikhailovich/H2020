@@ -21,7 +21,7 @@
 			<router-link is="button" @click="goToConstruct"  class="BottomQuote_button">#2020</router-link></p>
 			<img class="arrow" id="arrow" src="~@/assets/Arrow.png" alt="arrow">
 		</main>
-		<footer><router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg> Go back</router-link></footer> 
+		<footer><router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>{{ $t("footer.GoBack")}}</router-link></footer> 
 	</div>
 </template>
 
@@ -133,7 +133,8 @@ hr{
 		font-size: 45vw;
 	}
 	.war, .politics, .fun{
-		font-size: 4vw
+		font-size: 4vw;
+		text-shadow: 0vw 0vw 0.1vw #000;
 	}
 	header{
 		height: 10vw;
@@ -161,6 +162,7 @@ hr{
 		font-size: 2vw;
 		align-self: flex-start;
 		display: inline;
+		text-shadow: 0vw 0vw 0.1vw #000;
 	}
 	span:first-of-type{
 		margin-left: 4.5vw;

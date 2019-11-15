@@ -15,7 +15,7 @@
           <input type="text" v-model="hardSkill" placeholder="0" maxlength="3">
       </div>
       <router-link is="button"></router-link>
-      <p>Distribute the available points into two groups of skills:<br>Hard is responsible for the technical side of your profession.<br>Soft is resposible for successful participation in the workflow and teamwork.</p>
+      <p>Distribute the available points into two groups of skills: <b>hard</b> is responsible for the technical side of your profession. <b>Soft</b> is resposible for successful participation in the workflow and teamwork.</p>
   </section>
 </template>
 
@@ -65,6 +65,7 @@ export default {
         display: block;
         width: 100%;
         height: 100%;
+        overflow: hidden;
     }
     h1{
 		color: #fff;
@@ -136,8 +137,11 @@ export default {
         bottom: 1vw;
         left: 1vw;
         color: #fff;
-		font-size: 1.4vw;
+		font-size: 2vw;
 		font-weight: 300;
+        white-space: nowrap;
+        transform: translateX(43%);
+        animation: ticker 20s linear infinite;
     }
     .tophr{
         transform: rotate(-15deg);
@@ -156,6 +160,12 @@ export default {
         bottom: initial;
         font-size: 2.5vw;
     }
-
-
+    @keyframes ticker {
+        0%{
+            transform: translateX(43%)
+        }
+        100%{
+            transform: translateX(-100%)
+        }
+    }
 </style>
