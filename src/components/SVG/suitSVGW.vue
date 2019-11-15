@@ -43,6 +43,6 @@
 
 <script>
 export default {
-	name:'suitSVG',
+	name:'suitSVGW',
 	}
 </script>

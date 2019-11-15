@@ -5,57 +5,57 @@ export default {
                 id:1,
                 src:require('../../assets/Textures/Shoes/male/1.png'),
                 icon:require('../../assets/Textures/Shoes/male/icons/1.png'),
-                posX:200,
-                posY:200
+                posX:317,
+                posY:1070
             },
             {
                 id:2,
                 src:require('../../assets/Textures/Shoes/male/2.png'),
                 icon:require('../../assets/Textures/Shoes/male/icons/2.png'),
-                posX:200,
-                posY:200
+                posX:330,
+                posY:1065
             },
             {
                 id:3,
                 src:require('../../assets/Textures/Shoes/male/3.png'),
                 icon:require('../../assets/Textures/Shoes/male/icons/3.png'),
-                posX:200,
-                posY:200
+                posX:308,
+                posY:1068
             },
             {
                 id:4,
                 src:require('../../assets/Textures/Shoes/male/4.png'),
                 icon:require('../../assets/Textures/Shoes/male/icons/4.png'),
-                posX:200,
-                posY:200
+                posX:316,
+                posY:1010
             },
             {
                 id:5,
                 src:require('../../assets/Textures/Shoes/male/5.png'),
                 icon:require('../../assets/Textures/Shoes/male/icons/5.png'),
-                posX:200,
-                posY:200
+                posX:318,
+                posY:1010
             },
             {
                 id:6,
                 src:require('../../assets/Textures/Shoes/male/6.png'),
                 icon:require('../../assets/Textures/Shoes/male/icons/6.png'),
-                posX:200,
-                posY:200
+                posX:320,
+                posY:1040
             },
             {
                 id:7,
                 src:require('../../assets/Textures/Shoes/male/7.png'),
                 icon:require('../../assets/Textures/Shoes/male/icons/7.png'),
-                posX:200,
-                posY:200
+                posX:330,
+                posY:1047
             },
             {
                 id:8,
                 src:require('../../assets/Textures/Shoes/male/8.png'),
                 icon:require('../../assets/Textures/Shoes/male/icons/8.png'),
-                posX:200,
-                posY:200
+                posX:328,
+                posY:992
             },
         ],
         shoesFemale: [
@@ -63,57 +63,57 @@ export default {
                 id:1,
                 src:require('../../assets/Textures/Shoes/female/1.png'),
                 icon:require('../../assets/Textures/Shoes/female/icons/1.png'),
-                posX:200,
-                posY:200
+                posX:328,
+                posY:1057
             },
             {
                 id:2,
                 src:require('../../assets/Textures/Shoes/female/2.png'),
                 icon:require('../../assets/Textures/Shoes/female/icons/2.png'),
-                posX:200,
-                posY:200
+                posX:354,
+                posY:1010
             },
             {
                 id:3,
                 src:require('../../assets/Textures/Shoes/female/3.png'),
                 icon:require('../../assets/Textures/Shoes/female/icons/3.png'),
-                posX:200,
-                posY:200
+                posX:360,
+                posY:730
             },
             {
                 id:4,
                 src:require('../../assets/Textures/Shoes/female/4.png'),
                 icon:require('../../assets/Textures/Shoes/female/icons/4.png'),
-                posX:200,
-                posY:200
+                posX:321,
+                posY:993
             },
             {
                 id:5,
                 src:require('../../assets/Textures/Shoes/female/5.png'),
                 icon:require('../../assets/Textures/Shoes/female/icons/5.png'),
-                posX:200,
-                posY:200
+                posX: 337,
+                posY:1004
             },
             {
                 id:6,
                 src:require('../../assets/Textures/Shoes/female/6.png'),
                 icon:require('../../assets/Textures/Shoes/female/icons/6.png'),
-                posX:200,
-                posY:200
+                posX:324,
+                posY:1035
             },
             {
                 id:7,
                 src:require('../../assets/Textures/Shoes/female/7.png'),
                 icon:require('../../assets/Textures/Shoes/female/icons/7.png'),
-                posX:200,
-                posY:200
+                posX:340,
+                posY:988
             },
             {
                 id:8,
                 src:require('../../assets/Textures/Shoes/female/8.png'),
                 icon:require('../../assets/Textures/Shoes/female/icons/8.png'),
-                posX:200,
-                posY:200
+                posX:337,
+                posY:990
             },
         ],
     }
