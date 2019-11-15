@@ -81,6 +81,11 @@ const routes = [
         path:'just_a_little',
         name:'just_a_little',
         component: () => import(/* webpackChunkName: "justALittle", webpackPrefetch: true */'../components/configurator/justALittle.vue')
+      },
+      {
+        path: 'proportion_skills',
+        name: 'proportion_skills',
+        component: () => import(/* webpackChunkName: "proportionSkills", webpackPrefetch: true */'../components/configurator/proportionSkills.vue')
       }
     ]
   }
