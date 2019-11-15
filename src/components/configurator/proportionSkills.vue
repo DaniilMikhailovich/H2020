@@ -1,6 +1,7 @@
 <template>
   <section>
       <h1>Personality</h1>
+      <hr class="separate">
       <div class="circleSum">
           <p class="sumOfScills">{{ sumOfScills }}</p>
       </div>
@@ -14,7 +15,9 @@
           Hard skill
           <input type="text" v-model="hardSkill" placeholder="0" maxlength="3">
       </div>
-      <router-link is="button"></router-link>
+      <transition>
+      <router-link v-if="buttonTrigger" is="button" class="Next_Button" @click="goToNext">Next</router-link>
+      </transition>
       <p>Distribute the available points into two groups of skills: <b>hard</b> is responsible for the technical side of your profession. <b>Soft</b> is resposible for successful participation in the workflow and teamwork.</p>
   </section>
 </template>
@@ -25,7 +28,8 @@ export default {
     data(){
         return{
             softSkills:null,
-            hardSkill:null
+            hardSkill:null,
+            buttonTrigger: false
         }
     },
     computed:{
@@ -41,25 +45,38 @@ export default {
         softSkills: function() {
             if((this.softSkills !== 0)&&(!isNaN(this.softSkills))){
             this.hardSkill = this.sumOfScills - this.softSkills
+            this.buttonTrigger = true
             } else {
-                this.hardSkill = 999
-                this.softSkills = 1
+                this.hardSkill = 0
+                this.softSkills = 0
+                this.buttonTrigger = false
+                
             }
         },
         hardSkill: function() {
             if((this.hardSkill !== 0)&&(!isNaN(this.hardSkill))){
             this.softSkills = this.sumOfScills - this.hardSkill 
             } else {
-                this.hardSkill = 1
-                this.softSkills = 999
+                this.softSkills = 0
+                this.hardSkill = 0
             }
         }
-    }
-
+    },
+    methods:{
+        goToNext(){
+            this.$router.push('/create/hard_skill')
+        }
+    },
 }
 </script>
 
 <style scoped>
+    .v-enter, .v-leave-to{
+        opacity: 0;
+    }
+    .v-enter-active, .v-leave-active{
+        transition: .2s
+    }
     section{
         position: relative;
         display: block;
@@ -80,7 +97,7 @@ export default {
         background: none;
         background-color: rgba(255, 255, 255, 0.52);
         border-radius: 2vw;
-        color: #fff;
+        color: #AC3FF0;
 		font-size: 1.3vw;
 		font-weight: 300;
         text-align: center;
@@ -89,7 +106,7 @@ export default {
         width: 10vw;
         height: 10vw;
         border-radius: 50%;
-        background-color: #AC3FF0;
+        background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
         position: absolute;
         top: calc(50% - 5vw);
         left: 10%;
@@ -101,7 +118,7 @@ export default {
         width: 8vw;
         height: 8vw;
         border-radius: 50%;
-        background-color: #AC3FF0;
+        background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
         position: absolute;
         top: calc(25% - 4vw);
         right: 15%;
@@ -110,7 +127,7 @@ export default {
         width: 8vw;
         height: 8vw;
         border-radius: 50%;
-        background-color: #AC3FF0;
+        background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
         position: absolute;
         top: calc(75% - 4vw);
         right: 25%;
@@ -121,7 +138,7 @@ export default {
         justify-content: center;
         align-items: center;
         font-size: 1.5vw;
-        color: #fff;
+        color: #AC3FF0;
         font-weight: 300;
     }
     hr{
@@ -131,6 +148,14 @@ export default {
         background-color: #fff;
         position: absolute;
         border: .2vw solid #ffffff;
+    }
+    .separate{
+		margin: .3vw 0vw;
+		height: 0.1vw;
+        width: calc(100% - 2vw);
+        border-radius: 0;
+        border: initial;
+        margin-left: 1vw;
     }
     p{
         position: absolute;
@@ -160,6 +185,23 @@ export default {
         bottom: initial;
         font-size: 2.5vw;
     }
+    .Next_Button{
+		border-radius: 2.5vw;
+		background: #ac40f1;
+		border: 0.1vw solid #ac40f1;
+		color: #fff;
+		font-size: 2vw;
+		padding: 0.2vw 3vw;
+		cursor: pointer;
+		box-shadow: 0vw 0vw 0.2vw #000;
+		text-shadow: 0vw 0vw 0.1vw #000;
+        right:2vw;
+        bottom: 45%;
+        position: absolute;
+	}
+	.Next_Button:active{
+		box-shadow: inset 0.2vw 0.2vw 0.3vw #000;
+	}
     @keyframes ticker {
         0%{
             transform: translateX(43%)

@@ -5,11 +5,11 @@
 		<main>
 			<section class="workSpace">
 				<section class="progressBar">
-					<personsvg class="personSVG" :class="[{'active':this.$route.path === firstStep}, {'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}]"></personsvg>
-					<arrowsvg class="arrowSVG" :class="[{'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}]"></arrowsvg>
-					<hangersvg class="hangerSVG" :class="[{'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}]"></hangersvg>
-					<arrowsvg class="arrowSVG" :class="[{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}]"></arrowsvg>
-					<seekersvg class="seekerSVG" :class="[{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}]"></seekersvg>
+					<personsvg class="personSVG" :class="[{'active':this.$route.path === firstStep}, {'active':this.$route.path === secondStepM},{'active': this.$route.path === (secondStepW)},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}, {'active':this.$route.path === hardSkill}]"></personsvg>
+					<arrowsvg class="arrowSVG" :class="[{'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills},{'active':this.$route.path === hardSkill}]"></arrowsvg>
+					<hangersvg class="hangerSVG" :class="[{'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}, {'active':this.$route.path === hardSkill}]"></hangersvg>
+					<arrowsvg class="arrowSVG" :class="[{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}, {'active':this.$route.path === hardSkill}]"></arrowsvg>
+					<seekersvg class="seekerSVG" :class="[{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}, {'active':this.$route.path === hardSkill}]"></seekersvg>
 					<arrowsvg class="arrowSVG"></arrowsvg>
 					<awardsvg class="awardSVG"></awardsvg>
 				</section>
@@ -86,6 +86,7 @@ export default {
 			secondStepW: '/create/women_clothes',
 			justALittle:'/create/just_a_little',
 			proportionSkills:'/create/proportion_skills',
+			hardSkill: '/create/hard_skill'
 		}
 	},
 	computed:{
@@ -167,7 +168,7 @@ export default {
 			this.$router.push('/evolve/1')
 		},
 		goToNext(){
-			this.$router.push('/create/just_a_little')
+				this.$router.push('/create/just_a_little')
 		},
 		Reset(){
 			this.$router.push('/create/personalisation'),
