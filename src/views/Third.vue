@@ -28,13 +28,13 @@
 							:config="{image:hair, x:this.$store.getters.HUMAN_HEAD.posX,y:this.$store.getters.HUMAN_HEAD.posY, scale:{x:.38,y:.38}}">
 						</v-image>
 						<v-image
+							:config="{image:pants, x:this.$store.getters.HUMAN_PANTS.posX,y:this.$store.getters.HUMAN_PANTS.posY, scale:{x:.3801,y:.3801}}">
+						</v-image>
+						<v-image
 							:config="{image:shirt, x:this.$store.getters.HUMAN_SHIRT.posX,y:this.$store.getters.HUMAN_SHIRT.posY, scale:{x:.3801,y:.3801}}">
 						</v-image>
 						<v-image
 							:config="{image:shoes, x:this.$store.getters.HUMAN_SHOES.posX,y:this.$store.getters.HUMAN_SHOES.posY, scale:{x:.3801,y:.3801}}">
-						</v-image>
-						<v-image
-							:config="{image:pants, x:this.$store.getters.HUMAN_PANTS.posX,y:this.$store.getters.HUMAN_PANTS.posY, scale:{x:.3801,y:.3801}}">
 						</v-image>
 						<v-image
 							:config="{image:jacket, x:this.$store.getters.HUMAN_JACKET.posX,y:this.$store.getters.HUMAN_JACKET.posY, scale:{x:.3801,y:.3801}}">
