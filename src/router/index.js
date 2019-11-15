@@ -77,7 +77,11 @@ const routes = [
         name: 'women_clothes',
         component: () => import(/* webpackChunkName: "clothes", webpackPrefetch: true */'../components/configurator/womenClothes.vue')
       },
-      
+      {
+        path:'just_a_little',
+        name:'just_a_little',
+        component: () => import(/* webpackChunkName: "justALittle", webpackPrefetch: true */'../components/configurator/justALittle.vue')
+      }
     ]
   }
 ]

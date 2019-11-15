@@ -24,23 +24,23 @@
 						<v-image :config="{image:podium, x: 320, y:1060, scale:{x:2,y:2}}"></v-image>
 						<v-image :config="{image:question, x: 380, y:450, scale:{x:.8,y:.8}}"></v-image>
 						<v-image :config="{image:human, x: 340, y:140, scale:{x:1,y:1}}"></v-image>
-						<v-image 
-							:config="{image:hair, x:this.$store.getters.HUMAN_HEAD.posX,y:this.$store.getters.HUMAN_HEAD.posY, scale:{x:.38,y:.38}}">
-						</v-image>
 						<v-image
 							:config="{image:pants, x:this.$store.getters.HUMAN_PANTS.posX,y:this.$store.getters.HUMAN_PANTS.posY, scale:{x:.3801,y:.3801}}">
 						</v-image>
 						<v-image
-							:config="{image:shirt, x:this.$store.getters.HUMAN_SHIRT.posX,y:this.$store.getters.HUMAN_SHIRT.posY, scale:{x:.3801,y:.3801}}">
+							:config="{image:shoes, x:this.$store.getters.HUMAN_SHOES.posX,y:this.$store.getters.HUMAN_SHOES.posY, scale:{x:.3801,y:.3801}}">
 						</v-image>
 						<v-image
-							:config="{image:shoes, x:this.$store.getters.HUMAN_SHOES.posX,y:this.$store.getters.HUMAN_SHOES.posY, scale:{x:.3801,y:.3801}}">
+							:config="{image:shirt, x:this.$store.getters.HUMAN_SHIRT.posX,y:this.$store.getters.HUMAN_SHIRT.posY, scale:{x:.3801,y:.3801}}">
 						</v-image>
 						<v-image
 							:config="{image:jacket, x:this.$store.getters.HUMAN_JACKET.posX,y:this.$store.getters.HUMAN_JACKET.posY, scale:{x:.3801,y:.3801}}">
 						</v-image>
 						<v-image
 							:config="{image:accessories, x:this.$store.getters.HUMAN_ACCESSORIES.posX,y:this.$store.getters.HUMAN_ACCESSORIES.posY, scale:{x:.38,y:.38}}">
+						</v-image>
+						<v-image 
+							:config="{image:hair, x:this.$store.getters.HUMAN_HEAD.posX,y:this.$store.getters.HUMAN_HEAD.posY, scale:{x:.38,y:.38}}">
 						</v-image>
 					</v-layer>
 				</v-stage>
@@ -49,6 +49,7 @@
 		<footer>
 			<router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>Go back</router-link>
 			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW" is="button" @click="Reset" class="GoBack_button"><resetsvg class="arrowbutton"></resetsvg>Reset</router-link>
+			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW" is="button" @click="goToNext" class="GoBack_button"><arrowsvg class="arrowSVG arrowbutton"></arrowsvg>Go next</router-link>
 		</footer>
 	</div>
 </template>
@@ -162,6 +163,9 @@ export default {
 	methods: {
 		goToBack(){
 			this.$router.push('/evolve/1')
+		},
+		goToNext(){
+			this.$router.push('/create/just_a_little')
 		},
 		Reset(){
 			this.$router.push('/create/personalisation'),
