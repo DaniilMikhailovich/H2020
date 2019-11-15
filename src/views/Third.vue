@@ -5,11 +5,11 @@
 		<main>
 			<section class="workSpace">
 				<section class="progressBar">
-					<personsvg class="personSVG" :class="[{'active':this.$route.path === firstStep}, {'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW}]"></personsvg>
-					<arrowsvg class="arrowSVG" :class="[{'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW}]"></arrowsvg>
-					<hangersvg class="hangerSVG" :class="[{'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW}]"></hangersvg>
-					<arrowsvg class="arrowSVG"></arrowsvg>
-					<seekersvg class="seekerSVG"></seekersvg>
+					<personsvg class="personSVG" :class="[{'active':this.$route.path === firstStep}, {'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}]"></personsvg>
+					<arrowsvg class="arrowSVG" :class="[{'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}]"></arrowsvg>
+					<hangersvg class="hangerSVG" :class="[{'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}]"></hangersvg>
+					<arrowsvg class="arrowSVG" :class="[{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}]"></arrowsvg>
+					<seekersvg class="seekerSVG" :class="[{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}]"></seekersvg>
 					<arrowsvg class="arrowSVG"></arrowsvg>
 					<awardsvg class="awardSVG"></awardsvg>
 				</section>
@@ -84,6 +84,8 @@ export default {
 			firstStep: '/create/personalisation',
 			secondStepM: '/create/man_clothes',
 			secondStepW: '/create/women_clothes',
+			justALittle:'/create/just_a_little',
+			proportionSkills:'/create/proportion_skills',
 		}
 	},
 	computed:{
