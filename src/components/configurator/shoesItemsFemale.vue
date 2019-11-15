@@ -33,9 +33,10 @@ export default {
 		margin-bottom: 0.2vw;
 		width: 12.5vw;
 		height: 11vw;
+		border-radius: 0.5vw;
 		cursor: pointer;
 		transition: 0.5s;
-		background: linear-gradient(rgba(250, 238, 253, 0.001), rgba(247, 158, 255, 0.5));
+		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
 		border: none;
 	}
 	.button:hover {
@@ -44,10 +45,14 @@ export default {
 		transition: 0.3s;
 	}
 	img{
-		width: 100%;
+		width: 80%;
 	}
 	button:nth-of-type(3) img{
 		height :90%;
+		width: initial;
+	}
+	button:nth-of-type(4) img, button:nth-of-type(2) img{
+		height :60%;
 		width: initial;
 	}
 

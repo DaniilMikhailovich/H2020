@@ -32,12 +32,13 @@ export default {
 		height: 23vw;
 	}
 	.button{
-		margin-bottom: 0.2vw;
-		width: 9.9vw;
+		margin-bottom: 0.4vw;
+		width: 9.4vw;
+		border-radius: 0.5vw;
 		height: 11vw;
 		cursor: pointer;
 		transition: 0.3s;
-		background: linear-gradient(rgba(250, 238, 253, 0.001), rgba(247, 158, 255, 0.5));
+		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
 		border: none;
 	}
 	.button:hover {
@@ -46,7 +47,7 @@ export default {
 		transition: 0.3s;
 	}
 	img{
-		width: 70%;
+		width: 60%;
 	}
 	.button:nth-of-type(3) img, .button:nth-of-type(8) img, .button:nth-of-type(4) img{
 		height: initial;

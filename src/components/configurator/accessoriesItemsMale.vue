@@ -32,12 +32,13 @@ export default {
 		height: 23vw;
 	}
 	.button{
-		margin-bottom: 0.2vw;
-		width: 9.9vw;
-		height: 11vw;
+		margin-bottom: 0.4vw;
+		width: 9.4vw;
+		height: 10.7vw;
 		cursor: pointer;
 		transition: 0.3s;
-		background: linear-gradient(rgba(250, 238, 253, 0.001), rgba(247, 158, 255, 0.5));
+		border-radius: 0.5vw;
+		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
 		border: none;
 	}
 	.button:hover {

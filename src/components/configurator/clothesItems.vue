@@ -24,7 +24,7 @@ export default {
 <style scoped>
 	section{
 		display: flex;
-		justify-content: space-detween;
+		justify-content: space-between;
 		flex-wrap: wrap;
 		height: 23vw;
 	}
@@ -32,12 +32,13 @@ export default {
 		overflow-y: scroll;
 	}
 	.button{
-		margin-bottom: 0.2vw;
-		width: 9.9vw;
+		margin-bottom: 0.4vw;
+		width: 9.4vw;
 		height: 11vw;
 		cursor: pointer;
+		border-radius: 0.5vw;
 		transition: 0.3s;
-		background: linear-gradient(rgba(250, 238, 253, 0.001), rgba(247, 158, 255, 0.5));
+		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
 		border: none;
 	}
 	.button:hover{
@@ -46,7 +47,7 @@ export default {
 		transition: 0.3s;
 	}
 	img{
-		height: 100%;
+		height: 80%;
 	}
 
 </style>
