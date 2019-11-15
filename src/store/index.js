@@ -12,7 +12,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    gender:'female',
+    gender:'',
     humanName:'',
     humanHead:'',
     humanShirt:'',
