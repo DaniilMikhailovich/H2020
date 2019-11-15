@@ -1,6 +1,6 @@
 <template>
     <section>
-        <p class="phrase">Left just a little 😉</p>
+        <p class="phrase">{{$t('thirdPage.skills.leftjust')}}</p>
         <router-link is="button" class="Next_Button" @click="goToNext">{{$t('thirdPage.name.next')}}</router-link>
     </section>
 </template>
@@ -28,7 +28,7 @@ export default {
     }
     .phrase{
         color: #fff;
-        font-size: 7vw;
+        font-size: 5vw;
         margin-bottom: 3vw;
     }
     .Next_Button{

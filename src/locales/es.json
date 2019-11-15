@@ -46,6 +46,14 @@
     },
     "clothes": {
       "clothes": "Ropa"
+    },
+    "skills": {
+      "leftjust": "Dejado solo un poco 😉"
+    },
+    "ticker": {
+      "text1": "Distribuya los puntos disponibles en dos grupos de habilidades:",
+      "text2": "es responsable del aspecto técnico de su profesión.",
+      "text3": "es responsable de una participación exitosa en el flujo de trabajo y el trabajo en equipo."
     }
   },
   "footer": {
