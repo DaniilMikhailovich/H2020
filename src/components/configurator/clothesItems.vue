@@ -24,7 +24,7 @@ export default {
 <style scoped>
 	section{
 		display: flex;
-		justify-content: space-detween;
+		justify-content: space-between;
 		flex-wrap: wrap;
 		height: 23vw;
 	}

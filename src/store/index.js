@@ -19,7 +19,10 @@ export default new Vuex.Store({
     humanJackets:'',
     humanPants:'',
     humanShoes:'',
-    humanAccessories:''
+    humanAccessories:'',
+    sumOfSkills:1000,
+    hardSkill:0,
+    softSkills:0
     },
   getters:{
     GENDER: state => {
@@ -45,6 +48,15 @@ export default new Vuex.Store({
     },
     HUMAN_JACKET: state => {
       return state.humanJackets
+    },
+    SUMOFSKILLS:state => {
+      return state.sumOfSkills
+    },
+    HARDSKILL: state => {
+      return state.hardSkill
+    },
+    SOFTSKILLS: state => {
+      return state.softSkills
     }
   },
   mutations: {
