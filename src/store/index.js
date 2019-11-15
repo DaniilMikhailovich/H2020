@@ -83,9 +83,21 @@ export default new Vuex.Store({
     },
     SET_SHOES: (state, payload) =>{
       state.humanShoes = payload
+    },
+    SET_SOFTSKILLS: (state, payload) =>{
+      state.softSkills = payload
+    },
+    SET_HARDSKILL: (state, payload) =>{
+      state.hardSkill = payload
     }
   },
   actions: {
+    PUSH_SOFTSKILLS: async (context, payload) => {
+      context.commit('SET_SOFTSKILLS', payload)
+    },
+    PUSH_HARDSKILL: (context, payload) => {
+      context.commit('SET_HARDSKILL', payload)
+    },
     GET_GENDER: async (context, payload) => {
       context.commit('SET_GENDER', payload)
     },
