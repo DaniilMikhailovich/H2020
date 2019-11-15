@@ -4,154 +4,154 @@ export default {
             {
                 id:1,
                 src:require('../../assets/Textures/Pants/male/1.png'),
-                posX:200,
-                posY:200
+                posX:420,
+                posY:580
             },
             {
                 id:2,
                 src:require('../../assets/Textures/Pants/male/2.png'),
-                posX:200,
-                posY:200
+                posX:406,
+                posY:580
             },
             {
                 id:3,
                 src:require('../../assets/Textures/Pants/male/3.png'),
-                posX:200,
-                posY:200
+                posX:415,
+                posY:580
             },
             {
                 id:4,
                 src:require('../../assets/Textures/Pants/male/4.png'),
-                posX:200,
-                posY:200
+                posX:424,
+                posY:580
             },
             {
                 id:5,
                 src:require('../../assets/Textures/Pants/male/5.png'),
-                posX:200,
-                posY:200
+                posX:425,
+                posY:580
             },
             {
                 id:6,
                 src:require('../../assets/Textures/Pants/male/6.png'),
-                posX:200,
-                posY:200
+                posX:423,
+                posY:582
             },
             {
                 id:7,
                 src:require('../../assets/Textures/Pants/male/7.png'),
-                posX:200,
-                posY:200
+                posX:423,
+                posY:582
             },
             {
                 id:8,
                 src:require('../../assets/Textures/Pants/male/8.png'),
-                posX:200,
-                posY:200
+                posX:425,
+                posY:583
             },
             {
                 id:9,
                 src:require('../../assets/Textures/Pants/male/9.png'),
-                posX:200,
-                posY:200
+                posX:425,
+                posY:580
             },
             {
                 id:10,
                 src:require('../../assets/Textures/Pants/male/10.png'),
-                posX:200,
-                posY:200
+                posX:424,
+                posY:580
             },
         ],
         pantsFemale: [
             {
                 id:1,
                 src:require('../../assets/Textures/Pants/female/1.png'),
-                posX:200,
-                posY:200
+                posX:405,
+                posY:545
             },
             {
                 id:2,
                 src:require('../../assets/Textures/Pants/female/2.png'),
-                posX:200,
-                posY:200
+                posX:425,
+                posY:540
             },
             {
                 id:3,
                 src:require('../../assets/Textures/Pants/female/3.png'),
-                posX:200,
-                posY:200
+                posX:413,
+                posY:540
             },
             {
                 id:4,
                 src:require('../../assets/Textures/Pants/female/4.png'),
-                posX:200,
-                posY:200
+                posX:425,
+                posY:540
             },
             {
                 id:5,
                 src:require('../../assets/Textures/Pants/female/5.png'),
-                posX:200,
-                posY:200
+                posX:393,
+                posY:540
             },
             {
                 id:6,
                 src:require('../../assets/Textures/Pants/female/6.png'),
-                posX:200,
-                posY:200
+                posX:401,
+                posY:520
             },
             {
                 id:7,
                 src:require('../../assets/Textures/Pants/female/7.png'),
-                posX:200,
-                posY:200
+                posX:424,
+                posY:545
             },
             {
                 id:8,
                 src:require('../../assets/Textures/Pants/female/8.png'),
-                posX:200,
-                posY:200
+                posX:410,
+                posY:525
             },
             {
                 id:9,
                 src:require('../../assets/Textures/Pants/female/9.png'),
-                posX:200,
-                posY:200
+                posX:415,
+                posY:560
             },
             {
                 id:10,
                 src:require('../../assets/Textures/Pants/female/10.png'),
-                posX:200,
-                posY:200
+                posX:425,
+                posY:530
             },
             {
                 id:11,
                 src:require('../../assets/Textures/Pants/female/11.png'),
-                posX:200,
-                posY:200
+                posX:424,
+                posY:525
             },
             {
                 id:12,
                 src:require('../../assets/Textures/Pants/female/12.png'),
-                posX:200,
-                posY:200
+                posX:426,
+                posY:548
             },
             {
                 id:13,
                 src:require('../../assets/Textures/Pants/female/13.png'),
-                posX:200,
-                posY:200
+                posX:424,
+                posY:537
             },
             {
                 id:14,
                 src:require('../../assets/Textures/Pants/female/14.png'),
-                posX:200,
-                posY:200
+                posX:415,
+                posY:530
             },
             {
                 id:15,
                 src:require('../../assets/Textures/Pants/female/15.png'),
-                posX:200,
-                posY:200
+                posX:415,
+                posY:530
             },
         ],
     }
