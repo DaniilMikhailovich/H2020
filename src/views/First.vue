@@ -367,7 +367,6 @@ main{
 		font-size: 3vw;
 		padding: 0vw 2vw;
 		line-height: 4vw;
-		text-shadow: none;
 		box-shadow: 0vw 0vw 0.2vw #000;
 		text-shadow: 0vw 0vw 0.1vw #000;
 	}

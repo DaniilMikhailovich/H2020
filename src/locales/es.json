@@ -40,10 +40,17 @@
     },
     "name": {
       "name": "Nombre",
-      "next": "Luego"
+      "next": "Luego",
+      "placeholder": "Tu nombre favorito...?"
+      
     },
     "clothes": {
       "clothes": "Ropa"
     }
+  },
+  "footer": {
+    "GoBack": "Regresa",
+    "reset": "Reiniciar",
+    "next": "Siguiente"
   }
 }

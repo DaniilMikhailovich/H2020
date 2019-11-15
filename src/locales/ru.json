@@ -37,10 +37,16 @@
     },
     "name": {
       "name": "Имя",
-      "next": "Далее"
+      "next": "Далее",
+      "placeholder": "Твое любимое имя...?"
     },
     "clothes": {
       "clothes": "Одежда"
     }
+  },
+  "footer": {
+    "GoBack": "Назад",
+    "reset": "Сброс",
+    "next": "Далее"
   }
 }

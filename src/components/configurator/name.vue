@@ -1,7 +1,6 @@
 <template>
 	<section>
-		<input type="text" maxlength="25" v-model="humanName" placeholder="Enter the name...">
-		<!-- Роутер линк обязательно запилить вариативным в зависимости от гендера, просто пушим разные роуты в зависимости от значения gender -->
+		<input type="text" maxlength="25" v-model="humanName" :placeholder="$t('thirdPage.name.placeholder')">
 		<router-link is="button" class="Next_Button" @click="goToNext">{{$t('thirdPage.name.next')}}</router-link>
 	</section>
 </template>
@@ -31,36 +30,41 @@ export default {
 }
 </script>
 <style scoped>
-		span{
-			font-size: 60px;
-		}
-		input{
-			user-select: all;
-			outline: none;
-			background-color: transparent;
-			width: 40vw;
-			height: 5vw;
-			text-align: center;
-			font-size: 4vw;
-			border: none;
-			box-shadow: none;
-			border-bottom: 0.1vw solid #fff;
-			caret-color: #ac40f1;
-			color: #fff;
-			margin-bottom: 4vw;
-		}
-		.currentTab{
-			flex-direction: column;
-			align-items: center;
-			margin-top: 7vw;
-		}
-		.Next_Button{
-			border-radius: 2.5vw;
-			background: #ac40f1;
-			border: 0.1vw solid #ac40f1;
-			color: #fff;
-			font-size: 2.5vw;
-			padding: 0.2vw 3vw;
-			cursor: pointer;
-		}
+	span{
+		font-size: 60px;
+	}
+	input{
+		user-select: all;
+		outline: none;
+		background-color: transparent;
+		width: 40vw;
+		height: 5vw;
+		text-align: center;
+		font-size: 4vw;
+		border: none;
+		box-shadow: none;
+		border-bottom: 0.1vw solid #fff;
+		caret-color: #ac40f1;
+		color: #fff;
+		margin-bottom: 4vw;
+	}
+	.currentTab{
+		flex-direction: column;
+		align-items: center;
+		margin-top: 7vw;
+	}
+	.Next_Button{
+		border-radius: 2.5vw;
+		background: #ac40f1;
+		border: 0.1vw solid #ac40f1;
+		color: #fff;
+		font-size: 2.5vw;
+		padding: 0.2vw 3vw;
+		cursor: pointer;
+		box-shadow: 0vw 0vw 0.2vw #000;
+		text-shadow: 0vw 0vw 0.1vw #000;
+	}
+	.Next_Button:active{
+		box-shadow: inset 0.2vw 0.2vw 0.3vw #000;
+	}
 </style>

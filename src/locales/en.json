@@ -37,10 +37,16 @@
     },
     "name":{
       "name":"Name",
-      "next":"Next"
+      "next":"Next",
+      "placeholder": "Your favorite name...?"
     },
     "clothes":{
       "clothes":"Clothes"
     }
+  },
+  "footer": {
+    "GoBack": "Go Back",
+    "reset": "Reset",
+    "next": "Next"
   }
 }

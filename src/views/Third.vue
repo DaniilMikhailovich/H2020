@@ -47,9 +47,9 @@
 			</section>
 		</main>
 		<footer>
-			<router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>Go back</router-link>
-			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW" is="button" @click="Reset" class="GoBack_button"><resetsvg class="arrowbutton"></resetsvg>Reset</router-link>
-			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW" is="button" @click="goToNext" class="GoBack_button"><arrowsvg class="arrowSVG arrowbutton"></arrowsvg>Go next</router-link>
+			<router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>{{ $t("footer.GoBack")}}</router-link>
+			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW" is="button" @click="Reset" class="GoBack_button"><resetsvg class="arrowbutton"></resetsvg>{{ $t("footer.reset")}}</router-link>
+			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW" is="button" @click="goToNext" class="GoBack_button"><arrowsvg class="arrowSVG arrowbutton"></arrowsvg>{{ $t("footer.next")}}</router-link>
 		</footer>
 	</div>
 </template>
