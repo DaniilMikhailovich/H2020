@@ -15,7 +15,7 @@
           <input type="text" v-model="hardSkill" placeholder="0" maxlength="3">
       </div>
       <router-link is="button"></router-link>
-      <p>Distribute the available points into two groups of skills: <b>hard</b> is responsible for the technical side of your profession. <b>Soft</b> is resposible for successful participation in the workflow and teamwork.</p>
+      <p class="ticker">{{ $t("thirdPage.ticker.text1")}}<b> Hard </b>{{ $t("thirdPage.ticker.text2")}}<b> Soft </b>{{ $t("thirdPage.ticker.text3")}}</p>
   </section>
 </template>
 
@@ -134,6 +134,11 @@ export default {
     }
     p{
         position: absolute;
+        color: #fff;
+		font-weight: 300;
+    }
+    .ticker{
+        position: absolute;
         bottom: 1vw;
         left: 1vw;
         color: #fff;
@@ -158,7 +163,7 @@ export default {
         position: relative;
         left: initial;
         bottom: initial;
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
     @keyframes ticker {
         0%{

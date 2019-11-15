@@ -47,9 +47,11 @@
 			</section>
 		</main>
 		<footer>
-			<router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>{{ $t("footer.GoBack")}}</router-link>
+			<div class="leftButtonGroup">
+				<router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>{{ $t("footer.GoBack")}}</router-link>
 			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW" is="button" @click="Reset" class="GoBack_button"><resetsvg class="arrowbutton"></resetsvg>{{ $t("footer.reset")}}</router-link>
-			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW" is="button" @click="goToNext" class="GoBack_button"><arrowsvg class="arrowSVG arrowbutton"></arrowsvg>{{ $t("footer.next")}}</router-link>
+			</div>
+			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW" is="button" @click="goToNext" class="GoNext_button">{{ $t("footer.next")}}<arrowsvg class="arrowright"></arrowsvg></router-link>
 		</footer>
 	</div>
 </template>
@@ -278,8 +280,13 @@ export default {
 }
 footer{
 	display: flex;
-	width: 95vw;
-	align-items: flex-start;
+	width: 94vw;
+	align-items: center;
+	justify-content: space-between;
+}
+.leftButtonGroup{
+	display: flex;
+	justify-content: flex-start;
 }
 .progressBar{
 	height: 6vw;
@@ -359,12 +366,39 @@ header{
 		border-radius: 3vw;
 		display: flex;
 		align-items: center;
-		margin-left: 1vw;
+		margin-right: 1vw;
+	}
+	.GoNext_button{
+		background-color: #ac40f1;
+		border: none;
+		font-size: 1.5vw;
+		color: #fff;
+		font-weight: 300;
+		cursor: pointer;
+		z-index: 100;
+		box-shadow: 0vw 0vw 15vw 1vw #000;
+		padding: 0.3vw 2vw;
+		border-radius: 3vw;
+		display: flex;
+		align-items: center;
+		margin-right: initial;
+		margin-bottom: 1vw;
+		box-shadow: 0vw 0vw 0.2vw #000;
+		text-shadow: 0vw 0vw 0.1vw #000;
+	}
+	.GoNext_button:active{
+		box-shadow: inset 0.2vw 0.2vw 0.3vw #000;
 	}
 	.arrowbutton{
 		width: 1.5vw;
 		fill: #fff;
 		margin-right: 0.5vw;
+	}
+	.arrowright{
+		width: 1.5vw;
+		fill: #fff;
+		margin-left: 0.5vw;
+		transform: rotate(180deg);
 	}
 }
 </style>
