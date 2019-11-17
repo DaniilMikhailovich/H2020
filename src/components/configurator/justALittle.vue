@@ -2,7 +2,6 @@
     <section>
         <p class="phrase">{{$t('thirdPage.skills.leftjust')}}</p>
         <router-link is="button" class="Next_Button" @click="goToNext">{{$t('thirdPage.name.next')}}</router-link>
-        <input type="range">
     </section>
 </template>
 

@@ -12,11 +12,6 @@
 <script>
 export default {
 	name:'hardSkill',
-	data(){
-		return{
-			buttonTrigger:true
-		}
-	},
 	components:{
 		hardskillitems: () => import(/* webpackChunkName: "hardskillitems", webpackPrefetch: true */ '../configurator/hardSkillItems.vue')
 	},
@@ -24,6 +19,11 @@ export default {
 		array(){
 			return this.$store.state.hardSkillArray.hardSkill
 		},
+		buttonTrigger(){
+			if(this.$store.getters.HARDSKILLNAME !== ''){
+				return true
+			} return false
+		}
 	},
 	methods:{
         goToNext(){

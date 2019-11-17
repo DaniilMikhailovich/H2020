@@ -13,7 +13,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    gender:'',
+    gender:'male',
     humanName:'',
     humanHead:'',
     humanShirt:'',
@@ -25,9 +25,21 @@ export default new Vuex.Store({
     hardSkillPoints:0,
     softSkillsPoints:0,
     hardSkillName:'',
-    softSkillResult:''
+    Initiative: '',
+    Creativity:'',
+    Adaptability:'',
+    Reflection:'',
+    Multitasking:'',
+    ListeningSkills:'',
+    Teamwork:'',
+    CriticalThinking:'',
+    TimeManagement:'',
+    humanImg:null
     },
   getters:{
+    HUMAN_IMG: state =>{
+      return state.humanImg
+    },
     GENDER: state => {
       return state.gender
     },
@@ -95,13 +107,52 @@ export default new Vuex.Store({
     },
     SET_HARDSKILL: (state, payload) =>{
       state.hardSkillPoints = payload
-    }
+    },
+    SET_HARDSKILL_NAME: (state, payload) =>{
+      state.hardSkillName = payload
+    },
+    SET_INITIATIVE: (state, payload) =>{
+      state.Initiative = payload
+    },
+    SET_CREATIVITY: (state, payload) =>{
+      state.Creativity = payload
+    },
+    SET_ADAPTABILITY: (state, payload) =>{
+      state.Adaptability = payload
+    },
+    SET_REFLECTION: (state, payload) =>{
+      state.Reflection = payload
+    },
+    SET_MULTITASKING: (state, payload) =>{
+      state.Multitasking = payload
+    },
+    SET_LISTENING: (state, payload) =>{
+      state.ListeningSkills = payload
+    },
+    SET_TEAMWORK: (state, payload) =>{
+      state.Teamwork = payload
+    },
+    SET_CRITICAL: (state, payload) =>{
+      state.CriticalThinking = payload
+    },
+    SET_TIMEMANAGEMENT: (state, payload) =>{
+      state.TimeManagement = payload
+    },
+    SET_HUMANIMG: (state, payload) =>{
+      state.humanImg = payload
+    },
   },
   actions: {
+    PUSH_HUMANIMG: (context, payload) =>{
+      context.commit('SET_HUMANIMG', payload)
+    },
+    PUSH_HARDSKILL_NAME: (context, payload) =>{
+      context.commit('SET_HARDSKILL_NAME', payload)
+    },
     PUSH_SOFTSKILLS: async (context, payload) => {
       context.commit('SET_SOFTSKILLS', payload)
     },
-    PUSH_HARDSKILL: (context, payload) => {
+    PUSH_HARDSKILL: async (context, payload) => {
       context.commit('SET_HARDSKILL', payload)
     },
     GET_GENDER: async (context, payload) => {
@@ -127,7 +178,34 @@ export default new Vuex.Store({
     },
     PUSH_SHOES: async (context, payload) =>{
       context.commit('SET_SHOES', payload)
-    }
+    },
+    PUSH_INITIATIVE: async (context, payload) =>{
+      context.commit('SET_INITIATIVE', payload)
+    },
+    PUSH_CREATIVITY: async (context, payload) =>{
+      context.commit('SET_CREATIVITY', payload)
+    },
+    PUSH_ADAPTABILITY: async (context, payload) =>{
+      context.commit('SET_ADAPTABILITY', payload)
+    },
+    PUSH_REFLECTION: async (context, payload) =>{
+      context.commit('SET_REFLECTION', payload)
+    },
+    PUSH_MULTITASKING: async (context, payload) =>{
+      context.commit('SET_MULTITASKING', payload)
+    },
+    PUSH_LISTENING: async (context, payload) =>{
+      context.commit('SET_LISTENING', payload)
+    },
+    PUSH_TEAMWORK: async (context, payload) =>{
+      context.commit('SET_TEAMWORK', payload)
+    },
+    PUSH_CRITICAL: async (context, payload) =>{
+      context.commit('SET_CRITICAL', payload)
+    },
+    PUSH_TIMEMANAGEMENT: async (context, payload) =>{
+      context.commit('SET_TIMEMANAGEMENT', payload)
+    },
   },
   modules:{
     hairArrayMale,

@@ -3,41 +3,51 @@
         <h1 class="clothesTitle">SOFT Skill</h1>
         <hr class="separate">
         <div class="skillItem">
-            <p>Skill 1</p>
+            <p>Инициативность</p>
             <input type="range" min="0" max="100" v-model.number=skill1 class="range" :style= "{ background: 'linear-gradient(to right, #ac40f1 0%, #ac40f1 '+skill1Gradient+'%, #fff '+skill1Gradient+'%, #fff 100%)'}">
+            <p class="percent">{{ skill1 }}%</p>
         </div>
         <div class="skillItem">
-            <p>Skill 2</p>
+            <p>Креативность</p>
             <input type="range" min="0" max="100" v-model.number=skill2 class="range" :style= "{ background: 'linear-gradient(to right, #ac40f1 0%, #ac40f1 '+skill2Gradient+'%, #fff '+skill2Gradient+'%, #fff 100%)'}">
+            <p class="percent">{{ skill2 }}%</p>
         </div>
         <div class="skillItem">
-            <p>Skill 3</p>
+            <p>Адаптируемость</p>
             <input type="range" min="0" max="100" v-model.number=skill3 class="range" :style= "{ background: 'linear-gradient(to right, #ac40f1 0%, #ac40f1 '+skill3Gradient+'%, #fff '+skill3Gradient+'%, #fff 100%)'}">
+            <p class="percent">{{ skill3 }}%</p>
         </div>
         <div class="skillItem">
-            <p>Skill 4</p>
+            <p>Рефлексия</p>
             <input type="range" min="0" max="100" v-model.number=skill4 class="range" :style= "{ background: 'linear-gradient(to right, #ac40f1 0%, #ac40f1 '+skill4Gradient+'%, #fff '+skill4Gradient+'%, #fff 100%)'}">
+            <p class="percent">{{ skill4 }}%</p>
         </div>
         <div class="skillItem">
-            <p>Skill 5</p>
+            <p>Многозадачность</p>
             <input type="range" min="0" max="100" v-model.number=skill5 class="range" :style= "{ background: 'linear-gradient(to right, #ac40f1 0%, #ac40f1 '+skill5Gradient+'%, #fff '+skill5Gradient+'%, #fff 100%)'}">
+            <p class="percent">{{ skill5 }}%</p>
         </div>
         <div class="skillItem">
-            <p>Skill 6</p>
+            <p>Умение слушать</p>
             <input type="range" min="0" max="100" v-model.number=skill6 class="range" :style= "{ background: 'linear-gradient(to right, #ac40f1 0%, #ac40f1 '+skill6Gradient+'%, #fff '+skill6Gradient+'%, #fff 100%)'}">
+            <p class="percent">{{ skill6 }}%</p>
         </div>
         <div class="skillItem">
-            <p>Skill 7</p>
+            <p>Работа в команде</p>
             <input type="range" min="0" max="100" v-model.number=skill7 class="range" :style= "{ background: 'linear-gradient(to right, #ac40f1 0%, #ac40f1 '+skill7Gradient+'%, #fff '+skill7Gradient+'%, #fff 100%)'}">
+            <p class="percent">{{ skill7 }}%</p>
         </div>
         <div class="skillItem">
-            <p>Skill 8</p>
+            <p>Критичность мышления</p>
             <input type="range" min="0" max="100" v-model.number=skill8 class="range" :style= "{ background: 'linear-gradient(to right, #ac40f1 0%, #ac40f1 '+skill8Gradient+'%, #fff '+skill8Gradient+'%, #fff 100%)'}">
+            <p class="percent">{{ skill8 }}%</p>
         </div>
         <div class="skillItem">
-            <p>Skill 9</p>
+            <p>Тайм-менеджмент</p>
             <input type="range" min="0" max="100" v-model.number=skill9 class="range" :style= "{ background: 'linear-gradient(to right, #ac40f1 0%, #ac40f1 '+skill9Gradient+'%, #fff '+skill9Gradient+'%, #fff 100%)'}">
+            <p class="percent">{{ skill9 }}%</p>
         </div>
+        <router-view></router-view>
     </section>
 </template>
 
@@ -137,40 +147,64 @@ export default {
         skill9Value(){
             return Math.round((this.skill9*this.onePercentPrice)/this.priceOfRange)
         },
-
-
-    }
+        controllSum(){
+            return this.skill1Value+this.skill2Value+this.skill3Value+this.skill4Value+this.skill5Value+this.skill6Value+this.skill7Value+this.skill8Value+this.skill9Value
+        }
+    },
+    updated(){
+        this.$store.dispatch('PUSH_INITIATIVE', this.skill1Value)
+        this.$store.dispatch('PUSH_CREATIVITY', this.skill2Value)
+        this.$store.dispatch('PUSH_ADAPTABILITY', this.skill3Value)
+        this.$store.dispatch('PUSH_REFLECTION', this.skill4Value)
+        this.$store.dispatch('PUSH_MULTITASKING', this.skill5Value)
+        this.$store.dispatch('PUSH_LISTENING', this.skill6Value)
+        this.$store.dispatch('PUSH_TEAMWORK', this.skill7Value)
+        this.$store.dispatch('PUSH_CRITICAL', this.skill8Value)
+        if(this.controllSum>this.softSkills){
+            this.$store.dispatch('PUSH_TIMEMANAGEMENT', this.skill9Value-1)
+        }else if(this.controllSum<this.softSkills){
+            this.$store.dispatch('PUSH_TIMEMANAGEMENT', this.skill9Value+1)
+        } else {this.$store.dispatch('PUSH_TIMEMANAGEMENT', this.skill9Value)}
+    },
 }
 </script>
 
 <style scoped>
     section{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
         padding: 1vw;
     }
     .skillItem{
         width: 15vw;
-        height: 7vw;
+        height: 8vw;
         border-radius: 0.5vw;
 		transition: 0.3s;
 		background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
 		border: none;
         margin-bottom: 1vw;
         display: flex;
-        justify-content:center;
+        justify-content:space-around;
         align-items: center;
         flex-direction: column;
         box-shadow: 0vw 0vw 1.5vw#000;
     }
     p{
-        font-size: 2vw;
-        margin-bottom: 1vw;
+        font-size: 1.4vw;
+        margin: 0;
         font-weight: 300;
         color: #fff;
         text-shadow: 0vw 0vw 1vw#000;
+        text-align: center;
+    }
+    .percent{
+        font-size: 1.2vw;
+        background: none;
+        background-color: rgba(56, 56, 56, 0.342);
+        border-radius: 2vw;
+        padding:0 1vw;
     }
     .rangeSlider{
         width: 30%;
