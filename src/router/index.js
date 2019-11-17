@@ -92,6 +92,11 @@ const routes = [
         name: 'hard_skill',
         component: () => import(/* webpackChunkName: "hardSkill", webpackPrefetch: true */'../components/configurator/hardSkill.vue')
 
+      },
+      {
+        path: 'soft_skill',
+        name: 'soft_skill',
+        component: () => import(/* webpackChunkName: "softSkill", webpackPrefetch: true */'../components/configurator/softSkill.vue')
       }
     ]
   }

@@ -20,7 +20,7 @@
 			<section class="canvascontainer" ref="canvascontainer">
 				<v-stage ref="stage" :config="stage">
 					<v-layer>
-						<v-text :config="{text: name, fontSize:60, x:posX, y:20}"></v-text>
+						<v-text :config="{text: name, fontSize:60, x:posX, y:20, fill:'#ac40f1'}"></v-text>
 						<v-image :config="{image:podium, x: 320, y:1060, scale:{x:2,y:2}}"></v-image>
 						<v-image :config="{image:question, x: 380, y:450, scale:{x:.8,y:.8}}"></v-image>
 						<v-image :config="{image:human, x: 340, y:140, scale:{x:1,y:1}}"></v-image>

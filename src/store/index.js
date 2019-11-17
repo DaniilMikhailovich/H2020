@@ -7,6 +7,7 @@ import shirtsArray from './modules/shirtsArray'
 import pantsArray from './modules/pantsArray'
 import accessoriesArray from './modules/accessoriesArray'
 import shoesArray from './modules/shoesArray'
+import hardSkillArray from './modules/hardSkillArray'
 
 Vue.use(Vuex)
 
@@ -21,8 +22,10 @@ export default new Vuex.Store({
     humanShoes:'',
     humanAccessories:'',
     sumOfSkills:1000,
-    hardSkill:0,
-    softSkills:0
+    hardSkillPoints:0,
+    softSkillsPoints:0,
+    hardSkillName:'',
+    softSkillResult:''
     },
   getters:{
     GENDER: state => {
@@ -53,10 +56,13 @@ export default new Vuex.Store({
       return state.sumOfSkills
     },
     HARDSKILL: state => {
-      return state.hardSkill
+      return state.hardSkillPoints
     },
     SOFTSKILLS: state => {
-      return state.softSkills
+      return state.softSkillsPoints
+    },
+    HARDSKILLNAME: state => {
+      return state.hardSkillName
     }
   },
   mutations: {
@@ -85,10 +91,10 @@ export default new Vuex.Store({
       state.humanShoes = payload
     },
     SET_SOFTSKILLS: (state, payload) =>{
-      state.softSkills = payload
+      state.softSkillsPoints = payload
     },
     SET_HARDSKILL: (state, payload) =>{
-      state.hardSkill = payload
+      state.hardSkillPoints = payload
     }
   },
   actions: {
@@ -131,5 +137,6 @@ export default new Vuex.Store({
     pantsArray,
     accessoriesArray,
     shoesArray,
+    hardSkillArray
   },
 })

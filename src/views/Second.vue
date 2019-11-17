@@ -31,8 +31,8 @@
 			updateWidth(){
 				this.width = window.innerWidth
 				if(this.width <= 999){
-          this.$router.push('/evolve/1')
-        }
+					this.$router.push('/evolve/1')
+					}
 			},
 		},
 		created(){
