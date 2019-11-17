@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section :class="[{scrollM:items.length >=1},{scrollD:items.length >=11}]">
 		<button class="button"
 			v-for="item in items"
 			v-bind:key="item.id"
@@ -25,33 +25,82 @@ export default {
 <style scoped>
 	section{
 		display: flex;
-		justify-content: space-around;
-		flex-wrap: wrap;
-		padding: 1vw;
-		overflow-y: scroll;
-		height: 23vw;
+		overflow: hidden;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		height: 45vw;
+	}
+	.scrollM{
+		overflow-x: scroll;
 	}
 	.button{
 		margin-bottom: 0.4vw;
-		width: 9.4vw;
-		height: 10.7vw;
+		width: 35vw;
+		height: 40vw;
+		margin: 2vw 1vw 0vw 0vw;
 		cursor: pointer;
-		transition: 0.3s;
+		flex-shrink: 0;
 		border-radius: 0.5vw;
+		transition: 0.3s;
 		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
 		border: none;
+		outline: none;
+		border-radius: 1vw;
 	}
-	.button:hover {
+	.button::-moz-focus-outer{
+		border: none;
+	}
+	.button:hover{
 		transform: scale(1.1);
 		background: none;
 		transition: 0.3s;
 	}
 	img{
-		width: 80%;
+		height: 20%;
 	}
-	button:nth-of-type(4) img{
+	button:nth-of-type(11) img{
+		width: 90%;
+	}
+@media screen and (min-width: 760px) and (max-width: 999px) {
+}
+
+
+@media screen and (min-width: 1000px), (orientation: landscape){
+	section{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		height: 23vw;
+	}
+	.scrollD{
+		overflow-y: scroll;
+	}
+	.scrollM{
+		overflow-x: hidden;
+	}
+	.button{
+		margin-bottom: 0.4vw;
+		cursor: pointer;
+		transition: 0.3s;
+		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
+		border: none;
+		outline: none;
+		border-radius: 1vw;
+		width: 9.7vw;
+		height: 10.8vw;
+		border-radius: 0.5vw;
+		margin: 0vw 0vw 0.4vw 0vw;
+	}
+	.button:hover{
+		transform: scale(1.1);
+		background: none;
+		transition: 0.3s;
+	}
+	img{
 		height: 80%;
+	}
+	button:nth-of-type(11) img{
 		width: initial;
 	}
-
+}
 </style>

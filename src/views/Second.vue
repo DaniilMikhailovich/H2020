@@ -6,10 +6,6 @@
 </template>
 
 <script>
-// import '@/components/desktopSecond.vue'
-// const DesktopSecond = () => import(/* webpackChunkName: "desktopsecond" */ '../components/desktopSecond.vue')
-// import '@/components/mobileSecond.vue'
-// const MobileSecond = () => import(/* webpackChunkName: "mobilesecond" */ '../components/mobileSecond.vue')
 	export default{
 		name: 'secondPage',
 		components:{
@@ -40,10 +36,10 @@
 			},
 		},
 		created(){
-			window.addEventListener('resize', this.updateWidth)
+			// window.addEventListener('resize', this.updateWidth)
 		},
 		beforeDestroy(){
-			window.removeEventListener('resize', this.updateWidth)
+			// window.removeEventListener('resize', this.updateWidth)
 		}
 	}
 </script>

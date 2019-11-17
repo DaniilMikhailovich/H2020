@@ -37,7 +37,58 @@ export default {
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
-		padding: 1vw;
+		padding: 3vw 1.5vw;
+	}
+	.button{
+		outline: none;
+		position: relative;
+		display: inline-block;
+		color: #E0FFFF;
+		overflow: hidden;
+		background-color: #cdcdcd;
+		border-radius: 1vw;
+		border: none;
+		padding: 0.5vw 2vw;
+		font-size: 6vw;
+		cursor: pointer;
+		width: 47vw;
+		height: 10vw;
+		outline: none;
+	}
+	button:focus{
+		border: 0.15vw solid #ac40f1;
+		padding: 0.35vw 1.85vw;
+	}
+	.currentTab{
+		flex-basis: 100%;
+		padding: 3vw 0;
+		justify-content: space-around;
+	}
+	.button:hover{
+		background-color: #ac40f1;
+	}
+	.button.active{
+		background-color: #ac40f1;
+	}
+	.v-enter-active {
+		transition: opacity .2s;
+	}
+	.v-leave-active{
+		transition: opacity .2s;
+	}
+	.v-enter, .v-leave-to{
+		opacity: 0;
+	}
+@media screen and (min-width: 760px) and (max-width: 999px) {
+}
+
+
+@media screen and (min-width: 1000px), (orientation: landscape){
+	section{
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		padding: 1vw ;
 		margin-top: 1vw;
 	}
 	.button{
@@ -50,7 +101,7 @@ export default {
 		border-radius: 0.5vw;
 		border: none;
 		padding: 0.5vw 2vw;
-		font-size: 1.5vw;
+		font-size: 2.5vw;
 		cursor: pointer;
 		box-shadow: 3vw 3vw 10vw #000;
 		width: 25vw;
@@ -76,4 +127,5 @@ export default {
 	.v-enter, .v-leave-to{
 		opacity: 0;
 	}
+}
 </style>

@@ -31,24 +31,45 @@ export default {
 	}
 	.button{
 		margin-bottom: 0.4vw;
-		width: 9.4vw;
-		height: 8.5vw;
+		width: 18vw;
+		height: 17vw;
 		border-radius: 0.5vw;
 		cursor: pointer;
 		transition: 0.5s;
 		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
 		border: none;
+		margin-top: 0.5vw;
+		outline: none;
 	}
 	.button:hover {
 		transform: scale(1.1);
 		background: none;
 		transition: 0.3s;
 	}
-	.button:nth-of-type(3) img{
+	.button:focus {
+		border: 0.1vw solid #ac40f1;
+	}
+	.button:nth-of-type(3) img, .button:nth-of-type(6) img{
     height: initial;
     width: 80%;
 	}
 	img{
 		height: 60%;
+	}
+	@media screen and (min-width: 760px) and (max-width: 999px) {
+	}
+	@media screen and (min-width: 1000px), (orientation: landscape){
+		.button{
+			width: 9.4vw;
+			height: 8.5vw;
+			margin-top: 0vw;
+		}
+		.button:nth-of-type(3) img{
+			height: initial;
+			width: 80%;
+		}
+		img{
+			height: 60%;
+		}
 	}
 </style>

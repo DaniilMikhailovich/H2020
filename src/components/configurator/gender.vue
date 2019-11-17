@@ -31,6 +31,42 @@ export default {
 
 <style scoped>
 .malesvg, .femalesvg{
+	width: 46vw;
+	fill: #5bc8ff;
+}
+.femalesvg{
+	fill: #f5a9a9
+}
+button{
+	background-color: #fff;
+	position: relative;
+	border: none;
+	border-radius: 1vw;
+	padding: 1vw;
+	cursor: pointer;
+	height: 51vw;
+	width: 47vw;
+	outline: none;
+	background-color: rgb(226, 226, 226);
+}
+button:focus{
+	border: 0.15vw solid #ac40f1;
+	padding: 0.85vw;
+}
+p{
+	position: absolute;
+	bottom: 1vw;
+	right: 1vw;
+	font-size: 4vw;
+	font-weight: 400;
+	color: #ac40f1;
+}
+@media screen and (min-width: 760px) and (max-width: 999px) {
+}
+
+
+@media screen and (min-width: 1000px), (orientation: landscape){
+	.malesvg, .femalesvg{
 	width: 22vw;
 	fill: #5bc8ff;
 }
@@ -49,9 +85,9 @@ button{
 }
 p{
 	position: absolute;
-	bottom: 0.5vw;
-	right: 0.5vw;
-	font-size: 1.5vw;
+	font-size: 2vw;
 	font-weight: 200;
+	color: #ac40f1;
+}
 }
 </style>

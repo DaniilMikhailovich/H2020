@@ -145,7 +145,7 @@ html{
 }
 #app{
 	width: 100vw;
-	height: 100vh;
+	height: calc(100vh - 55px);
 	background: linear-gradient(rgb(0, 247, 255), rgb(100, 255, 131));
 	font-family: 'Source', sans-serif;
 	overflow: hidden;
@@ -163,7 +163,7 @@ html{
 }
 main{
 	position: relative;
-	height: 100%;
+	height: 100vh;
 	width: 100vw;
 	display: flex;
 	flex-direction: column;

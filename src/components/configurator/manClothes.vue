@@ -49,27 +49,30 @@ export default {
 <style scoped>
 	section{
 		display: flex;
-		justify-content: flex-start;
+		justify-content: space-around;
 		align-items: flex-start;
 		flex-wrap: wrap;
 		padding: 1vw;
+		width: 100%;
 	}
 	.clothesTitle{
 		flex-basis: 100%;
-		color: #fff;
-		font-size: 3vw;
+		color: #ac40f1;
+		font-size: 6vw;
 		font-weight: 300;
 	}
 	.separate{
 		margin: 1vw 0vw;
 		flex-basis: 100%;
 		height: 0.1vw;
+		border: 0.1vw solid #ac40f1;
+		margin-bottom: 2vw;
 	}
 	.hairstylesvg, .shirtsvg, .accessoriessvg{
-		width: 2vw;
+		width: 5vw;
 	}
 	.suitsvgm, .pantssvg, .shoessvg{
-		width: 3vw;
+		width: 6vw;
 	}
 	.hairstylesvg.active, .shirtsvg.active, .pantssvg.active, .accessoriessvg.active, .suitsvgm.active, .shoessvg.active{
 		fill: #ffffff;
@@ -79,6 +82,7 @@ export default {
 	}
 	.button{
 		outline: none;
+		border-radius: 0.5vw;
 		position: relative;
 		display: inline-block;
 		color: #E0FFFF;
@@ -90,20 +94,15 @@ export default {
 		padding: 0.5vw 0.5vw;
 		font-size: 1.5vw;
 		cursor: pointer;
-		width: 8.8vw;
-		height: 4vw;
+		width: 10vw;
+		height: 10vw;
 	}
 	.button:hover{
 		background-color: #ac40f1;
 	}
 	.button.active{
 		background-color: #ac40f1;
-		border: 0.1vw solid #fff;
-		border-bottom: none;
-		box-shadow: 0vw 0vw 2vw#000;
-	}
-	.button:not(.active){
-		border-bottom: 0.1vw solid #fff;
+		box-shadow: 0vw 0vw 1vw#000;
 	}
 	.v-enter-active, .v-leave-active{
 		transition: opacity .2s;
@@ -111,4 +110,40 @@ export default {
 	.v-enter, .v-leave-to{
 		opacity: 0;
 	}
+@media screen and (min-width: 760px) and (max-width: 999px) {
+}
+
+
+@media screen and (min-width: 1000px), (orientation: landscape){
+	section{
+		justify-content: flex-start;
+	}
+	.clothesTitle{
+		color: #fff;
+		font-size: 3vw;
+	}
+	.separate{
+		border: 0.1vw solid #fff;
+		margin-bottom: 1vw;
+	}
+	.hairstylesvg, .shirtsvg, .accessoriessvg{
+		width: 2vw;
+	}
+	.suitsvgm, .pantssvg, .shoessvg{
+		width: 3vw;
+	}
+	.button{
+		border-radius: initial;
+		width: 8.8vw;
+		height: 4vw;
+	}
+	.button.active{
+		border: 0.1vw solid #fff;
+		border-bottom: none;
+		box-shadow: 0vw 0vw 2vw#000;
+	}
+	.button:not(.active){
+		border-bottom: 0.1vw solid #fff;
+	}
+}
 </style>

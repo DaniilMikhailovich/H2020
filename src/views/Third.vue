@@ -272,14 +272,14 @@ export default {
 
 <style scoped>
 .personSVG, .awardSVG, .seekerSVG, .hangerSVG{
-	height: 5.5vw;
+	height: 8vw;
 }
 .arrowSVG{
-	height: 3vw;
-	transform: rotate(180deg);
+	height: 5vw;
+	transform: rotate(270deg);
 }
 footer{
-	display: flex;
+	display: none;
 	width: 94vw;
 	align-items: center;
 	justify-content: space-between;
@@ -289,44 +289,47 @@ footer{
 	justify-content: flex-start;
 }
 .progressBar{
-	height: 6vw;
-	width: 55vw;
+	height: 70vw;
+	right: 10vw;
+	bottom: 50%;
+	position: absolute;
+	z-index: 0;
 	border-radius: .3vw;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	fill: rgb(189, 189, 189);
+	fill: rgb(138, 138, 138);
 }
 .active{
-	fill: #fff;
+	fill: rgb(255, 255, 255);
 }
 .configurator{
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	height: 35vw;
-	width: 55vw;
+	height: 70vw;
+	width: 100vw;
 	border-radius: .5vw;
-	background-color: rgba(0, 0, 0, 0.25);
-}
-.canvascontainer{
-	height: 41vw;
-	width: 32vw;
-	border-radius: .5vw;
+	z-index: 999;
 	background-color: rgb(255, 255, 255);
 }
+.canvascontainer{
+	height: 85vw;
+	width: 66.4vw;
+}
 .workSpace{
-	display: flex;
-	flex-direction: column;
+	order: 2;
 }
 #app{
 	display: flex;
+	height: calc(100vh - 55px);
 }
 main{
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	flex-direction: column;
+	/* flex-wrap: wrap; */
+	justify-content: flex-end;
 	align-items: center;
 }
 header{
@@ -344,6 +347,53 @@ header{
 .GoBack_button{
 	margin-bottom: 1vw;
 }
+.GoBack_button{
+	background: none;
+	border: none;
+	font-size: 1.5vw;
+	color: #fff;
+	font-weight: 300;
+	cursor: pointer;
+	z-index: 100;
+	box-shadow: 0vw 0vw 15vw 1vw #000;
+	padding: 0.3vw 2vw;
+	border-radius: 3vw;
+	display: flex;
+	align-items: center;
+	margin-right: 1vw;
+}
+.GoNext_button{
+	background-color: #ac40f1;
+	border: none;
+	font-size: 1.5vw;
+	color: #fff;
+	font-weight: 300;
+	cursor: pointer;
+	z-index: 100;
+	box-shadow: 0vw 0vw 15vw 1vw #000;
+	padding: 0.3vw 2vw;
+	border-radius: 3vw;
+	display: flex;
+	align-items: center;
+	margin-right: initial;
+	margin-bottom: 1vw;
+	box-shadow: 0vw 0vw 0.2vw #000;
+	text-shadow: 0vw 0vw 0.1vw #000;
+}
+.GoNext_button:active{
+	box-shadow: inset 0.2vw 0.2vw 0.3vw #000;
+}
+.arrowbutton{
+	width: 1.5vw;
+	fill: #fff;
+	margin-right: 0.5vw;
+}
+.arrowright{
+	width: 1.5vw;
+	fill: #fff;
+	margin-left: 0.5vw;
+	transform: rotate(180deg);
+}
 @media screen and (min-width: 760px) and (max-width: 999px) {
 }
 
@@ -353,52 +403,69 @@ header{
 		transform: rotate(-10deg);
 		font-size: 45vw;
 	}
-	.GoBack_button{
-		background: none;
-		border: none;
-		font-size: 1.5vw;
-		color: #fff;
-		font-weight: 300;
-		cursor: pointer;
-		z-index: 100;
-		box-shadow: 0vw 0vw 15vw 1vw #000;
-		padding: 0.3vw 2vw;
-		border-radius: 3vw;
-		display: flex;
-		align-items: center;
-		margin-right: 1vw;
+	main{
+		height: 100vh;
+		flex-direction: row;
+		justify-content: space-around;
 	}
-	.GoNext_button{
-		background-color: #ac40f1;
-		border: none;
-		font-size: 1.5vw;
-		color: #fff;
-		font-weight: 300;
-		cursor: pointer;
-		z-index: 100;
-		box-shadow: 0vw 0vw 15vw 1vw #000;
-		padding: 0.3vw 2vw;
-		border-radius: 3vw;
-		display: flex;
-		align-items: center;
-		margin-right: initial;
-		margin-bottom: 1vw;
-		box-shadow: 0vw 0vw 0.2vw #000;
-		text-shadow: 0vw 0vw 0.1vw #000;
+	.personSVG, .awardSVG, .seekerSVG, .hangerSVG{
+		height: 5.5vw;
 	}
-	.GoNext_button:active{
-		box-shadow: inset 0.2vw 0.2vw 0.3vw #000;
-	}
-	.arrowbutton{
-		width: 1.5vw;
-		fill: #fff;
-		margin-right: 0.5vw;
-	}
-	.arrowright{
-		width: 1.5vw;
-		fill: #fff;
-		margin-left: 0.5vw;
+	.arrowSVG{
+		height: 3vw;
 		transform: rotate(180deg);
+	}
+	footer{
+		display: flex;
+		width: 94vw;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.leftButtonGroup{
+		display: flex;
+		justify-content: flex-start;
+	}
+	.progressBar{
+		height: 6vw;
+		width: 55vw;
+		border-radius: .3vw;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		fill: rgb(189, 189, 189);
+		height: 6vw;
+		right: initial;
+		top: initial;
+		position: initial;
+		flex-direction: row;
+	}
+	.active{
+		fill: #fff;
+	}
+	.configurator{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		height: 35vw;
+		width: 55vw;
+		border-radius: .5vw;
+		background-color: rgba(0, 0, 0, 0.25);
+	}
+	.canvascontainer{
+		height: 41vw;
+		order: 2;
+		width: 32vw;
+		border-radius: .5vw;
+		background-color: rgb(255, 255, 255);
+	}
+	.workSpace{
+		order: 2;
+		display: flex;
+		flex-direction: column;
+	}
+	#app{
+		display: flex;
+		height: 100vh;
 	}
 }
 </style>

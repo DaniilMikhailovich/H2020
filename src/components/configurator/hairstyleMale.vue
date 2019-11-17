@@ -77,15 +77,17 @@ export default {
         flex-basis: 100%;
     }
     .button{
-        width: 3vw;
-        height: 3vw;
+        width: 8vw;
+        height: 8vw;
         border-radius: 50%;
         border: none;
         cursor: pointer;
+        margin: 1vw 0vw 0.5vw 0vw;
+        outline: none;
     }
-    .button.active{
-        border: 1px solid #fff;
-    }
+    .button:focus, .button.active {
+		border: 0.2vw solid #ac40f1;
+	}
     .black{
         background-color: #202020;
     }
@@ -106,5 +108,21 @@ export default {
     }
     .red{
         background-color: #5c2f00;
+    }
+    @media screen and (min-width: 760px) and (max-width: 999px) {
+    }
+    @media screen and (min-width: 1000px), (orientation: landscape){
+        section{
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .button{
+            width: 3vw;
+            height: 3vw;
+            margin: 0vw 0vw 0vw 0vw;
+        }
+        .button.active{
+            border: 0.2vw solid #fff;
+        }
     }
 </style>
