@@ -86,6 +86,12 @@ const routes = [
         path: 'proportion_skills',
         name: 'proportion_skills',
         component: () => import(/* webpackChunkName: "proportionSkills", webpackPrefetch: true */'../components/configurator/proportionSkills.vue')
+      },
+      {
+        path: 'hard_skill',
+        name: 'hard_skill',
+        component: () => import(/* webpackChunkName: "hardSkill", webpackPrefetch: true */'../components/configurator/hardSkill.vue')
+
       }
     ]
   }
