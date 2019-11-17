@@ -95,18 +95,21 @@ export default {
         width: 4vw;
         height: 1.5vw;
         background: none;
-        background-color: rgba(255, 255, 255, 0.52);
+        background-color: rgba(56, 56, 56, 0.52);
         border-radius: 2vw;
-        color: #AC3FF0;
+        color: #fff;
 		font-size: 1.3vw;
 		font-weight: 300;
         text-align: center;
+    }
+    div{
+        box-shadow: 0vw 0vw 1.5vw#000;
     }
     .circleSum{
         width: 10vw;
         height: 10vw;
         border-radius: 50%;
-        background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
+        background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
         position: absolute;
         top: calc(50% - 5vw);
         left: 10%;
@@ -118,7 +121,7 @@ export default {
         width: 8vw;
         height: 8vw;
         border-radius: 50%;
-        background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
+        background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
         position: absolute;
         top: calc(25% - 4vw);
         right: 15%;
@@ -127,7 +130,7 @@ export default {
         width: 8vw;
         height: 8vw;
         border-radius: 50%;
-        background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
+        background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
         position: absolute;
         top: calc(75% - 4vw);
         right: 25%;
@@ -138,7 +141,7 @@ export default {
         justify-content: center;
         align-items: center;
         font-size: 1.5vw;
-        color: #AC3FF0;
+        color: #fff;
         font-weight: 300;
     }
     hr{
