@@ -96,7 +96,14 @@ const routes = [
       {
         path: 'soft_skill',
         name: 'soft_skill',
-        component: () => import(/* webpackChunkName: "softSkill", webpackPrefetch: true */'../components/configurator/softSkill.vue')
+        component: () => import(/* webpackChunkName: "softSkill", webpackPrefetch: true */'../components/configurator/softSkill.vue'),
+        children:[
+          {
+            path: 'finish',
+            name: 'finish',
+            component: () => import(/* webpackChunkName: "finish", webpackPrefetch: true */'../components/configurator/finish.vue'),
+          }
+        ]
       }
     ]
   }

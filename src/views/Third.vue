@@ -5,11 +5,11 @@
 		<main>
 			<section class="workSpace">
 				<section class="progressBar">
-					<personsvg class="personSVG" :class="[{'active':this.$route.path === firstStep}, {'active':this.$route.path === secondStepM},{'active': this.$route.path === (secondStepW)},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}, {'active':this.$route.path === hardSkill}]"></personsvg>
-					<arrowsvg class="arrowSVG" :class="[{'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills},{'active':this.$route.path === hardSkill}]"></arrowsvg>
-					<hangersvg class="hangerSVG" :class="[{'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}, {'active':this.$route.path === hardSkill}]"></hangersvg>
-					<arrowsvg class="arrowSVG" :class="[{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}, {'active':this.$route.path === hardSkill}]"></arrowsvg>
-					<seekersvg class="seekerSVG" :class="[{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}, {'active':this.$route.path === hardSkill}]"></seekersvg>
+					<personsvg class="personSVG" :class="[{'active':this.$route.path === firstStep}, {'active':this.$route.path === secondStepM},{'active': this.$route.path === (secondStepW)},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}, {'active':this.$route.path === hardSkill}, {'active':this.$route.path === softSkill}]"></personsvg>
+					<arrowsvg class="arrowSVG" :class="[{'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills},{'active':this.$route.path === hardSkill}, {'active':this.$route.path === softSkill}]"></arrowsvg>
+					<hangersvg class="hangerSVG" :class="[{'active':this.$route.path === secondStepM},{'active': this.$route.path === secondStepW},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}, {'active':this.$route.path === hardSkill}, {'active':this.$route.path === softSkill}]"></hangersvg>
+					<arrowsvg class="arrowSVG" :class="[{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}, {'active':this.$route.path === hardSkill}, {'active':this.$route.path === softSkill}]"></arrowsvg>
+					<seekersvg class="seekerSVG" :class="[{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}, {'active':this.$route.path === hardSkill}, {'active':this.$route.path === softSkill}]"></seekersvg>
 					<arrowsvg class="arrowSVG"></arrowsvg>
 					<awardsvg class="awardSVG"></awardsvg>
 				</section>
@@ -20,7 +20,7 @@
 			<section class="canvascontainer" ref="canvascontainer">
 				<v-stage ref="stage" :config="stage">
 					<v-layer>
-						<v-text :config="{text: name, fontSize:60, x:posX, y:20, fill:'#ac40f1'}"></v-text>
+						<v-text :config="{text:name, fontSize:60, x:posX, y:20, fill:'#ac40f1'}"></v-text>
 						<v-image :config="{image:podium, x: 320, y:1060, scale:{x:2,y:2}}"></v-image>
 						<v-image :config="{image:question, x: 380, y:450, scale:{x:.8,y:.8}}"></v-image>
 						<v-image :config="{image:human, x: 340, y:140, scale:{x:1,y:1}}"></v-image>
@@ -46,12 +46,14 @@
 				</v-stage>
 			</section>
 		</main>
+		
 		<footer>
+			<div class="invisible" :class="{overlay: this.$route.path === finish}"></div>
 			<div class="leftButtonGroup">
 				<router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>{{ $t("footer.GoBack")}}</router-link>
 			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW" is="button" @click="Reset" class="GoBack_button"><resetsvg class="arrowbutton"></resetsvg>{{ $t("footer.reset")}}</router-link>
 			</div>
-			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW" is="button" @click="goToNext" class="GoNext_button">{{ $t("footer.next")}}<arrowsvg class="arrowright"></arrowsvg></router-link>
+			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW || this.$route.path === softSkill" is="button" @click="goToNext" class="GoNext_button">{{ $t("footer.next")}}<arrowsvg class="arrowright"></arrowsvg></router-link>
 		</footer>
 	</div>
 </template>
@@ -88,7 +90,10 @@ export default {
 			secondStepW: '/create/women_clothes',
 			justALittle:'/create/just_a_little',
 			proportionSkills:'/create/proportion_skills',
-			hardSkill: '/create/hard_skill'
+			hardSkill: '/create/hard_skill',
+			softSkill: '/create/soft_skill',
+			finish: '/create/soft_skill/finish',
+			humanImg: null
 		}
 	},
 	computed:{
@@ -170,7 +175,15 @@ export default {
 			this.$router.push('/evolve/1')
 		},
 		goToNext(){
-				this.$router.push('/create/just_a_little')
+			if(this.$route.path === this.softSkill){
+				this.name = ''
+				this.$router.push('/create/soft_skill/finish')
+				setTimeout(() => {
+					this.humanImg = this.$refs.stage.getStage().toDataURL()
+					this.$store.dispatch('PUSH_HUMANIMG', this.humanImg)
+					this.name = this.humanName
+				},100)
+			}else this.$router.push('/create/just_a_little')
 		},
 		Reset(){
 			this.$router.push('/create/personalisation'),
@@ -272,6 +285,20 @@ export default {
 </script>
 
 <style scoped>
+.invisible{
+	display: none;
+}
+.overlay{
+	display: block;
+	position: absolute;
+	left: -10%;
+	right: -10%;
+	top: 0;
+	bottom: 0;
+	background: black;
+	opacity: 0.8;
+	z-index: 100000;
+}
 .personSVG, .awardSVG, .seekerSVG, .hangerSVG{
 	height: 8vw;
 }
@@ -280,6 +307,7 @@ export default {
 	transform: rotate(270deg);
 }
 footer{
+	position: relative;
 	display: none;
 	width: 94vw;
 	align-items: center;

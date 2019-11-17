@@ -15,7 +15,7 @@ export default {
 	name:'hardSkillItems',
 	methods:{
 		saveToStore(elem){
-			this.$store.dispatch('PUSH_HARDSKILL', elem)
+			this.$store.dispatch('PUSH_HARDSKILL_NAME', elem)
 		}
 	}
 }
