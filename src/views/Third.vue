@@ -48,7 +48,7 @@
 		</main>
 		
 		<footer>
-			<div class="invisible" :class="{overlay: this.$route.path === finish}"></div>
+			<div class="invisible" :class="{overlay: this.$route.path === finish}" @click="closeOverlay"></div>
 			<div class="leftButtonGroup">
 				<router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>{{ $t("footer.GoBack")}}</router-link>
 			<router-link v-if="this.$route.path !== firstStep" is="button" @click="Reset" class="GoBack_button"><resetsvg class="arrowbutton"></resetsvg>{{ $t("footer.reset")}}</router-link>
@@ -173,6 +173,9 @@ export default {
 	methods: {
 		goToBack(){
 			this.$router.push('/evolve/1')
+		},
+		closeOverlay(){
+			this.$router.push("/create/soft_skill")
 		},
 		goToNext(){
 			if(this.$route.path === this.softSkill){

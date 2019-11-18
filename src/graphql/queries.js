@@ -33,6 +33,7 @@ export const getAnswer = `query GetAnswer($id: ID!) {
     humanShoes {
       id
       src
+      icon
       posX
       posY
     }
@@ -94,6 +95,7 @@ export const listAnswers = `query ListAnswers(
       humanShoes {
         id
         src
+        icon
         posX
         posY
       }

@@ -6,7 +6,7 @@ type Answer @model {
   humanShirt: ImgObj
   humanJackets: ImgObj
   humanPants: ImgObj
-  humanShoes: ImgObj
+  humanShoes: ImgShoesObj
   humanAccessories: ImgObj
   hardSkillPoints: Int
   softSkillsPoints: Int
@@ -25,6 +25,14 @@ type Answer @model {
 type ImgObj {
   id: Int!
   src: String
+  posX: Int
+  posY: Int
+}
+
+type ImgShoesObj {
+  id: Int!
+  src: String
+  icon: String
   posX: Int
   posY: Int
 }

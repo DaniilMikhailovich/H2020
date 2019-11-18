@@ -33,6 +33,7 @@ export const createAnswer = `mutation CreateAnswer($input: CreateAnswerInput!) {
     humanShoes {
       id
       src
+      icon
       posX
       posY
     }
@@ -89,6 +90,7 @@ export const updateAnswer = `mutation UpdateAnswer($input: UpdateAnswerInput!) {
     humanShoes {
       id
       src
+      icon
       posX
       posY
     }
@@ -145,6 +147,7 @@ export const deleteAnswer = `mutation DeleteAnswer($input: DeleteAnswerInput!) {
     humanShoes {
       id
       src
+      icon
       posX
       posY
     }

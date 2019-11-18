@@ -33,6 +33,7 @@ export const onCreateAnswer = `subscription OnCreateAnswer {
     humanShoes {
       id
       src
+      icon
       posX
       posY
     }
@@ -89,6 +90,7 @@ export const onUpdateAnswer = `subscription OnUpdateAnswer {
     humanShoes {
       id
       src
+      icon
       posX
       posY
     }
@@ -145,6 +147,7 @@ export const onDeleteAnswer = `subscription OnDeleteAnswer {
     humanShoes {
       id
       src
+      icon
       posX
       posY
     }
