@@ -142,7 +142,7 @@ export default {
     }
   },
   components:{
-      downloadsvg: () => import(/* webpackChunkName: "downloadsvg", webpackPrefetch: true */ "../SVG/downloadSVG.vue")
+      downloadsvg: () => import(/* webpackChunkName: "downloadsvg", webpackPrefetch: 958 */ "../SVG/downloadSVG.vue")
   },
   async mounted(){
       const answer = {

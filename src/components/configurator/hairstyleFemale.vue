@@ -16,7 +16,7 @@ export default {
   components: {
     clothesitems: () =>
       import(
-        /* webpackChunkName: "clothesitems", webpackPrefetch: true */ "../configurator/hairItems.vue"
+        /* webpackChunkName: "clothesitems", webpackPrefetch: 967 */ "../configurator/hairItems.vue"
       )
   },
   methods: {

@@ -13,7 +13,7 @@
 export default {
 	name:'hardSkill',
 	components:{
-		hardskillitems: () => import(/* webpackChunkName: "hardskillitems", webpackPrefetch: true */ '../configurator/hardSkillItems.vue')
+		hardskillitems: () => import(/* webpackChunkName: "hardskillitems", webpackPrefetch: 961 */ '../configurator/hardSkillItems.vue')
 	},
 	computed:{
 		array(){

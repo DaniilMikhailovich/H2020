@@ -163,12 +163,12 @@ export default {
 		}
 	},
 	components:{
-		personsvg:() => import(/* webpackChunkName: "personSVG" */ '../components/SVG/personSVG.vue'),
-		arrowsvg:() => import(/* webpackChunkName: "arrowSVG" */ '../components/SVG/arrowSVG.vue'),
-		hangersvg:() => import(/* webpackChunkName: "hangerSVG" */ '../components/SVG/hangerSVG.vue'),
-		seekersvg:() => import(/* webpackChunkName: "seekerSVG" */ '../components/SVG/seekerSVG.vue'),
-		awardsvg:() => import(/* webpackChunkName: "awardSVG" */ '../components/SVG/awardSVG.vue'),
-		resetsvg:() => import(/* webpackChunkName: "resetSVG" */ '../components/SVG/resetSVG.vue')
+		personsvg:() => import(/* webpackChunkName: "personSVG", webpackPrefetch: 989 */ '../components/SVG/personSVG.vue'),
+		arrowsvg:() => import(/* webpackChunkName: "arrowSVG", webpackPrefetch: 988 */ '../components/SVG/arrowSVG.vue'),
+		hangersvg:() => import(/* webpackChunkName: "hangerSVG", webpackPrefetch: 987 */ '../components/SVG/hangerSVG.vue'),
+		seekersvg:() => import(/* webpackChunkName: "seekerSVG", webpackPrefetch: 986 */ '../components/SVG/seekerSVG.vue'),
+		awardsvg:() => import(/* webpackChunkName: "awardSVG", webpackPrefetch: 985 */ '../components/SVG/awardSVG.vue'),
+		resetsvg:() => import(/* webpackChunkName: "resetSVG", webpackPrefetch: 984 */ '../components/SVG/resetSVG.vue')
 	},
 	methods: {
 		goToBack(){
