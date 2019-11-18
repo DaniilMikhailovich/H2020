@@ -1,0 +1,30 @@
+type Answer @model {
+  id: ID!
+  gender: String!
+  humanName: String
+  humanHead:  ImgObj
+  humanShirt: ImgObj
+  humanJackets: ImgObj
+  humanPants: ImgObj
+  humanShoes: ImgObj
+  humanAccessories: ImgObj
+  hardSkillPoints: Int
+  softSkillsPoints: Int
+  hardSkillName: String
+  Initiative: Int
+  Creativity: Int
+  Adaptability: Int
+  Reflection: Int
+  Multitasking: Int
+  ListeningSkills: Int
+  Teamwork: Int
+  CriticalThinking: Int
+  TimeManagement: Int
+}
+
+type ImgObj {
+  id: Int!
+  src: String
+  posX: Int
+  posY: Int
+}
