@@ -160,9 +160,21 @@ export default {
         this.$store.dispatch('PUSH_LISTENING', this.skill6Value)
         this.$store.dispatch('PUSH_TEAMWORK', this.skill7Value)
         this.$store.dispatch('PUSH_CRITICAL', this.skill8Value)
-        if(this.controllSum>this.softSkills){
+        if(this.controllSum === this.softSkills+4){
+            this.$store.dispatch('PUSH_LISTENING', this.skill6Value-1)
+            this.$store.dispatch('PUSH_TEAMWORK', this.skill7Value-1)
+            this.$store.dispatch('PUSH_CRITICAL', this.skill8Value-1)
             this.$store.dispatch('PUSH_TIMEMANAGEMENT', this.skill9Value-1)
-        }else if(this.controllSum<this.softSkills){
+        } else if(this.controllSum === this.softSkills+3){
+            this.$store.dispatch('PUSH_TEAMWORK', this.skill7Value-1)
+            this.$store.dispatch('PUSH_CRITICAL', this.skill8Value-1)
+            this.$store.dispatch('PUSH_TIMEMANAGEMENT', this.skill9Value-1)
+        } else if(this.controllSum === this.softSkills+2){
+            this.$store.dispatch('PUSH_CRITICAL', this.skill8Value-1)
+            this.$store.dispatch('PUSH_TIMEMANAGEMENT', this.skill9Value-1)
+        } else if(this.controllSum>this.softSkills){
+            this.$store.dispatch('PUSH_TIMEMANAGEMENT', this.skill9Value-1)
+        } else if(this.controllSum<this.softSkills){
             this.$store.dispatch('PUSH_TIMEMANAGEMENT', this.skill9Value+1)
         } else {this.$store.dispatch('PUSH_TIMEMANAGEMENT', this.skill9Value)}
     },
