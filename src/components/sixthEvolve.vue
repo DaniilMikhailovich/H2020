@@ -6,6 +6,7 @@
 			<section class="submenu">
 				<h2>{{$t('secondPage.evolution.punk')}}</h2>
 				<router-link is="button" @click="goToNext" class="evolve" >{{$t('secondPage.evolution.evolve')}}</router-link>
+				<router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>back</router-link>
 			</section>
 		</main>
 </template>
@@ -17,6 +18,12 @@ export default {
 		goToNext(){
 			this.$router.push('/evolve/7')
 		},
+		goToBack(){
+			this.$router.push('/evolve/5')
+		}
+	},
+	components:{
+		arrowsvg:() => import(/* webpackChunkName: "arrowsvg" */ '../components/SVG/arrowSVG.vue')
 	}
 }
 </script>
@@ -24,17 +31,22 @@ export default {
 <style scoped>
 main{
 	flex-direction: row;
+	align-items: flex-start;
 }
-.canvas{
-	width: 55vw;
-	height: 100%;
+.character{
+	width: 58vw;
 	margin-right: 5vw;
 }
 img{
-	width: 100%;
+	height: 100%;
+	width: 58vw;
 }
 .submenu{
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-self: center;
 	width: 25vw;
 	color: #20252a;
 	font-family: "Source", sans-serif;
@@ -57,7 +69,7 @@ img{
 	color: #E0FFFF;
 	background-color: #ac40f1;
 	cursor: pointer;
-	box-shadow: 1vw 1vw 5vw #000;
+	box-shadow: 0vw 0vw 2vw #000;
 }
 .evolve::before {
   content: '';
@@ -70,5 +82,24 @@ img{
   background-color: rgba(255, 255, 255, 0.6);
   transform: translateX(-3vw) skewX(-45deg);
   animation: move-light 1.7s infinite;
-} 
+}
+.GoBack_button{
+	background: none;
+	border: none;
+	font-size: 5vw;
+	color: #fff;
+	font-weight: 300;
+	cursor: pointer;
+	box-shadow: 0vw 0vw 2vw #000;
+	padding: 1vw 3vw 0.6vw 3vw;
+	border-radius: 4vw;
+	display: flex;
+	margin-top: 4vw;
+	align-items: center;
+}
+.arrowbutton{
+	width: 5vw;
+	fill: #fff;
+	margin-right: 2vw;
+}
 </style>

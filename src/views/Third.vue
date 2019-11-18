@@ -51,7 +51,7 @@
 			<div class="invisible" :class="{overlay: this.$route.path === finish}"></div>
 			<div class="leftButtonGroup">
 				<router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>{{ $t("footer.GoBack")}}</router-link>
-			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW" is="button" @click="Reset" class="GoBack_button"><resetsvg class="arrowbutton"></resetsvg>{{ $t("footer.reset")}}</router-link>
+			<router-link v-if="this.$route.path !== firstStep" is="button" @click="Reset" class="GoBack_button"><resetsvg class="arrowbutton"></resetsvg>{{ $t("footer.reset")}}</router-link>
 			</div>
 			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW || this.$route.path === softSkill" is="button" @click="goToNext" class="GoNext_button">{{ $t("footer.next")}}<arrowsvg class="arrowright"></arrowsvg></router-link>
 		</footer>
@@ -354,6 +354,11 @@ footer{
 	display: flex;
 	height: calc(100vh - 55px);
 }
+@media (-moz-touch-enabled){
+  #app{
+		height: 100vh;
+	}
+}
 main{
 	display: flex;
 	flex-direction: column;
@@ -495,6 +500,11 @@ header{
 	#app{
 		display: flex;
 		height: 100vh;
+	}
+	@-moz-document url-prefix(){
+		#app{
+		height: 100vh;
+		}
 	}
 }
 </style>

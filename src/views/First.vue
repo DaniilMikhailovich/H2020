@@ -100,12 +100,14 @@
         num = '0' + num;
       }
       return num;
-    }
+		}
 	},
 	created(){
-			window.addEventListener('resize', this.updateWidth)
-		}
+		window.addEventListener('resize', this.updateWidth)
+		let vh = window.innerHeight * 0.01
+		document.documentElement.style.setProperty('--vh', `${vh}px`)
 	}
+}
 </script>
 
 <style>
@@ -124,7 +126,7 @@ hr{
 	height: 5vw;
 	margin-top: 2vw;
 	margin-right: calc(1vw + 0.4vw);
-	box-shadow: 0vw 0vw 0.1vw #000;
+	box-shadow: 0vw 0vw 0.25vw #000;
 }
 .Eng, .Ru, .Spa{
 	background: none;
@@ -135,7 +137,7 @@ hr{
 	font-size: 4vw;
 	outline: none;
 	cursor: pointer;
-	text-shadow: 0vw 0vw 0.1vw #000;
+	text-shadow: 0vw 0vw 0.2vw #000;
 }
 .Eng:active, .Ru:active, .Spa:active{
 	color: rgb(224, 224, 224);
@@ -145,7 +147,8 @@ html{
 }
 #app{
 	width: 100vw;
-	height: calc(100vh - 55px);
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
 	background: linear-gradient(rgb(0, 247, 255), rgb(100, 255, 131));
 	font-family: 'Source', sans-serif;
 	overflow: hidden;
@@ -173,8 +176,8 @@ main{
 	overflow: hidden;
 }
 .snout{
-	background: url(~@/assets/HUMAN.png) 0vw 10vw no-repeat, url(~@/assets/morpheus.png) 93% 100%  no-repeat;
-	background-size: 23vw, 17vw;
+	background: url(~@/assets/HUMAN.png) 0vw 7vw no-repeat, url(~@/assets/morpheus.png) 93% 100%  no-repeat;
+	background-size: 13vh, 17vh;
 }
 .hand{
 	position: absolute;
@@ -198,6 +201,7 @@ main{
 	margin: 15vw 0 2vw 0;
 }
 #timer{
+	text-shadow: 0vw 0vw 0.3vw #000;
 	display: block;
 	z-index: 1;
 	color: #E0FFFF;
@@ -210,7 +214,7 @@ main{
 	color: #E0FFFF;
 	font-size: 6vw;
 	line-height: 6vw;
-	text-shadow: 0vw 0vw 0.1vw #000;
+	text-shadow: 0vw 0vw 0.3vw #000;
 }
 .TopQuote{
 	margin: 0 0 0 8vw;
@@ -235,6 +239,8 @@ main{
 	padding: 0.5vw 3vw;
 	font-size: 7vw;
 	cursor: pointer;
+	box-shadow: 0vw 0vw 0.3vw #000;
+	text-shadow: 0vw 0vw 0.2vw #000;
 }
 .BottomQuote_button::before {
   content: '';
@@ -260,7 +266,7 @@ main{
 	font-size: 4vw;
 	align-self: flex-end;
 	margin: 0 5vw 3vw 0;
-	text-shadow: 0vw 0vw 0.1vw #000;
+	text-shadow: 0vw 0vw 0.2vw #000;
 }
 .date{
 	color: #E0FFFF;
@@ -268,7 +274,7 @@ main{
 	font-size: 3vw;
 	font-family: 'Source', sans-serif;
 	word-spacing: 13vw;
-	text-shadow: 0vw 0vw 0.1vw #000;
+	text-shadow: 0vw 0vw 0.2vw #000;
 }
 .esDate, .ruDate{
   word-spacing: 0;
@@ -283,7 +289,9 @@ main{
 .esDate span:nth-child(3), .ruDate span:nth-child(3){
   margin-left: -5vw;
 }
-
+.BottomQuote_button:active{
+	box-shadow: inset 0.2vw 0.2vw 0.3vw #000;
+}
 @keyframes spin{
 	from{
 		transform: rotate(0deg);
@@ -330,6 +338,13 @@ main{
 	}
 } 
 @media screen and (min-width: 1000px), (orientation: landscape){
+	#app{
+		height: 100vh;
+	}
+	.snout{
+		background: url(~@/assets/HUMAN.png) 0vw 10vw no-repeat, url(~@/assets/morpheus.png) 93% 100%  no-repeat;
+		background-size: 23vw, 17vw;
+	}
 	.Eng, .Ru, .Spa{
 		font-size: 1.5vw;
 		margin: 2vw 1vw 0 0;
@@ -369,9 +384,6 @@ main{
 		line-height: 4vw;
 		box-shadow: 0vw 0vw 0.2vw #000;
 		text-shadow: 0vw 0vw 0.1vw #000;
-	}
-	.BottomQuote_button:active{
-		box-shadow: inset 0.2vw 0.2vw 0.3vw #000;
 	}
 	.autor{
 		font-size: 2vw;
