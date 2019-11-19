@@ -53,16 +53,11 @@
 				<router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>{{ $t("footer.GoBack")}}</router-link>
 			<router-link v-if="this.$route.path !== firstStep" is="button" @click="Reset" class="GoBack_button"><resetsvg class="arrowbutton"></resetsvg>{{ $t("footer.reset")}}</router-link>
 			</div>
-			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW || this.$route.path === softSkill" is="button" @click="goToNext" class="GoNext_button">{{ $t("footer.next")}}<arrowsvg class="arrowright"></arrowsvg></router-link>
+			<router-link v-if="this.$route.path === secondStepM || this.$route.path === secondStepW ||this.$route.path === softSkill" is="button" @click="goToNext" class="GoNext_button">{{ $t("footer.next")}}<arrowsvg class="arrowright"></arrowsvg></router-link>
 		</footer>
 	</div>
 </template>
-
-// $KonvaImg = $vm0.$refs.stage.getStage().toDataURL({pixelRatio: 3})
-
 <script>
-// const width = document.querySelector('#canvas').offsetWidth;
-// const height = document.querySelector('#canvas').offsetHeight;
 export default {
 	name: 'thirdPage',
 	data(){
@@ -362,7 +357,6 @@ footer{
 main{
 	display: flex;
 	flex-direction: column;
-	/* flex-wrap: wrap; */
 	justify-content: flex-end;
 	align-items: center;
 }

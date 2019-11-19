@@ -3,31 +3,43 @@ export default {
         hardSkill: [
             {
                 id:1,
-                skill:'Developer'
+                skill:'IT specialist'
             },
             {
                 id:2,
-                skill:'Developer'
+                skill:'Businessman'
             },
             {
                 id:3,
-                skill:'Developer'
+                skill:'Uber driver'
             },
             {
                 id:4,
-                skill:'Developer'
+                skill:'Manager'
             },
             {
                 id:5,
-                skill:'Developer'
+                skill:'psychologist'
             },
             {
                 id:6,
-                skill:'Developer'
+                skill:'eSportsman'
             },
             {
                 id:7,
-                skill:'Developer'
+                skill:'Blogger'
+            },
+            {
+                id:8,
+                skill: 'Military'
+            },
+            {
+                id:9,
+                skill: 'Miner'
+            },
+            {
+                id:10,
+                skill: 'Business trainer'
             },
 
         ]

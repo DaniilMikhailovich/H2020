@@ -131,7 +131,7 @@ hr{
 .Eng, .Ru, .Spa{
 	background: none;
 	border: none;
-	color: #E0FFFF;
+	color: #FFF;
 	margin: 2vw 2vw 0 0;
 	font-family: 'Source', sans-serif;
 	font-size: 4vw;
@@ -176,16 +176,16 @@ main{
 	overflow: hidden;
 }
 .snout{
-	background: url(~@/assets/HUMAN.png) 0vw 7vw no-repeat, url(~@/assets/morpheus.png) 93% 100%  no-repeat;
+	background: url(~@/assets/HUMAN.png) 0vw 4vh no-repeat, url(~@/assets/morpheus.png) 93% 100%  no-repeat;
 	background-size: 13vh, 17vh;
 }
 .hand{
 	position: absolute;
-	width: 23vw;
-	left: -0.2vw;
-	top: 10vw;
+	width: 13vh;
+	left: -0.1vh;
+	top: 4vh;
 	animation: rotate 1.2s infinite linear;
-	transform-origin: 310px 430px;
+	transform-origin: 79% 75%;
 }
 .title{
 	z-index: 1;
@@ -266,7 +266,7 @@ main{
 	font-size: 4vw;
 	align-self: flex-end;
 	margin: 0 5vw 3vw 0;
-	text-shadow: 0vw 0vw 0.2vw #000;
+	text-shadow: 0vw 0vw 0.3vw #000;
 }
 .date{
 	color: #E0FFFF;
@@ -342,8 +342,13 @@ main{
 		height: 100vh;
 	}
 	.snout{
-		background: url(~@/assets/HUMAN.png) 0vw 10vw no-repeat, url(~@/assets/morpheus.png) 93% 100%  no-repeat;
-		background-size: 23vw, 17vw;
+		background: url(~@/assets/HUMAN.png) 0vw 15vh no-repeat, url(~@/assets/morpheus.png) 93% 100%  no-repeat;
+		background-size: 47vh, 35vh;
+	}
+	.hand{
+		width: 47vh;
+		left:-0.4vh;
+		top: 15vh;
 	}
 	.Eng, .Ru, .Spa{
 		font-size: 1.5vw;

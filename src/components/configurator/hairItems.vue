@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section :class="[{scrollM:items.length >=1},{scrollD:items.length >=11}]">
 		<button class="button"
 			v-for="item in items"
 			v-bind:key="item.id"
@@ -25,24 +25,32 @@ export default {
 <style scoped>
 	section{
 		display: flex;
-		justify-content: space-around;
-		flex-wrap: wrap;
+		justify-content: flex-start;
+		flex-wrap: nowrap;
 		padding: 1vw;
+		overflow: hidden;
+		height: 45vw;
+	}
+	.scrollM{
+		overflow-x: scroll;
 	}
 	.button{
-		margin-bottom: 0.4vw;
-		width: 18vw;
-		height: 17vw;
-		border-radius: 0.5vw;
+		width: 32vw;
+		height: 31vw;
+		border-radius: 1vw;
 		cursor: pointer;
 		transition: 0.5s;
 		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
 		border: none;
-		margin-top: 0.5vw;
+		margin: 1vw 1vw 0vw 0vw;
 		outline: none;
+		flex-shrink: 0;
+	}
+	.button::-moz-focus-outer{
+		border: none;
 	}
 	.button:hover {
-		transform: scale(1.1);
+		transform: scale(1.05);
 		background: none;
 		transition: 0.3s;
 	}
@@ -59,10 +67,18 @@ export default {
 	@media screen and (min-width: 760px) and (max-width: 999px) {
 	}
 	@media screen and (min-width: 1000px), (orientation: landscape){
+		section{
+			flex-wrap: wrap;
+			justify-content: space-around;
+			padding: 1vw;
+			height: 20.5vw;
+		}
 		.button{
 			width: 9.4vw;
-			height: 8.5vw;
+			height: 8.9vw;
 			margin-top: 0vw;
+			flex-shrink: initial;
+			margin: 0vw;
 		}
 		.button:nth-of-type(3) img{
 			height: initial;
@@ -70,6 +86,12 @@ export default {
 		}
 		img{
 			height: 60%;
+		}
+		.scrollD{
+			overflow-y: scroll;
+		}
+		.scrollM{
+			overflow-x: hidden;
 		}
 	}
 </style>

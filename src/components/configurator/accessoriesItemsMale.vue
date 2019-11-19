@@ -37,10 +37,9 @@ export default {
 		margin-bottom: 0.4vw;
 		width: 35vw;
 		height: 40vw;
-		margin: 2vw 1vw 0vw 0vw;
+		margin: 1.5vw 1vw 0vw 0vw;
 		cursor: pointer;
 		flex-shrink: 0;
-		border-radius: 0.5vw;
 		transition: 0.3s;
 		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
 		border: none;

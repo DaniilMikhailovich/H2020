@@ -73,6 +73,7 @@ export default {
 section {
   justify-content: space-around;
   flex-wrap: wrap;
+  width: 100vw;
 }
 .currentColor {
   flex-basis: 100%;
@@ -83,7 +84,7 @@ section {
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  margin: 1vw 0vw 0.5vw 0vw;
+  margin: 1vw 0vw 0.3vw 0vw;
   outline: none;
 }
 .button:focus,
@@ -117,11 +118,12 @@ section {
   section {
     justify-content: space-around;
     flex-wrap: wrap;
+    width: initial;
   }
   .button {
     width: 3vw;
     height: 3vw;
-    margin: 0vw 0vw 0vw 0vw;
+    margin: 0vw;
   }
   .button.active {
     border: 0.2vw solid #fff;

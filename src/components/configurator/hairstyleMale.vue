@@ -72,6 +72,7 @@ export default {
     section{
         justify-content: space-around;
         flex-wrap: wrap;
+        width: 100vw;
     }
     .currentColor{
         flex-basis: 100%;
@@ -113,8 +114,7 @@ export default {
     }
     @media screen and (min-width: 1000px), (orientation: landscape){
         section{
-            justify-content: space-around;
-            flex-wrap: wrap;
+            width: initial;
         }
         .button{
             width: 3vw;

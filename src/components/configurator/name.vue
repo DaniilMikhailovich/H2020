@@ -34,7 +34,7 @@ export default {
 		user-select: all;
 		outline: none;
 		background-color: transparent;
-		width: 80vw;
+		width: 85vw;
 		height: 9vw;
 		text-align: center;
 		font-size: 8vw;

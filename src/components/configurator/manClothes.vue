@@ -1,6 +1,14 @@
 <template>
 	<section>
-		<h1 class="clothesTitle">{{$t('thirdPage.clothes.clothes')}}</h1>
+		<div class="topConfMenu">
+			<h1 class="clothesTitle">{{$t('thirdPage.clothes.clothes')}}</h1>
+			<div class="rightButtonGroup">
+				<router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg></router-link>
+				<router-link is="button" @click="Reset" class="GoBack_button"><resetsvg class="arrowbutton"></resetsvg></router-link>
+				<router-link is="button" @click="goToNext" class="GoNext_button"><arrowsvg class="arrowright"></arrowsvg></router-link>
+			</div>
+		</div>
+		
 		<hr class="separate">
 		<button
 			v-for="tab in tabs"
@@ -29,6 +37,8 @@ export default {
 		pants: () => import(/* webpackChunkName: "pants", webpackPrefetch: true */ '../configurator/pants.vue'),
 		accessories: () => import(/* webpackChunkName: "accessories", webpackPrefetch: true */ '../configurator/accessories.vue'),
 		shoes: () => import(/* webpackChunkName: "shoes", webpackPrefetch: true */ '../configurator/shoes.vue'),
+		arrowsvg:() => import(/* webpackChunkName: "arrowSVG" */ '../SVG/arrowSVG.vue'),
+		resetsvg:() => import(/* webpackChunkName: "resetSVG" */ '../SVG/resetSVG.vue')
 	},
 	data(){
 		return{
@@ -40,13 +50,40 @@ export default {
 				{id:4, name:'jackets', svg:'suitsvgm'},
 				{id:5, name:'shoes', svg:'shoessvg'},
 				{id:6, name:'accessories', svg:'accessoriessvg'}
-				]
+			]
 		}
+	},
+	methods: {
+		goToBack(){
+			this.$router.push('/evolve/1')
+		},
+		goToNext(){
+      this.$router.push('/create/just_a_little')
+    },
+		Reset(){
+			this.$router.push('/create/personalisation'),
+			this.$store.dispatch('GET_GENDER', null),
+			this.$store.dispatch('PUSH_NAME', '')
+		}	
 	}
 }
 </script>
 
 <style scoped>
+.GoBack_button{
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+}
+.GoNext_button{
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	background-color: #ac40f1;
+	border-radius: 50%;
+	padding: 0.5vw;
+}
 	section{
 		display: flex;
 		justify-content: space-around;
@@ -55,8 +92,19 @@ export default {
 		padding: 1vw;
 		width: 100%;
 	}
-	.clothesTitle{
+	.topConfMenu{
+		display: flex;
+		justify-content: space-between;
 		flex-basis: 100%;
+	}
+	.rightButtonGroup{
+		display: flex;
+	}
+	.rightButtonGroup>button {
+		margin-right: 2vw;
+		border: none;
+	}
+	.clothesTitle{
 		color: #ac40f1;
 		font-size: 6vw;
 		font-weight: 300;
@@ -66,6 +114,7 @@ export default {
 		flex-basis: 100%;
 		height: 0.1vw;
 		border: 0.1vw solid #ac40f1;
+		background-color: #ac40f1;
 		margin-bottom: 2vw;
 	}
 	.hairstylesvg, .shirtsvg, .accessoriessvg{
@@ -79,6 +128,17 @@ export default {
 	}
 	.currentTab{
 		flex-basis: 100%;
+	}
+	.arrowbutton{
+		width: 8vw;
+		fill: #ac40f1;
+		margin-right: 0.5vw;
+	}
+	.arrowright{
+		width: 8vw;
+		fill: rgb(255, 255, 255);
+		margin-left: 0.5vw;
+		transform: rotate(180deg);
 	}
 	.button{
 		outline: none;
@@ -117,6 +177,9 @@ export default {
 @media screen and (min-width: 1000px), (orientation: landscape){
 	section{
 		justify-content: flex-start;
+	}
+	.rightButtonGroup{
+		display: none;
 	}
 	.clothesTitle{
 		color: #fff;

@@ -1,5 +1,5 @@
 <template>
-	<section :class="{scroll:items.length >=11}">
+	<section :class="[{scrollM:items.length >=1},{scrollD:items.length >=11}]">
 		<button class="button"
 			v-for="item in items"
 			v-bind:key="item.id"
@@ -24,21 +24,30 @@ export default {
 <style scoped>
 	section{
 		display: flex;
+		overflow: hidden;
 		justify-content: space-between;
-		flex-wrap: wrap;
-		height: 23vw;
+		flex-wrap: nowrap;
+		height: 55vw;
 	}
-	.scroll{
-		overflow-y: scroll;
+	.scrollM{
+		overflow-x: scroll;
 	}
 	.button{
+		font-size: 6vw;
+		color: #ac40f1;
 		margin-bottom: 0.4vw;
-		width: 9.4vw;
-		height: 11vw;
+		width: 40vw;
+		height: 50vw;
+		margin: 1.5vw 1vw 0vw 0vw;
 		cursor: pointer;
-		border-radius: 0.5vw;
+		flex-shrink: 0;
 		transition: 0.3s;
-		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
+		background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
+		border: none;
+		outline: none;
+		border-radius: 1vw;
+	}
+	.button::-moz-focus-outer{
 		border: none;
 	}
 	.button:hover{
@@ -46,8 +55,48 @@ export default {
 		background: none;
 		transition: 0.3s;
 	}
-	img{
-		height: 80%;
+	.button:active{
+		transform: scale(1.1);
+		background: #ac40f1;
+		transition: 0.3s;
 	}
+@media screen and (min-width: 760px) and (max-width: 999px) {
+}
 
+
+@media screen and (min-width: 1000px), (orientation: landscape){
+	section{
+		flex-wrap: wrap;
+		height: 27vw;
+	}
+	.scrollD{
+		overflow-y: scroll;
+	}
+	.scrollM{
+		overflow-x: hidden;
+	}
+	.button{
+		font-size: 1.5vw;
+		color: #fff;
+		cursor: pointer;
+		transition: 0.3s;
+		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
+		border: none;
+		outline: none;
+		width: 10vw;
+		height: 12vw;
+		border-radius: 0.5vw;
+		margin: 0vw 0vw 0.4vw 0vw;
+	}
+	.button:hover{
+		transform: scale(1.1);
+		background: none;
+		transition: 0.3s;
+	}
+	.button:focus{
+		transform: scale(1.1);
+		background: #ac40f1;
+		transition: 0.3s;
+	}
+}
 </style>

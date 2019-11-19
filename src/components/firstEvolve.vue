@@ -34,12 +34,12 @@ main{
 	align-items: flex-start;
 }
 .character{
-	width: 58vw;
+	width: 52vw;
 	margin-right: 5vw;
 }
 img{
 	height: 100%;
-	width: 58vw;
+	width: 52vw;
 }
 .submenu{
 	text-align: center;
