@@ -14,7 +14,7 @@
 export default {
     name: 'Hairstyle',
     components:{
-        clothesitems:() => import(/* webpackChunkName: "hairitems", webpackPrefetch: true */ '../configurator/hairItems.vue'),
+        clothesitems:() => import(/* webpackChunkName: "hairitems", webpackPrefetch: 967 */ '../configurator/hairItems.vue'),
     },
     methods:{
         changeColor(){
