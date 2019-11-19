@@ -7,7 +7,7 @@
       <hr>
       <button @click="changeLocRu" class="Ru">Русский</button>
     </header>
-    <img class="earth" src="~@/assets/Earth.png" alt="OurEarth">
+    <img class="earth" :src="require('../assets/Earth.png')" alt="OurEarth">
     <main class="snout">
       <h1 class="title">{{ $t("firstPage.h1") }}</h1>
       <p class="TopQuote">{{ $t("firstPage.topQuote")}}<span id="trigger" class="invisible" :class="{ruTopQuote:(this.$i18n.locale==='ru')}">{{ $t("firstPage.with")}} <router-link is="button" @click="goToEvolve" class="BottomQuote_button">{{ $t('firstPage.choice')}}</router-link> »</span></p>
@@ -15,7 +15,7 @@
       <p class="autor">-{{ $t('firstPage.autor')}}</p>
       <p id="timer"></p>
       <p class="date" :class="{enDate:(this.$i18n.locale==='en'), ruDate:(this.$i18n.locale==='ru'), esDate:(this.$i18n.locale==='es') }"> <span> {{ $t('firstPage.date.days')}}</span> <span>{{ $t('firstPage.date.hours')}}</span> <span>{{ $t('firstPage.date.mins')}}</span>  </p>
-			<img class="hand" src="~@/assets/HAND.png" alt="Hand">
+			<img class="hand" :src="require('../assets/HAND.png')" alt="Hand">
 		</main>
     <footer></footer>
 		</div>
@@ -176,7 +176,7 @@ main{
 	overflow: hidden;
 }
 .snout{
-	background: url(~@/assets/HUMAN.png) 0vw 4vh no-repeat, url(~@/assets/morpheus.png) 93% 100%  no-repeat;
+	background: url(../assets/HUMAN.png) 0vw 4vh no-repeat, url(../assets/morpheus.png) 93% 100%  no-repeat;
 	background-size: 13vh, 17vh;
 }
 .hand{
