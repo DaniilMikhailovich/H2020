@@ -127,7 +127,119 @@ hr{
 	}
 }
 
-@media screen and (min-width: 1000px), (orientation: landscape){
+@media screen and (max-width: 999px) and (orientation: landscape) {
+.BackNumber{
+		transform: rotate(-10deg);
+		font-size: 45vw;
+	}
+	.war, .politics, .fun{
+		font-size: 3.5vw;
+		text-shadow: 0vw 0vw 0.1vw #000;
+	}
+	header{
+		height: calc(var(--vh, 1vh) * 9);
+	}
+	hr{
+	height: calc(var(--vh, 1vh) * 8);
+	width: 0.2vw;
+	}
+	.humanity, .arrow{
+		display: block;
+	}
+	.humanity{
+		width: 95vw;
+	}
+	.arrow{
+		width: 75vw;
+		margin-top: 2vw;
+	}
+	main{
+		flex-direction: column;
+	}
+	.description{
+		color: #E0FFFF;
+		font-family: 'Source', sans-serif;
+		font-size: 2vw;
+		align-self: flex-start;
+		display: inline;
+		text-shadow: 0vw 0vw 0.1vw #000;
+	}
+	span:first-of-type{
+		margin-left: 4.5vw;
+		margin-right: 4vw;
+	}
+	span:nth-of-type(2){
+		margin-right: 4vw;
+	}
+	span:nth-of-type(3){
+		margin-right: 5vw;
+	}
+	span:nth-of-type(4){
+		margin-right: 7.5vw;
+	}
+	span:nth-of-type(5){
+		margin-right: 7vw;
+	}
+	span:nth-of-type(6){
+		margin-right: 7vw;
+	}
+	span:nth-of-type(7){
+		margin-right: 4vw;
+	}
+	.BottomQuote_button{
+		padding: 0vw 2vw;
+		font-size: 2vw;
+		line-height: 3vw;
+	}
+	.GoBack_button{
+		background: none;
+		border: none;
+		font-size: 1.5vw;
+		color: #fff;
+		font-weight: 300;
+		cursor: pointer;
+		z-index: 100;
+		box-shadow: 0vw 0vw 15vw 1vw #000;
+		padding: 0.3vw 2vw;
+		border-radius: 3vw;
+		display: flex;
+		align-items: center;
+	}
+	.arrowbutton{
+		width: 1.5vw;
+		fill: #fff;
+		margin-right: 0.5vw;
+	}
+	span.ruAristocrats{
+		margin-right: 2vw;
+	}
+	span.ruBourgeois{
+		margin-right: 3.5vw;
+	}
+	span.ruMafia{
+		margin-right: 6.5vw;
+	}
+	span.ruHippie{
+		margin-right: 7vw;
+	}
+	span.ruPunks{
+		margin-right: 6vw;
+	}
+	span.ruHipsters{
+		margin-right: 3vw;
+	}
+	span.esAristocrats{
+		margin-right: 3vw;
+	}
+	span.esPunks{
+		margin-right: 6.5vw;
+	}
+	span.esHipster{
+		margin-right: 3.75vw;
+	}
+}
+
+@media screen and (min-width: 1000px){
 	.BackNumber{
 		transform: rotate(-10deg);
 		font-size: 45vw;

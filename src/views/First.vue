@@ -31,7 +31,7 @@
 		},
 		computed: {
       isDesktop: function(){
-        if(this.width >= 999){
+        if(this.width >= 800){
           return true
         }
         else{
