@@ -23,8 +23,8 @@ export default {
         }
     },
     components:{
-        clothesItemsMale:() => import(/* webpackChunkName: "accessoriesitems", webpackPrefetch: true */ '../configurator/accessoriesItemsMale.vue'),
-        clothesItemsFemale:() => import(/* webpackChunkName: "accessoriesitems", webpackPrefetch: true */ '../configurator/accessoriesItemsFemale.vue')
+        clothesItemsMale:() => import(/* webpackChunkName: "accessoriesitems", webpackPrefetch: 966 */ '../configurator/accessoriesItemsMale.vue'),
+        clothesItemsFemale:() => import(/* webpackChunkName: "accessoriesitems", webpackPrefetch: 966 */ '../configurator/accessoriesItemsFemale.vue')
     }
     
 }

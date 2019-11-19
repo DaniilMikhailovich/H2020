@@ -16,8 +16,8 @@
 export default {
 	name:'personalisation',
 	components:{
-		Gender: () => import(/* webpackChunkName: "gender", webpackPrefetch: true */ './gender.vue'),
-		Name: () => import(/* webpackChunkName: "name", webpackPrefetch: true */ './name.vue')
+		Gender: () => import(/* webpackChunkName: "gender", webpackPrefetch: 982 */ './gender.vue'),
+		Name: () => import(/* webpackChunkName: "name", webpackPrefetch: 981 */ './name.vue')
 	},
 	data(){
 		return{

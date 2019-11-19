@@ -48,7 +48,7 @@
 		</main>
 		
 		<footer>
-			<div class="invisible" :class="{overlay: this.$route.path === finish}"></div>
+			<div class="invisible" :class="{overlay: this.$route.path === finish}" @click="closeOverlay"></div>
 			<div class="leftButtonGroup">
 				<router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>{{ $t("footer.GoBack")}}</router-link>
 			<router-link v-if="this.$route.path !== firstStep" is="button" @click="Reset" class="GoBack_button"><resetsvg class="arrowbutton"></resetsvg>{{ $t("footer.reset")}}</router-link>
@@ -163,16 +163,19 @@ export default {
 		}
 	},
 	components:{
-		personsvg:() => import(/* webpackChunkName: "personSVG" */ '../components/SVG/personSVG.vue'),
-		arrowsvg:() => import(/* webpackChunkName: "arrowSVG" */ '../components/SVG/arrowSVG.vue'),
-		hangersvg:() => import(/* webpackChunkName: "hangerSVG" */ '../components/SVG/hangerSVG.vue'),
-		seekersvg:() => import(/* webpackChunkName: "seekerSVG" */ '../components/SVG/seekerSVG.vue'),
-		awardsvg:() => import(/* webpackChunkName: "awardSVG" */ '../components/SVG/awardSVG.vue'),
-		resetsvg:() => import(/* webpackChunkName: "resetSVG" */ '../components/SVG/resetSVG.vue')
+		personsvg:() => import(/* webpackChunkName: "personSVG", webpackPrefetch: 989 */ '../components/SVG/personSVG.vue'),
+		arrowsvg:() => import(/* webpackChunkName: "arrowSVG", webpackPrefetch: 988 */ '../components/SVG/arrowSVG.vue'),
+		hangersvg:() => import(/* webpackChunkName: "hangerSVG", webpackPrefetch: 987 */ '../components/SVG/hangerSVG.vue'),
+		seekersvg:() => import(/* webpackChunkName: "seekerSVG", webpackPrefetch: 986 */ '../components/SVG/seekerSVG.vue'),
+		awardsvg:() => import(/* webpackChunkName: "awardSVG", webpackPrefetch: 985 */ '../components/SVG/awardSVG.vue'),
+		resetsvg:() => import(/* webpackChunkName: "resetSVG", webpackPrefetch: 984 */ '../components/SVG/resetSVG.vue')
 	},
 	methods: {
 		goToBack(){
 			this.$router.push('/evolve/1')
+		},
+		closeOverlay(){
+			this.$router.push("/create/soft_skill")
 		},
 		goToNext(){
 			if(this.$route.path === this.softSkill){
