@@ -167,7 +167,21 @@ export default {
 	},
 	methods: {
 		goToBack(){
-			this.$router.push('/evolve/1')
+			if(this.$route.path === this.firstStep) {
+				this.$router.push('/evolve/8')
+			} else if ((this.$route.path == this.secondStepW)||(this.$route.path == this.secondStepM)) {
+				this.$router.push(this.firstStep)
+			} else if (this.$route.path === this.justALittle){
+				if(this.$store.getters.GENDER ==='male'){
+					this.$router.push(this.secondStepM)
+				} else this.$router.push(this.secondStepW)
+			} else if (this.$route.path === this.proportionSkills){
+				this.$router.push(this.justALittle)
+			} else if (this.$route.path === this.hardSkill){
+				this.$router.push(this.proportionSkills)
+			} else if (this.$route.path === this.softSkill){
+				this.$router.push(this.hardSkill)
+			}
 		},
 		closeOverlay(){
 			this.$router.push("/create/soft_skill")
@@ -187,6 +201,7 @@ export default {
 			this.$router.push('/create/personalisation'),
 			this.$store.dispatch('GET_GENDER', null),
 			this.$store.dispatch('PUSH_NAME', '')
+			this.$store.dispatch('PUSH_HARDSKILL_NAME', 'null')
 		},
 		newGender(){
 			const image = new window.Image()

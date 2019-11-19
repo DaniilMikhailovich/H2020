@@ -53,18 +53,18 @@ export default {
 			]
 		}
 	},
-	methods: {
+	methods:{
 		goToBack(){
-			this.$router.push('/evolve/1')
+			this.$router.push('/create/personalisation')
 		},
 		goToNext(){
-      this.$router.push('/create/just_a_little')
-    },
+			this.$router.push('/create/just_a_little')
+		},
 		Reset(){
 			this.$router.push('/create/personalisation'),
 			this.$store.dispatch('GET_GENDER', null),
 			this.$store.dispatch('PUSH_NAME', '')
-		}	
+		}
 	}
 }
 </script>

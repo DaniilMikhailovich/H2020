@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="topConfMenu">
-      <h1 class="clothesTitle">{{$t('thirdPage.clothes.clothes')}}</h1>
+      <h1 class="clothesTitle">HARD Skill</h1>
       <div class="rightButtonGroup">
         <router-link is="button" @click="goToBack" class="GoBack_button">
           <arrowsvg class="arrowbutton"></arrowsvg>
@@ -42,7 +42,7 @@ export default {
       return this.$store.state.hardSkillArray.hardSkill;
     },
     buttonTrigger() {
-      if (this.$store.getters.HARDSKILLNAME !== "") {
+      if (this.$store.getters.HARDSKILLNAME !== 'null') {
         return true;
       }
       return false;
@@ -53,13 +53,13 @@ export default {
       this.$router.push("/create/soft_skill");
     },
     goToBack() {
-      this.$router.push("/evolve/1");
+      this.$router.push("/create/proportion_skills");
     },
-    //alert
     Reset() {
-      this.$router.push("/create/personalisation"),
-        this.$store.dispatch("GET_GENDER", null),
-        this.$store.dispatch("PUSH_NAME", "");
+      this.$router.push('/create/personalisation'),
+			this.$store.dispatch('GET_GENDER', null),
+			this.$store.dispatch('PUSH_NAME', '')
+			this.$store.dispatch('PUSH_HARDSKILL_NAME', 'null')
     }
   }
 };
