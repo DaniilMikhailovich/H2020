@@ -38,6 +38,10 @@ export default {
 	},
 	components:{
 		arrowsvg:() => import(/* webpackChunkName: "arrowsvg" */ '../components/SVG/arrowSVG.vue')
+	},
+	mounted(){
+		let vh = window.innerHeight * 0.01
+		document.documentElement.style.setProperty('--vh', `${vh}px`)
 	}
 }
 </script>
@@ -137,10 +141,10 @@ hr{
 		text-shadow: 0vw 0vw 0.1vw #000;
 	}
 	header{
-		height: calc(var(--vh, 1vh) * 9);
+		height: calc(var(--vh, 1vh) * 11);
 	}
 	hr{
-	height: calc(var(--vh, 1vh) * 8);
+	height: calc(var(--vh, 1vh) * 10);
 	width: 0.2vw;
 	}
 	.humanity, .arrow{
@@ -151,7 +155,7 @@ hr{
 	}
 	.arrow{
 		width: 75vw;
-		margin-top: 2vw;
+		margin-top: 1vw;
 	}
 	main{
 		flex-direction: column;

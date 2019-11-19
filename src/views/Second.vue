@@ -19,7 +19,7 @@
 		},
 		computed: {
       isDesktop: function(){
-        if(this.width >= 800){
+        if(this.width >= 561){
           return true
         }
         else{
@@ -30,7 +30,7 @@
 		methods: {
 			updateWidth(){
 				this.width = window.innerWidth
-				if(this.width <= 799){
+				if(this.width <= 560){
 					if(this.$route.path === '/evolve'){
 					this.$router.push('/evolve/8')
 					}
@@ -42,6 +42,10 @@
 		},
 		beforeDestroy(){
 			window.removeEventListener('resize', this.updateWidth)
+		},
+		mounted(){
+			let vh = window.innerHeight * 0.01
+			document.documentElement.style.setProperty('--vh', `${vh}px`)
 		}
 	}
 </script>

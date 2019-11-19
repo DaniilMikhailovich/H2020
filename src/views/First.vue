@@ -31,7 +31,7 @@
 		},
 		computed: {
       isDesktop: function(){
-        if(this.width >= 800){
+        if(this.width >= 560){
           return true
         }
         else{
@@ -107,9 +107,9 @@
 	},
 	created(){
 		window.addEventListener('resize', this.updateWidth)
-		// window.addEventListener('resize', function(){
-		// let vh = window.innerHeight * 0.01
-		// document.documentElement.style.setProperty('--vh', `${vh}px`)})
+		window.addEventListener('resize', function(){
+			let vh = window.innerHeight * 0.01
+			document.documentElement.style.setProperty('--vh', `${vh}px`)})
 	}
 }
 </script>
@@ -122,7 +122,7 @@ header {
 	display: flex;
 	width: 100vw;
 	justify-content: flex-end;
-	height: calc(var(--vh, 1vh) * 5);
+	height: calc(var(--vh, 1vh) * 2);
 }
 hr{
 	border: 0.1vw solid #E0FFFF;
@@ -172,7 +172,7 @@ body{
 }
 main{
 	position: relative;
-	height: calc(var(--vh, 1vh) * 95);
+	height: calc(var(--vh, 1vh) * 98);
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
