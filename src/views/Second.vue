@@ -9,8 +9,8 @@
 	export default{
 		name: 'secondPage',
 		components:{
-			DesktopSecond:() => import(/* webpackChunkName: "desktopsecond" */ '../components/desktopSecond.vue'),
-			MobileSecond:() => import(/* webpackChunkName: "mobilesecond" */ '../components/mobileSecond.vue')
+			DesktopSecond:() => import(/* webpackChunkName: "desktopsecond", webpackPrefetch: 999 */ '../components/desktopSecond.vue'),
+			MobileSecond:() => import(/* webpackChunkName: "mobilesecond", webpackPreload:true */ '../components/mobileSecond.vue')
 		},
 		data: function(){
 			return{

@@ -55,20 +55,46 @@
 </template>
 
 <script>
+import API, {  graphqlOperation } from '@aws-amplify/api'
+import { createAnswer } from "../../graphql/mutations"
 export default {
   name: "finish",
   computed: {
     imgSrc() {
       return this.$store.getters.HUMAN_IMG;
     },
+    gender(){
+      return this.$store.getters.GENDER;
+    },
     humanName() {
       return this.$store.getters.HUMAN_NAME;
+    },
+    humanHead(){
+      return this.$store.getters.HUMAN_HEAD;
+    },
+    humanShirt(){
+      return this.$store.getters.HUMAN_SHIRT;
+    },
+    humanPants(){
+      return this.$store.getters.HUMAN_PANTS;
+    },
+    humanShoes(){
+      return this.$store.getters.HUMAN_SHOES;
+    },
+    humanAccessories(){
+      return this.$store.getters.HUMAN_ACCESSORIES;
+    },
+    humanJackets(){
+      return this.$store.getters.HUMAN_JACKET;
     },
     hardSkill() {
       return this.$store.getters.HARDSKILLNAME;
     },
     hardSkillPoints() {
       return this.$store.getters.HARDSKILL;
+    },
+    softSkillsPoints(){
+      return this.$store.getters.SOFTSKILLS;
     },
     Initiative() {
       return this.$store.state.Initiative;
@@ -116,9 +142,34 @@ export default {
     }
   },
   components:{
-      downloadsvg: () => import(/* webpackChunkName: "downloadsvg", webpackPrefetch: true */ "../SVG/downloadSVG.vue")
+      downloadsvg: () => import(/* webpackChunkName: "downloadsvg", webpackPrefetch: 958 */ "../SVG/downloadSVG.vue")
+  },
+  async mounted(){
+      const answer = {
+        gender: this.gender,
+        humanName: this.humanName,
+        humanHead:  this.humanHead,
+        humanShirt: this.humanShirt,
+        humanJackets: this.humanJackets,
+        humanPants: this.humanPants,
+        humanShoes: this.humanShoes,
+        humanAccessories: this.humanAccessories,
+        hardSkillPoints: this.hardSkillPoints,
+        softSkillsPoints: this.softSkillsPoints,
+        hardSkillName: this.hardSkill,
+        Initiative: this.Initiative,
+        Creativity: this.Creativity,
+        Adaptability: this.Adaptability,
+        Reflection: this.Reflection,
+        Multitasking: this.Multitasking,
+        ListeningSkills: this.ListeningSkills,
+        Teamwork: this.Teamwork,
+        CriticalThinking: this.CriticalThinking,
+        TimeManagement: this.TimeManagement
+      }
+      await API.graphql(graphqlOperation(createAnswer, { input: answer }))
+    }
   }
-};
 </script>
 
 <style scoped>

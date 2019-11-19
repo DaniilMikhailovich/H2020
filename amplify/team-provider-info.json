@@ -1,0 +1,14 @@
+{
+    "vue": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-h2020-vue-184853-authRole",
+            "UnauthRoleArn": "arn:aws:iam::499810478660:role/amplify-h2020-vue-184853-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::499810478660:role/amplify-h2020-vue-184853-authRole",
+            "Region": "eu-central-1",
+            "DeploymentBucketName": "amplify-h2020-vue-184853-deployment",
+            "UnauthRoleName": "amplify-h2020-vue-184853-unauthRole",
+            "StackName": "amplify-h2020-vue-184853",
+            "StackId": "arn:aws:cloudformation:eu-central-1:499810478660:stack/amplify-h2020-vue-184853/ecfea400-0a1a-11ea-b449-0286ce2a29ec"
+        }
+    }
+}
