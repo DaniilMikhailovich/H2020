@@ -8,7 +8,7 @@
 			<p class="fun" :class="{ruFun:(this.$i18n.locale==='ru', 'es')}">{{$t('secondPage.header.fun')}}</p>
 		</header>
 		<h1 class="BackNumber">2020</h1>
-		<transition appear mode="out-in">
+		<transition appear mode="out-in" name="evolve">
 		<router-view/>
 		</transition>
 		<footer></footer> 
@@ -45,14 +45,14 @@ export default {
 </script>
 
 <style scoped>
-.v-enter-active {
+.evolve-enter-active, .evolve-leave-active {
   transition: opacity .2s;
 }
-.v-leave-active{
-	transition: opacity .2s;
-}
-.v-enter, .v-leave-to{
+.evolve-enter, .evolve-leave-to{
   opacity: 0;
+}
+.evolve-enter-to, .evolve-leave{
+	opacity: 1;
 }
 #app{
 	height: 100vh;

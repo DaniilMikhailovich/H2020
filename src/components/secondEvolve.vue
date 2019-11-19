@@ -1,7 +1,7 @@
 <template>
 	<main>
 			<div class="canvas">
-				<img src="~@/assets/renaissance.png" alt="renaissance">
+				<img :src="require('../assets/renaissance.png')" alt="renaissance">
 			</div>
 			<section class="submenu">
 				<h2>{{$t('secondPage.evolution.aristocrat')}}</h2>
