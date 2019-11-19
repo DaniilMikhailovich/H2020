@@ -191,10 +191,10 @@ export default {
 				this.name = ''
 				this.$router.push('/create/soft_skill/finish')
 				setTimeout(() => {
-					this.humanImg = this.$refs.stage.getStage().toDataURL()
+					this.humanImg = this.$refs.stage.getStage().toDataURL({pixelRatio: 3})
 					this.$store.dispatch('PUSH_HUMANIMG', this.humanImg)
 					this.name = this.humanName
-				},100)
+				},300)
 			}else this.$router.push('/create/just_a_little')
 		},
 		Reset(){
