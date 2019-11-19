@@ -19,7 +19,7 @@
 		},
 		computed: {
       isDesktop: function(){
-        if(this.width >= 999){
+        if(this.width >= 800){
           return true
         }
         else{
@@ -30,16 +30,18 @@
 		methods: {
 			updateWidth(){
 				this.width = window.innerWidth
-				if(this.width <= 999){
-					this.$router.push('/evolve/1')
+				if(this.width <= 799){
+					if(this.$route.path === '/evolve'){
+					this.$router.push('/evolve/8')
 					}
+				}
 			},
 		},
 		created(){
-			// window.addEventListener('resize', this.updateWidth)
+			window.addEventListener('resize', this.updateWidth)
 		},
 		beforeDestroy(){
-			// window.removeEventListener('resize', this.updateWidth)
+			window.removeEventListener('resize', this.updateWidth)
 		}
 	}
 </script>
