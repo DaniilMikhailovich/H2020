@@ -18,42 +18,42 @@ const routes = [
       {
         path: '1',
         name: 'firstEvolve',
-        component: () => import(/* webpackChunkName: "firstEvolve", webpackPrefetch: 998 */'../components/firstEvolve.vue')
+        component: () => import(/* webpackChunkName: "firstEvolve", webpackPreload: true */'../components/firstEvolve.vue')
       },
       {
         path: '2',
         name: 'secondEvolve',
-        component: () => import(/* webpackChunkName: "secondEvolve", webpackPrefetch: 997 */'../components/secondEvolve.vue')
+        component: () => import(/* webpackChunkName: "secondEvolve", webpackPreload: true */'../components/secondEvolve.vue')
       },
       {
         path: '3',
         name: 'thirdEvolve',
-        component: () => import(/* webpackChunkName: "thirdEvolve", webpackPrefetch: 996 */'../components/thirdEvolve.vue')
+        component: () => import(/* webpackChunkName: "thirdEvolve", webpackPreload: true */'../components/thirdEvolve.vue')
       },
       {
         path: '4',
         name: 'fourthEvolve',
-        component: () => import(/* webpackChunkName: "fourthEvolve", webpackPrefetch: 995 */'../components/fourthEvolve.vue')
+        component: () => import(/* webpackChunkName: "fourthEvolve", webpackPreload: true */'../components/fourthEvolve.vue')
       },
       {
         path: '5',
         name: 'fifthEvolve',
-        component: () => import(/* webpackChunkName: "fifthEvolve", webpackPrefetch: 994 */'../components/fifthEvolve.vue')
+        component: () => import(/* webpackChunkName: "fifthEvolve", webpackPreload: true */'../components/fifthEvolve.vue')
       },
       {
         path: '6',
         name: 'sixthEvolve',
-        component: () => import(/* webpackChunkName: "sixthEvolve", webpackPrefetch: 993 */'../components/sixthEvolve.vue')
+        component: () => import(/* webpackChunkName: "sixthEvolve", webpackPreload: true */'../components/sixthEvolve.vue')
       },
       {
         path: '7',
         name: 'seventhEvolve',
-        component: () => import(/* webpackChunkName: "seventhEvolve", webpackPrefetch: 992 */'../components/seventhEvolve.vue')
+        component: () => import(/* webpackChunkName: "seventhEvolve", webpackPreload: true */'../components/seventhEvolve.vue')
       },
       {
         path: '8',
         name: 'eighthEvolve',
-        component: () => import(/* webpackChunkName: "eighthEvolve", webpackPrefetch: 991 */'../components/eighthEvolve.vue')
+        component: () => import(/* webpackChunkName: "eighthEvolve", webpackPreload: true */'../components/eighthEvolve.vue')
       }
     ]
   },

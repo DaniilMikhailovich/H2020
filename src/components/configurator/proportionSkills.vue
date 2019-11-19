@@ -200,6 +200,7 @@ input {
   font-size: 4vw;
   font-weight: 300;
   text-align: center;
+  user-select: all;
 }
 .circleSum {
   width: 40vw;

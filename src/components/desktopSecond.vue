@@ -9,7 +9,7 @@
 		</header>
 		<h1 class="BackNumber">2020</h1>
 		<main>
-			<img class="humanity" src="~@/assets/evolve.png" alt="evolve">
+			<img class="humanity" :src="require('../assets/evolve.png')" alt="evolve">
 			<p class="description">
 			<span :class="{ruGreeks:(this.$i18n.locale==='ru')}">{{$t('secondPage.evolution.greek')}}</span>  
 			<span :class="{esAristocrats:(this.$i18n.locale==='es'), ruAristocrats:(this.$i18n.locale==='ru')}">{{$t('secondPage.evolution.aristocrat')}}</span>  
@@ -19,7 +19,7 @@
 			<span :class="{esPunks:(this.$i18n.locale==='es'), ruPunks:(this.$i18n.locale==='ru')}">{{$t('secondPage.evolution.punk')}}</span> 
 			<span :class="{esHipster:(this.$i18n.locale==='es'), ruHipsters:(this.$i18n.locale==='ru')}">{{$t('secondPage.evolution.hipsters')}}</span>  
 			<router-link is="button" @click="goToConstruct"  class="BottomQuote_button">#2020</router-link></p>
-			<img class="arrow" id="arrow" src="~@/assets/Arrow.png" alt="arrow">
+			<img class="arrow" id="arrow" :src="require('../assets/Arrow.png')" alt="arrow">
 		</main>
 		<footer><router-link is="button" @click="goToBack" class="GoBack_button"><arrowsvg class="arrowbutton"></arrowsvg>{{ $t("footer.GoBack")}}</router-link></footer> 
 	</div>
