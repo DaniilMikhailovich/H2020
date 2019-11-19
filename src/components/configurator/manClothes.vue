@@ -154,8 +154,8 @@ export default {
 		padding: 0.5vw 0.5vw;
 		font-size: 1.5vw;
 		cursor: pointer;
-		width: 10vw;
-		height: 10vw;
+		width: calc(var(--vh, 1vh) * 6);
+		height: calc(var(--vh, 1vh) * 6)
 	}
 	.button:hover{
 		background-color: #ac40f1;

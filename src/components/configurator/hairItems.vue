@@ -27,22 +27,24 @@ export default {
 		display: flex;
 		justify-content: flex-start;
 		flex-wrap: nowrap;
-		padding: 1vw;
+		padding-left: calc(var(--vh, 1vh) * 0.5);
+		padding-top: calc(var(--vh, 1vh) * 0.3);
 		overflow: hidden;
-		height: 45vw;
+		height: 43vw;
 	}
 	.scrollM{
 		overflow-x: scroll;
 	}
 	.button{
-		width: 32vw;
-		height: 31vw;
+		width: 35vw;
+		height: calc(var(--vh, 1vh) * 18.8);
 		border-radius: 1vw;
 		cursor: pointer;
 		transition: 0.5s;
 		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
 		border: none;
-		margin: 1vw 1vw 0vw 0vw;
+		margin-right: calc(var(--vh, 1vh) * 0.4);
+		margin-top: calc(var(--vh, 1vh) * 0.1);
 		outline: none;
 		flex-shrink: 0;
 	}

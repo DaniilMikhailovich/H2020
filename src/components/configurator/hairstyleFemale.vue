@@ -79,12 +79,12 @@ section {
   flex-basis: 100%;
 }
 .button {
-  width: 8vw;
-  height: 8vw;
+  width: calc(var(--vh, 1vh) * 5);
+  height: calc(var(--vh, 1vh) * 5);
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  margin: 1vw 0vw 0.3vw 0vw;
+  margin-top: calc(var(--vh, 1vh) * 0.1);
   outline: none;
 }
 .button:focus,

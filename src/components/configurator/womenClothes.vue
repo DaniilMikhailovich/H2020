@@ -125,7 +125,7 @@ export default {
 	.suitsvgw, .pantssvg, .shoessvg{
 		width: 6vw;
 	}
-	.hairstylesvg.active, .shirtsvg.active, .pantssvg.active, .accessoriessvg.active, .suitsvgm.active, .shoessvg.active{
+	.hairstylesvg.active, .shirtsvg.active, .pantssvg.active, .accessoriessvg.active, .suitsvgw.active, .shoessvg.active{
 		fill: #ffffff;
 	}
 	.currentTab{
@@ -156,8 +156,8 @@ export default {
 		padding: 0.5vw 0.5vw;
 		font-size: 1.5vw;
 		cursor: pointer;
-		width: 10vw;
-		height: 10vw;
+		width: calc(var(--vh, 1vh) * 6);
+		height: calc(var(--vh, 1vh) * 6)
 	}
 	.button:hover{
 		background-color: #ac40f1;
@@ -194,7 +194,7 @@ export default {
 	.hairstylesvg, .shirtsvg, .accessoriessvg{
 		width: 2vw;
 	}
-	.suitsvgm, .pantssvg, .shoessvg{
+	.suitsvgw, .pantssvg, .shoessvg{
 		width: 3vw;
 	}
 	.button{

@@ -69,6 +69,7 @@ p{
 @media screen and (min-width: 1000px), (orientation: landscape){
 	.malesvg, .femalesvg{
 	width: 22vw;
+	height: initial;
 	fill: #5bc8ff;
 }
 .femalesvg{
