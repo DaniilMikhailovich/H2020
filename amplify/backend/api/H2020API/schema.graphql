@@ -30,7 +30,7 @@ type ImgObj {
 }
 
 type ImgShoesObj {
-  id: Int!
+  id: Int
   src: String
   icon: String
   posX: Int
