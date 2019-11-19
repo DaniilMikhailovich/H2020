@@ -31,7 +31,8 @@ export default {
 
 <style scoped>
 .malesvg, .femalesvg{
-	width: 46vw;
+	height: calc(var(--vh, 1vh) * 24);
+	width: calc(var(--vh, 1vh) * 24);
 	fill: #5bc8ff;
 }
 .femalesvg{
@@ -44,7 +45,7 @@ button{
 	border-radius: 1vw;
 	padding: 1vw;
 	cursor: pointer;
-	height: 51vw;
+	height: calc(var(--vh, 1vh) * 29);
 	width: 47vw;
 	outline: none;
 	background-color: rgb(226, 226, 226);

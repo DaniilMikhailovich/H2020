@@ -43,12 +43,14 @@ export default {
 		border-bottom: 0.1vw solid #ac40f1;
 		caret-color: #ac40f1;
 		color: #ac40f1;
-		margin-bottom: 10vw;
+		margin-bottom: calc(var(--vh, 1vh) * 5);
 	}
 	.currentTab{
 		flex-direction: column;
 		align-items: center;
-		margin-top: 7vw;
+		justify-content: flex-start;
+		margin-top: calc(var(--vh, 1vh) * 7);
+		margin-bottom: calc(var(--vh, 1vh) * 5);
 	}
 	.Next_Button{
 		border-radius: 5vw;

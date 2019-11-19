@@ -39,7 +39,7 @@ main{
 }
 img{
 	height: 100%;
-	width: 52vw;
+	width: 28vh;
 }
 .submenu{
 	text-align: center;

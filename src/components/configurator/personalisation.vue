@@ -37,7 +37,8 @@ export default {
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
-		padding: 3vw 1.5vw;
+		padding: 2vw 1.5vw 0vw 1.5vw;
+		height: calc(var(--vh, 1vh) * 40);
 	}
 	.button{
 		outline: none;

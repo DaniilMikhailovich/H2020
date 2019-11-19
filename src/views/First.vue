@@ -101,11 +101,15 @@
       }
       return num;
 		}
+
+		let vh = window.innerHeight * 0.01
+		document.documentElement.style.setProperty('--vh', `${vh}px`)
 	},
 	created(){
 		window.addEventListener('resize', this.updateWidth)
-		let vh = window.innerHeight * 0.01
-		document.documentElement.style.setProperty('--vh', `${vh}px`)
+		// window.addEventListener('resize', function(){
+		// let vh = window.innerHeight * 0.01
+		// document.documentElement.style.setProperty('--vh', `${vh}px`)})
 	}
 }
 </script>
@@ -118,6 +122,7 @@ header {
 	display: flex;
 	width: 100vw;
 	justify-content: flex-end;
+	height: calc(var(--vh, 1vh) * 5);
 }
 hr{
 	border: 0.1vw solid #E0FFFF;
@@ -147,8 +152,6 @@ html{
 }
 #app{
 	width: 100vw;
-	height: 100vh;
-	height: calc(var(--vh, 1vh) * 100);
 	background: linear-gradient(rgb(0, 247, 255), rgb(100, 255, 131));
 	font-family: 'Source', sans-serif;
 	overflow: hidden;
@@ -164,9 +167,12 @@ html{
 	z-index: 0;
 	animation: spin 190s infinite linear;
 }
+body{
+	height: calc(var(--vh, 1vh) * 100);
+}
 main{
 	position: relative;
-	height: 100vh;
+	height: calc(var(--vh, 1vh) * 95);
 	width: 100vw;
 	display: flex;
 	flex-direction: column;

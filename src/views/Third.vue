@@ -266,8 +266,15 @@ export default {
 		question.onload =() =>{
 			this.question=question
 		}
+		// window.addEventListener('resize', function(){
+		// let vh = window.innerHeight * 0.01
+		// document.documentElement.style.setProperty('--vh', `${vh}px`)
+		// setTimeout(()=>{this.changeCanvas()},8000)
+		// })
 	},
 	mounted(){
+		let vh = window.innerHeight * 0.01
+		document.documentElement.style.setProperty('--vh', `${vh}px`)
 		this.changeCanvas(),
 		this.newGender(),
 		this.posX = this.calcPosName(),
@@ -316,9 +323,9 @@ footer{
 	justify-content: flex-start;
 }
 .progressBar{
-	height: 70vw;
+	height: calc(var(--vh, 1vh) * 40);
 	right: 10vw;
-	bottom: 50%;
+	top: calc(var(--vh, 1vh) * 11);
 	position: absolute;
 	z-index: 0;
 	border-radius: .3vw;
@@ -335,33 +342,25 @@ footer{
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	height: 70vw;
+	height: calc(var(--vh, 1vh) * 40);
 	width: 100vw;
 	border-radius: .5vw;
 	z-index: 999;
 	background-color: rgb(255, 255, 255);
 }
 .canvascontainer{
-	height: 85vw;
-	width: 66.4vw;
+	height: calc(var(--vh, 1vh) * 60);
+	width: calc(var(--vh, 1vh) * 46.9);
 }
 .workSpace{
 	order: 2;
 }
-#app{
-	display: flex;
-	height: calc(100vh - 55px);
-}
-@media (-moz-touch-enabled){
-  #app{
-		height: 100vh;
-	}
-}
 main{
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: space-between;
 	align-items: center;
+	height: calc(var(--vh, 1vh) * 100);
 }
 header{
 	display: none;
@@ -374,9 +373,6 @@ header{
 	opacity: 0.1;
 	position: absolute;
 	z-index: 0;
-}
-.GoBack_button{
-	margin-bottom: 1vw;
 }
 .GoBack_button{
 	background: none;
@@ -497,6 +493,9 @@ header{
 	#app{
 		display: flex;
 		height: 100vh;
+	}
+	.GoBack_button{
+	margin-bottom: 1vw;
 	}
 	@-moz-document url-prefix(){
 		#app{
