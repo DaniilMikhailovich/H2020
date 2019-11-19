@@ -15,12 +15,43 @@ export default new Vuex.Store({
   state: {
     gender:'',
     humanName:'',
-    humanHead:'',
-    humanShirt:'',
-    humanJackets:'',
-    humanPants:'',
-    humanShoes:'',
-    humanAccessories:'',
+    humanHead:{
+      id:0,
+      src:'',
+      posX:0,
+      posY:0
+    },
+    humanShirt:{
+      id:0,
+      src:'',
+      posX:0,
+      posY:0
+    },
+    humanJackets:{
+      id:0,
+      src:'',
+      posX:0,
+      posY:0
+    },
+    humanPants:{
+      id:0,
+      src:'',
+      posX:0,
+      posY:0
+    },
+    humanShoes:{
+      id:0,
+      src:'',
+      icon:'',
+      posX:0,
+      posY:0
+    },
+    humanAccessories:{
+      id:0,
+      src:'',
+      posX:0,
+      posY:0
+    },
     sumOfSkills:1000,
     hardSkillPoints:0,
     softSkillsPoints:0,
