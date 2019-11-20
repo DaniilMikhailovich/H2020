@@ -34,10 +34,10 @@ export default {
 		overflow-x: scroll;
 	}
 	.button{
-		margin-bottom: 0.4vw;
-		width: 35vw;
-		height: 40vw;
-		margin: 1.5vw 1vw 0vw 0vw;
+		width: 38vw;
+		height: calc(var(--vh, 1vh) * 24);
+		margin-top: calc(var(--vh, 1vh) * 0.4);
+		margin-right: calc(var(--vh, 1vh) * 0.5);
 		cursor: pointer;
 		flex-shrink: 0;
 		transition: 0.3s;
@@ -50,16 +50,28 @@ export default {
 		border: none;
 	}
 	.button:hover{
-		transform: scale(1.1);
+		transform: scale(1.05);
 		background: none;
 		transition: 0.3s;
 	}
 	img{
-		height: 20%;
+		height: 25%;
 	}
-	button:nth-of-type(11) img{
-		width: 90%;
+	button:nth-of-type(n+4) img{
+		height: 40%;
 	}
+	button:nth-of-type(n+8) img{
+		height: 60%;
+	}
+	button:nth-child(n+4):nth-child(-n+6) img {
+		height: 50%;
+	}
+	/* button:nth-of-type(11) img, button:nth-of-type(12) img{
+		height: 70%;
+	}
+	button:nth-of-type(11) img, button:nth-of-type(12) img{
+		height: 70%;
+	} */
 @media screen and (min-width: 760px) and (max-width: 999px) {
 }
 

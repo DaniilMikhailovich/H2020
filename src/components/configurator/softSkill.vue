@@ -398,34 +398,40 @@ section {
   width: 100%;
 }
 .skillItem {
-  width: 72vw;
-  height: 50vw;
+  width: 47vw;
+  height: calc(var(--vh, 1vh) * 30);
   border-radius: 1vw;
   transition: 0.3s;
   background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
   border: none;
-  margin: 1vw 3vw 1vw 1vw;
+  margin: calc(var(--vh, 1vh) * 0.5);
+  margin-top: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  box-shadow: 0vw 0vw 1.5vw#000;
+  box-shadow: 0vw 0vw 0.7vw#000;
   flex-shrink: 0;
 }
+.range:focus, .range:active{
+    outline: 0.2vw solid rgb(36, 198, 219);
+  }
 p {
-  font-size: 6.5vw;
+  font-size: calc(var(--vh, 1vh) * 2.5);
+  letter-spacing: -0.2vw;
   margin: 0;
   font-weight: 400;
-  color: #fff;
-  text-shadow: 0vw 0vw .2vw#000;
+  color: #ac40f1;
+  text-shadow: 0vw 0vw .1vw#000;
   text-align: center;
 }
 .percent {
-  font-size: 5vw;
+  font-size: 4vw;
+  margin-bottom: 1vw;
   background: none;
   background-color: rgba(56, 56, 56, 0.342);
   border-radius: 5vw;
-  padding: 0 4vw;
+  padding: 0vw 4vw;
   font-weight: 400;
 }
 .rangeSlider {
@@ -447,10 +453,12 @@ p {
 }
 .range {
   appearance: none;
+  transform: rotate(-90deg);
   border-radius: 5vw;
-  width: 90%;
+  width: calc(var(--vh, 1vh) * 22);
   height: 7vw;
   outline: none;
+  user-select: all;
   -moz-outline-radius: 20px;
 }
 .range::-moz-range-track {
@@ -484,55 +492,45 @@ p {
   .rightButtonGroup {
     display: none;
   }
-  section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  .scrollD{
+		overflow-y: scroll;
+	}
+	.scrollM{
+		overflow-x: hidden;
     flex-wrap: wrap;
-    padding: 1vw;
-  }
+    justify-content: space-around;
+	}
   .skillItem {
     width: 15vw;
     height: 8vw;
     border-radius: 0.5vw;
-    transition: 0.3s;
-    background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
-    border: none;
     margin-bottom: 1vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0vw 0vw 1.5vw#000;
+    flex-shrink: initial;
   }
   p {
     font-size: 1.4vw;
-    margin: 0;
-    font-weight: 300;
     color: #fff;
-    text-shadow: 0vw 0vw 1vw#000;
-    text-align: center;
+    text-shadow: 0vw 0vw 0.1vw#000;
+    letter-spacing: normal;
   }
   .percent {
     font-size: 1.2vw;
-    background: none;
-    background-color: rgba(56, 56, 56, 0.342);
     border-radius: 2vw;
-    padding: 0 1vw;
+    padding: 0vw 1vw;
   }
   .rangeSlider {
     width: 30%;
   }
   .clothesTitle {
-    flex-basis: 100%;
     color: #fff;
     font-size: 3vw;
-    font-weight: 300;
+    margin-bottom: initial;
   }
   .separate {
     margin: 1vw 0vw;
-    flex-basis: 100%;
     height: 0.1vw;
+    border: #fff;
+    background-color: #fff;
   }
   .range {
     appearance: none;
@@ -540,6 +538,8 @@ p {
     width: 90%;
     height: 1.1vw;
     outline: none;
+    user-select: all;
+    transform: initial;
     -moz-outline-radius: 20px;
   }
   .range::-moz-range-thumb {

@@ -30,13 +30,14 @@ section {
   flex-wrap: nowrap;
   overflow: hidden;
   padding: 1vw;
-  height: 45vw;
+  height: 50vw;
 }
 .button {
-  width: 35vw;
-	height: 40vw;
+  width: 38vw;
+	height: calc(var(--vh, 1vh) * 24);
+	margin-top: calc(var(--vh, 1vh) * 0.4);
+	margin-right: calc(var(--vh, 1vh) * 0.5);
   cursor: pointer;
-  margin: 1.5vw 1vw 0vw 0vw;
   transition: 0.3s;
   flex-shrink: 0;
   border-radius: 1vw;
