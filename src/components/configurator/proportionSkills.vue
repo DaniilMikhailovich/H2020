@@ -90,10 +90,10 @@ export default {
     this.$store.dispatch("PUSH_SOFTSKILLS", this.softSkills);
     this.$store.dispatch("PUSH_HARDSKILL", this.hardSkill);
   },
-  created(){
+  created() {
     if (navigator.userAgent.match(/iPhone/i)) {
       this.iphoneTrigger = true;
-  }
+    }
   },
   watch: {
     softSkills: function() {
@@ -120,17 +120,17 @@ export default {
       this.$router.push("/create/hard_skill");
     },
     goToBack() {
-      if(this.$store.getters.GENDER ==='male'){
-					this.$router.push('/create/man_clothes')
-				} else this.$router.push('/create/women_clothes')
+      if (this.$store.getters.GENDER === "male") {
+        this.$router.push("/create/man_clothes");
+      } else this.$router.push("/create/women_clothes");
     },
     inputActive() {
       this.inputTrigger = true;
     },
     Reset() {
       this.$router.push("/create/personalisation"),
-      this.$store.dispatch("GET_GENDER", null),
-      this.$store.dispatch("PUSH_NAME", "");
+        this.$store.dispatch("GET_GENDER", null),
+        this.$store.dispatch("PUSH_NAME", "");
     }
   },
   components: {
@@ -138,7 +138,7 @@ export default {
       import(/* webpackChunkName: "arrowSVG" */ "../SVG/arrowSVG.vue"),
     resetsvg: () =>
       import(/* webpackChunkName: "resetSVG" */ "../SVG/resetSVG.vue")
-  }
+  },
 };
 </script>
 
@@ -198,7 +198,7 @@ section {
 input {
   border: none;
   width: calc(var(--vh, 1vh) * 10);
-  height: calc(var(--vh, 1vh) *4);
+  height: calc(var(--vh, 1vh) * 4);
   background: none;
   background-color: rgba(56, 56, 56, 0.52);
   border-radius: 5vw;
@@ -281,27 +281,27 @@ p {
 }
 .ticker {
   position: absolute;
-  bottom: 1vw;
+  top: calc(var(--vh, 1vh) * 36);
   left: 1vw;
   color: #ac40f1;
   font-size: 5vw;
   font-weight: 400;
   white-space: nowrap;
-  transform: translateX(43%);
+  transform: translateX(0%);
   z-index: 998;
-  animation: ticker 20s linear infinite;
+  animation: ticker 28s linear infinite;
 }
 .tophr {
   transform: rotate(-25deg);
   left: calc(var(--vh, 1vh) * 18);
   top: calc(var(--vh, 1vh) * 19);
-  width: 23vw;
+  width: calc(var(--vh, 1vh) * 20);
 }
 .bothr {
   transform: rotate(12deg);
   left: calc(var(--vh, 1vh) * 20);
   top: calc(var(--vh, 1vh) * 28);
-  width: 40vw
+  width: calc(var(--vh, 1vh) * 30);
 }
 .sumOfScills {
   position: relative;
@@ -326,11 +326,10 @@ p {
   top: 0;
   z-index: 999;
   left: 0;
-  height: 100vh;
   right: 0;
   background-color: #fff;
 }
-.inputM.iphoneInput{
+.inputM.iphoneInput {
   all: initial;
   position: relative;
   display: block;
@@ -524,52 +523,50 @@ p {
     overflow: hidden;
   }
   input {
-    border: none;
-    width: 20vw;
-    height: 7vw;
-    background: none;
-    background-color: rgba(56, 56, 56, 0.52);
-    border-radius: 5vw;
-    color: rgb(255, 255, 255);
-    font-size: 4vw;
-    font-weight: 300;
-    text-align: center;
-  }
+  border: none;
+  width: calc(var(--vh, 1vh) * 10);
+  height: calc(var(--vh, 1vh) * 4);
+  background: none;
+  background-color: rgba(56, 56, 56, 0.52);
+  border-radius: 5vw;
+  color: #fff;
+  font-size: 4vw;
+  font-weight: 300;
+  text-align: center;
+  user-select: all;
+}
   .circleSum {
-    width: 40vw;
-    height: 40vw;
+    width: calc(var(--vh, 1vh) * 22);
+    height: calc(var(--vh, 1vh) * 22);
     border-radius: 50%;
     background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
     position: absolute;
-    top: 28vw;
+    top: calc(var(--vh, 1vh) * 15);
+    z-index: 997;
     left: 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0vw 0vw 0.3vw #000;
-    text-shadow: 0vw 0vw 0.2vw #000;
+    box-shadow: 0vw 0vw 0.4vw #000;
+    text-shadow: 0vw 0vw 0.3vw #000;
   }
   .circleSoft {
-    width: 30vw;
-    height: 30vw;
+    width: calc(var(--vh, 1vh) * 16);
+    height: calc(var(--vh, 1vh) * 16);
     border-radius: 50%;
     background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
     position: absolute;
-    top: 11.5vw;
+    top: calc(var(--vh, 1vh) * 7);
     left: 50vw;
-    box-shadow: 0vw 0vw 0.3vw #000;
-    text-shadow: 0vw 0vw 0.2vw #000;
   }
   .circleHard {
-    width: 25vw;
-    height: 25vw;
+    width: calc(var(--vh, 1vh) * 14);
+    height: calc(var(--vh, 1vh) * 14);
     border-radius: 50%;
     background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
     position: absolute;
-    top: 43vw;
+    top: calc(var(--vh, 1vh) * 23);
     left: 70vw;
-    box-shadow: 0vw 0vw 0.3vw #000;
-    text-shadow: 0vw 0vw 0.2vw #000;
   }
   .circleHard,
   .circleSoft {
@@ -577,17 +574,21 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 6vw;
+    font-size: calc(var(--vh, 1vh) * 3.3);
     color: #fff;
     font-weight: 300;
+    z-index: 997;
+    box-shadow: 0vw 0vw 0.4vw #000;
+    text-shadow: 0vw 0vw 0.3vw #000;
   }
   hr {
     width: 20vw;
-    height: 0.3vw;
+    height: 0.1vw;
+    height: calc(var(--vh, 1vh) * 0.1);
     border-radius: 30%;
-    background-color: #fff;
     position: absolute;
-    border: 0.2vw solid #ffffff;
+    border: 0.2vw solid rgb(67, 251, 77);
+    box-shadow: 0 0 0.3vw rgb(36, 198, 219);
   }
   .separate {
     margin: 0.3vw 0vw;
@@ -606,26 +607,26 @@ p {
   }
   .ticker {
     position: absolute;
-    bottom: 1vw;
+    top: calc(var(--vh, 1vh) * 36);
     left: 1vw;
     color: #ac40f1;
     font-size: 5vw;
     font-weight: 400;
     white-space: nowrap;
-    transform: translateX(43%);
-    animation: ticker 20s linear infinite;
+    transform: translateX(0%);
+    animation: ticker 28s linear infinite;
   }
   .tophr {
     transform: rotate(-25deg);
-    left: 40vw;
-    top: 34.5vw;
-    width: 12vw;
+    left: calc(var(--vh, 1vh) * 18);
+    top: calc(var(--vh, 1vh) * 19);
+    width: calc(var(--vh, 1vh) * 20);
   }
   .bothr {
     transform: rotate(12deg);
-    left: 42vw;
-    top: 50vw;
-    width: 28vw;
+    left: calc(var(--vh, 1vh) * 20);
+    top: calc(var(--vh, 1vh) * 28);
+    width: calc(var(--vh, 1vh) * 30);
   }
   .sumOfScills {
     position: relative;
@@ -650,7 +651,6 @@ p {
     top: 0;
     z-index: 999;
     left: 0;
-    height: 100vh;
     right: 0;
     background-color: #fff;
   }

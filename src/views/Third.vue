@@ -194,7 +194,7 @@ export default {
 					this.humanImg = this.$refs.stage.getStage().toDataURL({pixelRatio: 3})
 					this.$store.dispatch('PUSH_HUMANIMG', this.humanImg)
 					this.name = this.humanName
-				},300)
+				},500)
 			}else this.$router.push('/create/just_a_little')
 		},
 		Reset(){
@@ -281,11 +281,6 @@ export default {
 		question.onload =() =>{
 			this.question=question
 		}
-		// window.addEventListener('resize', function(){
-		// let vh = window.innerHeight * 0.01
-		// document.documentElement.style.setProperty('--vh', `${vh}px`)
-		// setTimeout(()=>{this.changeCanvas()},8000)
-		// })
 	},
 	mounted(){
 		let vh = window.innerHeight * 0.01

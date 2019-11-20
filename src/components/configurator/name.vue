@@ -9,6 +9,8 @@
       :placeholder="$t('thirdPage.name.placeholder')"
     />
     <router-link is="button" class="Next_Button" @click="goToNext">{{$t('thirdPage.name.next')}}</router-link>
+    <div class="overlay"></div>
+    <div class="popup"></div>
   </section>
 </template>
 

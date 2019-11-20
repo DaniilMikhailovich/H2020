@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="topConfMenu">
-      <h1 class="clothesTitle">HARD Skill</h1>
+      <h1 class="clothesTitle">{{$t('thirdPage.hardskill.HARD')}}</h1>
       <div class="rightButtonGroup">
         <router-link is="button" @click="goToBack" class="GoBack_button">
           <arrowsvg class="arrowbutton"></arrowsvg>

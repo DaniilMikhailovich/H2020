@@ -183,6 +183,7 @@ p {
 }
 .overlay {
   position: absolute;
+  z-index: 998;
   left: 0;
   right: 0;
   top: 0;
