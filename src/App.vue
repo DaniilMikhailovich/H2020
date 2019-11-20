@@ -2,6 +2,24 @@
       <router-view></router-view>
 </template>
 
+<script>
+export default {
+	name:"H2020",
+	data(){
+		return {
+			saved_state: null
+		}
+	},
+	updated(){
+		let json = JSON.stringify(this.$store.state)
+		sessionStorage.setItem('state', json)
+
+		alert(sessionStorage.getItem('state'))
+	},
+
+}
+</script>
+
 <style>
 *{
 	margin: 0;

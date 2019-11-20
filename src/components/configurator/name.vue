@@ -3,6 +3,7 @@
     <input
       :class="[{'iphoneTrue':iphoneTrigger}]"
       @keyup.enter="goToNext"
+      @input="validName(humanName)"
       type="text"
       maxlength="25"
       v-model="humanName"
@@ -20,7 +21,12 @@ export default {
   data() {
     return {
       humanName: this.$store.getters.HUMAN_NAME,
-      iphoneTrigger: false
+      iphoneTrigger: false,
+      nameValidly: true,
+      popUpDisplay: false,
+      nameNotInput: false,
+      nameNotValid: false,
+      genderNotInput: false
     };
   },
   watch: {
@@ -32,13 +38,21 @@ export default {
     goToNext() {
       if (this.$store.getters.GENDER === "male") {
         if (this.humanName !== "") {
-          this.$router.push("/create/man_clothes");
-        } else alert("Input name");
+          if(this.nameValidly === true){
+            this.$router.push("/create/man_clothes")
+            } else {this.nameNotValid = true,this.popUpDisplay = true}
+        } else {this.popUpDisplay = true, this.nameNotInput = true}
       } else if (this.$store.getters.GENDER === "female") {
         if (this.humanName !== "") {
-          this.$router.push("/create/women_clothes");
-        } else alert("Input name");
-      } else alert("Set gender of you human2020");
+          if(this.nameValidly === true){
+            this.$router.push("/create/women_clothes")
+            } else {this.nameNotValid = true,this.popUpDisplay = true}
+        } else {this.popUpDisplay = true, this.nameNotInput = true}
+      } else {this.popUpDisplay = true, this.genderNotInput}
+    },
+    validName(humanName) {
+      var re = /^[а-яА-ЯёЁa-zA-Z0-9]+$/
+      this.nameValidly = re.test(humanName)
     }
   },
   created() {
