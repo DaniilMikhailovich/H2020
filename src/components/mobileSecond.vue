@@ -84,14 +84,15 @@ header{
 .war, .politics, .fun{
 	background: none;
 	border: none;
-	color: #20252a;
+	color: rgb(255, 255, 255);
+	text-shadow: 0 0 0.2vw rgb(67, 251, 77);
 	margin: 2vw 2vw 0 0;
 	font-family: 'Source', sans-serif;
-	font-size: 7vw;
+	font-size: calc(var(--vh, 1vh) * 6);
 	outline: none;
 }
 .ruFun, .ruWar, .ruPolitics{
-	line-height: 6vw;
+	line-height: calc(var(--vh, 1vh) * 5);
 }
 
 hr{
