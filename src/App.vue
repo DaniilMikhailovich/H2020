@@ -4,7 +4,19 @@
 
 <script>
 export default {
-	
+	name:"H2020",
+	data(){
+		return {
+			saved_state: null
+		}
+	},
+	updated(){
+		let json = JSON.stringify(this.$store.state)
+		sessionStorage.setItem('state', json)
+
+		alert(sessionStorage.getItem('state'))
+	},
+
 }
 </script>
 
