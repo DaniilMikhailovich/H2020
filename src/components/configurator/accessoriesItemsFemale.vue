@@ -28,15 +28,16 @@ export default {
 		overflow: hidden;
 		justify-content: space-between;
 		flex-wrap: nowrap;
-		height: 45vw;
+		height: 50vw;
 	}
 	.scrollM{
 		overflow-x: scroll;
 	}
 	.button{
-		width: 35vw;
-		height: 40vw;
-		margin: 1.5vw 1vw 0.4vw 0vw;
+		width: 38vw;
+		height: calc(var(--vh, 1vh) * 24);
+		margin-top: calc(var(--vh, 1vh) * 0.4);
+		margin-right: calc(var(--vh, 1vh) * 0.5);
 		cursor: pointer;
 		flex-shrink: 0;
 		transition: 0.3s;

@@ -30,7 +30,7 @@ export default {
 		padding-left: calc(var(--vh, 1vh) * 0.5);
 		padding-top: calc(var(--vh, 1vh) * 0.3);
 		overflow: hidden;
-		height: 43vw;
+		height: 45vw;
 	}
 	.scrollM{
 		overflow-x: scroll;

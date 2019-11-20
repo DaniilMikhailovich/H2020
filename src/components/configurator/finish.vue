@@ -5,7 +5,7 @@
       <section class="text">
         <p class="name">{{ humanName }}</p>
         <p class="hardskill">Hard Skills: {{ hardSkill }} ({{ hardSkillPoints }} points)</p>
-        <p>Soft Skills:</p>
+        <p class="softtitle">Soft Skills:</p>
         <section class="softskills">
           <div class="skillItem">
             <p>Инициативность</p>
@@ -48,8 +48,9 @@
             <downloadsvg class="downloadSVG"></downloadsvg>
             <p>Share your opinion with the whole world! Together we can change everything! #2020 #human2020</p>
         </section>
+        <section class="YourOpinion"><img :src="imgSrc" alt="Your human" /></section>
       </section>
-      <img :src="imgSrc" alt="Your human" />
+      <img class="desctopIMG" :src="imgSrc" alt="Your human" />
     </section>
   </section>
 </template>
@@ -175,9 +176,135 @@ export default {
 <style scoped>
 p {
   color: #ac40f1;
+  font-size: 3vw;
+}
+.desctopIMG{
+    display: none;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: black;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 75vw;
+  height: 70vh;
+  background: linear-gradient(rgb(100, 255, 131), rgb(0, 247, 255));
+  left: calc(50% - 37vw);
+  top: calc(50% - 35vh);
+  z-index: 999;
+  flex-shrink: 0;
+  border-radius: 2vw;
+}
+.name {
+  text-transform: capitalize;
+  flex-basis: 100%;
+  order: 1;
+  width: 100%;
+  text-align: center;
+}
+.text {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vw;
+}
+.softskills{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    order: 6;
+    flex-basis: 100%;
+}
+.skillItem {
+  width: 23vw;
+  height: 10vw;
+  border-radius: 1vw;
+  transition: 0.3s;
+  background: #ffffff;
+  border: none;
+  margin-bottom: 1vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0vw 0vw 0.5vw#000;
+  text-align: center;
+}
+.skillItem p{
+    font-size: 2.5vw;
+    line-height: 2vw;
+}
+.download{
+  width: 48%;
+  flex-basis: 48%;
+    display: flex;
+    order: 2;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+}
+.YourOpinion{
+  order: 3;
+  flex-basis: 52%;
+  width: 52%;
+  height: 40vh;
+}
+.YourOpinion img{
+  width: 140%;
+  transform: translateX(-10vw);
+}
+.download p{
+  order: 1;
+    font-size: 3.5vw;
+    margin-left: 0.5vw;
+}
+.downloadSVG{
+  order: 2;
+    width: 12vw;
+    fill: #ac40f1;
+}
+.softtitle{
+  order: 4;
+  flex-basis: 20%;
+}
+.hardskill{
+  order: 5;
+  flex-basis: 80%;
+  text-align: right;
+}
+@media screen and (min-width: 760px) and (max-width: 999px) {
+}
+
+
+@media screen and (min-width: 1000px), (orientation: landscape){
+  .YourOpinion{
+    display: none;
+  }
+  p {
   font-size: 1.8vw;
 }
-img{
+.desctopIMG{
+  display: initial;
     position: relative;
     width: 43%;
 }
@@ -192,71 +319,66 @@ img{
   cursor: pointer;
 }
 .popup {
-  display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  width: 75vw;
   height: 80vh;
-  background: linear-gradient(rgb(100, 255, 131), rgb(0, 247, 255));
-  left: calc(50% - 37vw);
   top: calc(50% - 38vh);
   padding: 2vw 0vw 2vw 2vw;
-  flex-shrink: 0;
-  border-radius: 1vw;
+  border-radius: 2vw;
 }
 .name {
   text-transform: capitalize;
+  flex-basis: initial;
+  order: initial;
+  width: initial;
+  text-align: initial;
 }
 .text {
-    position: relative;
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
-  height: 100%;
   width: 55%;
+  flex-wrap: initial;
+  padding: initial;
 }
 .softskills{
-    position: relative;
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
     justify-content: space-between;
+    order: initial;
+    flex-basis: initial;
 }
 .skillItem {
   width: 12vw;
   height: 5vw;
   border-radius: 0.5vw;
-  transition: 0.3s;
-  background: #ffffff;
-  border: none;
-  margin-bottom: 1vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 0vw 0vw 0.5vw#000;
-  text-align: center;
 }
 .skillItem p{
     font-size: 1.2vw;
+    line-height: initial;
 }
 .download{
-    display: flex;
-    flex-shrink: 0;
-    justify-content: space-between;
+  flex-basis: initial;
+  order: initial;
+  flex-direction: row;
     align-items: center;
     width: 100%;
-    cursor: pointer;
 }
 .download p{
+  order: initial;
     font-size: 1.2vw;
     margin-left: 0.5vw;
 }
 .downloadSVG{
+  order: initial;
     width: 5vw;
     fill: #ac40f1;
+}
+.softtitle{
+  order: initial;
+  flex-basis: initial;
+}
+.hardskill{
+  order: initial;
+  flex-basis: initial;
+  text-align: initial;
+}
 }
 </style>

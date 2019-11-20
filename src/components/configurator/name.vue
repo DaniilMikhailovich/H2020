@@ -21,9 +21,13 @@ export default {
 	methods: {
 		goToNext(){
 			if(this.$store.getters.GENDER==='male') {
-				this.$router.push('/create/man_clothes')
+				if(this.humanName !== ''){
+					this.$router.push('/create/man_clothes')
+				}else alert('Input name')
 			} else if(this.$store.getters.GENDER==='female'){
-				this.$router.push('/create/women_clothes')
+				if(this.humanName !== ''){
+					this.$router.push('/create/women_clothes')
+				}else alert('Input name')
 			} else alert('Set gender of you human2020')
 		},
 	},

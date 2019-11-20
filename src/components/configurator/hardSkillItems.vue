@@ -27,7 +27,7 @@ export default {
 		overflow: hidden;
 		justify-content: space-between;
 		flex-wrap: nowrap;
-		height: 55vw;
+		height: 65vw;
 	}
 	.scrollM{
 		overflow-x: scroll;
@@ -36,9 +36,10 @@ export default {
 		font-size: 6vw;
 		color: #ac40f1;
 		margin-bottom: 0.4vw;
-		width: 40vw;
-		height: 50vw;
-		margin: 1.5vw 1vw 0vw 0vw;
+		width: 41vw;
+		height: calc(var(--vh, 1vh) * 30);
+		margin-top: calc(var(--vh, 1vh) * 0.5);
+		margin-right: calc(var(--vh, 1vh) * 0.7);
 		cursor: pointer;
 		flex-shrink: 0;
 		transition: 0.3s;
@@ -51,9 +52,10 @@ export default {
 		border: none;
 	}
 	.button:hover{
-		transform: scale(1.1);
+		transform: scale(1.05);
 		background: none;
 		transition: 0.3s;
+		border: 0.2vw solid #ac40f1;
 	}
 	.button:active{
 		transform: scale(1.1);
@@ -83,10 +85,10 @@ export default {
 		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
 		border: none;
 		outline: none;
-		width: 10vw;
+		width: 9.8vw;
 		height: 12vw;
 		border-radius: 0.5vw;
-		margin: 0vw 0vw 0.4vw 0vw;
+		margin: 0vw 0.4vw 0.4vw 0vw;
 	}
 	.button:hover{
 		transform: scale(1.1);
