@@ -114,18 +114,18 @@ export default {
       this.$router.push("/create/hard_skill");
     },
     goToBack() {
-      this.$router.push("/evolve/1");
+      if(this.$store.getters.GENDER ==='male'){
+					this.$router.push('/create/man_clothes')
+				} else this.$router.push('/create/women_clothes')
     },
     inputActive() {
       this.inputTrigger = true;
     },
-    //alert
     Reset() {
       this.$router.push("/create/personalisation"),
-        this.$store.dispatch("GET_GENDER", null),
-        this.$store.dispatch("PUSH_NAME", "");
+      this.$store.dispatch("GET_GENDER", null),
+      this.$store.dispatch("PUSH_NAME", "");
     }
-    //alert
   },
   components: {
     arrowsvg: () =>

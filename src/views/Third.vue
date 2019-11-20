@@ -167,7 +167,21 @@ export default {
 	},
 	methods: {
 		goToBack(){
-			this.$router.push('/evolve/1')
+			if(this.$route.path === this.firstStep) {
+				this.$router.push('/evolve/8')
+			} else if ((this.$route.path == this.secondStepW)||(this.$route.path == this.secondStepM)) {
+				this.$router.push(this.firstStep)
+			} else if (this.$route.path === this.justALittle){
+				if(this.$store.getters.GENDER ==='male'){
+					this.$router.push(this.secondStepM)
+				} else this.$router.push(this.secondStepW)
+			} else if (this.$route.path === this.proportionSkills){
+				this.$router.push(this.justALittle)
+			} else if (this.$route.path === this.hardSkill){
+				this.$router.push(this.proportionSkills)
+			} else if (this.$route.path === this.softSkill){
+				this.$router.push(this.hardSkill)
+			}
 		},
 		closeOverlay(){
 			this.$router.push("/create/soft_skill")
@@ -177,16 +191,17 @@ export default {
 				this.name = ''
 				this.$router.push('/create/soft_skill/finish')
 				setTimeout(() => {
-					this.humanImg = this.$refs.stage.getStage().toDataURL()
+					this.humanImg = this.$refs.stage.getStage().toDataURL({pixelRatio: 3})
 					this.$store.dispatch('PUSH_HUMANIMG', this.humanImg)
 					this.name = this.humanName
-				},100)
+				},300)
 			}else this.$router.push('/create/just_a_little')
 		},
 		Reset(){
 			this.$router.push('/create/personalisation'),
 			this.$store.dispatch('GET_GENDER', null),
 			this.$store.dispatch('PUSH_NAME', '')
+			this.$store.dispatch('PUSH_HARDSKILL_NAME', 'null')
 		},
 		newGender(){
 			const image = new window.Image()

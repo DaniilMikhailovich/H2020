@@ -330,13 +330,13 @@ export default {
       this.$parent.goToNext()
     },
     goToBack() {
-      this.$router.push("/evolve/1");
+      this.$router.push("/create/hard_skill");
     },
-    //alert
     Reset() {
-      this.$router.push("/create/personalisation"),
-        this.$store.dispatch("GET_GENDER", null),
-        this.$store.dispatch("PUSH_NAME", "");
+      this.$router.push('/create/personalisation'),
+			this.$store.dispatch('GET_GENDER', null),
+			this.$store.dispatch('PUSH_NAME', '')
+			this.$store.dispatch('PUSH_HARDSKILL_NAME', 'null')
     }
   }
 };
