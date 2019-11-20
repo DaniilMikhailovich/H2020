@@ -9,7 +9,7 @@
 		</header>
 		<h1 class="BackNumber">2020</h1>
 		<transition appear mode="out-in" name="evolve">
-		<router-view/>
+			<router-view/>
 		</transition>
 		<footer></footer> 
 	</div>
