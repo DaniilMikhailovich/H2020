@@ -1,5 +1,5 @@
 <template>
-  <section :class="[{'inputM':inputTrigger}]">
+  <section :class="[{'inputM':inputTrigger},{'iphoneInput': iphoneTrigger}]">
     <div class="topConfMenu">
       <h1 class="clothesTitle">{{$t('thirdPage.clothes.clothes')}}</h1>
       <div class="rightButtonGroup">
@@ -77,7 +77,8 @@ export default {
       softSkills: null,
       hardSkill: null,
       buttonTrigger: false,
-      inputTrigger: false
+      inputTrigger: false,
+      iphoneTrigger: false
     };
   },
   computed: {
@@ -88,6 +89,11 @@ export default {
   beforeDestroy() {
     this.$store.dispatch("PUSH_SOFTSKILLS", this.softSkills);
     this.$store.dispatch("PUSH_HARDSKILL", this.hardSkill);
+  },
+  created(){
+    if (navigator.userAgent.match(/iPhone/i)) {
+      this.iphoneTrigger = true;
+  }
   },
   watch: {
     softSkills: function() {
@@ -323,6 +329,14 @@ p {
   height: 100vh;
   right: 0;
   background-color: #fff;
+}
+.inputM.iphoneInput{
+  all: initial;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 @keyframes ticker {
   0% {
