@@ -39,13 +39,13 @@ export default {
       if (this.$store.getters.GENDER === "male") {
         if (this.humanName !== "") {
           if(this.nameValidly === true){
-            this.$router.push("/create/man_clothes")
+            this.$router.replace("/create/man_clothes")
             } else {this.nameNotValid = true,this.popUpDisplay = true}
         } else {this.popUpDisplay = true, this.nameNotInput = true}
       } else if (this.$store.getters.GENDER === "female") {
         if (this.humanName !== "") {
           if(this.nameValidly === true){
-            this.$router.push("/create/women_clothes")
+            this.$router.replace("/create/women_clothes")
             } else {this.nameNotValid = true,this.popUpDisplay = true}
         } else {this.popUpDisplay = true, this.nameNotInput = true}
       } else {this.popUpDisplay = true, this.genderNotInput}

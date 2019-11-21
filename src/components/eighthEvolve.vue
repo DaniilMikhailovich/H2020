@@ -16,7 +16,7 @@ export default {
 	name:'eightEvolve',
 	methods: {
 		goToNext(){
-			this.$router.push('/create/personalisation')
+			this.$router.replace('/create/personalisation')
 		},
 		goToBack(){
 			this.$router.push('/evolve/7')
