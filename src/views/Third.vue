@@ -288,12 +288,15 @@ export default {
 		question.onload =() =>{
 			this.question=question
 		}
+		if((this.$store.getters.GENDER === null)||(this.$store.GENDER.HUMAN_NAME === '')){
+			this.$router.push('/create/personalisation')
+		}
 	},
 	mounted(){
 		let vh = window.innerHeight * 0.01
 		document.documentElement.style.setProperty('--vh', `${vh}px`)
 		this.changeCanvas(),
-		this.newGender(),
+		setTimeout(()=>{ this.newGender() },300),
 		this.posX = this.calcPosName(),
 		this.newHair(),
 		this.newAccessories(),
