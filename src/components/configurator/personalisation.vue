@@ -44,7 +44,7 @@ export default {
 	.button{
 		position: relative;
 		display: inline-block;
-		color: #E0FFFF;
+		color: #fff;
 		overflow: hidden;
 		background-color: #cdcdcd;
 		border-radius: 1vw;

@@ -48,7 +48,10 @@
       "clothes": "Ropa"
     },
     "skills": {
-      "leftjust": "Dejado solo un poco 😉"
+      "leftjust": "Dejado solo un poco 😉",
+      "skillPoint": "Puntos de habilidad",
+      "hard": "Hard",
+      "soft": "Soft"
     },
     "ticker": {
       "text1": "Distribuya los puntos disponibles en dos grupos de habilidades:",

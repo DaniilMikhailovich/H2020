@@ -45,6 +45,9 @@ export default {
   watch: {
     humanName: function() {
       this.$store.dispatch("PUSH_NAME", this.humanName);
+    },
+    popUpDisplay: function(){
+      this.$store.dispatch("PUSH_POPUP", this.popUpDisplay)
     }
   },
   methods: {
@@ -82,7 +85,7 @@ export default {
     if (navigator.userAgent.match(/iPhone/i)) {
       this.iphoneTrigger = true;
     }
-  }
+  },
 };
 </script>
 <style scoped>
@@ -188,10 +191,33 @@ input {
 }
 
 @media screen and (min-width: 1000px), (orientation: landscape) {
+.msg{
+  font-size: 3vw;
+  margin-top: 2vw;
+}
+.return{
+  margin-bottom: 2vw;
+  border-radius: 2vw;
+  font-size: 2vw;
+  padding: 0.1vw 0;
+  width: 12vw;
+  box-shadow: 0vw 0vw 0.4vw #000;
+  text-shadow: 0vw 0vw 0.2vw #000;
+}
+.return:active{
+  box-shadow:  inset 0vw 0vw 0.2vw #000;
+}
+.popup {
+  width: 30vw;
+  height:30vh;
+  left: calc(50% - 15vw);
+  top: calc(50% - 15vh);
+  border-radius: 1vw;
+}
   input {
     user-select: all;
     background-color: transparent;
-    width: 40vw;
+    width: 45vw;
     height: 5vw;
     text-align: center;
     font-size: 4vw;
