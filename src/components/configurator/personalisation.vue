@@ -35,6 +35,7 @@ export default {
 <style scoped>
 	section{
 		display: flex;
+		flex-basis: 100%;
 		justify-content: space-around;
 		flex-wrap: wrap;
 		padding: 2vw 1.5vw 0vw 1.5vw;

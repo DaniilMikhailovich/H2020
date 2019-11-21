@@ -84,13 +84,13 @@ export default {
 		margin: 0vw 0.4vw 0.4vw 0vw;
 	}
 	.button:hover{
-		transform: scale(1.1);
+		transform: scale(1.05);
 		background: none;
 		transition: 0.3s;
 	}
 	.button:focus{
-		transform: scale(1.1);
-		background: #ac40f1;
+		transform: scale(1.05);
+		background: none;
 		transition: 0.3s;
 	}
 }

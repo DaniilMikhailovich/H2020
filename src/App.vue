@@ -13,8 +13,6 @@ export default {
 	updated(){
 		let json = JSON.stringify(this.$store.state)
 		sessionStorage.setItem('state', json)
-
-		alert(sessionStorage.getItem('state'))
 	},
 
 }
