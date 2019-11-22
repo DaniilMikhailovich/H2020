@@ -288,7 +288,7 @@ export default {
 		question.onload =() =>{
 			this.question=question
 		}
-		if((this.$store.getters.GENDER === null)||(this.$store.GENDER.HUMAN_NAME === '')){
+		if((this.$store.getters.GENDER === null)||(this.$store.getters.HUMAN_NAME === '')){
 			this.$router.push('/create/personalisation')
 		}
 	},
