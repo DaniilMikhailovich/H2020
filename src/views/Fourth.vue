@@ -15,8 +15,9 @@
         </section>
         <section class="configurator">
           <!-- <p class="sooon">DeVeLoPeRs aRe WoRkInG oN tHiS sCrEeN😤🤕😘</p> -->
-          <chart :series="series" :hardSkill="hardSkillName"></chart>
-          <section class="conclusion"></section>
+          <chart1 v-if="isDesktop" :series="series" :hardSkill="hardSkillName"></chart1>
+          <chart2 v-else :series="series" :hardSkill="hardSkillName"></chart2>
+          <section class="conclusion"> Хуйня из под коня а мы спиздили ваши пероснальные данные, а может и нет, думайте теперь сами и следить за своей картой)))))</section>
         </section>
       </section>
       <section class="canvascontainer" ref="canvascontainer">
@@ -50,6 +51,7 @@ export default {
         width: this.stageWidth,
         height: this.stageHeight
       },
+      width: window.innerWidth,
       stageWidth: 1000,
       stageHeight: 1282,
       human: null,
@@ -115,6 +117,13 @@ export default {
         this.CriticalThinking,
         this.TimeManagement
       ];
+    },
+    isDesktop: function() {
+      if ((this.width >= 560)&&((window.innerWidth/window.innerHeight) >1)) {
+        return true;
+      } else {
+        return false;
+      }
     }
   },
   methods: {
@@ -236,9 +245,13 @@ export default {
       import(
         /* webpackChunkName: "awardSVG", webpackPrefetch: 985 */ "../components/SVG/awardSVG.vue"
       ),
-    chart: () =>
+    chart1: () =>
       import(
-        /* webpackChunkName: "chart", webpackPrefetch: 780 */ "../components/charts/charts.vue"
+        /* webpackChunkName: "chart", webpackPrefetch: 780 */ "../components/charts/chart1.vue"
+      ),
+    chart2: () =>
+      import(
+        /* webpackChunkName: "chart", webpackPrefetch: 780 */ "../components/charts/chart2.vue"
       )
   },
   async beforeCreate(){
@@ -715,13 +728,16 @@ footer {
 }
 .configurator {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(var(--vh, 1vh) * 40);
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 50vh;
   width: 100vw;
   border-radius: 0.5vw;
   z-index: 999;
   background-color: rgb(255, 255, 255);
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
 }
 .sooon {
   font-size: 12vw;
@@ -914,5 +930,58 @@ header {
       height: 100vh;
     }
   }
+}
+@media screen and (max-width: 999px) and (orientation: landscape){
+	main{
+		height: 70vh;
+	}
+	.progressBar{
+		width: 35vw;
+		border-radius: .3vw;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		fill: rgb(189, 189, 189);
+		height: 4vw;
+		right: initial;
+		top: initial;
+		position: initial;
+		flex-direction: row;
+	}
+	.configurator{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		height: 26vw;
+		width: 55vw;
+		border-radius: .5vw;
+		background-color: rgba(0, 0, 0, 0.25);
+	}
+	.personSVG, .awardSVG, .seekerSVG, .hangerSVG{
+		height: 3.8vw;
+	}
+	.arrowSVG{
+		height: 2vw;
+		transform: rotate(180deg);
+	}
+	.canvascontainer{
+		height: 30vw;
+		order: 2;
+		width: 23.4vw;
+		border-radius: .5vw;
+		background-color: rgb(255, 255, 255);
+	}
+	.workSpace{
+		order: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	footer{
+		width: 89vw;
+	}
+	.mobileMain{
+		height: 100vh;
+	}
 }
 </style>

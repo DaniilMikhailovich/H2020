@@ -1,5 +1,5 @@
 <template>
-	<section :class="[{scrollM:items.length >=1},{scrollD:items.length >=11}]">
+	<section class="items" :class="[{scrollM:items.length >=1},{scrollD:items.length >=11}]">
 		<button class="button"
 			v-for="item in items"
 			v-bind:key="item.id"
@@ -40,7 +40,7 @@ export default {
 		overflow: hidden;
 		justify-content: space-between;
 		flex-wrap: nowrap;
-		height: 65vw;
+		height: 60vw;
 	}
 	.scrollM{
 		overflow-x: scroll;
@@ -113,6 +113,29 @@ export default {
 	.hardsvg{
 		width: 60%;
 		margin-top: 1vw;
+	}
+}
+@media screen and (max-width: 999px) and (orientation: landscape){
+	.items{
+		flex-wrap: nowrap;
+		height: 23vw;
+	}
+	.scrollD{
+		overflow-y: hidden;
+	}
+	.scrollM{
+		overflow-x: scroll;
+	}
+	.button{
+		cursor: pointer;
+		transition: 0.3s;
+		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
+		border: none;
+		width: 14vw;
+		height: 18vw;
+		border-radius: 0.5vw;
+		margin-right: 1vw;
+		font-size: 2vw;
 	}
 }
 </style>

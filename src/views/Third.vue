@@ -2,7 +2,7 @@
 	<div id="app">
 		<header>Human 2020</header>
 		<h1 class="BackNumber">2020</h1>
-		<main>
+		<main :class="{'mobileMain':this.$route.path === '/create/soft_skill/finish'}">
 			<section @mouseover="evolve1 = true" class="workSpace">
 				<section class="progressBar" :class="{progressBarTriggered:this.$store.getters.skillInputActive}">
 					<personsvg class="personSVG" :class="[{'active':this.$route.path === firstStep}, {'active':this.$route.path === secondStepM},{'active': this.$route.path === (secondStepW)},{'active': this.$route.path === justALittle},{'active': this.$route.path === proportionSkills}, {'active':this.$route.path === hardSkill}, {'active':this.$route.path === softSkill}]"></personsvg>
@@ -674,6 +674,9 @@ header{
 	}
 	footer{
 		width: 89vw;
+	}
+	.mobileMain{
+		height: 100vh;
 	}
 }
 </style>
