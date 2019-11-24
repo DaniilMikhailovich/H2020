@@ -13,7 +13,9 @@
       <h1 @mouseover="evolve1 = true, firsthint = true" @mouseout="evolve1 = false" class="title">
         {{ $t("firstPage.h1") }}
         <div class="popup1" :class="{popupActive1:(evolve1) && (firsthint)}">
-          <p class="fcaption">-Проект, в котором Ты однозначно сможешь повлиять на мнение всего мира, а может даже изменить будущее!</p>
+          <p
+            class="fcaption"
+          >-Проект, в котором Ты однозначно сможешь повлиять на мнение всего мира, а может даже изменить будущее!</p>
         </div>
         <div class="hint" :class="{firstHintOut:firsthint}">
           <p class="firsthint">НАВЕДИ МЫШКУ</p>
@@ -24,7 +26,9 @@
       </h1>
       <h2 @mouseover="evolve5 = true" @mouseout="evolve5 = false" class="TopQuote">
         <div class="popup5" :class="{popupActive5:(evolve5) && (firsthint)}">
-          <p class="fcaption">Я здесь, чтобы Вы не забывали про ответственность за каждое решение, принятое в жизни.</p>
+          <p
+            class="fcaption"
+          >Я здесь, чтобы Вы не забывали про ответственность за каждое решение, принятое в жизни.</p>
         </div>
         {{ $t("firstPage.topQuote")}}
         <span
@@ -63,10 +67,14 @@
       >
         <p id="timer"></p>
         <div class="popup4">
-          <p class="fcaption">До нового года осталось совсем чуть-чуть, подумай о своих близких, порадуй их💕</p>
+          <p
+            class="fcaption"
+          >До нового года осталось совсем чуть-чуть, подумай о своих близких, порадуй их💕</p>
         </div>
         <div class="popup4M">
-          <p class="fcaption">До нового года осталось совсем чуть-чуть, подумай о своих близких, порадуй их💕 И не забывай что каждый день в тебе кто-то нуждается</p>
+          <p
+            class="fcaption"
+          >До нового года осталось совсем чуть-чуть, подумай о своих близких, порадуй их💕 И не забывай что каждый день в тебе кто-то нуждается</p>
         </div>
       </h2>
       <p
@@ -84,7 +92,9 @@
           <p class="fcaption">Ребят, оглянитесь! Ведь на нас смотрят миллиарды людей.</p>
         </div>
         <div class="popup3M" :class="{popupActive3M:(evolve3) && (firsthint)}">
-          <p class="fcaption">Когда Ты нажмешь на кнопку... Проект даст тебе возможность повлиять на мнение целого мира!</p>
+          <p
+            class="fcaption"
+          >Когда Ты нажмешь на кнопку... Проект даст тебе возможность повлиять на мнение целого мира!</p>
         </div>
         <img
           @mouseover="evolve3 = true"
@@ -929,6 +939,334 @@ input {
     width: 25vw;
     border-radius: 1vw;
     height: 4vw;
+    background-color: rgba(232, 22, 255, 0.295);
+    animation: Attention 10s linear;
+  }
+  @keyframes TitleShadow {
+    0% {
+      text-shadow: 0 0 2vw #e716ff;
+    }
+    50% {
+      text-shadow: 0 0 2vw #02e2fd;
+    }
+    100% {
+      text-shadow: 0 0 2vw #e716ff;
+    }
+  }
+  @keyframes Attention {
+    0% {
+      right: -1vw;
+    }
+    100% {
+      right: -25vw;
+    }
+  }
+}
+@media screen and (max-width: 999px) and (orientation: landscape) {
+  .popup4M,
+  .popup3M,
+  .hint3 {
+    display: none;
+  }
+  .fcaption {
+    width: auto;
+    color: #fff;
+    font-size: 1.5vw;
+    font-weight: 400;
+    line-height: 2vw;
+    margin: auto 0;
+    text-align: center;
+    z-index: 999;
+    opacity: 1;
+  }
+  .hint {
+    top: 5vw;
+    border-end-end-radius: 1vw;
+    border-start-end-radius: 1vw;
+    right: -3.4vw;
+    width: 13vw;
+    height: 3vw;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.233);
+    position: absolute;
+    transition: 1s;
+    display: initial;
+  }
+  .firstHintOut {
+    opacity: 0;
+  }
+  .firsthint {
+    color: #fff;
+    font-size: 1.7vw;
+    font-weight: 400;
+    line-height: 3vw;
+    text-align: center;
+    margin-top: initial;
+    z-index: 999;
+    opacity: 1;
+  }
+  .hint:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -1.4vw;
+    left: -5vw;
+    border-top: 3vw solid transparent;
+    border-bottom: 3vw solid transparent;
+    border-right: 5vw solid rgba(0, 0, 0, 0.233);
+  }
+  .popup1 {
+    display: initial;
+    position: absolute;
+    top: 3vw;
+    left: 0vw;
+    width: 75vw;
+    height: 3vw;
+    background: rgba(0, 0, 0, 0.233);
+    border-radius: 1vw;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.4s;
+    transition-delay: 0.5s;
+  }
+  .popup1:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 4vw;
+    top: 3vw;
+    border: 2vw solid transparent;
+    border-top: 0vw solid rgba(0, 0, 0, 0.233);
+    border-right: 2vw solid rgba(0, 0, 0, 0.233);
+  }
+  .popupActive1 {
+    top: -1.5vw;
+    opacity: 1;
+  }
+  .popup2 {
+    display: initial;
+    position: absolute;
+    top: 50vw;
+    right: 50vw;
+    width: 11vw;
+    height: 3vw;
+    background: rgba(255, 63, 63, 0.74);
+    border-radius: 0.7vw;
+    z-index: 1;
+    opacity: 0;
+    transition: 1.5s;
+    transition-timing-function: ease-out;
+    transform: rotate(-380deg) scale(10);
+    transition-delay: 0.5s;
+  }
+  .popup2:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -2.5vw;
+    top: 1vw;
+    border-top: 0.5vw solid transparent;
+    border-bottom: 0.5vw solid transparent;
+    border-right: 2.5vw solid rgba(255, 63, 63, 0.74);
+  }
+  .popupActive2 {
+    top: 19vw;
+    right: 16vw;
+    opacity: 1;
+    transform: rotate(-20deg) scale(1);
+  }
+  .popup3 {
+    display: initial;
+    position: absolute;
+    top: 10vw;
+    left: -16vw;
+    width: 16vw;
+    height: 7.5vw;
+    background: rgba(0, 0, 0, 0.233);
+    border-radius: 1vw;
+    z-index: 1;
+    opacity: 0;
+    transition: 1s;
+  }
+  .popup3:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 1vw;
+    top: 7.5vw;
+    border: 0.5vw solid transparent;
+    border-top: 2vw solid rgba(0, 0, 0, 0.233);
+  }
+  .popupActive3 {
+    left: 1vw;
+    top: 0vw;
+    opacity: 1;
+  }
+  .popup4 {
+    display: initial;
+    position: absolute;
+    bottom: -5vw;
+    left: 30vw;
+    width: 36vw;
+    height: 5vw;
+    background: rgba(0, 0, 0, 0.233);
+    border-radius: 1vw;
+    z-index: 1;
+    opacity: 0;
+    transition: 1s;
+  }
+  .popup4:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 18vw;
+    top: 5vw;
+    border: 0.5vw solid transparent;
+    border-top: 1vw solid rgba(0, 0, 0, 0.233);
+  }
+  .popupActive4 .popup4 {
+    bottom: 13.5vw;
+    opacity: 1;
+  }
+  .popup5 {
+    display: initial;
+    position: absolute;
+    top: -12.5vw;
+    right: -39vw;
+    width: 16vw;
+    height: 11vw;
+    background: rgba(0, 0, 0, 0.233);
+    border-radius: 1vw;
+    border-end-start-radius: 0.2vw;
+    z-index: 1;
+    opacity: 0;
+    transition: 1s;
+  }
+  .popup5:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 1vw;
+    top: 11vw;
+    border: 2vw solid transparent;
+    border-top: 0vw solid rgba(0, 0, 0, 0.233);
+    border-left: 1.7vw solid rgba(0, 0, 0, 0.233);
+  }
+  .popupActive5 {
+    right: -27vw;
+    opacity: 1;
+  }
+  #app {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+  header {
+    height: 2vw;
+  }
+  .snout {
+    background: url(~@/assets/HUMAN.png) 0vw 15vh no-repeat,
+      url(~@/assets/morpheus.png) 93% 100% no-repeat;
+    background-size: 47vh, 35vh;
+  }
+  .hand {
+    width: 47vh;
+    left: -0.4vh;
+    top: 15vh;
+  }
+  .Eng,
+  .Ru,
+  .Spa {
+    font-size: 1.5vw;
+    margin: 1vw 1vw 0 0;
+  }
+  hr {
+    border: 0.1vw solid #fff;
+    width: 0.1vw;
+    background: none;
+    height: 2vw;
+    margin-top: 1vw;
+    margin-right: calc(0.5vw + 0.4vw);
+    box-shadow: 0vw 0vw 0.1vw #000;
+  }
+  .earth {
+    width: 35vw;
+  }
+  .title {
+    width: 90vw;
+    text-shadow: 0vw 0vw 3vw #000;
+    font-size: 11vw;
+    margin: 0;
+    animation: TitleShadow 190s linear infinite;
+  }
+  .BottomQuote {
+    display: none;
+  }
+  .invisible {
+    display: inline;
+  }
+  .TopQuote {
+    margin: 0 0 1vw 0;
+    font-weight: 400;
+    font-size: 3vw;
+    align-self: center;
+    position: relative;
+  }
+  .BottomQuote_button {
+    font-size: 3vw;
+    padding: 0vw 2vw;
+    line-height: 4vw;
+    box-shadow: 0vw 0vw 0.2vw #000;
+    text-shadow: 0vw 0vw 0.1vw #000;
+    animation: cycle 3s linear infinite;
+  }
+  .autor {
+    font-size: 2vw;
+    margin: 0 25vw 0vw 0;
+  }
+  #timer {
+    font-size: 11vw;
+    font-weight: 400;
+    position: relative;
+    line-height: 9vw;
+    margin-bottom: 0vw;
+    animation: TitleShadow 190s linear infinite;
+  }
+  .date {
+    font-size: 2vw;
+    line-height: 3vw;
+    word-spacing: 30vw;
+  }
+  .enDate span:nth-child(2) {
+    margin: 0vw 8.5vw;
+  }
+  body {
+    background: linear-gradient(rgb(0, 247, 255), rgb(100, 255, 131));
+  }
+  .BottomQuote_button::before {
+    filter: blur(1vw);
+    width: 3vw;
+  }
+  .esDate,
+  .ruDate {
+    word-spacing: 0;
+  }
+  .esDate span:nth-child(2),
+  .ruDate span:nth-child(2) {
+    margin: 0vw 12vw;
+  }
+  .attention {
+    position: absolute;
+    top: 0vw;
+    right: -25vw;
+    z-index: 998;
+    width: 25vw;
+    border-radius: 1vw;
+    height: 3vw;
     background-color: rgba(232, 22, 255, 0.295);
     animation: Attention 10s linear;
   }
