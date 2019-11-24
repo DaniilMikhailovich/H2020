@@ -4,7 +4,7 @@
 			v-for="color in colors"
 			v-bind:key="color.id"
 			v-bind:class="['button', { active: currentColor === color.color }, color.color]"
-			v-on:click="currentColor = color.color, array=color.array">
+			v-on:click="currentColor = color.color, array=color.array,changeColor()">
         </button>
         <clothesitems :items="array"  :type="type" class="currentColor"></clothesitems>
     </section>
@@ -16,11 +16,14 @@ export default {
     components:{
         clothesitems:() => import(/* webpackChunkName: "hairitems", webpackPrefetch: 967 */ '../configurator/hairItems.vue'),
     },
-    methods:{
-        changeColor(){
-        
-        }
-    },
+    methods: {
+    changeColor() {
+      if(this.$store.state.humanHead.id !== 0){
+        this.currentID = +this.$store.state.humanHead.id-1
+        this.$store.dispatch('PUSH_HEAD', this.array[this.currentID])
+      }
+    }
+  },
     data(){
         return{
             currentColor:'black',

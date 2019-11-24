@@ -19,27 +19,27 @@
 			</section>
 			<section class="canvascontainer" ref="canvascontainer" :class="{canvascontainerTriggered:skillInputActive}">
 				<v-stage ref="stage" :config="stage">
-					<v-layer>
+					<v-layer ref="scene">
 						<v-text :config="{text:name, fontSize:60, x:posX, y:20, fill:'#ac40f1'}"></v-text>
 						<v-image :config="{image:podium, x: 320, y:1060, scale:{x:2,y:2}}"></v-image>
 						<v-image :config="{image:question, x: 380, y:450, scale:{x:.8,y:.8}}"></v-image>
 						<v-image :config="{image:human, x: 340, y:140, scale:{x:1,y:1}}"></v-image>
-						<v-image
+						<v-image ref="pants"
 							:config="{image:pants, x:this.$store.getters.HUMAN_PANTS.posX,y:this.$store.getters.HUMAN_PANTS.posY, scale:{x:.3801,y:.3801}}">
 						</v-image>
-						<v-image
+						<v-image ref="shoes"
 							:config="{image:shoes, x:this.$store.getters.HUMAN_SHOES.posX,y:this.$store.getters.HUMAN_SHOES.posY, scale:{x:.3801,y:.3801}}">
 						</v-image>
-						<v-image
+						<v-image ref="shirt"
 							:config="{image:shirt, x:this.$store.getters.HUMAN_SHIRT.posX,y:this.$store.getters.HUMAN_SHIRT.posY, scale:{x:.3801,y:.3801}}">
 						</v-image>
-						<v-image
+						<v-image ref="jacket"
 							:config="{image:jacket, x:this.$store.getters.HUMAN_JACKET.posX,y:this.$store.getters.HUMAN_JACKET.posY, scale:{x:.3801,y:.3801}}">
 						</v-image>
-						<v-image
+						<v-image ref="accessories"
 							:config="{image:accessories, x:this.$store.getters.HUMAN_ACCESSORIES.posX,y:this.$store.getters.HUMAN_ACCESSORIES.posY, scale:{x:.38,y:.38}}">
 						</v-image>
-						<v-image 
+						<v-image ref="hair"
 							:config="{image:hair, x:this.$store.getters.HUMAN_HEAD.posX,y:this.$store.getters.HUMAN_HEAD.posY, scale:{x:.38,y:.38}}">
 						</v-image>
 					</v-layer>
@@ -88,7 +88,8 @@ export default {
 			hardSkill: '/create/hard_skill',
 			softSkill: '/create/soft_skill',
 			finish: '/create/soft_skill/finish',
-			humanImg: null
+			humanImg: null,
+			scene:null
 		}
 	},
 	computed:{
@@ -161,6 +162,90 @@ export default {
 		},
 		shoesSrc: function(){
 			this.newShoes()
+		},
+		async shoes(){
+			await this.$refs.shoes.getStage().setZIndex(this.$store.getters.HUMAN_SHOES.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.pants.getStage().setZIndex(this.$store.getters.HUMAN_PANTS.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.shirt.getStage().setZIndex(this.$store.getters.HUMAN_SHIRT.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.jacket.getStage().setZIndex(this.$store.getters.HUMAN_JACKET.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.hair.getStage().setZIndex(this.$store.getters.HUMAN_HEAD.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.accessories.getStage().setZIndex(this.$store.getters.HUMAN_ACCESSORIES.z)
+			await this.$refs.scene.getStage().draw()
+		},
+		async pants(){
+			await this.$refs.shoes.getStage().setZIndex(this.$store.getters.HUMAN_SHOES.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.pants.getStage().setZIndex(this.$store.getters.HUMAN_PANTS.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.shirt.getStage().setZIndex(this.$store.getters.HUMAN_SHIRT.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.jacket.getStage().setZIndex(this.$store.getters.HUMAN_JACKET.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.hair.getStage().setZIndex(this.$store.getters.HUMAN_HEAD.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.accessories.getStage().setZIndex(this.$store.getters.HUMAN_ACCESSORIES.z)
+			await this.$refs.scene.getStage().draw()
+		},
+		async shirt(){
+			await this.$refs.shoes.getStage().setZIndex(this.$store.getters.HUMAN_SHOES.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.pants.getStage().setZIndex(this.$store.getters.HUMAN_PANTS.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.shirt.getStage().setZIndex(this.$store.getters.HUMAN_SHIRT.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.jacket.getStage().setZIndex(this.$store.getters.HUMAN_JACKET.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.hair.getStage().setZIndex(this.$store.getters.HUMAN_HEAD.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.accessories.getStage().setZIndex(this.$store.getters.HUMAN_ACCESSORIES.z)
+			await this.$refs.scene.getStage().draw()
+		},
+		async jacket(){
+			await this.$refs.shoes.getStage().setZIndex(this.$store.getters.HUMAN_SHOES.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.pants.getStage().setZIndex(this.$store.getters.HUMAN_PANTS.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.shirt.getStage().setZIndex(this.$store.getters.HUMAN_SHIRT.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.jacket.getStage().setZIndex(this.$store.getters.HUMAN_JACKET.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.hair.getStage().setZIndex(this.$store.getters.HUMAN_HEAD.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.accessories.getStage().setZIndex(this.$store.getters.HUMAN_ACCESSORIES.z)
+			await this.$refs.scene.getStage().draw()
+		},
+		async accessories(){
+			await this.$refs.shoes.getStage().setZIndex(this.$store.getters.HUMAN_SHOES.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.pants.getStage().setZIndex(this.$store.getters.HUMAN_PANTS.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.shirt.getStage().setZIndex(this.$store.getters.HUMAN_SHIRT.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.jacket.getStage().setZIndex(this.$store.getters.HUMAN_JACKET.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.hair.getStage().setZIndex(this.$store.getters.HUMAN_HEAD.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.accessories.getStage().setZIndex(this.$store.getters.HUMAN_ACCESSORIES.z)
+			await this.$refs.scene.getStage().draw()
+		},
+		async hair(){
+			await this.$refs.shoes.getStage().setZIndex(this.$store.getters.HUMAN_SHOES.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.pants.getStage().setZIndex(this.$store.getters.HUMAN_PANTS.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.shirt.getStage().setZIndex(this.$store.getters.HUMAN_SHIRT.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.jacket.getStage().setZIndex(this.$store.getters.HUMAN_JACKET.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.hair.getStage().setZIndex(this.$store.getters.HUMAN_HEAD.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.accessories.getStage().setZIndex(this.$store.getters.HUMAN_ACCESSORIES.z)
+			await this.$refs.scene.getStage().draw()
 		}
 		
 	},
@@ -259,6 +344,7 @@ export default {
 			image.onload = () =>{
 				this.shoes=image
 			}
+			
 		},
 		changeCanvas(){
 			this.canvascontainer = this.$refs.canvascontainer
@@ -296,6 +382,7 @@ export default {
 	mounted(){
 		let vh = window.innerHeight * 0.01
 		document.documentElement.style.setProperty('--vh', `${vh}px`)
+		this.scene = this.$refs.scene.getStage()
 		this.changeCanvas(),
 		setTimeout(()=>{ this.newGender() },300),
 		this.posX = this.calcPosName(),
