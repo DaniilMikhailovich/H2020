@@ -262,8 +262,7 @@ input:focus::placeholder{
     box-shadow: inset 0.2vw 0.2vw 0.3vw #000;
   }
 }
-@media screen and (max-width: 1000px) and (orientation: landscape),
-  (max-width: 1000px) and (orientation: portrait) {
+@media screen and (max-width: 1000px) and (orientation: portrait) {
   input:focus {
     position: absolute;
     top: 0;

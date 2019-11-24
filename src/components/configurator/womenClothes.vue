@@ -211,4 +211,25 @@ export default {
 		border-bottom: 0.1vw solid #fff;
 	}
 }
+@media screen and (min-width: 1000px), (orientation: landscape){
+	.clothesTitle{
+		color: #fff;
+		font-size: 2.5vw;
+	}
+	.separate{
+		border: 0.1vw solid #fff;
+		margin-bottom: 1vw;
+	}
+	.hairstylesvg, .shirtsvg, .accessoriessvg{
+		width: 2vw;
+	}
+	.suitsvgm, .pantssvg, .shoessvg{
+		width: 3vw;
+	}
+	.button{
+		border-radius: initial;
+		width: 8.8vw;
+		height: 4vw;
+	}
+}
 </style>

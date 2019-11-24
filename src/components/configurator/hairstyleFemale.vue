@@ -134,4 +134,9 @@ section {
     border: 0.2vw solid #fff;
   }
 }
+@media screen and (max-width: 999px) and (orientation: landscape) {
+  section{
+    width: 50vw;
+  }
+}
 </style>
