@@ -69,6 +69,9 @@ button:focus {
   border: 0.3vw solid rgb(48, 2, 173);
   padding: 0vw 1.4vw;
 }
+.tap:not(.active) {
+  animation: cycle 3s linear infinite;
+}
 .currentTab {
   flex-basis: 100%;
   padding: 3vw 0;
@@ -92,6 +95,32 @@ button:focus {
 .v-enter,
 .v-leave-to {
   opacity: 0;
+}
+@keyframes cycle {
+  35% {
+    transform: rotate(0) translate(0, 0);
+  }
+  40% {
+    transform: rotate(3deg) translate(0, -2px);
+  }
+  45% {
+    transform: rotate(-1deg) translate(0, -2px);
+  }
+  50% {
+    transform: rotate(3deg) translate(0, -2px);
+  }
+  55% {
+    transform: rotate(-1deg) translate(0, -2px);
+  }
+  60% {
+    transform: rotate(3deg) translate(0, -2px);
+  }
+  65% {
+    transform: rotate(-1deg) translate(0, -2px);
+  }
+  70% {
+    transform: rotate(0) translate(0, 0);
+  }
 }
 @media screen and (min-width: 760px) and (max-width: 999px) {
 }
@@ -118,9 +147,6 @@ button:focus {
     box-shadow: 3vw 3vw 10vw #000;
     width: 25vw;
     height: 4vw;
-  }
-  .tap:not(.active){
-    animation: cycle 3s linear infinite;
   }
   .currentTab {
     flex-basis: 100%;
@@ -150,32 +176,6 @@ button:focus {
   .v-enter,
   .v-leave-to {
     opacity: 0;
-  }
-  @keyframes cycle {
-    35% {
-      transform: rotate(0) translate(0, 0);
-    }
-    40% {
-      transform: rotate(3deg) translate(0, -2px);
-    }
-    45% {
-      transform: rotate(-1deg) translate(0, -2px);
-    }
-    50% {
-      transform: rotate(3deg) translate(0, -2px);
-    }
-    55% {
-      transform: rotate(-1deg) translate(0, -2px);
-    }
-    60% {
-      transform: rotate(3deg) translate(0, -2px);
-    }
-    65% {
-      transform: rotate(-1deg) translate(0, -2px);
-    }
-    70% {
-      transform: rotate(0) translate(0, 0);
-    }
   }
 }
 </style>

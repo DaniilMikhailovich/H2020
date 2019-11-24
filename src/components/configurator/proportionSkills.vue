@@ -112,6 +112,7 @@ export default {
   background-color: #ac40f1;
   border-radius: 50%;
   padding: 0.5vw;
+  animation: cycle 2s linear infinite;
 }
 .rightButtonGroup > button {
   margin-right: 2vw;

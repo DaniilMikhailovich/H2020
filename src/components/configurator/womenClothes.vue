@@ -85,6 +85,7 @@ export default {
 	padding: 0.5vw;
 	border: none;
 	box-shadow: none;
+	animation: cycle 2s linear infinite;
 }
 	section{
 		display: flex;

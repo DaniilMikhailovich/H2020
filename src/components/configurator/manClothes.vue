@@ -83,6 +83,7 @@ export default {
 	background-color: #ac40f1;
 	border-radius: 50%;
 	padding: 0.5vw;
+	animation: cycle 2s linear infinite;
 }
 	section{
 		display: flex;
@@ -154,7 +155,7 @@ export default {
 		font-size: 1.5vw;
 		cursor: pointer;
 		width: calc(var(--vh, 1vh) * 6);
-		height: calc(var(--vh, 1vh) * 6)
+		height: calc(var(--vh, 1vh) * 6);
 	}
 	.button:hover{
 		background-color: #ac40f1;
