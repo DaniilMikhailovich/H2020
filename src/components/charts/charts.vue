@@ -16,12 +16,15 @@ export default {
     return {
       chartOptions: {
         colors: [
-          "#ac40f1",
-          "rgb(67, 251, 77)",
-          "rgb(36, 198, 219)",
-          "#e716ff",
-          "#02e2fd",
-          "rgb(48, 2, 173)"
+          "#00BFD1",
+          "#FFDF00",
+          "#FF7600",
+          "#00FF00",
+          "#FF0015",
+          "#D6F700",
+          "#3E3EC1",
+          "#00AC50",
+          "#BA5CAB"
         ],
         labels: [
           "Initiative",
