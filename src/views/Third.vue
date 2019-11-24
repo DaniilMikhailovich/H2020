@@ -36,7 +36,7 @@
 						<v-image
 							:config="{image:jacket, x:this.$store.getters.HUMAN_JACKET.posX,y:this.$store.getters.HUMAN_JACKET.posY, scale:{x:.3801,y:.3801}}">
 						</v-image>
-						<v-image
+						<v-image ref="access"
 							:config="{image:accessories, x:this.$store.getters.HUMAN_ACCESSORIES.posX,y:this.$store.getters.HUMAN_ACCESSORIES.posY, scale:{x:.38,y:.38}}">
 						</v-image>
 						<v-image 

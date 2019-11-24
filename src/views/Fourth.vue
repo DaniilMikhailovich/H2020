@@ -15,7 +15,7 @@
         </section>
         <section class="configurator">
           <!-- <p class="sooon">DeVeLoPeRs aRe WoRkInG oN tHiS sCrEeN😤🤕😘</p> -->
-          <chart :series="series"></chart>
+          <chart :series="series" :hardSkill="hardSkillName"></chart>
           <section class="conclusion"></section>
         </section>
       </section>
@@ -240,6 +240,40 @@ export default {
       import(
         /* webpackChunkName: "chart", webpackPrefetch: 780 */ "../components/charts/charts.vue"
       )
+  },
+  async beforeCreate(){
+   await axios
+      .post(
+        "https://api.rs2.usw2.rockset.com/v1/orgs/self/queries",
+        {
+          sql: {
+            query: `SELECT
+					    H2020Collection.hardSkillName
+					FROM
+					    commons.H2020Collection
+					WHERE
+						H2020Collection.hardSkillName <> 'null'
+					GROUP BY
+					    H2020Collection.hardSkillName
+					ORDER BY
+					    COUNT(*) DESC
+					LIMIT
+					    1`
+          }
+        },
+        {
+          headers: {
+            Authorization:
+              "ApiKey TVjJpzuiOaUQJfo6MA18EpunKDdWfQiQUANLK69T01ysoQhWbkbo89jtpcZLv0gv"
+          }
+        }
+      )
+      .then(response => {
+        this.hardSkillName = response.data.results[0].hardSkillName;
+      })
+      .catch(error => {
+        this.hardSkillName = error;
+      });
   },
   created() {
     window.addEventListener("resize", this.changeCanvas);
@@ -581,38 +615,6 @@ export default {
 
     // Получение hardSkillName
 
-    await axios
-      .post(
-        "https://api.rs2.usw2.rockset.com/v1/orgs/self/queries",
-        {
-          sql: {
-            query: `SELECT
-					    H2020Collection.hardSkillName
-					FROM
-					    commons.H2020Collection
-					WHERE
-						H2020Collection.hardSkillName <> 'null'
-					GROUP BY
-					    H2020Collection.hardSkillName
-					ORDER BY
-					    COUNT(*) DESC
-					LIMIT
-					    1`
-          }
-        },
-        {
-          headers: {
-            Authorization:
-              "ApiKey TVjJpzuiOaUQJfo6MA18EpunKDdWfQiQUANLK69T01ysoQhWbkbo89jtpcZLv0gv"
-          }
-        }
-      )
-      .then(response => {
-        this.hardSkillName = response.data.results[0].hardSkillName;
-      })
-      .catch(error => {
-        this.hardSkillName = error;
-      });
 
     // Получение SoftSkills
 
