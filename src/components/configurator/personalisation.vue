@@ -178,4 +178,27 @@ button:focus {
     opacity: 0;
   }
 }
+@media screen and (max-width: 999px) and (orientation: landscape) {
+button:focus {
+  transform: scale(1);
+}
+.button {
+    position: relative;
+    display: inline-block;
+    color: #e0ffff;
+    overflow: hidden;
+    background-color: #cdcdcd;
+    border-radius: 0.5vw;
+    border: none;
+    padding: 0.5vw 1vw;
+    font-size: 2vw;
+    cursor: pointer;
+    box-shadow: 3vw 3vw 10vw #000;
+    width: 20vw;
+    height: 3vw;
+  }
+  section {
+    margin-top: 0vw;
+  }
+}
 </style>

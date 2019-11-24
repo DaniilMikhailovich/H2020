@@ -626,4 +626,54 @@ header{
 		}
 	}
 }
+@media screen and (max-width: 999px) and (orientation: landscape){
+	main{
+		height: 70vh;
+	}
+	.progressBar{
+		width: 35vw;
+		border-radius: .3vw;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		fill: rgb(189, 189, 189);
+		height: 4vw;
+		right: initial;
+		top: initial;
+		position: initial;
+		flex-direction: row;
+	}
+	.configurator{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		height: 26vw;
+		width: 55vw;
+		border-radius: .5vw;
+		background-color: rgba(0, 0, 0, 0.25);
+	}
+	.personSVG, .awardSVG, .seekerSVG, .hangerSVG{
+		height: 3.8vw;
+	}
+	.arrowSVG{
+		height: 2vw;
+		transform: rotate(180deg);
+	}
+	.canvascontainer{
+		height: 30vw;
+		order: 2;
+		width: 23.4vw;
+		border-radius: .5vw;
+		background-color: rgb(255, 255, 255);
+	}
+	.workSpace{
+		order: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	footer{
+		width: 89vw;
+	}
+}
 </style>
