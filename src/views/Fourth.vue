@@ -19,7 +19,7 @@
             <chartd v-if="isDesktop" :sections="chartSections" :hardSkill="hardSkillName"></chartd>
             <chartm v-else :sections="chartSections" :hardSkill="hardSkillName"></chartm>
           </section>
-          <section class="conclusion"> Хуйня из под коня а мы спиздили ваши пероснальные данные, а может и нет, думайте теперь сами и следить за своей картой)))))</section>
+          <section class="conclusion">{{$t('Fourth.text')}}</section>
         </section>
       </section>
       <section class="canvascontainer" ref="canvascontainer">
@@ -785,6 +785,10 @@ footer {
 .conclusion {
     width: 80vw;
     flex-shrink: 0;
+    font-size: 3vw;
+    color: #fff;
+    font-weight: 400;
+    
   }
   .charts{
     width: 135vw;
@@ -938,6 +942,7 @@ header {
     border-radius: 0.5vw;
     background-color: rgba(0, 0, 0, 0.25);
     flex-shrink: 0;
+    overflow-x: hidden;
   }
   .conclusion {
     width: 45%;
