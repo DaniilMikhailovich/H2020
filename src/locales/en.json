@@ -95,6 +95,9 @@
     },
     "hardskill": {
       "HARD": "HARD skill"
+    },
+    "popup": {
+      "share": "Share your opinion with the whole world! Together we can change everything!"
     }
   },
   "footer": {

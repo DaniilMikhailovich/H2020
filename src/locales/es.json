@@ -99,6 +99,9 @@
     },
     "hardskill": {
       "HARD": "HARD habilidad"
+    },
+    "popup": {
+      "share": "¡Comparte tu opinión con todo el mundo! ¡Juntos podemos cambiar todo!"
     }
   },
   "footer": {

@@ -4,35 +4,35 @@
     <section class="popup">
       <section class="text">
         <p class="name">{{ humanName }}</p>
-        <p class="hardskill">Hard Skills: {{ hardSkill }} ({{ hardSkillPoints }} points)</p>
+        <p class="hardskill">Hard Skills: {{$t(hardSkill)}} ({{ hardSkillPoints }} points)</p>
         <p class="softtitle">Soft Skills:</p>
         <section class="softskills">
           <div class="skillItem">
-            <p>Инициативность</p>
+            <p>{{$t('thirdPage.softskill.Initiative')}}</p>
             <p class="percent">{{ Initiative }}</p>
           </div>
           <div class="skillItem">
-            <p>Креативность</p>
+            <p>{{$t('thirdPage.softskill.Creativity')}}</p>
             <p class="percent">{{ Creativity }}</p>
           </div>
           <div class="skillItem">
-            <p>Адаптивность</p>
+            <p>{{$t('thirdPage.softskill.Adaptability')}}</p>
             <p class="percent">{{ Adaptability }}</p>
           </div>
           <div class="skillItem">
-            <p>Рефлексия</p>
+            <p>{{$t('thirdPage.softskill.Reflection')}}</p>
             <p class="percent">{{ Reflection }}</p>
           </div>
           <div class="skillItem">
-            <p>Многозадачность</p>
+            <p>{{$t('thirdPage.softskill.Multitasking')}}</p>
             <p class="percent">{{ Multitasking }}</p>
           </div>
           <div class="skillItem">
-            <p>Умение слушать</p>
+            <p>{{$t('thirdPage.softskill.Listening skills')}}</p>
             <p class="percent">{{ ListeningSkills }}</p>
           </div>
           <div class="skillItem">
-            <p>Командная работа</p>
+            <p>{{$t('thirdPage.softskill.Teamwork')}}</p>
             <p class="percent">{{ Teamwork }}</p>
           </div>
           <div class="skillItem">
@@ -46,7 +46,7 @@
         </section>
         <section class="download" @click="downloadImage">
           <downloadsvg class="downloadSVG"></downloadsvg>
-          <p>Share your opinion with the whole world! Together we can change everything! #2020 #human2020</p>
+          <p>{{$t('thirdPage.popup.share')}} #2020 #human2020</p>
         </section>
         <section class="YourOpinion">
           <img :src="imgSrc" alt="Your human" />
