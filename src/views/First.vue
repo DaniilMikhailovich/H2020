@@ -15,20 +15,20 @@
         <div class="popup1" :class="{popupActive1:(evolve1) && (firsthint)}">
           <p
             class="fcaption"
-          >-Проект, в котором Ты однозначно сможешь повлиять на мнение всего мира, а может даже изменить будущее!</p>
+          >{{ $t('firstPage.popup1')}}</p>
         </div>
         <div class="hint" :class="{firstHintOut:firsthint}">
-          <p class="firsthint">НАВЕДИ МЫШКУ</p>
+          <p class="firsthint">{{ $t('firstPage.hint')}}</p>
         </div>
         <div class="hintM" :class="{firstHintOut:firsthint}">
-          <p class="firsthint">НАЖМИ НА МЕНЯ💌</p>
+          <p class="firsthint">{{ $t('firstPage.hintM')}}</p>
         </div>
       </h1>
       <h2 @mouseover="evolve5 = true" @mouseout="evolve5 = false" class="TopQuote">
         <div class="popup5" :class="{popupActive5:(evolve5) && (firsthint)}">
           <p
             class="fcaption"
-          >Я здесь, чтобы Вы не забывали про ответственность за каждое решение, принятое в жизни.</p>
+          >{{ $t('firstPage.popup5')}}</p>
         </div>
         {{ $t("firstPage.topQuote")}}
         <span
@@ -69,17 +69,19 @@
         <div class="popup4">
           <p
             class="fcaption"
-          >До нового года осталось совсем чуть-чуть, подумай о своих близких, порадуй их💕</p>
+          >{{ $t('firstPage.popup4')}}</p>
         </div>
         <div class="popup4M">
           <p
             class="fcaption"
-          >До нового года осталось совсем чуть-чуть, подумай о своих близких, порадуй их💕 И не забывай что каждый день в тебе кто-то нуждается</p>
+          >{{ $t('firstPage.popup4M')}}</p>
         </div>
       </h2>
       <p
         @mouseover="evolve4 = true"
         @mouseout="evolve4 = false"
+        @click="evolve4 = true"
+        @focusout="evolve4 = false"
         class="date"
         :class="{enDate:(this.$i18n.fallbackLocale ==='en'), enDate:(this.$i18n.locale==='en'), ruDate:(this.$i18n.locale==='ru'), esDate:(this.$i18n.locale==='es') }"
       >
@@ -89,12 +91,12 @@
       </p>
       <div class="popupAndImg">
         <div class="popup3" :class="{popupActive3:(evolve3) && (firsthint)}">
-          <p class="fcaption">Ребят, оглянитесь! Ведь на нас смотрят миллиарды людей.</p>
+          <p class="fcaption">{{ $t('firstPage.popup3')}}</p>
         </div>
         <div class="popup3M" :class="{popupActive3M:(evolve3) && (firsthint)}">
           <p
             class="fcaption"
-          >Когда Ты нажмешь на кнопку... Проект даст тебе возможность повлиять на мнение целого мира!</p>
+          >{{ $t('firstPage.popup3M')}}</p>
         </div>
         <img
           @mouseover="evolve3 = true"
@@ -126,7 +128,7 @@ export default {
   },
   computed: {
     isDesktop: function() {
-      if (this.width >= 560) {
+      if ((this.width >= 560)&&((window.innerWidth / window.innerHeight) > 1)) {
         return true;
       } else {
         return false;
@@ -317,7 +319,7 @@ export default {
   position: absolute;
   top: 1vw;
   right: -55vw;
-  z-index: 998;
+  z-index: 0;
   width: 55vw;
   border-radius: 1.5vw;
   height: 7vw;
@@ -625,6 +627,67 @@ input {
     font-size: 15.5vw;
     margin: 30vw 0 2vw 0;
   }
+  .fcaption {
+    font-size: 3.5vw;
+    line-height: 5vw;
+  }
+  .popup3M {
+  position: absolute;
+  top: 2vw;
+  left: -70vw;
+  width: 70vw;
+  height: 17vw;
+  background: rgba(0, 0, 0, 0.233);
+  border-radius: 1vw;
+  z-index: 1;
+  opacity: 0;
+  transition: 1s;
+}
+.popup3M:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -5.4vw;
+  top: 13vw;
+  border: 1.5vw solid transparent;
+  border-right: 4vw solid rgba(0, 0, 0, 0.233);
+}
+.popupActive3M {
+  top: 2vw;
+  left: 22vw;
+  opacity: 1;
+}
+.attention {
+  top: 0vw;
+}
+.popup4M {
+  position: absolute;
+  bottom: 2vw;
+  left: 70vw;
+  width: 60vw;
+  height: 20vw;
+  background: rgba(0, 0, 0, 0.233);
+  border-radius: 1vw;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+}
+.popup4M:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: -6.5vw;
+  top: 2vw;
+  border: 1.5vw solid transparent;
+  border-left: 5vw solid rgba(0, 0, 0, 0.233);
+}
+.popupActive4M .popup4M {
+  bottom: 2vw;
+  left: 3vw;
+  opacity: 1;
+}
 }
 @media screen and (min-width: 1000px), (orientation: landscape) {
   .popup4M,
@@ -635,9 +698,9 @@ input {
   .fcaption {
     width: auto;
     color: #fff;
-    font-size: 1.7vw;
+    font-size: 1.5vw;
     font-weight: 400;
-    line-height: 2.5vw;
+    line-height: 2vw;
     margin: auto 0;
     text-align: center;
     z-index: 999;
@@ -747,8 +810,8 @@ input {
     position: absolute;
     top: 10vw;
     left: -16vw;
-    width: 16vw;
-    height: 7.5vw;
+    width: 19vw;
+    height: 8vw;
     background: rgba(0, 0, 0, 0.233);
     border-radius: 1vw;
     z-index: 1;
@@ -761,12 +824,12 @@ input {
     height: 0;
     position: absolute;
     left: 1vw;
-    top: 7.5vw;
+    top: 8vw;
     border: 0.5vw solid transparent;
     border-top: 2vw solid rgba(0, 0, 0, 0.233);
   }
   .popupActive3 {
-    left: 1vw;
+    left: 0.2vw;
     top: 0vw;
     opacity: 1;
   }
@@ -800,10 +863,10 @@ input {
   .popup5 {
     display: initial;
     position: absolute;
-    top: -16vw;
+    top: -9vw;
     right: -39vw;
     width: 16vw;
-    height: 17vw;
+    height: 10vw;
     background: rgba(0, 0, 0, 0.233);
     border-radius: 1vw;
     border-end-start-radius: 0.2vw;
@@ -817,7 +880,7 @@ input {
     height: 0;
     position: absolute;
     left: 1vw;
-    top: 17vw;
+    top: 10vw;
     border: 2vw solid transparent;
     border-top: 0vw solid rgba(0, 0, 0, 0.233);
     border-left: 2vw solid rgba(0, 0, 0, 0.233);

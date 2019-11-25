@@ -53,7 +53,7 @@
         class="Next_Button"
         @focus="goToNext"
         @click="goToNext"
-      >Next</router-link>
+      >{{$t('thirdPage.name.next')}}</router-link>
     </transition>
   </section>
 </template>
@@ -346,106 +346,7 @@ input {
   }
 }
 }
-@media screen and (max-width: 759px) and (orientation: landscape) {
-  span{
-  color: #ac40f1;
-  font-size: 9vw;
-  margin: 0 2vw;
-}
-.circles{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-.Next_Button{
-  display: none;
-}
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 100vw;
-  height: 50vh;
-}
-.sumOfSkill {
-  display: flex;
-  align-items: center;
-  order: 1;
-}
-.SOFT {
-  display: flex;
-  align-items: center;
-  order: 3;
-}
-.HARD {
-  display: flex;
-  align-items: center;
-  order: 2;
-}
-.tickerContainer {
-  display: flex;
-  order: 4;
-}
-.ticker {
-  color: #ac40f1;
-  font-size: 5vw;
-  font-weight: 400;
-  flex-shrink: 0;
-  transform: translateX(22%);
-  animation: ticker 28s linear infinite;
-}
-input {
-  border: none;
-  width: 15vw;
-  height: 6vw;
-  background: none;
-  background-color: rgba(56, 56, 56, 0.52);
-  border-radius: 5vw;
-  color: #fff;
-  font-size: 4vw;
-  font-weight: 300;
-  text-align: center;
-  user-select: all;
-}
-.circleSum {
-  width: 26vw;
-  height: 26vw;
-  border-radius: 50%;
-  background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
-  z-index: 997;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0vw 0vw 0.4vw #000;
-  text-shadow: 0vw 0vw 0.3vw #000;
-}
-.circleSoft {
-  width: 26vw;
-  height: 26vw;
-  border-radius: 50%;
-  background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
-}
-.circleHard {
-  width: 26vw;
-  height: 26vw;
-  border-radius: 50%;
-  background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
-}
-.circleHard,
-.circleSoft {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 6vw;
-  color: #fff;
-  font-weight: 300;
-  z-index: 997;
-  box-shadow: 0vw 0vw 0.4vw #000;
-  text-shadow: 0vw 0vw 0.3vw #000;
-}
-}
+
 @media screen and (max-width: 999px) and (orientation: landscape){
   .Next_Button {
   justify-self: center;
@@ -546,6 +447,106 @@ input {
   100% {
     transform: translateX(-100%);
   }
+}
+}
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  span{
+  color: #ac40f1;
+  font-size: 9vw;
+  margin: 0 2vw;
+}
+.circles{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.Next_Button{
+  display: none;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100vw;
+  height: 50vh;
+}
+.sumOfSkill {
+  display: flex;
+  align-items: center;
+  order: 1;
+}
+.SOFT {
+  display: flex;
+  align-items: center;
+  order: 3;
+}
+.HARD {
+  display: flex;
+  align-items: center;
+  order: 2;
+}
+.tickerContainer {
+  display: flex;
+  order: 4;
+}
+.ticker {
+  color: #ac40f1;
+  font-size: 5vw;
+  font-weight: 400;
+  flex-shrink: 0;
+  transform: translateX(22%);
+  animation: ticker 28s linear infinite;
+}
+input {
+  border: none;
+  width: 15vw;
+  height: 6vw;
+  background: none;
+  background-color: rgba(56, 56, 56, 0.52);
+  border-radius: 5vw;
+  color: #fff;
+  font-size: 4vw;
+  font-weight: 300;
+  text-align: center;
+  user-select: all;
+}
+.circleSum {
+  width: 26vw;
+  height: 26vw;
+  border-radius: 50%;
+  background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
+  z-index: 997;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0vw 0vw 0.4vw #000;
+  text-shadow: 0vw 0vw 0.3vw #000;
+}
+.circleSoft {
+  width: 26vw;
+  height: 26vw;
+  border-radius: 50%;
+  background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
+}
+.circleHard {
+  width: 26vw;
+  height: 26vw;
+  border-radius: 50%;
+  background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
+}
+.circleHard,
+.circleSoft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 6vw;
+  color: #fff;
+  font-weight: 300;
+  z-index: 997;
+  box-shadow: 0vw 0vw 0.4vw #000;
+  text-shadow: 0vw 0vw 0.3vw #000;
 }
 }
 </style>

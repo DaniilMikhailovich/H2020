@@ -2,7 +2,7 @@
   <main>
     <div class="character">
       <div class="popupM" :class="{popupActiveM:(evolveM)}">
-        <p class="fcaption">Шляпа, ПП Томпсона, строгий костюм и пуля в голове...</p>
+        <p class="fcaption">{{$t('secondPage.popup4')}}</p>
       </div>
       <img :src="require('../assets/mafia.png')" alt="mafia" />
     </div>

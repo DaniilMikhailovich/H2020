@@ -4,7 +4,7 @@
 			v-for="item in items"
 			v-bind:key="item.id"
 			v-on:click="saveToStore(item.skill)">
-			<p>{{ item.skill }}</p>
+			<p>{{$t(item.skill)}}</p>
 			<component class="hardsvg" :is="item.svg"></component>
 		</button>
 	</section>
@@ -70,7 +70,15 @@ export default {
 		transition: 0.3s;
 		border: 0.2vw solid #ac40f1;
 	}
+	.hardsvg{
+		width: 75%;
+		margin-top: 1vw;
+	}
 @media screen and (min-width: 760px) and (max-width: 999px) {
+	.hardsvg{
+		width: 60%;
+		margin-top: 1vw;
+	}
 }
 
 

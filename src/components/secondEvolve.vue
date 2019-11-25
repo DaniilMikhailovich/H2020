@@ -2,7 +2,7 @@
   <main>
     <div class="character">
       <div class="popupM" :class="{popupActiveM:(evolveM)}">
-        <p class="fcaption">На первом месте у нас была человеческая личность и таллант.</p>
+        <p class="fcaption">{{$t('secondPage.popup2')}}</p>
       </div>
       <img :src="require('../assets/renaissance.png')" alt="renaissance" />
     </div>

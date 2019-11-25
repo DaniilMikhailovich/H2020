@@ -2,7 +2,7 @@
   <main>
     <div class="character">
       <div class="popupM" :class="{popupActiveM:(evolveM)}">
-        <p class="fcaption">Свободная одежда, любовь и мысли. Насилие - путь в пропасть</p>
+        <p class="fcaption">{{$t('secondPage.popup5')}}</p>
       </div>
       <img :src="require('../assets/hippie.png')" alt="hippie" />
     </div>

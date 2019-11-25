@@ -676,4 +676,9 @@ header{
 		width: 89vw;
 	}
 }
+@media screen and (max-width: 600px) and (orientation: landscape){
+	main{
+		height: 100vh;
+	}
+}
 </style>

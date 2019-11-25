@@ -2,7 +2,7 @@
   <main>
     <div class="character">
       <div class="popupM" :class="{popupActiveM:(evolveM)}">
-        <p class="fcaption">А теперь время делать свой выбор, деньги или таллант, любовь или война, строгий костюм или кожаная куртка!</p>
+        <p class="fcaption">{{$t('secondPage.popup8')}}</p>
       </div>
       <img :src="require('../assets/2020.png')" alt="2020" />
     </div>
