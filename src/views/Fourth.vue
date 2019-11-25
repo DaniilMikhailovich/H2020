@@ -785,10 +785,9 @@ footer {
 .conclusion {
     width: 80vw;
     flex-shrink: 0;
-    font-size: 3vw;
-    color: #fff;
-    font-weight: 400;
-    
+    font-size: 6vw;
+    color: rgb(48, 2, 173);
+    font-weight: 700;
   }
   .charts{
     width: 135vw;
@@ -887,6 +886,14 @@ header {
 }
 
 @media screen and (min-width: 1000px), (orientation: landscape) {
+  .conclusion {
+    width: 80vw;
+    flex-shrink: 0;
+    font-size: 2.5vw;
+    color: rgb(48, 2, 173);
+    font-weight: 700;
+    text-align: center;
+  }
   .BackNumber {
     transform: rotate(-10deg);
     font-size: 45vw;
