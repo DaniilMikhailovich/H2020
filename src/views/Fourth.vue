@@ -15,8 +15,10 @@
         </section>
         <section class="configurator">
           <!-- <p class="sooon">DeVeLoPeRs aRe WoRkInG oN tHiS sCrEeN😤🤕😘</p> -->
-          <chart1 v-if="isDesktop" :series="series" :hardSkill="hardSkillName"></chart1>
-          <chart2 v-else :series="series" :hardSkill="hardSkillName"></chart2>
+          <section class="charts">
+            <chartd v-if="isDesktop" :sections="chartSections" :hardSkill="hardSkillName"></chartd>
+            <chartm v-else :sections="chartSections" :hardSkill="hardSkillName"></chartm>
+          </section>
           <section class="conclusion"> Хуйня из под коня а мы спиздили ваши пероснальные данные, а может и нет, думайте теперь сами и следить за своей картой)))))</section>
         </section>
       </section>
@@ -105,18 +107,59 @@ export default {
         return require("../assets/girl.png");
       } else return null;
     },
-    series() {
+    chartSections(){
       return [
-        this.Initiative,
-        this.Creativity,
-        this.Adaptability,
-        this.Reflection,
-        this.Multitasking,
-        this.ListeningSkills,
-        this.Teamwork,
-        this.CriticalThinking,
-        this.TimeManagement
-      ];
+        {
+          label: "Initiative - "+this.Initiative,
+          value: this.Initiative,
+          color: '#00C0D2'
+        },
+        {
+          label: "Creativity - "+this.Creativity,
+          value: this.Creativity,
+          color: '#FFDF00'
+        },
+        {
+          label: "Adaptability - "+this.Adaptability,
+          value: this.Adaptability,
+          color: '#FF7600'
+        },
+        {
+          label: "Reflection - "+this.Reflection,
+          value: this.Reflection,
+          color: '#00FF00'
+        },
+        {
+          label: "Multitasking - "+this.Multitasking,
+          value: this.Multitasking,
+          color: '#FF0015'
+        },
+        {
+          label: "ListeningSkills - "+this.ListeningSkills,
+          value: this.ListeningSkills,
+          color: '#D6F700'
+        },
+        {
+          label: "Teamwork - "+this.Teamwork,
+          value: this.Teamwork,
+          color: '#3F3FC2'
+        },
+        {
+          label: "CriticalThinking - "+this.CriticalThinking,
+          value: this.CriticalThinking,
+          color: '#00AD51'
+        },
+        {
+          label: "TimeManagement - "+this.TimeManagement,
+          value: this.TimeManagement,
+          color: '#BA5CAB'
+        },
+        {
+          label: this.hardSkillName,
+          value: this.hardSkillPoints,
+          color: '#FF6384'
+        },
+      ]
     },
     isDesktop: function() {
       if ((this.width >= 560)&&((window.innerWidth/window.innerHeight) >1)) {
@@ -244,15 +287,15 @@ export default {
     awardsvg: () =>
       import(
         /* webpackChunkName: "awardSVG", webpackPrefetch: 985 */ "../components/SVG/awardSVG.vue"
-      ),
-    chart1: () =>
+        ),
+    chartd: () =>
       import(
-        /* webpackChunkName: "chart", webpackPrefetch: 780 */ "../components/charts/chart1.vue"
-      ),
-    chart2: () =>
+        /* webpackChunkName: "chartD", webpackPrefetch: 801 */ "../components/charts/chartD.vue"
+        ),
+    chartm: () =>
       import(
-        /* webpackChunkName: "chart", webpackPrefetch: 780 */ "../components/charts/chart2.vue"
-      )
+        /* webpackChunkName: "chartD", webpackPrefetch: 801 */ "../components/charts/chartM.vue"
+        ),
   },
   async beforeCreate(){
    await axios
@@ -289,7 +332,7 @@ export default {
       });
   },
   created() {
-    window.addEventListener("resize", this.changeCanvas);
+    window.addEventListener("resize", this.changeCanvas());
     const podium = new window.Image();
     podium.src = require("../assets/podium.png");
     podium.onload = () => {
@@ -729,8 +772,8 @@ footer {
 .configurator {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  height: 50vh;
+  align-items: center;
+  height: 35vh;
   width: 100vw;
   border-radius: 0.5vw;
   z-index: 999;
@@ -739,6 +782,14 @@ footer {
   flex-wrap: nowrap;
   overflow-x: scroll;
 }
+.conclusion {
+    width: 80vw;
+    flex-shrink: 0;
+  }
+  .charts{
+    width: 135vw;
+    flex-shrink: 0;
+  }
 .sooon {
   font-size: 12vw;
   color: rgb(71, 243, 255);
@@ -886,9 +937,13 @@ header {
     width: 55vw;
     border-radius: 0.5vw;
     background-color: rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
   }
   .conclusion {
-    width: 40%;
+    width: 45%;
+  }
+  .charts{
+    width: 55%;
   }
   .sooon {
     font-size: 7vw;
@@ -957,6 +1012,20 @@ header {
 		border-radius: .5vw;
 		background-color: rgba(0, 0, 0, 0.25);
 	}
+  .configurator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5vw;
+    background-color: rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+  }
+  .conclusion {
+    width: 45%;
+  }
+  .charts{
+    width: 45%;
+  }
 	.personSVG, .awardSVG, .seekerSVG, .hangerSVG{
 		height: 3.8vw;
 	}
