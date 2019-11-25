@@ -32,4 +32,21 @@ export default {
 .cdc-legend {
   justify-content: flex-start;
 }
+@media screen and (max-width: 999px) and (orientation: landscape){
+     .cdc-legend{
+     justify-content: flex-start;
+     font-size: .7vw;
+     color: rgb(48, 2, 173);
+ }
+ }
+@media screen and (min-width: 1000px), (orientation: landscape) {
+   .donut{
+     font-size: 1vw;
+     text-align: left;
+ }
+ .cdc-legend{
+     justify-content: flex-start;
+     color: rgb(48, 2, 173);
+ }
+ }
 </style>
