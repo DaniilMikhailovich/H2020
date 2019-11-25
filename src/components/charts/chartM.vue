@@ -3,7 +3,7 @@
     class="donut"
     background="white"
     foreground="#FF6384"
-    :size="65"
+    :size="55"
     unit="vw"
     :thickness="30"
     hasLegend
@@ -26,7 +26,7 @@ export default {
 
 <style>
 .donut {
-  font-size: 2.7vw;
+  font-size: 2.5vw;
   text-align: left;
 }
 .cdc-legend {
