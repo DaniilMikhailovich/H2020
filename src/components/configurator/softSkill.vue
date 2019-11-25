@@ -572,4 +572,57 @@ p {
     border: none;
   }
 }
+@media screen and (max-width: 999px) and (orientation: landscape) {
+  .scrollM{
+    display: flex;
+    flex-wrap:nowrap;
+    overflow-x: scroll;
+    justify-content: flex-start;
+}
+ .skillItem {
+   justify-content: space-around;
+    width: 23vw;
+    height: 17vw;
+    border-radius: 0.5vw;
+    margin-bottom: 1vw;
+    flex-shrink: 0;
+  }
+  p{
+    font-size: 2vw;
+  }
+  .percent{
+    font-size: 1.8vw;
+  }
+    .range {
+    appearance: none;
+    border-radius: 1vw;
+    width: 90%;
+    height: 2vw;
+    user-select: all;
+    transform: initial;
+    -moz-outline-radius: 20px;
+  }
+  .range:focus, .range:active{
+    border: 0.15vw solid rgb(48, 2, 173);
+    height: 2.1vw;
+  }
+  .range::-moz-range-thumb {
+    appearance: none;
+    width: 2.2vw;
+    height: 2.2vw;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid;
+  }
+  .range::-webkit-slider-thumb {
+    appearance: none;
+    width: 2.2vw;
+    height: 2.2vw;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid;
+  }
+}
 </style>

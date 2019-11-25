@@ -356,7 +356,7 @@ input {
   border: 0.1vw solid #ac40f1;
   color: #fff;
   opacity: 0;
-  font-size: 2vw;
+  font-size: 1.8vw;
   padding: 0.1vw 4vw;
   cursor: pointer;
   box-shadow: 0vw 0vw 0.8vw #000;
@@ -385,7 +385,9 @@ input {
   display: initial;
 }
 section {
-  height: 30vw;
+  height: 20vw;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .ticker {
   text-shadow: 0 0 0.3vw #ac40f1;
@@ -410,13 +412,13 @@ input {
   user-select: all;
 }
 .circleSum {
-  width: 15vw;
-  height: 15vw;
+  width: 12vw;
+  height: 12vw;
   border-radius: 50%;
   background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
   z-index: 997;
   display: flex;
-  font-size: 6vw;
+  font-size: 4vw;
   color: #fff;
   justify-content: center;
   align-items: center;
@@ -425,15 +427,15 @@ input {
 }
 .circleHard,
 .circleSoft {
-  width: 15vw;
-  height: 15vw;
+  width: 12vw;
+  height: 12vw;
   border-radius: 50%;
   background: linear-gradient(rgb(67, 251, 77), rgb(36, 198, 219));
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 3.5vw;
+  font-size: 3vw;
   color: #fff;
   font-weight: 300;
   z-index: 997;
