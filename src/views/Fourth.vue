@@ -135,7 +135,7 @@ export default {
           color: '#FF0015'
         },
         {
-          label: "ListeningSkills - "+this.ListeningSkills,
+          label: "Listening Skills - "+this.ListeningSkills,
           value: this.ListeningSkills,
           color: '#D6F700'
         },
@@ -145,12 +145,12 @@ export default {
           color: '#3F3FC2'
         },
         {
-          label: "CriticalThinking - "+this.CriticalThinking,
+          label: "Critical Thinking - "+this.CriticalThinking,
           value: this.CriticalThinking,
           color: '#00AD51'
         },
         {
-          label: "TimeManagement - "+this.TimeManagement,
+          label: "Time Management - "+this.TimeManagement,
           value: this.TimeManagement,
           color: '#BA5CAB'
         },
