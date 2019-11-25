@@ -340,11 +340,12 @@ export default {
 		goToNext(){
 			if(this.$route.path === this.softSkill){
 				this.name = ''
+				if(this.$store.getters.requestCounter < 2){
+				this.pushToDynamo()}
 				setTimeout(() => {
 					this.$router.push('/create/soft_skill/finish')
 					this.humanImg = this.$refs.stage.getStage().toDataURL({pixelRatio: 3})
 					this.$store.dispatch('PUSH_HUMANIMG', this.humanImg)
-					this.pushToDynamo()
 				},500)
 				setTimeout(()=>{this.name = this.humanName},600)
 			}else this.$router.push('/create/just_a_little')
@@ -373,6 +374,9 @@ export default {
 				TimeManagement: this.TimeManagement
 			};
 			await API.graphql(graphqlOperation(createAnswer, { input: answer }));
+			var counter = this.$store.getters.requestCounter
+			counter = counter + 1
+			this.$store.dispatch('PUSH_COUNTER', counter)
 		},
 		Reset(){
 			this.$router.push('/create/personalisation'),
