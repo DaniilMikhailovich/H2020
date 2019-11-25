@@ -10,7 +10,7 @@
     legendPlacement="right"
     :sections="sections"
     :total="1000"
-  >{{ hardSkill }}</vc-donut>
+  >{{ $t(hardSkill) }}</vc-donut>
 </template>
 
 <script>
