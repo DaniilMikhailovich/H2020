@@ -12,10 +12,10 @@
       <section class="humanity">
         <article class="evolve1">
           <div class="hint" :class="{firstHintOut:firsthint}">
-            <p class="firsthint">MOUSE OVER</p>
+            <p class="firsthint">{{$t('secondPage.hint')}}</p>
           </div>
           <div class="popup1" :class="{popupActive1:(evolve1) && (firsthint)}">
-            <p class="fcaption">А вот в наше время...👴👵 В моде был ручной труд и складки на одежде.</p>
+            <p class="fcaption">{{$t('secondPage.popup1')}}</p>
           </div>
           <p @mouseover="evolve1 = true" @mouseout="evolve1 = false" class="century">III</p>
           <img
@@ -29,7 +29,7 @@
         </article>
         <article class="evolve2">
           <div class="popup2" :class="{popupActive2:(evolve2) && (firsthint)}">
-            <p class="fcaption">На первом месте у нас была человеческая личность и таллант</p>
+            <p class="fcaption">{{$t('secondPage.popup2')}}</p>
           </div>
           <p @mouseover="evolve2 = true" @mouseout="evolve2 = false" class="century">III</p>
           <img
@@ -45,7 +45,7 @@
         </article>
         <article class="evolve3">
           <div class="popup3" :class="{popupActive3:(evolve3) && (firsthint)}">
-            <p class="fcaption">Большие животы и дорогие костюмы, ООО?...ОАО?...ИП? Почти.. наёмный труд!</p>
+            <p class="fcaption">{{$t('secondPage.popup4')}}</p>
           </div>
           <p @mouseover="evolve3 = true" @mouseout="evolve3 = false" class="century">III</p>
           <img
@@ -61,7 +61,7 @@
         </article>
         <article class="evolve4">
           <div class="popup4" :class="{popupActive4:(evolve4) && (firsthint)}">
-            <p class="fcaption">Шляпа, ПП Томпсона, строгий костюм и пуля в голове...</p>
+            <p class="fcaption">{{$t('secondPage.popup5')}}</p>
           </div>
           <p @mouseover="evolve4 = true" @mouseout="evolve5 = false" class="century">III</p>
           <img
@@ -75,7 +75,7 @@
         </article>
         <article class="evolve5">
           <div class="popup5" :class="{popupActive5:(evolve5) && (firsthint)}">
-            <p class="fcaption">Свободная одежда, любовь и мысли. Насилие - путь в пропасть</p>
+            <p class="fcaption">{{$t('secondPage.popup6')}}</p>
           </div>
           <p @mouseover="evolve5 = true" @mouseout="evolve5 = false" class="century">III</p>
           <img
@@ -89,7 +89,7 @@
         </article>
         <article class="evolve6">
           <div class="popup6" :class="{popupActive6:(evolve6) && (firsthint)}">
-            <p class="fcaption">Цепи..цепи..цепи, кожаные куртки с заклепками и громкая музыка 🎸</p>
+            <p class="fcaption">{{$t('secondPage.popup7')}}</p>
           </div>
           <p @mouseover="evolve6 = true" @mouseout="evolve6 = false" class="century">III</p>
           <img
@@ -105,7 +105,7 @@
         </article>
         <article class="evolve7">
           <div class="popup7" :class="{popupActive7:(evolve7) && (firsthint)}">
-            <p class="fcaption">Ребята в теме! Барбершоп, сигвей, блог, да они предложения из этих слов строят😁</p>
+            <p class="fcaption">{{$t('secondPage.popup8')}}</p>
           </div>
           <p @mouseover="evolve7 = true" @mouseout="evolve7 = false" class="century">III</p>
           <img
@@ -329,7 +329,7 @@ hr {
     border-end-end-radius: 0vw;
     left: 1.5vw;
     width: 6.5vw;
-    height: 3vw;
+    height: 3.5vw;
     text-align: center;
     background: rgba(0, 0, 0, 0.233);
     position: absolute;
@@ -344,7 +344,7 @@ hr {
     font-weight: 400;
     text-align: center;
     z-index: 999;
-    line-height: 1.5vw;
+    line-height: 1.8vw;
     opacity: 1;
   }
   .hint:after {
@@ -352,11 +352,11 @@ hr {
     width: 0;
     height: 0;
     position: absolute;
-    top: 3vw;
-    left: -1.8vw;
-    border-left: 5vw solid transparent;
-    border-right: 5vw solid transparent;
-    border-top: 3vw solid rgba(0, 0, 0, 0.233);
+    top: 3.5vw;
+    left: -0.8vw;
+    border-left: 4vw solid transparent;
+    border-right: 4vw solid transparent;
+    border-top: 2vw solid rgba(0, 0, 0, 0.233);
   }
   .popup1 {
     position: absolute;
@@ -448,7 +448,7 @@ hr {
     position: absolute;
     top: -10vw;
     left: -33vw;
-    width: 42vw;
+    width: 49vw;
     height: 3vw;
     background: rgba(0, 0, 0, 0.233);
     border-radius: 1vw;
@@ -461,7 +461,7 @@ hr {
     width: 0;
     height: 0;
     position: absolute;
-    right: 3vw;
+    right: 10vw;
     top: 3vw;
     border: 0.5vw solid transparent;
     border-top: 1vw solid rgba(0, 0, 0, 0.233);
@@ -474,7 +474,7 @@ hr {
     position: absolute;
     top: 1.4vw;
     right: -80vw;
-    width: 45vw;
+    width: 60vw;
     height: 3vw;
     background: rgba(0, 0, 0, 0.233);
     border-radius: 1vw;
@@ -493,14 +493,14 @@ hr {
     border-top: 2vw solid rgba(0, 0, 0, 0.233);
   }
   .popupActive5 {
-    right: -16vw;
+    right: -31vw;
     opacity: 1;
   }
   .popup6 {
     position: absolute;
     top: -10vw;
     right: 0vw;
-    width: 50vw;
+    width: 65vw;
     height: 3vw;
     background: rgba(0, 0, 0, 0.233);
     border-radius: 1vw;
@@ -526,7 +526,7 @@ hr {
     position: absolute;
     top: 1.4vw;
     right: -60vw;
-    width: 60vw;
+    width: 71vw;
     height: 3vw;
     background: rgba(0, 0, 0, 0.233);
     border-radius: 1vw;

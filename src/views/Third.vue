@@ -679,4 +679,9 @@ header{
 		height: 100vh;
 	}
 }
+@media screen and (max-width: 600px) and (orientation: landscape){
+	main{
+		height: 100vh;
+	}
+}
 </style>

@@ -2,7 +2,7 @@
   <main>
     <div class="character">
       <div class="popupM" :class="{popupActiveM:(evolveM)}">
-        <p class="fcaption">А вот в наше время...👴👵 В моде был ручной труд и складки на одежде.</p>
+        <p class="fcaption">{{$t('secondPage.popup1')}}</p>
       </div>
       <img :src="require('../assets/greek.png')" alt="greek" />
     </div>

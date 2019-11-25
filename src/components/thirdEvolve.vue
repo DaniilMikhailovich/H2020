@@ -2,7 +2,7 @@
   <main>
     <div class="character">
       <div class="popupM" :class="{popupActiveM:(evolveM)}">
-        <p class="fcaption">Большие животы и дорогие костюмы, ООО?...ОАО?...ИП? Почти.. наёмный труд!</p>
+        <p class="fcaption">{{$t('secondPage.popup3')}}</p>
       </div>
       <img :src="require('../assets/industrial.png')" alt="industrial" />
     </div>

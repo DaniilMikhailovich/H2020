@@ -2,7 +2,7 @@
   <main>
     <div class="character">
       <div class="popupM" :class="{popupActiveM:(evolveM)}">
-        <p class="fcaption">Цепи..цепи..цепи, кожаные куртки с заклепками и громкая музыка 🎸</p>
+        <p class="fcaption">{{$t('secondPage.popup6')}}</p>
       </div>
       <img :src="require('../assets/Punk.png')" alt="punk" />
     </div>

@@ -300,91 +300,7 @@ section {
     font-weight: 300;
   }
 }
-@media screen and (max-width: 759px) and (orientation: landscape) {
-  .Next_Button {
-    display: none;
-  }
-  .GoBack_button {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border: none;
-    transition: 0.2s;
-  }
-  .arrowbutton {
-    width: 8vw;
-    fill: #ac40f1;
-    margin-right: 0.5vw;
-  }
-  .arrowright {
-    width: 8vw;
-    fill: rgb(255, 255, 255);
-    margin-left: 0.5vw;
-    transform: rotate(180deg);
-  }
-  .GoNext_button {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    background-color: #ac40f1;
-    border-radius: 50%;
-    padding: 0.5vw;
-  }
-  .rightButtonGroup > button {
-    margin-right: 2vw;
-    border: none;
-  }
-  .topConfMenu {
-    display: flex;
-    justify-content: space-between;
-    flex-basis: 100%;
-  }
-  .rightButtonGroup {
-    display: flex;
-    margin: 0.5vw 0vw;
-  }
-  section {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 1vw;
-    width: 100%;
-  }
-  .clothesTitle {
-    flex-basis: 100%;
-    color: #ac40f1;
-    font-size: 7vw;
-    font-weight: 300;
-  }
-  .separate {
-    margin: 0.3vw 0vw;
-    height: 0.1vw;
-    width: calc(100% - 2vw);
-    border-radius: 0;
-    border: initial;
-    margin-left: 1vw;
-    border: 0.1vw solid #ac40f1;
-    background-color: #ac40f1;
-  }
-  .v-enter,
-  .v-leave-to {
-    opacity: 0;
-  }
-  .v-enter-active,
-  .v-leave-active {
-    transition: 0.2s;
-  }
-  .inputM {
-    position: absolute;
-    top: 0;
-    z-index: 999;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-  }
-}
+
 @media screen and (max-width: 999px) and (orientation: landscape) {
   .inputM {
     top: initial;
@@ -504,6 +420,91 @@ section {
     color: #fff;
     font-size: 3vw;
     font-weight: 300;
+  }
+}
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  .Next_Button {
+    display: none;
+  }
+  .GoBack_button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: none;
+    transition: 0.2s;
+  }
+  .arrowbutton {
+    width: 8vw;
+    fill: #ac40f1;
+    margin-right: 0.5vw;
+  }
+  .arrowright {
+    width: 8vw;
+    fill: rgb(255, 255, 255);
+    margin-left: 0.5vw;
+    transform: rotate(180deg);
+  }
+  .GoNext_button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #ac40f1;
+    border-radius: 50%;
+    padding: 0.5vw;
+  }
+  .rightButtonGroup > button {
+    margin-right: 2vw;
+    border: none;
+  }
+  .topConfMenu {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+  }
+  .rightButtonGroup {
+    display: flex;
+    margin: 0.5vw 0vw;
+  }
+  section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1vw;
+    width: 100%;
+  }
+  .clothesTitle {
+    flex-basis: 100%;
+    color: #ac40f1;
+    font-size: 7vw;
+    font-weight: 300;
+  }
+  .separate {
+    margin: 0.3vw 0vw;
+    height: 0.1vw;
+    width: calc(100% - 2vw);
+    border-radius: 0;
+    border: initial;
+    margin-left: 1vw;
+    border: 0.1vw solid #ac40f1;
+    background-color: #ac40f1;
+  }
+  .v-enter,
+  .v-leave-to {
+    opacity: 0;
+  }
+  .v-enter-active,
+  .v-leave-active {
+    transition: 0.2s;
+  }
+  .inputM {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    background-color: #fff;
   }
 }
 </style>

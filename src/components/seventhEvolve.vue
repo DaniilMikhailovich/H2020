@@ -2,7 +2,7 @@
   <main>
     <div class="character">
       <div class="popupM" :class="{popupActiveM:(evolveM)}">
-        <p class="fcaption">Ребята в теме! Барбершоп, сигвей, блог, да они предложения из этих слов строят😁</p>
+        <p class="fcaption">{{$t('secondPage.popup7')}}</p>
       </div>
       <img :src="require('../assets/hipster.png')" alt="hipster" />
     </div>
