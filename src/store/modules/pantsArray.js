@@ -71,6 +71,27 @@ export default {
                 posY:580,
                 z:4
             },
+            {
+                id: 11,
+                src: require('../../assets/Textures/Pants/male/11.png'),
+                posX: 424,
+                posY: 580,
+                z: 4
+            },
+            {
+                id: 12,
+                src: require('../../assets/Textures/Pants/male/12.png'),
+                posX: 424,
+                posY: 580,
+                z: 4
+            },
+            {
+                id: 13,
+                src: require('../../assets/Textures/Pants/male/13.png'),
+                posX: 424,
+                posY: 580,
+                z: 4
+            },
         ],
         pantsFemale: [
             {

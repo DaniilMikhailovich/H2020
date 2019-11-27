@@ -3,104 +3,135 @@ export default {
         accessoriesMale: [
             {
                 id:1,
-                src:require('../../assets/Textures/Accessories/male/1.png'),
+                icon: require('../../assets/Textures/Accessories/male/1.png'),
+                src: require('../../assets/Textures/Accessories/male/1.png'),
                 posX:406,
                 posY:207,
                 z:8
             },
             {
                 id:2,
-                src:require('../../assets/Textures/Accessories/male/2.png'),
+                icon: require('../../assets/Textures/Accessories/male/2.png'),
+                src: require('../../assets/Textures/Accessories/male/2.png'),
                 posX:420,
                 posY:220,
                 z:8
             },
             {
                 id:3,
-                src:require('../../assets/Textures/Accessories/male/3.png'),
+                icon: require('../../assets/Textures/Accessories/male/3.png'),
+                src: require('../../assets/Textures/Accessories/male/3.png'),
                 posX:408,
                 posY:215,
                 z:8
             },
             {
                 id:4,
-                src:require('../../assets/Textures/Accessories/male/4.png'),
+                icon: require('../../assets/Textures/Accessories/male/4.png'),
+                src: require('../../assets/Textures/Accessories/male/4.png'),
                 posX:463,
                 posY:340,
                 z:8
             },
             {
                 id:5,
-                src:require('../../assets/Textures/Accessories/male/5.png'),
+                icon: require('../../assets/Textures/Accessories/male/5.png'),
+                src: require('../../assets/Textures/Accessories/male/5.png'),
                 posX:350,
                 posY:715,
                 z:5
             },
             {
                 id:6,
-                src:require('../../assets/Textures/Accessories/male/6.png'),
+                icon: require('../../assets/Textures/Accessories/male/6.png'),
+                src: require('../../assets/Textures/Accessories/male/6.png'),
                 posX:641,
                 posY:714,
                 z:5
             },
             {
                 id:7,
-                src:require('../../assets/Textures/Accessories/male/7.png'),
+                icon: require('../../assets/Textures/Accessories/male/7.png'),
+                src: require('../../assets/Textures/Accessories/male/7.png'),
                 posX:410,
                 posY:590,
                 z:8
             },
             {
                 id:8,
-                src:require('../../assets/Textures/Accessories/male/8.png'),
+                icon: require('../../assets/Textures/Accessories/male/8.png'),
+                src: require('../../assets/Textures/Accessories/male/8.png'),
                 posX:419,
                 posY:345,
                 z:8
             },
             {
                 id:9,
-                src:require('../../assets/Textures/Accessories/male/9.png'),
+                icon: require('../../assets/Textures/Accessories/male/9.png'),
+                src: require('../../assets/Textures/Accessories/male/9.png'),
                 posX:419,
                 posY:345,
                 z:8
             },
             {
                 id:10,
-                src:require('../../assets/Textures/Accessories/male/10.png'),
+                icon: require('../../assets/Textures/Accessories/male/10.png'),
+                src: require('../../assets/Textures/Accessories/male/10.png'),
                 posX:622,
                 posY:650,
                 z:5
             },
             {
                 id:11,
-                src:require('../../assets/Textures/Accessories/male/11.png'),
+                icon: require('../../assets/Textures/Accessories/male/11.png'),
+                src: require('../../assets/Textures/Accessories/male/11.png'),
                 posX:463,
                 posY:340,
                 z:8
             },
             {
                 id:12,
-                src:require('../../assets/Textures/Accessories/male/12.png'),
+                icon: require('../../assets/Textures/Accessories/male/12.png'),
+                src: require('../../assets/Textures/Accessories/male/12.png'),
                 posX:463,
                 posY:340,
                 z:8
             },
             {
                 id:13,
-                src:require('../../assets/Textures/Accessories/male/13.png'),
+                icon: require('../../assets/Textures/Accessories/male/13.png'),
+                src: require('../../assets/Textures/Accessories/male/13.png'),
                 posX:363,
                 posY:636,
                 z:5
             },
             {
                 id:14,
-                src:require('../../assets/Textures/Accessories/male/14.png'),
+                icon: require('../../assets/Textures/Accessories/male/14.png'),
+                src: require('../../assets/Textures/Accessories/male/14.png'),
                 posX:620,
                 posY:650,
                 z:5
             },
             {
                 id: 15,
+                icon: require('../../assets/Textures/Accessories/male/15.png'),
+                src: require('../../assets/Textures/Accessories/male/15.png'),
+                posX: 406,
+                posY: 207,
+                z: 8
+            },
+            {
+                id: 16,
+                icon: require('../../assets/Textures/Accessories/male/16.png'),
+                src: require('../../assets/Textures/Accessories/male/16.png'),
+                posX: 420,
+                posY: 220,
+                z: 8
+            },
+            {
+                id: 17,
+                icon: require('../../assets/question.png'),
                 src: require('../../assets/question.png'),
                 posX: -1000,
                 posY: -1000,

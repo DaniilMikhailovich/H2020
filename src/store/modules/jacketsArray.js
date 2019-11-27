@@ -71,6 +71,41 @@ export default {
                 posY:335,
                 z:7
             },
+            {
+                id: 11,
+                src: require('../../assets/Textures/Jackets/male/11.png'),
+                posX: 386,
+                posY: 336,
+                z: 7
+            },
+            {
+                id: 12,
+                src: require('../../assets/Textures/Jackets/male/12.png'),
+                posX: 292,
+                posY: 342,
+                z: 7
+            },
+            {
+                id: 13,
+                src: require('../../assets/Textures/Jackets/male/13.png'),
+                posX: 362,
+                posY: 329,
+                z: 7
+            },
+            {
+                id: 14,
+                src: require('../../assets/Textures/Jackets/male/14.png'),
+                posX: 372,
+                posY: 331,
+                z: 7
+            },
+            {
+                id: 15,
+                src: require('../../assets/Textures/Jackets/male/15.png'),
+                posX: 365,
+                posY: 335,
+                z: 7
+            }
         ],
         jacketsFemale: [
             {
@@ -138,7 +173,7 @@ export default {
             },
             {
                 id:11,
-                src:require('../../assets/Textures/Jackets/female/11.png'),
+                src:require('../../assets/Textures/Jackets/female/104.png'),
                 posX: 385,
                 posY: 340,
                 z:7

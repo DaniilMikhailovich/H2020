@@ -71,6 +71,13 @@ export default {
                 posX:405,
                 posY:110,
                 z:9
+            },
+            {
+                id: '11',
+                src: require('../../assets/Textures/Hair/male/black/11.png'),
+                posX: 405,
+                posY: 110,
+                z: 9
             }
         ],
         // Мужские коричнивые волосы
@@ -144,6 +151,13 @@ export default {
                 posX:405,
                 posY:110,
                 z:9
+            },
+            {
+                id: '11',
+                src: require('../../assets/Textures/Hair/male/brown/11.png'),
+                posX: 405,
+                posY: 110,
+                z: 9
             }
         ],
         // Мужские темно-коричнивые волосы
@@ -217,6 +231,13 @@ export default {
                 posX:405,
                 posY:110,
                 z:9
+            },
+            {
+                id: '11',
+                src: require('../../assets/Textures/Hair/male/darkBrown/11.png'),
+                posX: 405,
+                posY: 110,
+                z: 9
             }
         ],
         // Мужские рыжие волосы
@@ -290,6 +311,13 @@ export default {
                 posX:405,
                 posY:110,
                 z:9
+            },
+            {
+                id: '11',
+                src: require('../../assets/Textures/Hair/male/ginger/11.png'),
+                posX: 405,
+                posY: 110,
+                z: 9
             }
         ],
         // Мужские зеленые волосы
@@ -363,6 +391,13 @@ export default {
                 posX:405,
                 posY:110,
                 z:9
+            },
+            {
+                id: '11',
+                src: require('../../assets/Textures/Hair/male/green/11.png'),
+                posX: 405,
+                posY: 110,
+                z: 9
             }
         ],
         // Мужские серые волосы
@@ -436,6 +471,13 @@ export default {
                 posX:405,
                 posY:110,
                 z:9
+            },
+            {
+                id: '11',
+                src: require('../../assets/Textures/Hair/male/grey/11.png'),
+                posX: 405,
+                posY: 110,
+                z: 9
             }
         ],
         // Мужские красные волосы
@@ -509,6 +551,13 @@ export default {
                 posX:405,
                 posY:110,
                 z:9
+            },
+            {
+                id: '11',
+                src: require('../../assets/Textures/Hair/male/red/11.png'),
+                posX: 405,
+                posY: 110,
+                z: 9
             }
         ],
     },
