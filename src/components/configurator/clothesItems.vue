@@ -3,7 +3,9 @@
 		<button class="button"
 			v-for="item in items"
 			v-bind:key="item.id"
-			v-on:click="drawOnCanvas(item)">
+			v-on:click="drawOnCanvas(item)"
+			
+			>
 			<img :src="item.src" alt="">
 		</button>
 	</section>
@@ -11,11 +13,18 @@
 
 <script>
 export default {
-	props: ['items','type'],
+	props: ['items','type','getter','map'],
 	name:'clothesitems',
 	methods:{
 		drawOnCanvas(elem){
+			if(this.map[elem.id].disable.indexOf(this.getter) === -1){
 			this.$store.dispatch('PUSH_'+this.type, elem)
+			}
+		}
+	},
+	computed:{
+		mapa() {
+			return this.map[1].disable.indexOf(this.getter)
 		}
 	}
 }

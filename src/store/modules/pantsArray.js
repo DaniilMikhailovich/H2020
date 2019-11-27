@@ -179,5 +179,40 @@ export default {
                 z:4
             },
         ],
+        pantsMaleDisableMap:[
+            {
+                disable: []
+            },
+            {
+                disable: [100] 
+            },
+            {
+                disable: [100] 
+            },
+            {
+                disable: [100] 
+            },
+            {
+                disable: [100]  
+            },
+            {
+                disable: [100] 
+            },
+            {
+                disable: [100]   
+            },
+            {
+                disable: [100] 
+            },
+            {
+                disable: [100] 
+            },
+            {
+                disable: [100] 
+            },
+            {
+                disable: [100] 
+            },
+        ]
     }
 }

@@ -191,7 +191,7 @@ export default {
   },
   methods: {
     goToConstruct() {
-      this.$router.replace("/create/personalisation");
+      this.$router.replace("/evolve/popup");
     },
     goToBack() {
       this.$router.push("/");
@@ -342,7 +342,7 @@ hr {
   .fcaption {
     width: auto;
     color: #fff;
-    font-size: 1.5vw;
+    font-size: 2vw;
     font-weight: 400;
     line-height: 2.5vw;
     margin: auto 0;

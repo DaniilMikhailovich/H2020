@@ -179,5 +179,40 @@ export default {
                 z:7
             },
         ],
+        jacketsMaleDisableMap:[
+            {
+                disable: []
+            },
+            {
+                disable: [3,5] 
+            },
+            {
+                disable: [3,5] 
+            },
+            {
+                disable: [3,5] 
+            },
+            {
+                disable: [3,5] 
+            },
+            {
+                disable: [3] 
+            },
+            {
+                disable: [3,5] 
+            },
+            {
+                disable: [3] 
+            },
+            {
+                disable: [3,5] 
+            },
+            {
+                disable: [3,5] 
+            },
+            {
+                disable: [3,5] 
+            },
+        ]
     }
 }

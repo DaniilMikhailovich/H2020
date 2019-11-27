@@ -1,5 +1,5 @@
 <template>
-<clothesitems :items="array"  :type="type"></clothesitems>    
+<clothesitems :items="array" :map="map" :getter="getter" :type="type"></clothesitems>    
 </template>
 
 <script>
@@ -16,6 +16,16 @@ export default {
             }else if(this.$store.getters.GENDER==='female') {
                 return this.$store.state.pantsArray.pantsFemale
             } return null
+        },
+        map(){
+            if(this.$store.getters.GENDER==='male'){
+                return this.$store.state.pantsArray.pantsMaleDisableMap
+            }else if(this.$store.getters.GENDER==='female') {
+                return [1]
+            } return null
+        },
+        getter(){
+            return 20
         }
     },
     components:{

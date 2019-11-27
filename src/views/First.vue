@@ -217,7 +217,8 @@ export default {
 .fcaption {
   width: auto;
   color: #fff;
-  font-size: 4vw;
+  font-size: 5vw;
+  font-family: 'Caveat';
   font-weight: 400;
   line-height: 6vw;
   margin: auto 0;
@@ -699,7 +700,7 @@ input {
   .fcaption {
     width: auto;
     color: #fff;
-    font-size: 1.5vw;
+    font-size: 2vw;
     font-weight: 400;
     line-height: 2vw;
     margin: auto 0;
