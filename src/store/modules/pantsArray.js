@@ -178,6 +178,48 @@ export default {
                 posY:530,
                 z:4
             },
+            {
+                id:16,
+                src:require('../../assets/Textures/Pants/female/99.png'),
+                posX:415,
+                posY:530,
+                z:4
+            },
+            {
+                id:17,
+                src:require('../../assets/Textures/Pants/female/100.png'),
+                posX:415,
+                posY:530,
+                z:4
+            },
+            {
+                id:18,
+                src:require('../../assets/Textures/Pants/female/101.png'),
+                posX:415,
+                posY:530,
+                z:4
+            },
+            {
+                id:19,
+                src:require('../../assets/Textures/Pants/female/102.png'),
+                posX:415,
+                posY:530,
+                z:4
+            },
+            {
+                id:20,
+                src:require('../../assets/Textures/Pants/female/111.png'),
+                posX:415,
+                posY:530,
+                z:4
+            },
+            {
+                id:21,
+                src:require('../../assets/Textures/Pants/female/112.png'),
+                posX:415,
+                posY:530,
+                z:4
+            },
         ],
         pantsMaleDisableMap:[
             {

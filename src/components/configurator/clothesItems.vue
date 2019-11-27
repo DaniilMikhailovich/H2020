@@ -4,7 +4,7 @@
 			v-for="item in items"
 			v-bind:key="item.id"
 			v-on:click="drawOnCanvas(item)"
-			
+
 			>
 			<img :src="item.src" alt="">
 		</button>
@@ -17,9 +17,10 @@ export default {
 	name:'clothesitems',
 	methods:{
 		drawOnCanvas(elem){
-			if(this.map[elem.id].disable.indexOf(this.getter) === -1){
+			// if(this.map[elem.id].disable.indexOf(this.getter) === -1){
+			// this.$store.dispatch('PUSH_'+this.type, elem)
+			// }
 			this.$store.dispatch('PUSH_'+this.type, elem)
-			}
 		}
 	},
 	computed:{
