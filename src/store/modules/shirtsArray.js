@@ -318,6 +318,179 @@ export default {
                 z: 6
             },
         ],
+        femaleMap:[
+            {
+                disableFirst:[], //Pants
+                disableSecond:[], //Jackets
+                disableThird:[] //Access
+            },
+            //1 shirt
+            {
+                disableFirst:[],
+                disableSecond:[],
+                disableThird:[]
+            },
+            //2 shirt
+            {
+                disableFirst:[],
+                disableSecond:[],
+                disableThird:[]
+            },
+            //3 shirt
+            {
+                disableFirst:[],
+                disableSecond:[],
+                disableThird:[]
+            },
+            //4 shirt
+            {
+                disableFirst:[3,15],
+                disableSecond:[],
+                disableThird:[15]
+            },
+            //5 shirt
+            {
+                disableFirst:[],
+                disableSecond:[],
+                disableThird:[]
+            },
+            //6 shirt
+            {
+                disableFirst:[],
+                disableSecond:[],
+                disableThird:[]
+            },
+            //7 shirt
+            {
+                disableFirst:[],
+                disableSecond:[],
+                disableThird:[]
+            },
+            //8 shirt
+            {
+                disableFirst:[],
+                disableSecond:[],
+                disableThird:[]
+            },
+            //9 shirt
+            {
+                disableFirst:[],
+                disableSecond:[],
+                disableThird:[]
+            },
+            //10 shirt
+            {
+                disableFirst:[],
+                disableSecond:[],
+                disableThird:[]
+            },
+            //11 shirt
+            {
+                disableFirst:[1,2,3,4,5,6,8,20,21],
+                disableSecond:[1,7,10,15,16],
+                disableThird:[]
+            },
+            //12 shirt
+            {
+                disableFirst:[1,2,3,4,5,6,8,20,21],
+                disableSecond:[1,7,10,15,16],
+                disableThird:[]
+            },
+            //13 shirt
+            {
+                disableFirst:[1,2,5,6,21],
+                disableSecond:[1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,19],
+                disableThird:[10]
+            },
+            //14 shirt
+            {
+                disableFirst:[1,2,5,6,21],
+                disableSecond:[1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,19],
+                disableThird:[10]
+            },
+            //15 shirt
+            {
+                disableFirst:[1,2,5,6,21],
+                disableSecond:[1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,19],
+                disableThird:[10]
+            },
+            //16 shirt
+            {
+                disableFirst:[1,2,3,5,6,20,21],
+                disableSecond:[10,14,15,16],
+                disableThird:[]
+            },
+            //17 shirt
+            {
+                disableFirst:[1,2,3,5,6,8,9,14,15,18,19,20,21],
+                disableSecond:[10,14,15],
+                disableThird:[15]
+            },
+            //18 shirt
+            {
+                disableFirst:[1,2,3,5,6,8,9,14,15,16,17,18,19,20,21],
+                disableSecond:[15],
+                disableThird:[15]
+            },
+            //19 shirt
+            {
+                disableFirst:[1,2,3,5,6,8,9,14,15,16,17,18,19,20,21],
+                disableSecond:[15],
+                disableThird:[15]
+            },
+            //20 shirt
+            {
+                disableFirst:[1,2,3,5,6,20,21],
+                disableSecond:[10,14,15,16],
+                disableThird:[]
+            },
+            //21 shirt
+            {
+                disableFirst:[1,2,3,5,6,20,21],
+                disableSecond:[10,14,15,16],
+                disableThird:[]
+            },
+            //22 shirt
+            {
+                disableFirst:[1,2,3,5,6,21],
+                disableSecond:[1,2,4,5,6,7,8,9,10,11,12,14,15,16],
+                disableThird:[]
+            },
+            //23 shirt
+            {
+                disableFirst:[1,2,3,5,6,21],
+                disableSecond:[1,2,4,5,6,7,8,9,10,11,12,14,15,16],
+                disableThird:[]
+            },
+            //24 shirt
+            {
+                disableFirst:[],
+                disableSecond:[],
+                disableThird:[]
+            },
+            //25 shirt
+            {
+                disableFirst:[],
+                disableSecond:[1,7,10,14,15],
+                disableThird:[10]
+            },
+            //26 shirt
+            {
+                disableFirst:[],
+                disableSecond:[1,7,10,14,15],
+                disableThird:[10]
+            },
+            //27 shirt
+            {
+                disableFirst:[],
+                disableSecond:[1,7,10,14,15],
+                disableThird:[10]
+            },
+            
+        ],
+
+
+
         shirtsMaleDisableMap:[
             {
                 disable: []

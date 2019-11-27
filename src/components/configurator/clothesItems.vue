@@ -4,8 +4,7 @@
 			v-for="item in items"
 			v-bind:key="item.id"
 			v-on:click="drawOnCanvas(item)"
-
-			>
+			:class="{'disable':}">
 			<img :src="item.src" alt="">
 		</button>
 	</section>
@@ -13,20 +12,22 @@
 
 <script>
 export default {
-	props: ['items','type','getter','map'],
+	props: ['items','type','firstID','map','secondID','thirdID','fourthID'],
 	name:'clothesitems',
-	methods:{
-		drawOnCanvas(elem){
-			// if(this.map[elem.id].disable.indexOf(this.getter) === -1){
-			// this.$store.dispatch('PUSH_'+this.type, elem)
-			// }
-			this.$store.dispatch('PUSH_'+this.type, elem)
+	data(){
+		return{
+			trigger:false
 		}
 	},
-	computed:{
-		mapa() {
-			return this.map[1].disable.indexOf(this.getter)
+	methods:{
+		drawOnCanvas(elem){
+			if((this.map[elem.id].disableFirst.indexOf(this.firstID) === -1)&&(this.map[elem.id].disableSecond.indexOf(this.secondID) === -1)&&(this.map[elem.id].disableThird.indexOf(this.thirdID) === -1)){
+			this.$store.dispatch('PUSH_'+this.type, elem)
+			}
 		}
+	},
+	mounted(){
+		this.trigger = true
 	}
 }
 </script>
@@ -38,6 +39,9 @@ export default {
 		justify-content: space-between;
 		flex-wrap: nowrap;
 		height: 50vw;
+	}
+	.disable{
+		filter:brightness(40%)
 	}
 	.scrollM{
 		overflow-x: scroll;
