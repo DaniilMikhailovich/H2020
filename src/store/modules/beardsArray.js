@@ -4,29 +4,29 @@ export default {
 			{
 				id: 1,
 				src: require('../../assets/Textures/Beards/1.png'),
-				posX: 406,
-				posY: 207,
+				posX: 425,
+				posY: 245,
 				z: 8
 			},
 			{
 				id: 2,
 				src: require('../../assets/Textures/Beards/2.png'),
-				posX: 420,
-				posY: 220,
+				posX: 425,
+				posY: 225,
 				z: 8
 			},
 			{
 				id: 3,
 				src: require('../../assets/Textures/Beards/3.png'),
-				posX: 408,
-				posY: 215,
+				posX: 443,
+				posY: 263,
 				z: 8
 			},
 			{
 				id: 4,
 				src: require('../../assets/Textures/Beards/4.png'),
-				posX: 463,
-				posY: 340,
+				posX: 435,
+				posY: 260,
 				z: 8
 			}
 		]

@@ -25,23 +25,16 @@ export default {
       this.$store.dispatch("GET_GENDER", this.saved_state.gender);
       this.$store.dispatch("PUSH_NAME", this.saved_state.humanName);
       this.$store.dispatch("PUSH_HEAD", this.saved_state.humanHead);
+      this.$store.dispatch("PUSH_BEARD", this.saved_state.humanBeard);
       this.$store.dispatch("PUSH_SHIRTS", this.saved_state.humanShirt);
       this.$store.dispatch("PUSH_JACKETS", this.saved_state.humanJackets);
       this.$store.dispatch("PUSH_PANTS", this.saved_state.humanPants);
       this.$store.dispatch("PUSH_SHOES", this.saved_state.humanShoes);
-      this.$store.dispatch(
-        "PUSH_ACCESSORIES",
-        this.saved_state.humanAccessories
-      );
+      this.$store.dispatch("PUSH_ACCESSORIES",this.saved_state.humanAccessories);
+      this.$store.dispatch("PUSH_VEHICLE",this.saved_state.humanVehicle);
       this.$store.dispatch("PUSH_HARDSKILL", this.saved_state.hardSkillPoints);
-      this.$store.dispatch(
-        "PUSH_SOFTSKILLS",
-        this.saved_state.softSkillsPoints
-      );
-      this.$store.dispatch(
-        "PUSH_HARDSKILL_NAME",
-        this.saved_state.hardSkillName
-      );
+      this.$store.dispatch("PUSH_SOFTSKILLS",this.saved_state.softSkillsPoints);
+      this.$store.dispatch("PUSH_HARDSKILL_NAME",this.saved_state.hardSkillName);
       this.$store.dispatch("PUSH_INITIATIVE", this.saved_state.Initiative);
       this.$store.dispatch("PUSH_CREATIVITY", this.saved_state.Creativity);
       this.$store.dispatch("PUSH_ADAPTABILITY", this.saved_state.Adaptability);
@@ -50,10 +43,7 @@ export default {
       this.$store.dispatch("PUSH_LISTENING", this.saved_state.ListeningSkills);
       this.$store.dispatch("PUSH_TEAMWORK", this.saved_state.Teamwork);
       this.$store.dispatch("PUSH_CRITICAL", this.saved_state.CriticalThinking);
-      this.$store.dispatch(
-        "PUSH_TIMEMANAGEMENT",
-        this.saved_state.TimeManagement
-      );
+      this.$store.dispatch("PUSH_TIMEMANAGEMENT",this.saved_state.TimeManagement);
       this.$store.dispatch("PUSH_HUMANIMG", this.saved_state.humanImg);
       let json = JSON.stringify(this.$store.state);
       sessionStorage.setItem("state", json);

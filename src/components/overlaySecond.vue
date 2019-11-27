@@ -52,7 +52,9 @@ export default {
     },
     methods:{
         goToConstruct() {
-        this.$router.replace("/create/personalisation");
+            this.$store.dispatch('PUSH_RESPGENDER', this.respondentGender)
+            this.$store.dispatch('PUSH_RESPAGE', this.respondentAge)
+            this.$router.replace("/create/personalisation");
         },
         setAge(value){
             this.respondentAge = value

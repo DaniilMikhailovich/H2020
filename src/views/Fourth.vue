@@ -36,7 +36,9 @@
             <v-image
               :config="{image:accessories, x:accessoriesPosX,y:accessoriesPosY, scale:{x:.38,y:.38}}"
             ></v-image>
+            <v-image :config="{image:beard, x:beardPosX,y:beardPosY, scale:{x:.38,y:.38}}"></v-image>
             <v-image :config="{image:hair, x:hairPosX,y:hairPosY, scale:{x:.38,y:.38}}"></v-image>
+            <v-image :config="{image:vehicle, x:vehiclePosX,y:vehiclePosY, scale:{x:.38,y:.38}}"></v-image>
           </v-layer>
         </v-stage>
       </section>
@@ -60,6 +62,9 @@ export default {
       hair: null,
       hairPosX: 0,
       hairPosY: 0,
+      beard: null,
+      beardPosX: 0,
+      beardPosY: 0,
       jacket: null,
       jacketPosX: 0,
       jacketPosY: 0,
@@ -75,16 +80,21 @@ export default {
       shoes: null,
       shoesPosX: 0,
       shoesPosY: 0,
+      vehicle: null,
+      vehiclePosX: 0,
+      vehiclePosY: 0,
       canvascontainer: "",
       podium: null,
 
       gender: "",
       humanHead: null,
+      humanBeard: null,
       humanShirt: null,
       humanJackets: null,
       humanPants: null,
       humanShoes: null,
       humanAccessories: null,
+      humanVehicle: null,
       hardSkillPoints: 0,
       softSkillsPoints: 0,
       hardSkillName: "",
@@ -107,62 +117,62 @@ export default {
         return require("../assets/girl.png");
       } else return null;
     },
-    chartSections(){
+    chartSections() {
       return [
         {
-          label: "Initiative - "+this.Initiative,
+          label: "Initiative - " + this.Initiative,
           value: this.Initiative,
-          color: '#00C0D2'
+          color: "#00C0D2"
         },
         {
-          label: "Creativity - "+this.Creativity,
+          label: "Creativity - " + this.Creativity,
           value: this.Creativity,
-          color: '#FFDF00'
+          color: "#FFDF00"
         },
         {
-          label: "Adaptability - "+this.Adaptability,
+          label: "Adaptability - " + this.Adaptability,
           value: this.Adaptability,
-          color: '#FF7600'
+          color: "#FF7600"
         },
         {
-          label: "Reflection - "+this.Reflection,
+          label: "Reflection - " + this.Reflection,
           value: this.Reflection,
-          color: '#00FF00'
+          color: "#00FF00"
         },
         {
-          label: "Multitasking - "+this.Multitasking,
+          label: "Multitasking - " + this.Multitasking,
           value: this.Multitasking,
-          color: '#FF0015'
+          color: "#FF0015"
         },
         {
-          label: "Listening Skills - "+this.ListeningSkills,
+          label: "Listening Skills - " + this.ListeningSkills,
           value: this.ListeningSkills,
-          color: '#D6F700'
+          color: "#D6F700"
         },
         {
-          label: "Teamwork - "+this.Teamwork,
+          label: "Teamwork - " + this.Teamwork,
           value: this.Teamwork,
-          color: '#3F3FC2'
+          color: "#3F3FC2"
         },
         {
-          label: "Critical Thinking - "+this.CriticalThinking,
+          label: "Critical Thinking - " + this.CriticalThinking,
           value: this.CriticalThinking,
-          color: '#00AD51'
+          color: "#00AD51"
         },
         {
-          label: "Time Management - "+this.TimeManagement,
+          label: "Time Management - " + this.TimeManagement,
           value: this.TimeManagement,
-          color: '#BA5CAB'
+          color: "#BA5CAB"
         },
         {
           label: this.hardSkillName,
           value: this.hardSkillPoints,
-          color: '#FF6384'
-        },
-      ]
+          color: "#FF6384"
+        }
+      ];
     },
     isDesktop: function() {
-      if ((this.width >= 560)&&((window.innerWidth/window.innerHeight) >1)) {
+      if (this.width >= 560 && window.innerWidth / window.innerHeight > 1) {
         return true;
       } else {
         return false;
@@ -242,6 +252,24 @@ export default {
       };
       this.shoesPosX = this.humanShoes.posX;
       this.shoesPosY = this.humanShoes.posY;
+    },
+    newBeard() {
+      const image = new window.Image();
+      image.src = this.humanBeard.src;
+      image.onload = () => {
+        this.beard = image;
+      };
+      this.beardPosX = this.humanBeard.posX;
+      this.beardPosY = this.humanBeard.posY;
+    },
+    newVehicle() {
+      const image = new window.Image();
+      image.src = this.humanVehicle.src;
+      image.onload = () => {
+        this.vehicle = image;
+      };
+      this.vehiclePosX = this.humanVehicle.posX;
+      this.vehiclePosY = this.humanVehicle.posY;
     }
   },
   watch: {
@@ -250,6 +278,9 @@ export default {
     },
     humanHead() {
       this.newHair();
+    },
+    humanBeard() {
+      this.newBeard();
     },
     humanJackets: function() {
       this.newJacket();
@@ -265,6 +296,9 @@ export default {
     },
     humanShoes: function() {
       this.newShoes();
+    },
+    humanVehicle: function() {
+      this.newVehicle();
     }
   },
   components: {
@@ -287,18 +321,18 @@ export default {
     awardsvg: () =>
       import(
         /* webpackChunkName: "awardSVG", webpackPrefetch: 985 */ "../components/SVG/awardSVG.vue"
-        ),
+      ),
     chartd: () =>
       import(
         /* webpackChunkName: "chartD", webpackPrefetch: 801 */ "../components/charts/chartD.vue"
-        ),
+      ),
     chartm: () =>
       import(
         /* webpackChunkName: "chartD", webpackPrefetch: 801 */ "../components/charts/chartM.vue"
-        ),
+      )
   },
-  async beforeCreate(){
-   await axios
+  async beforeCreate() {
+    await axios
       .post(
         "https://api.rs2.usw2.rockset.com/v1/orgs/self/queries",
         {
@@ -671,7 +705,6 @@ export default {
 
     // Получение hardSkillName
 
-
     // Получение SoftSkills
 
     await axios
@@ -718,6 +751,22 @@ export default {
       .catch(error => {
         this.Initiative = error;
       });
+      await this.$refs.shoes.getStage().setZIndex(this.$store.getters.HUMAN_SHOES.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.pants.getStage().setZIndex(this.$store.getters.HUMAN_PANTS.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.shirt.getStage().setZIndex(this.$store.getters.HUMAN_SHIRT.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.jacket.getStage().setZIndex(this.$store.getters.HUMAN_JACKET.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.hair.getStage().setZIndex(this.$store.getters.HUMAN_HEAD.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.beard.getStage().setZIndex(this.$store.getters.HUMAN_BEARD.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.accessories.getStage().setZIndex(this.$store.getters.HUMAN_ACCESSORIES.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.vehicle.getStage().setZIndex(this.$store.getters.HUMAN_VEHICLE.z)
+			await this.$refs.scene.getStage().draw()
   },
   updated() {
     this.changeCanvas();
@@ -783,16 +832,16 @@ footer {
   overflow-x: scroll;
 }
 .conclusion {
-    width: 80vw;
-    flex-shrink: 0;
-    font-size: 6vw;
-    color: rgb(48, 2, 173);
-    font-weight: 700;
-  }
-  .charts{
-    width: 135vw;
-    flex-shrink: 0;
-  }
+  width: 80vw;
+  flex-shrink: 0;
+  font-size: 6vw;
+  color: rgb(48, 2, 173);
+  font-weight: 700;
+}
+.charts {
+  width: 135vw;
+  flex-shrink: 0;
+}
 .sooon {
   font-size: 12vw;
   color: rgb(71, 243, 255);
@@ -954,7 +1003,7 @@ header {
   .conclusion {
     width: 45%;
   }
-  .charts{
+  .charts {
     width: 55%;
   }
   .sooon {
@@ -998,32 +1047,32 @@ header {
     }
   }
 }
-@media screen and (max-width: 999px) and (orientation: landscape){
-	main{
-		height: 70vh;
-	}
-	.progressBar{
-		width: 35vw;
-		border-radius: .3vw;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		fill: rgb(189, 189, 189);
-		height: 4vw;
-		right: initial;
-		top: initial;
-		position: initial;
-		flex-direction: row;
-	}
-	.configurator{
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		height: 26vw;
-		width: 55vw;
-		border-radius: .5vw;
-		background-color: rgba(0, 0, 0, 0.25);
-	}
+@media screen and (max-width: 999px) and (orientation: landscape) {
+  main {
+    height: 70vh;
+  }
+  .progressBar {
+    width: 35vw;
+    border-radius: 0.3vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    fill: rgb(189, 189, 189);
+    height: 4vw;
+    right: initial;
+    top: initial;
+    position: initial;
+    flex-direction: row;
+  }
+  .configurator {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 26vw;
+    width: 55vw;
+    border-radius: 0.5vw;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
   .configurator {
     display: flex;
     justify-content: space-between;
@@ -1035,34 +1084,37 @@ header {
   .conclusion {
     width: 45%;
   }
-  .charts{
+  .charts {
     width: 45%;
   }
-	.personSVG, .awardSVG, .seekerSVG, .hangerSVG{
-		height: 3.8vw;
-	}
-	.arrowSVG{
-		height: 2vw;
-		transform: rotate(180deg);
-	}
-	.canvascontainer{
-		height: 30vw;
-		order: 2;
-		width: 23.4vw;
-		border-radius: .5vw;
-		background-color: rgb(255, 255, 255);
-	}
-	.workSpace{
-		order: 2;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	footer{
-		width: 89vw;
-	}
-	.mobileMain{
-		height: 100vh;
-	}
+  .personSVG,
+  .awardSVG,
+  .seekerSVG,
+  .hangerSVG {
+    height: 3.8vw;
+  }
+  .arrowSVG {
+    height: 2vw;
+    transform: rotate(180deg);
+  }
+  .canvascontainer {
+    height: 30vw;
+    order: 2;
+    width: 23.4vw;
+    border-radius: 0.5vw;
+    background-color: rgb(255, 255, 255);
+  }
+  .workSpace {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    width: 89vw;
+  }
+  .mobileMain {
+    height: 100vh;
+  }
 }
 </style>
