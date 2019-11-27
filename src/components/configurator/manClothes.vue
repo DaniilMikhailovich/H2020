@@ -53,9 +53,9 @@ export default {
 				{id:3, name:'pants', svg:'pantssvg'},
 				{id:4, name:'jackets', svg:'suitsvgm'},
 				{id:5, name:'shoes', svg:'shoessvg'},
-				{id:6, name:'accessories', svg:'accessoriessvg'},
-				{id:6, name:'beards', svg:'beardsvg'},
-				{id:6, name:'vehicles', svg:'vehiclesvg'}
+				{id:7, name:'accessories', svg:'accessoriessvg'},
+				{id:8, name:'beards', svg:'beardsvg'},
+				{id:9, name:'vehicles', svg:'vehiclesvg'}
 			]
 		}
 	},

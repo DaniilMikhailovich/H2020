@@ -5,41 +5,41 @@ export default {
 				id: 1,
 				icon: require('../../assets/Textures/Vehicles/1.png'),
 				src: require('../../assets/Textures/Vehicles/1.png'),
-				posX: 420,
-				posY: 580,
-				z: 4
+				posX: 490,
+				posY: 690,
+				z: 11
 			},
 			{
 				id: 2,
 				icon: require('../../assets/Textures/Vehicles/2.png'),
 				src: require('../../assets/Textures/Vehicles/2.png'),
-				posX: 406,
-				posY: 580,
-				z: 6
+				posX: 115,
+				posY: 1040,
+				z: 11
 			},
 			{
 				id: 3,
 				icon: require('../../assets/Textures/Vehicles/3i.png'),
 				src: require('../../assets/Textures/Vehicles/3.png'),
-				posX: 415,
-				posY: 580,
-				z: 4
+				posX: 419,
+				posY: 344,
+				z: 11
 			},
 			{
 				id: 4,
 				icon: require('../../assets/Textures/Vehicles/4.png'),
 				src: require('../../assets/Textures/Vehicles/4.png'),
-				posX: 424,
-				posY: 580,
-				z: 4
+				posX: 25,
+				posY: 690,
+				z: 11
 			},
 			{
 				id: 5,
 				icon: require('../../assets/Textures/Vehicles/5.png'),
 				src: require('../../assets/Textures/Vehicles/5.png'),
-				posX: 425,
-				posY: 580,
-				z: 4
+				posX: 190,
+				posY: 550,
+				z: 11
 			}
 		],
 		vehicleFemale: [
@@ -47,41 +47,41 @@ export default {
 				id: 1,
 				icon: require('../../assets/Textures/Vehicles/1.png'),
 				src: require('../../assets/Textures/Vehicles/1.png'),
-				posX: 405,
-				posY: 545,
-				z: 6
+				posX: 490,
+				posY: 690,
+				z: 11
 			},
 			{
 				id: 2,
 				icon: require('../../assets/Textures/Vehicles/2.png'),
 				src: require('../../assets/Textures/Vehicles/2.png'),
-				posX: 425,
-				posY: 540,
-				z: 6
+				posX: 115,
+				posY: 1040,
+				z: 11
 			},
 			{
 				id: 3,
 				icon: require('../../assets/Textures/Vehicles/3i.png'),
 				src: require('../../assets/Textures/Vehicles/3.png'),
-				posX: 413,
-				posY: 540,
-				z: 4
+				posX: 419,
+				posY: 344,
+				z: 11
 			},
 			{
 				id: 4,
 				icon: require('../../assets/Textures/Vehicles/4.png'),
 				src: require('../../assets/Textures/Vehicles/4.png'),
-				posX: 425,
-				posY: 540,
-				z: 4
+				posX: 25,
+				posY: 690,
+				z: 11
 			},
 			{
 				id: 5,
 				icon: require('../../assets/Textures/Vehicles/5.png'),
 				src: require('../../assets/Textures/Vehicles/5.png'),
-				posX: 393,
-				posY: 540,
-				z: 6
+				posX: 195,
+				posY: 550,
+				z: 11
 			}
 		],
 	}
