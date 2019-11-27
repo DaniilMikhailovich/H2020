@@ -296,6 +296,27 @@ export default {
                 posY: 345,
                 z: 6
             },
+            {
+                id: 28,
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 6
+            },
+            {
+                id: 29,
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 6
+            },
+            {
+                id: 30,
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 6
+            },
         ],
         shirtsMaleDisableMap:[
             {

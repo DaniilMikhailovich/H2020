@@ -28,6 +28,13 @@ export default {
 				posX: 435,
 				posY: 260,
 				z: 8
+			},
+			{
+				id: 5,
+				src: require('../../assets/Textures/your.svg'),
+				posX: -1000,
+				posY: -1000,
+				z: 8
 			}
 		]
 	}

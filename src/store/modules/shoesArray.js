@@ -105,6 +105,30 @@ export default {
                 posY: 992,
                 z: 5
             },
+            {
+                id: 14,
+                src: require('../../assets/Textures/your.svg'),
+                icon: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 5
+            },
+            {
+                id: 15,
+                src: require('../../assets/Textures/your.svg'),
+                icon: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 5
+            },
+            {
+                id: 16,
+                src: require('../../assets/Textures/your.svg'),
+                icon: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 5
+            },
         ],
         shoesFemale: [
             {

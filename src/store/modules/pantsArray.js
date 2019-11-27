@@ -92,6 +92,20 @@ export default {
                 posY: 580,
                 z: 4
             },
+            {
+                id: 14,
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 4
+            },
+            {
+                id: 15,
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 4
+            },
         ],
         pantsFemale: [
             {
@@ -240,6 +254,34 @@ export default {
                 posX:415,
                 posY:530,
                 z:4
+            },
+            {
+                id: 22,
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 4
+            },
+            {
+                id: 23,
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 4
+            },
+            {
+                id: 24,
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 4
+            },
+            {
+                id: 25,
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 4
             },
         ],
         pantsMaleDisableMap:[

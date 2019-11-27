@@ -241,6 +241,13 @@ export default {
                 posY: 330,
                 z:7
             },
+            {
+                id: 21,
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 7
+            },
         ],
         jacketsMaleDisableMap:[
             {

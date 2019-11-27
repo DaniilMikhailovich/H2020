@@ -4,7 +4,7 @@
 			v-for="item in items"
 			v-bind:key="item.id"
 			v-on:click="drawOnCanvas(item)">
-			<img :src="item.src" alt="">
+			<img :src="item.icon" alt="">
 		</button>
 	</section>
 </template>
@@ -65,10 +65,10 @@ export default {
 	button:nth-child(n+4):nth-child(-n+6) img {
 		height: 50%;
 	}
-	/* button:nth-of-type(11) img, button:nth-of-type(12) img{
-		height: 70%;
+	button:nth-of-type(15) img, button:nth-of-type(16) img{
+		height: 30%;
 	}
-	button:nth-of-type(11) img, button:nth-of-type(12) img{
+	/* button:nth-of-type(11) img, button:nth-of-type(12) img{
 		height: 70%;
 	} */
 @media screen and (min-width: 760px) and (max-width: 999px) {

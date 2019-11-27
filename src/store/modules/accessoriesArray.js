@@ -131,11 +131,35 @@ export default {
             },
             {
                 id: 17,
-                icon: require('../../assets/question.png'),
-                src: require('../../assets/question.png'),
+                icon: require('../../assets/Textures/your.svg'),
+                src: require('../../assets/Textures/your.svg'),
                 posX: -1000,
                 posY: -1000,
-                z:8
+                z: 8
+            },
+            {
+                id: 18,
+                icon: require('../../assets/Textures/your.svg'),
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 8
+            },
+            {
+                id: 19,
+                icon: require('../../assets/Textures/your.svg'),
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 8
+            },
+            {
+                id: 20,
+                icon: require('../../assets/Textures/your.svg'),
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 8
             },
         ],
         accessoriesFemale: [
@@ -322,6 +346,22 @@ export default {
                 posX:413,
                 posY:570,
                 z:8
+            },
+            {
+                id: 24,
+                src: require('../../assets/Textures/your.svg'),
+                icon: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 8
+            },
+            {
+                id: 25,
+                src: require('../../assets/Textures/your.svg'),
+                icon: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 8
             },
         ],
     }

@@ -6,7 +6,7 @@
       v-bind:key="item.id"
       v-on:click="drawOnCanvas(item)"
     >
-      <img :src="item.src" alt />
+      <img :src="item.icon" alt />
     </button>
   </section>
 </template>

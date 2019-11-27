@@ -58,7 +58,8 @@ export default {
   transition: 0.3s;
 }
 .button:nth-of-type(3) img,
-.button:nth-of-type(2) img {
+.button:nth-of-type(2) img,
+.button:nth-of-type(5) img {
   height: initial;
   width: 80%;
 }

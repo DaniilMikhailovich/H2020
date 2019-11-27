@@ -78,6 +78,34 @@ export default {
                 posX: 405,
                 posY: 110,
                 z: 9
+            },
+            {
+                id: '12',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '13',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '14',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '15',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
             }
         ],
         // Мужские коричнивые волосы
@@ -157,6 +185,34 @@ export default {
                 src: require('../../assets/Textures/Hair/male/brown/11.png'),
                 posX: 405,
                 posY: 110,
+                z: 9
+            },
+            {
+                id: '12',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '13',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '14',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '15',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
                 z: 9
             }
         ],
@@ -238,6 +294,34 @@ export default {
                 posX: 405,
                 posY: 110,
                 z: 9
+            },
+            {
+                id: '12',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '13',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '14',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '15',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
             }
         ],
         // Мужские рыжие волосы
@@ -317,6 +401,34 @@ export default {
                 src: require('../../assets/Textures/Hair/male/ginger/11.png'),
                 posX: 405,
                 posY: 110,
+                z: 9
+            },
+            {
+                id: '12',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '13',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '14',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '15',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
                 z: 9
             }
         ],
@@ -398,6 +510,34 @@ export default {
                 posX: 405,
                 posY: 110,
                 z: 9
+            },
+            {
+                id: '12',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '13',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '14',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '15',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
             }
         ],
         // Мужские серые волосы
@@ -478,6 +618,34 @@ export default {
                 posX: 405,
                 posY: 110,
                 z: 9
+            },
+            {
+                id: '12',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '13',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '14',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '15',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
             }
         ],
         // Мужские красные волосы
@@ -557,6 +725,34 @@ export default {
                 src: require('../../assets/Textures/Hair/male/red/11.png'),
                 posX: 405,
                 posY: 110,
+                z: 9
+            },
+            {
+                id: '12',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '13',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '14',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
+                z: 9
+            },
+            {
+                id: '15',
+                src: require('../../assets/Textures/your.svg'),
+                posX: -1000,
+                posY: -1000,
                 z: 9
             }
         ],

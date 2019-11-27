@@ -40,7 +40,47 @@ export default {
 				posX: 190,
 				posY: 550,
 				z: 11
-			}
+			},
+			{
+				id: 6,
+				icon: require('../../assets/Textures/Vehicles/6.png'),
+				src: require('../../assets/Textures/Vehicles/6.png'),
+				posX: 25,
+				posY: 690,
+				z: 11
+			},
+			{
+				id: 7,
+				icon: require('../../assets/Textures/Vehicles/7.png'),
+				src: require('../../assets/Textures/Vehicles/7.png'),
+				posX: 190,
+				posY: 550,
+				z: 11
+			},
+			{
+				id: 8,
+				icon: require('../../assets/Textures/your.svg'),
+				src: require('../../assets/Textures/your.svg'),
+				posX: -1000,
+				posY: -1000,
+				z: 11
+			},
+			{
+				id: 9,
+				icon: require('../../assets/Textures/your.svg'),
+				src: require('../../assets/Textures/your.svg'),
+				posX: -1000,
+				posY: -1000,
+				z: 11
+			},
+			{
+				id: 10,
+				icon: require('../../assets/Textures/your.svg'),
+				src: require('../../assets/Textures/your.svg'),
+				posX: -1000,
+				posY: -1000,
+				z: 11
+			},
 		],
 		vehicleFemale: [
 			{
@@ -82,7 +122,47 @@ export default {
 				posX: 195,
 				posY: 550,
 				z: 11
-			}
+			},
+			{
+				id: 6,
+				icon: require('../../assets/Textures/Vehicles/6.png'),
+				src: require('../../assets/Textures/Vehicles/6.png'),
+				posX: 25,
+				posY: 690,
+				z: 11
+			},
+			{
+				id: 7,
+				icon: require('../../assets/Textures/Vehicles/7.png'),
+				src: require('../../assets/Textures/Vehicles/7.png'),
+				posX: 190,
+				posY: 550,
+				z: 11
+			},
+			{
+				id: 8,
+				icon: require('../../assets/Textures/your.svg'),
+				src: require('../../assets/Textures/your.svg'),
+				posX: -1000,
+				posY: -1000,
+				z: 11
+			},
+			{
+				id: 9,
+				icon: require('../../assets/Textures/your.svg'),
+				src: require('../../assets/Textures/your.svg'),
+				posX: -1000,
+				posY: -1000,
+				z: 11
+			},
+			{
+				id: 10,
+				icon: require('../../assets/Textures/your.svg'),
+				src: require('../../assets/Textures/your.svg'),
+				posX: -1000,
+				posY: -1000,
+				z: 11
+			},
 		],
 	}
 }
