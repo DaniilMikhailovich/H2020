@@ -5,9 +5,11 @@ import hairArrayFemale from './modules/hairArrayFemale'
 import jacketsArray from './modules/jacketsArray'
 import shirtsArray from './modules/shirtsArray'
 import pantsArray from './modules/pantsArray'
+import beardsArray from './modules/beardsArray'
 import accessoriesArray from './modules/accessoriesArray'
 import shoesArray from './modules/shoesArray'
 import hardSkillArray from './modules/hardSkillArray'
+import vehiclesArray from './modules/vehiclesArray'
 
 Vue.use(Vuex)
 
@@ -58,6 +60,20 @@ export default new Vuex.Store({
       posY:0,
       z:10
     },
+    humanBeards: {
+      id: 0,
+      src: 'null',
+      posX: 0,
+      posY: 0,
+      z: 10
+    },
+    humanVehicles: {
+      id: 0,
+      src: 'null',
+      posX: 0,
+      posY: 0,
+      z: 10
+    },
     sumOfSkills:1000,
     hardSkillPoints:0,
     softSkillsPoints:0,
@@ -77,6 +93,12 @@ export default new Vuex.Store({
     requestCounter:0
     },
   getters:{
+    HUMAN_VEHICLE: state=>{
+      return state.humanVehicles
+    },
+    HUMAN_BEARD: state=> {
+      return state.humanBeards
+    },
     requestCounter: state =>{
       return state.requestCounter
     },
@@ -127,6 +149,12 @@ export default new Vuex.Store({
     }
   },
   mutations: {
+    SET_VEHICLE: (state, payload) => {
+      state.humanVehicles = payload
+    },
+    SET_BEARD: (state, payload) => {
+      state.humanBeards = payload
+    },
     SET_COUNTER: (state, payload) => {
       state.requestCounter = payload
     },
@@ -201,6 +229,12 @@ export default new Vuex.Store({
     },
   },
   actions: {
+    PUSH_VEHICLE: (context, payload) => {
+      context.commit('SET_VEHICLE', payload)
+    },
+    PUSH_BEARD: (context, payload) => {
+      context.commit('SET_BEARD', payload)
+    },
     PUSH_COUNTER: (context, payload) =>{
       context.commit('SET_COUNTER', payload)
     },
@@ -282,6 +316,8 @@ export default new Vuex.Store({
     pantsArray,
     accessoriesArray,
     shoesArray,
-    hardSkillArray
+    hardSkillArray,
+    beardsArray,
+    vehiclesArray
   },
 })
