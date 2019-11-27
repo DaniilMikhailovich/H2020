@@ -74,22 +74,22 @@ export default {
             {
                 id: 11,
                 src: require('../../assets/Textures/Pants/male/11.png'),
-                posX: 424,
-                posY: 580,
+                posX: 427,
+                posY: 585,
                 z: 4
             },
             {
                 id: 12,
                 src: require('../../assets/Textures/Pants/male/12.png'),
-                posX: 424,
-                posY: 580,
+                posX: 409,
+                posY: 582,
                 z: 4
             },
             {
                 id: 13,
                 src: require('../../assets/Textures/Pants/male/13.png'),
-                posX: 424,
-                posY: 580,
+                posX: 409,
+                posY: 353,
                 z: 4
             },
             {
