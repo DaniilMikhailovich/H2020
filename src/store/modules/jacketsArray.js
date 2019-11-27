@@ -4,43 +4,43 @@ export default {
             {
                 id:1,
                 src:require('../../assets/Textures/Jackets/male/1.png'),
-                posX:365,
-                posY:332,
+                posX:335,
+                posY:325,
                 z:7
             },
             {
                 id:2,
                 src:require('../../assets/Textures/Jackets/male/2.png'),
-                posX:387,
-                posY:337,
+                posX:335,
+                posY:325,
                 z:7
             },
             {
                 id:3,
                 src:require('../../assets/Textures/Jackets/male/3.png'),
-                posX:359,
-                posY:337,
+                posX:335,
+                posY:325,
                 z:7
             },
             {
                 id:4,
                 src:require('../../assets/Textures/Jackets/male/4.png'),
-                posX:422,
-                posY:349,
+                posX:265,
+                posY:256,
                 z:7
             },
             {
                 id:5,
                 src:require('../../assets/Textures/Jackets/male/5.png'),
-                posX:353,
-                posY:340,
+                posX:265,
+                posY:256,
                 z:7
             },
             {
                 id:6,
                 src:require('../../assets/Textures/Jackets/male/6.png'),
-                posX:386,
-                posY:336,
+                posX:353,
+                posY:330,
                 z:7
             },
             {
@@ -74,35 +74,35 @@ export default {
             {
                 id: 11,
                 src: require('../../assets/Textures/Jackets/male/11.png'),
-                posX: 386,
-                posY: 336,
+                posX: 365,
+                posY: 330,
                 z: 7
             },
             {
                 id: 12,
                 src: require('../../assets/Textures/Jackets/male/12.png'),
-                posX: 292,
-                posY: 342,
+                posX: 388,
+                posY: 338,
                 z: 7
             },
             {
                 id: 13,
                 src: require('../../assets/Textures/Jackets/male/13.png'),
-                posX: 362,
-                posY: 329,
+                posX: 361,
+                posY: 335,
                 z: 7
             },
             {
                 id: 14,
                 src: require('../../assets/Textures/Jackets/male/14.png'),
-                posX: 372,
-                posY: 331,
+                posX: 425,
+                posY: 345,
                 z: 7
             },
             {
                 id: 15,
                 src: require('../../assets/Textures/Jackets/male/15.png'),
-                posX: 365,
+                posX: 385,
                 posY: 335,
                 z: 7
             }

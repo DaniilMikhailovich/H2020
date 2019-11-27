@@ -45,16 +45,16 @@ export default {
 				id: 6,
 				icon: require('../../assets/Textures/Vehicles/6.png'),
 				src: require('../../assets/Textures/Vehicles/6.png'),
-				posX: 25,
-				posY: 690,
+				posX: 130,
+				posY: 1040,
 				z: 11
 			},
 			{
 				id: 7,
 				icon: require('../../assets/Textures/Vehicles/7.png'),
 				src: require('../../assets/Textures/Vehicles/7.png'),
-				posX: 190,
-				posY: 550,
+				posX: 130,
+				posY: 1040,
 				z: 11
 			},
 			{
@@ -103,8 +103,8 @@ export default {
 				id: 3,
 				icon: require('../../assets/Textures/Vehicles/3i.png'),
 				src: require('../../assets/Textures/Vehicles/3.png'),
-				posX: 419,
-				posY: 344,
+				posX: 415,
+				posY: 339,
 				z: 11
 			},
 			{
@@ -127,16 +127,16 @@ export default {
 				id: 6,
 				icon: require('../../assets/Textures/Vehicles/6.png'),
 				src: require('../../assets/Textures/Vehicles/6.png'),
-				posX: 25,
-				posY: 690,
+				posX: 130,
+				posY: 1040,
 				z: 11
 			},
 			{
 				id: 7,
 				icon: require('../../assets/Textures/Vehicles/7.png'),
 				src: require('../../assets/Textures/Vehicles/7.png'),
-				posX: 190,
-				posY: 550,
+				posX: 130,
+				posY: 1040,
 				z: 11
 			},
 			{
