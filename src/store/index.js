@@ -63,6 +63,7 @@ export default new Vuex.Store({
     humanAccessories:{
       id:0,
       src:'null',
+      icon:'null',
       posX:0,
       posY:0,
       z:8
@@ -70,6 +71,7 @@ export default new Vuex.Store({
     humanVehicle: {
       id: 0,
       src: 'null',
+      icon: 'null',
       posX: 0,
       posY: 0,
       z: 11
