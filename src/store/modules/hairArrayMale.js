@@ -75,8 +75,8 @@ export default {
             {
                 id: '11',
                 src: require('../../assets/Textures/Hair/male/black/11.png'),
-                posX: 405,
-                posY: 110,
+                posX: 420,
+                posY: 124,
                 z: 9
             },
             {
@@ -183,8 +183,8 @@ export default {
             {
                 id: '11',
                 src: require('../../assets/Textures/Hair/male/brown/11.png'),
-                posX: 405,
-                posY: 110,
+                posX: 420,
+                posY: 124,
                 z: 9
             },
             {
@@ -291,8 +291,8 @@ export default {
             {
                 id: '11',
                 src: require('../../assets/Textures/Hair/male/darkBrown/11.png'),
-                posX: 405,
-                posY: 110,
+                posX: 420,
+                posY: 124,
                 z: 9
             },
             {
@@ -399,8 +399,8 @@ export default {
             {
                 id: '11',
                 src: require('../../assets/Textures/Hair/male/ginger/11.png'),
-                posX: 405,
-                posY: 110,
+                posX: 420,
+                posY: 124,
                 z: 9
             },
             {
@@ -507,8 +507,8 @@ export default {
             {
                 id: '11',
                 src: require('../../assets/Textures/Hair/male/green/11.png'),
-                posX: 405,
-                posY: 110,
+                posX: 420,
+                posY: 124,
                 z: 9
             },
             {
@@ -615,8 +615,8 @@ export default {
             {
                 id: '11',
                 src: require('../../assets/Textures/Hair/male/grey/11.png'),
-                posX: 405,
-                posY: 110,
+                posX: 420,
+                posY: 124,
                 z: 9
             },
             {
@@ -723,8 +723,8 @@ export default {
             {
                 id: '11',
                 src: require('../../assets/Textures/Hair/male/red/11.png'),
-                posX: 405,
-                posY: 110,
+                posX: 420,
+                posY: 124,
                 z: 9
             },
             {
