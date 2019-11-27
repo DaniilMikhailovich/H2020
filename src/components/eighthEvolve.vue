@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     goToNext() {
-      this.$router.replace("/create/personalisation");
+      this.$router.replace("/evolve/popup");
     },
     goToBack() {
       this.$router.push("/evolve/7");
@@ -60,7 +60,7 @@ export default {
   transition: 0.8s;
 }
 .fcaption{
-  font-size: 5vw;
+  font-size: 6.5vw;
   line-height: 6vw;
 }
 .popupM:after {
