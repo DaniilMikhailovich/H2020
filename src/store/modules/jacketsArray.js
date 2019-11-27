@@ -213,6 +213,34 @@ export default {
                 posY: 330,
                 z:7
             },
+            {
+                id:17,
+                src:require('../../assets/Textures/Jackets/female/105.png'),
+                posX: 371,
+                posY: 330,
+                z:7
+            },
+            {
+                id:18,
+                src:require('../../assets/Textures/Jackets/female/106.png'),
+                posX: 371,
+                posY: 330,
+                z:7
+            },
+            {
+                id:19,
+                src:require('../../assets/Textures/Jackets/female/113.png'),
+                posX: 371,
+                posY: 330,
+                z:7
+            },
+            {
+                id:20,
+                src:require('../../assets/Textures/Jackets/female/114.png'),
+                posX: 371,
+                posY: 330,
+                z:7
+            },
         ],
         jacketsMaleDisableMap:[
             {

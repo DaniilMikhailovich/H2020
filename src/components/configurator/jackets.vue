@@ -19,13 +19,15 @@ export default {
         },
         map(){
             if(this.$store.getters.GENDER==='male'){
-                return this.$store.state.jacketsArray.jacketsMaleDisableMap
+                return [1]
+                // return this.$store.state.jacketsArray.jacketsMaleDisableMap
             }else if(this.$store.getters.GENDER==='female') {
-                return [1,2,3,4,5,6,7,8,9,10]
+                return [1]
             } return null
         },
         getter(){
-            return this.$store.getters.HUMAN_SHIRT.id
+            return 20
+            // return this.$store.getters.HUMAN_SHIRT.id
         }
     },
     components:{
