@@ -4,50 +4,50 @@ export default {
             {
                 id:1,
                 src:require('../../assets/Textures/Shirts/male/1.png'),
-                posX:410,
+                posX:409,
                 posY:345,
                 z:6
             },
             {
                 id:2,
                 src:require('../../assets/Textures/Shirts/male/2.png'),
-                posX:405,
-                posY:347,
+                posX:409,
+                posY:345,
                 z:6
             },
             {
                 id:3,
                 src:require('../../assets/Textures/Shirts/male/3.png'),
-                posX:335,
-                posY:350,
+                posX:409,
+                posY:344,
                 z:6
             },
             {
                 id:4,
                 src:require('../../assets/Textures/Shirts/male/4.png'),
-                posX:405,
-                posY:349,
+                posX:409,
+                posY:345,
                 z:6
             },
             {
                 id:5,
                 src:require('../../assets/Textures/Shirts/male/5.png'),
-                posX:360,
+                posX:409,
                 posY:345,
                 z:6
             },
             {
                 id:6,
                 src:require('../../assets/Textures/Shirts/male/6.png'),
-                posX:365,
-                posY:343,
+                posX:409,
+                posY:345,
                 z:6
             },
             {
                 id:7,
                 src:require('../../assets/Textures/Shirts/male/7.png'),
-                posX:365,
-                posY:342,
+                posX:411,
+                posY:345,
                 z:6
             },
             {
@@ -60,8 +60,8 @@ export default {
             {
                 id:9,
                 src:require('../../assets/Textures/Shirts/male/9.png'),
-                posX:411,
-                posY:344,
+                posX:367,
+                posY:342,
                 z:6
             },
             {
@@ -74,36 +74,36 @@ export default {
             {
                 id: 11,
                 src: require('../../assets/Textures/Shirts/male/11.png'),
-                posX: 365,
-                posY: 343,
+                posX: 356,
+                posY: 286,
                 z: 6
             },
             {
                 id: 12,
                 src: require('../../assets/Textures/Shirts/male/12.png'),
-                posX: 365,
-                posY: 342,
+                posX: 335,
+                posY: 350,
                 z: 6
             },
             {
                 id: 13,
                 src: require('../../assets/Textures/Shirts/male/13.png'),
-                posX: 408,
-                posY: 343,
+                posX: 360,
+                posY: 347,
                 z: 6
             },
             {
                 id: 14,
                 src: require('../../assets/Textures/Shirts/male/14.png'),
-                posX: 411,
-                posY: 344,
+                posX: 366,
+                posY: 343,
                 z: 6
             },
             {
                 id: 15,
                 src: require('../../assets/Textures/Shirts/male/15.png'),
-                posX: 367,
-                posY: 329,
+                posX: 369,
+                posY: 337,
                 z: 6
             },
         ],
