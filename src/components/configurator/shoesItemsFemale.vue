@@ -59,8 +59,8 @@ button:nth-of-type(3) img {
   height: 90%;
   width: initial;
 }
-button:nth-of-type(4) img,
-button:nth-of-type(2) img {
+button:nth-of-type(-2n+4) img,
+button:nth-of-type(-n+12):nth-of-type(n+9) img{
   height: 60%;
   width: initial;
 }

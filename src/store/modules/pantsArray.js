@@ -146,8 +146,8 @@ export default {
             {
                 id:6,
                 src:require('../../assets/Textures/Pants/female/6.png'),
-                posX:401,
-                posY:520,
+                posX:394,
+                posY:545,
                 z:4
             },
             {
@@ -168,7 +168,7 @@ export default {
                 id:9,
                 src:require('../../assets/Textures/Pants/female/9.png'),
                 posX:415,
-                posY:560,
+                posY:546,
                 z:4
             },
             {
@@ -216,15 +216,15 @@ export default {
             {
                 id:16,
                 src:require('../../assets/Textures/Pants/female/99.png'),
-                posX:415,
-                posY:530,
+                posX:423,
+                posY:536,
                 z:4
             },
             {
                 id:17,
                 src:require('../../assets/Textures/Pants/female/100.png'),
-                posX:415,
-                posY:530,
+                posX:423,
+                posY:536,
                 z:4
             },
             {
@@ -244,15 +244,15 @@ export default {
             {
                 id:20,
                 src:require('../../assets/Textures/Pants/female/111.png'),
-                posX:415,
-                posY:530,
+                posX:413,
+                posY:556,
                 z:4
             },
             {
                 id:21,
                 src:require('../../assets/Textures/Pants/female/112.png'),
-                posX:415,
-                posY:530,
+                posX:409,
+                posY:337,
                 z:4
             },
             {

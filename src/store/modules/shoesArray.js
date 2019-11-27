@@ -199,16 +199,16 @@ export default {
                 id: 9,
                 src: require('../../assets/Textures/Shoes/female/9.png'),
                 icon: require('../../assets/Textures/Shoes/female/icons/9.png'),
-                posX: 337,
-                posY: 1004,
+                posX: 360,
+                posY: 917,
                 z: 5
             },
             {
                 id: 10,
                 src: require('../../assets/Textures/Shoes/female/10.png'),
                 icon: require('../../assets/Textures/Shoes/female/icons/10.png'),
-                posX: 324,
-                posY: 1035,
+                posX: 359,
+                posY: 995,
                 z: 5
             },
             {

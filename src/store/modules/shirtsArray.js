@@ -160,8 +160,8 @@ export default {
             {
                 id:8,
                 src:require('../../assets/Textures/Shirts/female/8.png'),
-                posX:420,
-                posY:343,
+                posX:418,
+                posY:321,
                 z:6
             },
             {
@@ -180,120 +180,120 @@ export default {
             }, {
                 id: 11,
                 src: require('../../assets/Textures/Shirts/female/11.png'),
-                posX: 433,
-                posY: 340,
+                posX: 387,
+                posY: 350,
                 z: 6
             },
             {
                 id: 12,
                 src: require('../../assets/Textures/Shirts/female/12.png'),
-                posX: 433,
+                posX: 387,
                 posY: 350,
                 z: 6
             },
             {
                 id: 13,
                 src: require('../../assets/Textures/Shirts/female/13.png'),
-                posX: 396,
-                posY: 313,
+                posX: 353,
+                posY: 331,
                 z: 6
             },
             {
                 id: 14,
                 src: require('../../assets/Textures/Shirts/female/14.png'),
-                posX: 380,
-                posY: 345,
+                posX: 353,
+                posY: 331,
                 z: 6
             },
             {
                 id: 15,
                 src: require('../../assets/Textures/Shirts/female/15.png'),
-                posX: 433,
-                posY: 350,
+                posX: 353,
+                posY: 331,
                 z: 6
             },
             {
                 id: 16,
                 src: require('../../assets/Textures/Shirts/female/16.png'),
-                posX: 436,
-                posY: 350,
+                posX: 396,
+                posY: 345,
                 z: 6
             },
             {
                 id: 17,
                 src: require('../../assets/Textures/Shirts/female/17.png'),
-                posX: 435,
-                posY: 352,
+                posX: 419,
+                posY: 344,
                 z: 6
             },
             {
                 id: 18,
                 src: require('../../assets/Textures/Shirts/female/18.png'),
-                posX: 420,
-                posY: 343,
+                posX: 425,
+                posY: 344,
                 z: 6
             },
             {
                 id: 19,
                 src: require('../../assets/Textures/Shirts/female/19.png'),
-                posX: 434,
-                posY: 395,
+                posX: 425,
+                posY: 344,
                 z: 6
             },
             {
                 id: 20,
                 src: require('../../assets/Textures/Shirts/female/20.png'),
-                posX: 377,
+                posX: 396,
                 posY: 345,
                 z: 6
             },
             {
                 id: 21,
                 src: require('../../assets/Textures/Shirts/female/21.png'),
-                posX: 380,
+                posX: 396,
                 posY: 345,
                 z: 6
             },
             {
                 id: 22,
                 src: require('../../assets/Textures/Shirts/female/22.png'),
-                posX: 433,
-                posY: 350,
+                posX: 386,
+                posY: 342,
                 z: 6
             },
             {
                 id: 23,
                 src: require('../../assets/Textures/Shirts/female/23.png'),
-                posX: 436,
-                posY: 350,
+                posX: 386,
+                posY: 342,
                 z: 6
             },
             {
                 id: 24,
                 src: require('../../assets/Textures/Shirts/female/24.png'),
-                posX: 435,
-                posY: 352,
+                posX: 431,
+                posY: 344,
                 z: 6
             },
             {
                 id: 25,
                 src: require('../../assets/Textures/Shirts/female/25.png'),
-                posX: 420,
-                posY: 343,
+                posX: 380,
+                posY: 348,
                 z: 6
             },
             {
                 id: 26,
                 src: require('../../assets/Textures/Shirts/female/26.png'),
-                posX: 434,
-                posY: 395,
+                posX: 380,
+                posY: 348,
                 z: 6
             },
             {
                 id: 27,
                 src: require('../../assets/Textures/Shirts/female/27.png'),
-                posX: 377,
-                posY: 345,
+                posX: 380,
+                posY: 348,
                 z: 6
             },
             {
