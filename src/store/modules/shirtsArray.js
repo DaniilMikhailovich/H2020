@@ -144,5 +144,40 @@ export default {
                 z:6
             },
         ],
+        shirtsMaleDisableMap:[
+            {
+                disable: []
+            },
+            {
+                disable: [100] 
+            },
+            {
+                disable: [100] 
+            },
+            {
+                disable: [1,2,3,4,5,6,7,8,9,10] 
+            },
+            {
+                disable: [100]  
+            },
+            {
+                disable: [1,2,3,4,6,8,9,10] 
+            },
+            {
+                disable: [100]   
+            },
+            {
+                disable: [100] 
+            },
+            {
+                disable: [100] 
+            },
+            {
+                disable: [100] 
+            },
+            {
+                disable: [100] 
+            },
+        ]
     }
 }
