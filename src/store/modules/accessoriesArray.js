@@ -39,7 +39,7 @@ export default {
                 src: require('../../assets/Textures/Accessories/male/5.png'),
                 posX:350,
                 posY:715,
-                z:5
+                z:6
             },
             {
                 id:6,
@@ -47,7 +47,7 @@ export default {
                 src: require('../../assets/Textures/Accessories/male/6.png'),
                 posX:641,
                 posY:714,
-                z:5
+                z:6
             },
             {
                 id:7,
@@ -79,7 +79,7 @@ export default {
                 src: require('../../assets/Textures/Accessories/male/10.png'),
                 posX:622,
                 posY:650,
-                z:5
+                z:6
             },
             {
                 id:11,
@@ -103,7 +103,7 @@ export default {
                 src: require('../../assets/Textures/Accessories/male/13.png'),
                 posX:363,
                 posY:636,
-                z:5
+                z:6
             },
             {
                 id:14,
@@ -111,7 +111,7 @@ export default {
                 src: require('../../assets/Textures/Accessories/male/14.png'),
                 posX:620,
                 posY:650,
-                z:5
+                z:6
             },
             {
                 id: 15,
@@ -217,7 +217,7 @@ export default {
                 icon:require('../../assets/Textures/Accessories/female/7.png'),
                 posX:362,
                 posY:714,
-                z:6
+                z:8
             },
             {
                 id:8,
@@ -225,7 +225,7 @@ export default {
                 icon:require('../../assets/Textures/Accessories/female/8.png'),
                 posX:660,
                 posY:710,
-                z:6
+                z:8
             },
             {
                 id:9,
@@ -233,7 +233,7 @@ export default {
                 icon:require('../../assets/Textures/Accessories/female/9.png'),
                 posX:619,
                 posY:625,
-                z:6
+                z:7
             },
             {
                 id:10,
@@ -281,7 +281,7 @@ export default {
                 icon:require('../../assets/Textures/Accessories/female/15.png'),
                 posX:413,
                 posY:570,
-                z:8
+                z:6
             },
             {
                 id:16,

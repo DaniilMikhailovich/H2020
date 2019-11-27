@@ -13,7 +13,7 @@ export default {
                 src:require('../../assets/Textures/Pants/male/2.png'),
                 posX:406,
                 posY:580,
-                z:6
+                z:5
             },
             {
                 id:3,
@@ -83,14 +83,14 @@ export default {
                 src: require('../../assets/Textures/Pants/male/12.png'),
                 posX: 409,
                 posY: 582,
-                z: 4
+                z: 5
             },
             {
                 id: 13,
                 src: require('../../assets/Textures/Pants/male/13.png'),
                 posX: 409,
                 posY: 353,
-                z: 4
+                z: 6
             },
             {
                 id: 14,
@@ -246,14 +246,14 @@ export default {
                 src:require('../../assets/Textures/Pants/female/111.png'),
                 posX:413,
                 posY:556,
-                z:4
+                z:5
             },
             {
                 id:21,
                 src:require('../../assets/Textures/Pants/female/112.png'),
                 posX:409,
                 posY:337,
-                z:4
+                z:6
             },
             {
                 id: 22,
