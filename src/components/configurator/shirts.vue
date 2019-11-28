@@ -19,7 +19,7 @@ export default {
         },
         map(){
             if(this.$store.getters.GENDER==='male'){
-                return this.$store.state.shirtsArray.femaleMap
+                return this.$store.state.shirtsArray.maleMap
             }else if(this.$store.getters.GENDER==='female') {
                 return this.$store.state.shirtsArray.femaleMap
             } return null

@@ -5,7 +5,9 @@
       v-for="item in items"
       v-bind:key="item.id"
       v-on:click="drawOnCanvas(item)"
+      ref="button"
     >
+      <p>BLOCKED</p>
       <img :src="item.icon" alt />
     </button>
   </section>
@@ -13,11 +15,34 @@
 
 <script>
 export default {
-  props: ["items", "type"],
+  props: ["items", "type", "firstID", "map", "secondID", "thirdID", "fourthID"],
   name: "accessoriesItems",
   methods: {
     drawOnCanvas(elem) {
-      this.$store.dispatch("PUSH_" + this.type, elem);
+      if (
+        this.map[elem.id].disableFirst.indexOf(this.firstID) === -1 &&
+        this.map[elem.id].disableSecond.indexOf(this.secondID) === -1 &&
+        this.map[elem.id].disableThird.indexOf(this.thirdID) === -1 &&
+        this.map[elem.id].disableFourth.indexOf(this.fourthID) === -1
+      ) {
+        this.$store.dispatch("PUSH_" + this.type, elem);
+      }
+    }
+  },
+  mounted() {
+    for (var i = 0; i < this.items.length; i++) {
+      if (
+        this.map[this.items[i].id].disableFirst.indexOf(this.firstID) === -1 &&
+        this.map[this.items[i].id].disableSecond.indexOf(this.secondID) ===
+          -1 &&
+        this.map[this.items[i].id].disableThird.indexOf(this.thirdID) === -1 &&
+        this.map[this.items[i].id].disableThird.indexOf(this.thirdID) === -1 &&
+        this.map[this.items[i].id].disableFourth.indexOf(this.fourthID) === -1
+      ) {
+        this.$refs.button[i].classList.add("enable");
+      } else {
+        this.$refs.button[i].classList.add("disable");
+      }
     }
   }
 };
@@ -90,26 +115,26 @@ img {
     width: 30%;
   }
 }
-@media screen and (max-width: 999px) and (orientation: landscape){
-	.items{
-		flex-wrap: nowrap;
-		height: 23vw;
-	}
-	.scrollD{
-		overflow-y: hidden;
-	}
-	.scrollM{
-		overflow-x: scroll;
-	}
-	.button{
-		cursor: pointer;
-		transition: 0.3s;
-		background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
-		border: none;
-		width: 10vw;
-		height: 12vw;
-		border-radius: 0.5vw;
-		margin-right: 1vw;
-	}
+@media screen and (max-width: 999px) and (orientation: landscape) {
+  .items {
+    flex-wrap: nowrap;
+    height: 23vw;
+  }
+  .scrollD {
+    overflow-y: hidden;
+  }
+  .scrollM {
+    overflow-x: scroll;
+  }
+  .button {
+    cursor: pointer;
+    transition: 0.3s;
+    background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
+    border: none;
+    width: 10vw;
+    height: 12vw;
+    border-radius: 0.5vw;
+    margin-right: 1vw;
+  }
 }
 </style>
