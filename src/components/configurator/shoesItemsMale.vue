@@ -5,7 +5,8 @@
       v-for="item in items"
       v-bind:key="item.id"
       v-on:click="drawOnCanvas(item)"
-    >
+      ref="button">
+			<p>BLOCKED</p>
       <img :src="item.icon" alt />
     </button>
   </section>
@@ -13,14 +14,25 @@
 
 <script>
 export default {
-  props: ["items", "type"],
-  name: "clothesitems",
-  methods: {
-    drawOnCanvas(elem) {
-      this.$store.dispatch("PUSH_" + this.type, elem);
-    }
-  }
-};
+	props: ['items','type','firstID','map','secondID','thirdID','fourthID'],
+	name:'clothesitems',
+	methods:{
+		drawOnCanvas(elem){
+			if((this.map[elem.id].disableFirst.indexOf(this.firstID) === -1)&&(this.map[elem.id].disableSecond.indexOf(this.secondID) === -1)&&(this.map[elem.id].disableThird.indexOf(this.thirdID) === -1)&&(this.map[elem.id].disableFourth.indexOf(this.fourthID) === -1)){
+			this.$store.dispatch('PUSH_'+this.type, elem)
+			}
+		}
+	},
+	mounted(){
+		for (var i=0; i<this.items.length; i++){
+			if((this.map[this.items[i].id].disableFirst.indexOf(this.firstID) === -1)&&(this.map[this.items[i].id].disableSecond.indexOf(this.secondID) === -1)&&(this.map[this.items[i].id].disableThird.indexOf(this.thirdID) === -1)&&(this.map[this.items[i].id].disableThird.indexOf(this.thirdID) === -1)&&(this.map[this.items[i].id].disableFourth.indexOf(this.fourthID) === -1)){
+				this.$refs.button[i].classList.add("enable")
+			} else {
+				this.$refs.button[i].classList.add("disable")
+			}
+		}
+	}
+}
 </script>
 
 <style scoped>

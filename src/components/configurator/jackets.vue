@@ -1,5 +1,5 @@
 <template>
-<clothesitems :items="array" :map="map" :firstID="pantsID" :secondID="jacketID" :thirdID="accessID" :fourthID="0" :type="type"></clothesitems>    
+<clothesitems :items="array" :map="map" :firstID="shirtsID" :secondID="pantsID" :thirdID="accessID" :fourthID="1" :type="type"></clothesitems>    
 </template>
 
 <script>
@@ -19,16 +19,16 @@ export default {
         },
         map(){
             if(this.$store.getters.GENDER==='male'){
-                return this.$store.state.shirtsArray.femaleMap
+                return this.$store.state.jacketsArray.maleMap
             }else if(this.$store.getters.GENDER==='female') {
-                return this.$store.state.shirtsArray.femaleMap
+                return this.$store.state.jacketsArray.femaleMap
             } return null
         },
         pantsID(){
             return this.$store.getters.HUMAN_PANTS.id
         },
-        jacketID(){
-            return this.$store.getters.HUMAN_JACKET.id
+        shirtsID(){
+            return this.$store.getters.HUMAN_SHIRT.id
         },
         accessID(){
             return this.$store.getters.HUMAN_ACCESSORIES.id
