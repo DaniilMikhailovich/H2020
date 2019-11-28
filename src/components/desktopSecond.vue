@@ -311,6 +311,7 @@ hr {
   }
   header {
     height: 5vw;
+    margin-top: 1.5vw;
   }
   hr {
     height: 4.5vw;
@@ -389,8 +390,8 @@ hr {
   .popup1 {
     position: absolute;
     top: -5vw;
-    left: -55vw;
-    width: 55vw;
+    left: -60vw;
+    width: 60vw;
     height: 3vw;
     background: rgba(0, 0, 0, 0.233);
     border-radius: 1vw;
@@ -449,8 +450,8 @@ hr {
   .popup3 {
     position: absolute;
     top: -10vw;
-    left: 0vw;
-    width: 55vw;
+    left: -6vw;
+    width: 70vw;
     height: 3vw;
     background: rgba(0, 0, 0, 0.233);
     border-radius: 1vw;
@@ -463,7 +464,7 @@ hr {
     width: 0;
     height: 0;
     position: absolute;
-    left: 3vw;
+    left: 10vw;
     top: 3vw;
     border: 0.5vw solid transparent;
     border-top: 1vw solid rgba(0, 0, 0, 0.233);
@@ -696,6 +697,7 @@ hr {
   }
   header {
     height: 5vw;
+    margin-top: 1.5vw;
   }
   hr {
     height: 4.5vw;

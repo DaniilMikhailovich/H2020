@@ -61,16 +61,16 @@ export default {
                 id:8,
                 icon: require('../../assets/Textures/Accessories/male/8.png'),
                 src: require('../../assets/Textures/Accessories/male/8.png'),
-                posX:419,
-                posY:345,
+                posX:422,
+                posY:361,
                 z:8
             },
             {
                 id:9,
                 icon: require('../../assets/Textures/Accessories/male/9.png'),
                 src: require('../../assets/Textures/Accessories/male/9.png'),
-                posX:419,
-                posY:345,
+                posX:422,
+                posY:361,
                 z:8
             },
             {

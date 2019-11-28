@@ -141,14 +141,14 @@ export default {
                 src:require('../../assets/Textures/Pants/female/5.png'),
                 posX:393,
                 posY:540,
-                z:6
+                z:5
             },
             {
                 id:6,
                 src:require('../../assets/Textures/Pants/female/6.png'),
                 posX:394,
                 posY:545,
-                z:4
+                z:5
             },
             {
                 id:7,

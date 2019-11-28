@@ -4,57 +4,57 @@ export default {
             {
                 id:1,
                 src:require('../../assets/Textures/Shirts/male/1.png'),
-                posX:409,
-                posY:345,
+                posX:407,
+                posY:349,
                 z:6
             },
             {
                 id:2,
                 src:require('../../assets/Textures/Shirts/male/2.png'),
-                posX:409,
-                posY:345,
+                posX:407,
+                posY:349,
                 z:6
             },
             {
                 id:3,
                 src:require('../../assets/Textures/Shirts/male/3.png'),
-                posX:409,
-                posY:344,
+                posX:407,
+                posY:349,
                 z:6
             },
             {
                 id:4,
                 src:require('../../assets/Textures/Shirts/male/4.png'),
-                posX:409,
-                posY:345,
+                posX:407,
+                posY:349,
                 z:6
             },
             {
                 id:5,
                 src:require('../../assets/Textures/Shirts/male/5.png'),
-                posX:409,
-                posY:345,
+                posX:407,
+                posY:349,
                 z:6
             },
             {
                 id:6,
                 src:require('../../assets/Textures/Shirts/male/6.png'),
-                posX:409,
-                posY:345,
+                posX:407,
+                posY:349,
                 z:6
             },
             {
                 id:7,
                 src:require('../../assets/Textures/Shirts/male/7.png'),
                 posX:411,
-                posY:345,
+                posY:347,
                 z:6
             },
             {
                 id:8,
                 src:require('../../assets/Textures/Shirts/male/8.png'),
-                posX:408,
-                posY:343,
+                posX:407,
+                posY:349,
                 z:6
             },
             {
@@ -161,7 +161,7 @@ export default {
                 id:8,
                 src:require('../../assets/Textures/Shirts/female/8.png'),
                 posX:418,
-                posY:321,
+                posY:341,
                 z:6
             },
             {

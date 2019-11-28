@@ -7,8 +7,8 @@
       <img :src="require('../assets/2020.png')" alt="2020" />
     </div>
     <section class="submenu">
-      <h2>{{$t('secondPage.evolution.create')}}</h2>
-      <router-link is="button" @click="goToNext" class="evolve">#2020</router-link>
+      <h2>#2020</h2>
+      <router-link is="button" @click="goToNext" class="evolve">{{$t('secondPage.evolution.create')}}</router-link>
       <router-link is="button" @click="goToBack" class="GoBack_button">
         <arrowsvg class="arrowbutton"></arrowsvg>back
       </router-link>
@@ -103,9 +103,9 @@ img {
 }
 .submenu h2 {
   font-size: 7vw;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 2vw;
-  text-shadow: 0 0 0.5vw #fff;
+  text-shadow: 0 0 1vw #fff;
 }
 .evolve {
   outline: none;
