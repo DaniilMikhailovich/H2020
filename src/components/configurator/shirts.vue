@@ -1,5 +1,5 @@
 <template>
-<clothesitems :items="array" :map="map" :firstID="pantsID" :secondID="jacketID" :thirdID="accessID" :fourthID="0" :type="type"></clothesitems>    
+<clothesitems :items="array" :map="map" :firstID="pantsID" :secondID="jacketID" :thirdID="accessID" :fourthID="1" :type="type"></clothesitems>    
 </template>
 
 <script>

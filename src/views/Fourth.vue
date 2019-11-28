@@ -364,6 +364,99 @@ export default {
       .catch(error => {
         this.hardSkillName = error;
       });
+      await axios
+      .post(
+        "https://api.rs2.usw2.rockset.com/v1/orgs/self/queries",
+        {
+          sql: {
+            query: `SELECT
+					    H2020Collection.gender,
+					    H2020Collection.humanBeard
+					FROM
+					    commons.H2020Collection
+					WHERE
+					    H2020Collection.humanBeard.id <> 0
+					    and H2020Collection.gender = (
+					        SELECT
+					            H2020Collection.gender
+					        FROM
+					            commons.H2020Collection
+					        GROUP BY
+					            H2020Collection.gender
+					        ORDER BY
+					            COUNT(*) DESC
+					        limit
+					            1
+					    )
+					GROUP BY
+					    H2020Collection.gender,
+					    H2020Collection.humanBeard
+					ORDER BY
+					    COUNT(*) DESC
+					LIMIT
+					    1`
+          }
+        },
+        {
+          headers: {
+            Authorization:
+              "ApiKey TVjJpzuiOaUQJfo6MA18EpunKDdWfQiQUANLK69T01ysoQhWbkbo89jtpcZLv0gv"
+          }
+        }
+      )
+      .then(response => {
+        this.humanBeard = response.data.results[0].humanBeard;
+      })
+      .catch(error => {
+        this.humanBeard = error;
+      });
+
+      await axios
+      .post(
+        "https://api.rs2.usw2.rockset.com/v1/orgs/self/queries",
+        {
+          sql: {
+            query: `SELECT
+					    H2020Collection.gender,
+					    H2020Collection.humanVehicle
+					FROM
+					    commons.H2020Collection
+					WHERE
+					    H2020Collection.humanVehicle.id <> 0
+					    and H2020Collection.gender = (
+					        SELECT
+					            H2020Collection.gender
+					        FROM
+					            commons.H2020Collection
+					        GROUP BY
+					            H2020Collection.gender
+					        ORDER BY
+					            COUNT(*) DESC
+					        limit
+					            1
+					    )
+					GROUP BY
+					    H2020Collection.gender,
+					    H2020Collection.humanVehicle
+					ORDER BY
+					    COUNT(*) DESC
+					LIMIT
+					    1`
+          }
+        },
+        {
+          headers: {
+            Authorization:
+              "ApiKey TVjJpzuiOaUQJfo6MA18EpunKDdWfQiQUANLK69T01ysoQhWbkbo89jtpcZLv0gv"
+          }
+        }
+      )
+      .then(response => {
+        this.humanVehicle = response.data.results[0].humanVehicle;
+      })
+      .catch(error => {
+        this.humanVehicle = error;
+      });
   },
   created() {
     window.addEventListener("resize", this.changeCanvas());
@@ -753,9 +846,9 @@ export default {
       });
       await this.$refs.shoes.getStage().setZIndex(this.$store.getters.HUMAN_SHOES.z)
 			await this.$refs.scene.getStage().draw()
-			await this.$refs.pants.getStage().setZIndex(this.$store.getters.HUMAN_PANTS.z)
-			await this.$refs.scene.getStage().draw()
 			await this.$refs.shirt.getStage().setZIndex(this.$store.getters.HUMAN_SHIRT.z)
+			await this.$refs.scene.getStage().draw()
+			await this.$refs.pants.getStage().setZIndex(this.$store.getters.HUMAN_PANTS.z)
 			await this.$refs.scene.getStage().draw()
 			await this.$refs.jacket.getStage().setZIndex(this.$store.getters.HUMAN_JACKET.z)
 			await this.$refs.scene.getStage().draw()

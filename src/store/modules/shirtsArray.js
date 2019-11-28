@@ -322,209 +322,332 @@ export default {
             {
                 disableFirst:[], //Pants
                 disableSecond:[], //Jackets
-                disableThird:[] //Access
+                disableThird:[], //Access
+                disableFourth:[]
             },
             //1 shirt
             {
                 disableFirst:[],
                 disableSecond:[],
-                disableThird:[]
+                disableThird:[],
+                disableFourth:[]
             },
             //2 shirt
             {
                 disableFirst:[],
                 disableSecond:[],
-                disableThird:[]
+                disableThird:[],
+                disableFourth:[]
             },
             //3 shirt
             {
                 disableFirst:[],
                 disableSecond:[],
-                disableThird:[]
+                disableThird:[],
+                disableFourth:[]
             },
             //4 shirt
             {
                 disableFirst:[3,15],
                 disableSecond:[],
-                disableThird:[15]
+                disableThird:[15],
+                disableFourth:[]
             },
             //5 shirt
             {
                 disableFirst:[],
                 disableSecond:[],
-                disableThird:[]
+                disableThird:[],
+                disableFourth:[]
             },
             //6 shirt
             {
                 disableFirst:[],
                 disableSecond:[],
-                disableThird:[]
+                disableThird:[],
+                disableFourth:[]
             },
             //7 shirt
             {
                 disableFirst:[],
                 disableSecond:[],
-                disableThird:[]
+                disableThird:[],
+                disableFourth:[]
             },
             //8 shirt
             {
                 disableFirst:[],
                 disableSecond:[],
-                disableThird:[]
+                disableThird:[],
+                disableFourth:[]
             },
             //9 shirt
             {
                 disableFirst:[],
                 disableSecond:[],
-                disableThird:[]
+                disableThird:[],
+                disableFourth:[]
             },
             //10 shirt
             {
                 disableFirst:[],
                 disableSecond:[],
-                disableThird:[]
+                disableThird:[],
+                disableFourth:[]
             },
             //11 shirt
             {
-                disableFirst:[1,2,3,4,5,6,8,20,21],
+                disableFirst:[1,2,3,4,6,8,20,21],
                 disableSecond:[1,7,10,15,16],
-                disableThird:[]
+                disableThird:[],
+                disableFourth:[]
             },
             //12 shirt
             {
-                disableFirst:[1,2,3,4,5,6,8,20,21],
+                disableFirst:[1,2,3,4,6,8,20,21],
                 disableSecond:[1,7,10,15,16],
-                disableThird:[]
+                disableThird:[],
+                disableFourth:[]
             },
             //13 shirt
             {
-                disableFirst:[1,2,5,6,21],
+                disableFirst:[1,2,6,21],
                 disableSecond:[1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,19],
-                disableThird:[10]
+                disableThird:[10],
+                disableFourth:[]
             },
             //14 shirt
             {
-                disableFirst:[1,2,5,6,21],
+                disableFirst:[1,2,6,21],
                 disableSecond:[1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,19],
-                disableThird:[10]
+                disableThird:[10],
+                disableFourth:[]
             },
             //15 shirt
             {
-                disableFirst:[1,2,5,6,21],
+                disableFirst:[1,2,6,21],
                 disableSecond:[1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,19],
-                disableThird:[10]
+                disableThird:[10],
+                disableFourth:[]
             },
             //16 shirt
             {
-                disableFirst:[1,2,3,5,6,20,21],
+                disableFirst:[1,2,3,6,20,21],
                 disableSecond:[10,14,15,16],
-                disableThird:[]
+                disableThird:[15],
+                disableFourth:[]
             },
             //17 shirt
             {
                 disableFirst:[1,2,3,5,6,8,9,14,15,18,19,20,21],
                 disableSecond:[10,14,15],
-                disableThird:[15]
+                disableThird:[15],
+                disableFourth:[]
             },
             //18 shirt
             {
                 disableFirst:[1,2,3,5,6,8,9,14,15,16,17,18,19,20,21],
                 disableSecond:[15],
-                disableThird:[15]
+                disableThird:[15],
+                disableFourth:[]
             },
             //19 shirt
             {
                 disableFirst:[1,2,3,5,6,8,9,14,15,16,17,18,19,20,21],
                 disableSecond:[15],
-                disableThird:[15]
+                disableThird:[15],
+                disableFourth:[]
             },
             //20 shirt
             {
-                disableFirst:[1,2,3,5,6,20,21],
+                disableFirst:[1,2,3,6,20,21],
                 disableSecond:[10,14,15,16],
-                disableThird:[]
+                disableThird:[15],
+                disableFourth:[]
             },
             //21 shirt
             {
-                disableFirst:[1,2,3,5,6,20,21],
+                disableFirst:[1,2,3,6,20,21],
                 disableSecond:[10,14,15,16],
-                disableThird:[]
+                disableThird:[15],
+                disableFourth:[]
             },
             //22 shirt
             {
-                disableFirst:[1,2,3,5,6,21],
+                disableFirst:[1,2,3,6,21],
                 disableSecond:[1,2,4,5,6,7,8,9,10,11,12,14,15,16],
-                disableThird:[]
+                disableThird:[],
+                disableFourth:[]
             },
             //23 shirt
             {
-                disableFirst:[1,2,3,5,6,21],
+                disableFirst:[1,2,3,6,21],
                 disableSecond:[1,2,4,5,6,7,8,9,10,11,12,14,15,16],
-                disableThird:[]
+                disableThird:[],
+                disableFourth:[]
             },
             //24 shirt
             {
                 disableFirst:[],
                 disableSecond:[],
-                disableThird:[]
+                disableThird:[],
+                disableFourth:[]
             },
             //25 shirt
             {
                 disableFirst:[],
                 disableSecond:[1,7,10,14,15],
-                disableThird:[10]
+                disableThird:[10],
+                disableFourth:[]
             },
             //26 shirt
             {
                 disableFirst:[],
                 disableSecond:[1,7,10,14,15],
-                disableThird:[10]
+                disableThird:[10],
+                disableFourth:[]
             },
             //27 shirt
             {
                 disableFirst:[],
                 disableSecond:[1,7,10,14,15],
-                disableThird:[10]
+                disableThird:[10],
+                disableFourth:[]
             },
-            
+            {
+                disableFirst:[],
+                disableSecond:[],
+                disableThird:[],
+                disableFourth:[]
+            },
+            {
+                disableFirst:[],
+                disableSecond:[],
+                disableThird:[],
+                disableFourth:[]
+            },
+            {
+                disableFirst:[],
+                disableSecond:[],
+                disableThird:[],
+                disableFourth:[]
+            },
         ],
-
-
-
-        shirtsMaleDisableMap:[
+        maleMap:[
             {
-                disable: []
+                disableFirst:[], //Pants
+                disableSecond:[], //Jackets
+                disableThird:[], //Access
+                disableFourth:[]
             },
+            //1 shirt
             {
-                disable: [100] 
+                disableFirst:[], //Pants
+                disableSecond:[], //Jackets
+                disableThird:[], //Access
+                disableFourth:[]
             },
+            //2 shirt
             {
-                disable: [100] 
+                disableFirst:[], //Pants
+                disableSecond:[], //Jackets
+                disableThird:[], //Access
+                disableFourth:[]
             },
+            //3 shirt
             {
-                disable: [1,2,3,4,5,6,7,8,9,10] 
+                disableFirst:[], //Pants
+                disableSecond:[], //Jackets
+                disableThird:[], //Access
+                disableFourth:[]
             },
+            //4 shirt
             {
-                disable: [100]  
+                disableFirst:[], //Pants
+                disableSecond:[], //Jackets
+                disableThird:[], //Access
+                disableFourth:[]
             },
+            //5 shirt
             {
-                disable: [1,2,3,4,6,8,9,10] 
+                disableFirst:[], //Pants
+                disableSecond:[], //Jackets
+                disableThird:[], //Access
+                disableFourth:[]
             },
+            //6 shirt
             {
-                disable: [100]   
+                disableFirst:[], //Pants
+                disableSecond:[], //Jackets
+                disableThird:[], //Access
+                disableFourth:[]
             },
+            //7 shirt
             {
-                disable: [100] 
+                disableFirst:[], //Pants
+                disableSecond:[6,8,9,10,13,14,15], //Jackets
+                disableThird:[7], //Access
+                disableFourth:[]
             },
+            //8 shirt
             {
-                disable: [100] 
+                disableFirst:[], //Pants
+                disableSecond:[], //Jackets
+                disableThird:[], //Access
+                disableFourth:[]
             },
+            //9 shirt
             {
-                disable: [100] 
+                disableFirst:[], //Pants
+                disableSecond:[], //Jackets
+                disableThird:[], //Access
+                disableFourth:[]
             },
+            //10 shirt
             {
-                disable: [100] 
+                disableFirst:[], //Pants
+                disableSecond:[], //Jackets
+                disableThird:[], //Access
+                disableFourth:[]
+            },
+            //11 shirt
+            {
+                disableFirst:[], //Pants
+                disableSecond:[1,2,3,6,7,8,9,10,11,12,13,14,15], //Jackets
+                disableThird:[9], //Access
+                disableFourth:[]
+            },
+            //12 shirt
+            {
+                disableFirst:[], //Pants
+                disableSecond:[1,2,3,6,7,8,9,10,11,12,13,14,15], //Jackets
+                disableThird:[8], //Access
+                disableFourth:[]
+            },
+            //13 shirt
+            {
+                disableFirst:[], //Pants
+                disableSecond:[8,9,10,11,12,13,15], //Jackets
+                disableThird:[], //Access
+                disableFourth:[]
+            },
+            //14 shirt
+            {
+                disableFirst:[], //Pants
+                disableSecond:[8,9,10,12,13], //Jackets
+                disableThird:[], //Access
+                disableFourth:[]
+            },
+            //15 shirt
+            {
+                disableFirst:[], //Pants
+                disableSecond:[13,14], //Jackets
+                disableThird:[], //Access
+                disableFourth:[]
             },
         ]
+
+
+        
     }
 }
