@@ -62,10 +62,11 @@ export default {
 	.button p{
 		position: absolute;
 		color: red;
-		font-size: 2vw;
-		top: 4vw;
-		left: 1vw;
+		font-size: 7vw;
+		top: 14vw;
+		left: 3vw;
 		transform: rotate(45deg);
+		font-family: "block", sans-serif;
 		display: none;
 	}
 	.disable{
@@ -87,12 +88,17 @@ export default {
 		background: none;
 		transition: 0.3s;
 	}
+	.disable:hover{
+		transform: scale(1);
+		background: rgb(44, 42, 42);
+		transition: 0.3s;
+	}
 	img{
 		height: 80%;
 	}
-	button:nth-of-type(11) img{
+	/* button:nth-of-type(11) img{
 		width: 90%;
-	}
+	} */
 @media screen and (min-width: 760px) and (max-width: 999px) {
 }
 
@@ -118,6 +124,11 @@ export default {
 		border-radius: 0.5vw;
 		margin: 0vw 0vw 0.4vw 0vw;
 	}
+	.button p{
+		font-size: 2vw;
+		top: 4vw;
+		left: 0.5vw;
+	}
 	.button:hover{
 		transform: scale(1.1);
 		background: none;
@@ -126,8 +137,10 @@ export default {
 	img{
 		height: 80%;
 	}
-	button:nth-of-type(11) img{
-		width: initial;
+	.disable:hover{
+		transform: scale(1);
+		background: rgb(44, 42, 42);
+		transition: 0.3s;
 	}
 	.disable{
 		background: rgb(44, 42, 42);
@@ -154,5 +167,13 @@ export default {
 		border-radius: 0.5vw;
 		margin-right: 1vw;
 	}
+	.disable:hover{
+		transform: scale(1);
+		background: rgb(44, 42, 42);
+		transition: 0.3s;
+	}
+	.disable{
+		background: rgb(44, 42, 42);
+	}	
 }
 </style>

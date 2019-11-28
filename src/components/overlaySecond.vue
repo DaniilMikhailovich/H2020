@@ -140,6 +140,102 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  padding-top: 7vw;
+  position: absolute;
+  width: 80vw;
+  height: 40vh;
+  background: linear-gradient(rgb(100, 255, 131), rgb(0, 247, 255));
+  left: calc(50% - 40vw);
+  top: calc(50% - 20vh);
+  z-index: 999;
+  flex-shrink: 0;
+  border-radius: 2vw;
+}
+.name{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    justify-content: space-between;
+    padding: 0 0 0 9vw;
+}
+.name p:first-child{
+    margin-right: 10vw;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    justify-content: space-around;
+}
+.age{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 60%;
+}
+.gender{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+}
+button{
+    outline: none;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  overflow: hidden;
+  background-color: #ac40f1;
+  border-radius: 5vw;
+  border: none;
+  width: 20vw;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+  padding: 0.5vw 0vw;
+  font-size: 4vw;
+  cursor: pointer;
+  box-shadow: 0vw 0vw 0.6vw #000;
+  text-shadow: 0vw 0vw 0.4vw #000;
+  flex-shrink: 0;
+}
+.active{
+    box-shadow: inset 0.3vw 0.3vw 0.4vw #000
+}
+p{
+    font-size: 7vw;
+    font-family: 'Source';
+    color: #fff;
+}
+.name p{
+    width: 50%;
+    text-align: center;
+}
+.nextButton{
+    animation: cycle 3s infinite;
+}
+@media screen and (min-width: 760px) and (max-width: 999px) {
+
+}
+@media screen and (min-width: 1000px), (orientation: landscape) {
+    .overlay{
+	display: block;
+	position: absolute;
+	left: -10%;
+	right: -10%;
+	top: 0;
+	bottom: 0;
+	background: black;
+	opacity: 0.8;
+	z-index: 998;
+}
+.popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   padding-top: 1.5vw;
   position: absolute;
   width: 60vw;
@@ -212,5 +308,5 @@ p{
 .nextButton{
     animation: cycle 3s infinite;
 }
-
+}
 </style>

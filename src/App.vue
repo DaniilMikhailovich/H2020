@@ -196,4 +196,12 @@ a {
     U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
     U+FEFF, U+FFFD;
 }
+@font-face {
+  font-family: "block";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("~@/assets/fonts/blocked.woff2") format("woff2"),
+  url("~@/assets/fonts/blocked.woff") format("woff");
+}
 </style>
