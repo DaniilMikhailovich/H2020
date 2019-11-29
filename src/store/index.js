@@ -95,7 +95,7 @@ export default new Vuex.Store({
     skillInputActive: false,
     popupActive:false,
     requestCounter:0,
-    genderLoadTrigger:false
+    genderLoadTrigger:true
     },
   getters:{
     GENDER_LOAD_TRIGGER: state =>{
