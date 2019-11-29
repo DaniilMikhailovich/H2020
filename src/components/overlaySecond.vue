@@ -2,10 +2,10 @@
 <div>
   <section class="overlay"></section>
   <section class="popup">
-      <p>Нам важно знать ваши:</p>
+      <p class="minititle">{{ $t("secondPage.popup.title") }}</p>
       <section class="name">
-          <p>Возраст</p>
-          <p>Пол</p>
+          <p>{{ $t("secondPage.popup.age") }}</p>
+          <p>{{ $t("secondPage.popup.gender") }}</p>
       </section>
       <section class="buttons">
           <section class="age">
@@ -140,7 +140,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 7vw;
+  padding-top: 4vw;
   position: absolute;
   width: 80vw;
   height: 40vh;
@@ -150,6 +150,9 @@ export default {
   z-index: 999;
   flex-shrink: 0;
   border-radius: 2vw;
+}
+.minititle{
+    text-align: center;
 }
 .name{
     display: flex;
@@ -220,6 +223,12 @@ p{
 
 }
 @media screen and (min-width: 1000px), (orientation: landscape) {
+    .name{
+        padding: 0 0 0 0;
+    }
+.name p:first-child{
+    margin-right: 0vw;
+}
     .overlay{
 	display: block;
 	position: absolute;

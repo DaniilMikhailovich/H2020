@@ -45,6 +45,7 @@ export default {
   height: 50vw;
 }
 .button {
+  position: relative;
   width: 38vw;
 	height: calc(var(--vh, 1vh) * 24);
 	margin-top: calc(var(--vh, 1vh) * 0.4);
@@ -55,6 +56,32 @@ export default {
   border-radius: 1vw;
   background: linear-gradient(rgb(130, 255, 136), rgb(140, 242, 255));
   border: none;
+}
+.button p {
+  position: absolute;
+  color: red;
+  font-size: 7vw;
+  top: 14vw;
+  left: 3vw;
+  transform: rotate(45deg);
+  font-family: "block", sans-serif;
+  display: none;
+}
+.disable {
+  background: rgb(44, 42, 42);
+}
+.disable img {
+  filter: brightness(40%);
+  z-index: 0;
+}
+.disable p {
+  display: initial;
+  z-index: 999;
+}
+.disable:hover {
+  transform: scale(1);
+  background: rgb(44, 42, 42);
+  transition: 0.3s;
 }
 .scrollM{
 	overflow-x: scroll;
@@ -91,6 +118,11 @@ button:nth-of-type(5) img {
     height: 10.8vw;
     flex-shrink: initial;
   }
+  .button p {
+    font-size: 2vw;
+    top: 4vw;
+    left: 1.5vw;
+  }
   .scrollD{
 		overflow-y: scroll;
 	}
@@ -99,6 +131,9 @@ button:nth-of-type(5) img {
 	}
   .button:hover {
     transform: scale(1.1);
+  }
+  .disable {
+    background: rgb(44, 42, 42);
   }
 }
 @media screen and (max-width: 999px) and (orientation: landscape){
@@ -124,5 +159,8 @@ button:nth-of-type(5) img {
 		margin-right: 1vw;
     flex-shrink: 0;
 	}
+  .disable {
+    background: rgb(44, 42, 42);
+  }
 }
 </style>

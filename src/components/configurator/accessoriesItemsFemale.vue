@@ -60,6 +60,7 @@ export default {
   overflow-x: scroll;
 }
 .button {
+  position: relative;
   width: 38vw;
   height: calc(var(--vh, 1vh) * 24);
   margin-top: calc(var(--vh, 1vh) * 0.4);
@@ -71,6 +72,33 @@ export default {
   border: none;
   border-radius: 1vw;
 }
+.button p {
+  position: absolute;
+  color: red;
+  font-size: 7vw;
+  top: 14vw;
+  left: 3vw;
+  transform: rotate(45deg);
+  font-family: "block", sans-serif;
+  display: none;
+}
+.disable {
+  background: rgb(44, 42, 42);
+}
+.disable img {
+  filter: brightness(40%);
+  z-index: 0;
+}
+.disable p {
+  display: initial;
+  z-index: 999;
+}
+.disable:hover {
+  transform: scale(1);
+  background: rgb(44, 42, 42);
+  transition: 0.3s;
+}
+
 .button::-moz-focus-outer {
   border: none;
 }
@@ -111,6 +139,19 @@ img {
     border-radius: 0.5vw;
     margin: 0vw 0vw 0.4vw 0vw;
   }
+  .button p {
+    font-size: 2vw;
+    top: 4vw;
+    left: 0.5vw;
+  }
+  .disable:hover {
+    transform: scale(1);
+    background: rgb(44, 42, 42);
+    transition: 0.3s;
+  }
+  .disable {
+    background: rgb(44, 42, 42);
+  }
   .button:nth-of-type(7) img {
     width: 30%;
   }
@@ -135,6 +176,9 @@ img {
     height: 12vw;
     border-radius: 0.5vw;
     margin-right: 1vw;
+  }
+  .disable {
+    background: rgb(44, 42, 42);
   }
 }
 </style>

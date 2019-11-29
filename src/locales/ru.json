@@ -8,7 +8,17 @@
   "blogger": "Блогер",
   "military": "Военный",
   "miner": "Майнер",
-  "bussinessTrainer": "Бизнесс тренер",
+  "bussinessTrainer": "Бизнес тренер",
+  "teacher":"Учитель",
+  "doctor":"Врач",
+  "politician":"Чиновник",
+  "engineer": "Инженер",
+  "artist": "Артист",
+  "hookahman": "Кальянщик",
+  "lawyer": "Юрист",
+  "athlete": "Спортсмен",
+  "banker": "Банкир",
+  "unemployed": "Безработный",
   "firstPage": {
     "h1": "HUMAN 2020",
     "topQuote": "«Все начинается ",
@@ -34,6 +44,11 @@
       "war": "Нет войне!",
       "politics": "Нет политике!",
       "fun": "Улыбнись:)"
+    },
+    "popup": {
+      "title": "Нам важно знать ваши:",
+      "gender": "Пол",
+      "age": "Возраст"
     },
     "evolution": {
       "greek": "Античность",
@@ -64,6 +79,12 @@
     "popup8": "А теперь время делать свой выбор, деньги или таллант, любовь или война, строгий костюм или кожаная куртка!"
   },
   "thirdPage": {
+    "inputname": {
+      "forgotN": "Забыли имя",
+      "forgotG": "Забыли пол",
+      "forgotNumaric": "Только буквы и цифры",
+      "tryagain": "Ещё раз"
+    },
     "gender": {
       "male": "Мужчина",
       "female": "Женщина",

@@ -9,6 +9,16 @@
   "military": "Military",
   "miner": "Miner",
   "bussinessTrainer": "Business trainer",
+  "teacher": "Teacher",
+  "doctor": "Doctor",
+  "politician": "Politician",
+  "engineer": "Engineer",
+  "artist": "Artist",
+  "hookahman": "Hookahman",
+  "lawyer": "Lawyer",
+  "athlete": "Athlete",
+  "banker": "Banker",
+  "unemployed": "Unemployed",
   "firstPage": {
     "h1" : "HUMAN 2020",
     "topQuote" : "«Everything begins ",
@@ -34,6 +44,11 @@
       "war": "No War!",
       "politics": "No Politics!",
       "fun": "Just Fun:)"
+    },
+    "popup": {
+      "title": "It is important for us to know about you:",
+      "gender": "Gender",
+      "age": "Age"
     },
     "evolution":{
       "greek": "Antiquity",
@@ -64,6 +79,12 @@
     "popup8": "And now it's time to make your choice, money or a talent, love or war, a formal suit or a leather jacket!"
   },
   "thirdPage": {
+    "inputname": {
+      "forgotN": "Forgot name",
+      "forgotG": "Forgot gender",
+      "forgotNumaric": "Letters and numbers are allowed",
+      "tryagain": "Try again"
+    },
     "gender": {
       "male": "Male",
       "female": "Female",
