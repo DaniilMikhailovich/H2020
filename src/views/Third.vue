@@ -217,8 +217,8 @@ export default {
         }
 	},
 	watch:{
-		humanLink: function(){
-			this.newGender()
+		humanLink: async function(){
+			await this.newGender()
 			this.hair = null,
 			this.jacket = null,
 			this.shirt = null,
@@ -445,6 +445,9 @@ export default {
 			}else this.$router.push('/create/just_a_little')
 		},
 		async pushToDynamo() {
+			var counter = this.$store.getters.requestCounter
+			counter = counter + 1
+			this.$store.dispatch('PUSH_COUNTER', counter)
 			const answer = {
 				respondentGender: this.respondentGender,
 				respondentAge: this.respondentAge,
@@ -472,9 +475,6 @@ export default {
 				TimeManagement: this.TimeManagement
 			};
 			await API.graphql(graphqlOperation(createAnswer, { input: answer }));
-			var counter = this.$store.getters.requestCounter
-			counter = counter + 1
-			this.$store.dispatch('PUSH_COUNTER', counter)
 		},
 		Reset(){
 			this.$router.push('/create/personalisation'),
@@ -488,6 +488,7 @@ export default {
 			image.onload = () =>{
 			this.human=image
 			this.question=null
+			this.$store.dispatch('PUSH_GENDER_LOAD', true)
 			}
 		},
 		newHair(){
