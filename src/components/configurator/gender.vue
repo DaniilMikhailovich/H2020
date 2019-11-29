@@ -35,6 +35,7 @@ export default {
 			this.$store.dispatch('PUSH_SHOES', {id:0,src:'null',icon:'null',posX:0,posY:0,z:5})
 			this.$store.dispatch('PUSH_ACCESSORIES', {id:0,src:'null',icon:'null',posX:0,posY:0,z:8})
 			this.$store.dispatch('PUSH_VEHICLE', {id:0,src:'null',icon:'null',posX:0,posY:0,z:11})
+			this.$store.dispatch('PUSH_GENDER_LOAD', false)
 			this.maleTrigger = true
 			this.femaleTrigger = false
 		},
@@ -48,6 +49,7 @@ export default {
 			this.$store.dispatch('PUSH_SHOES', {id:0,src:'null',icon:'null',posX:0,posY:0,z:5})
 			this.$store.dispatch('PUSH_ACCESSORIES', {id:0,src:'null',icon:'null',posX:0,posY:0,z:8})
 			this.$store.dispatch('PUSH_VEHICLE', {id:0,src:'null',icon:'null',posX:0,posY:0,z:11})
+			this.$store.dispatch('PUSH_GENDER_LOAD', false)
 			this.maleTrigger = false
 			this.femaleTrigger = true
 		}
