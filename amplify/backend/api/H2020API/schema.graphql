@@ -1,5 +1,7 @@
 type Answer @model {
   id: ID!
+  respondentGender: String
+  respondentAge: String
   gender: String!
   humanName: String
   humanHead:  ImgObj

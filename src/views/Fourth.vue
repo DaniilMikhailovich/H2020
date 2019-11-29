@@ -25,20 +25,21 @@
       <section class="canvascontainer" ref="canvascontainer">
         <!-- <p class="description">Statistics from around the WORLD will be collected here...🌍</p> -->
         <v-stage ref="stage" :config="stage">
-          <v-layer>
+          <v-layer ref="scene">
             <v-text :config="{text:'Global 2020', fontSize:60, x:350, y:20, fill:'#ac40f1'}"></v-text>
             <v-image :config="{image:podium, x: 320, y:1060, scale:{x:2,y:2}}"></v-image>
+            <v-image :config="{image:question, x: 380, y:450, scale:{x:.8,y:.8}}"></v-image>
             <v-image :config="{image:human, x: 340, y:140, scale:{x:1,y:1}}"></v-image>
-            <v-image :config="{image:pants, x:pantsPosX,y:pantsPosY, scale:{x:.3801,y:.3801}}"></v-image>
-            <v-image :config="{image:shoes, x:shoesPosX,y:shoesPosY, scale:{x:.3801,y:.3801}}"></v-image>
-            <v-image :config="{image:shirt, x:shirtPosX,y:shirtPosY, scale:{x:.3801,y:.3801}}"></v-image>
-            <v-image :config="{image:jacket, x:jacketPosX,y:jacketPosY, scale:{x:.3801,y:.3801}}"></v-image>
-            <v-image
+            <v-image ref="pants" :config="{image:pants, x:pantsPosX,y:pantsPosY, scale:{x:.3801,y:.3801}}"></v-image>
+            <v-image ref="shoes" :config="{image:shoes, x:shoesPosX,y:shoesPosY, scale:{x:.3801,y:.3801}}"></v-image>
+            <v-image ref="shirt" :config="{image:shirt, x:shirtPosX,y:shirtPosY, scale:{x:.3801,y:.3801}}"></v-image>
+            <v-image ref="jacket" :config="{image:jacket, x:jacketPosX,y:jacketPosY, scale:{x:.3801,y:.3801}}"></v-image>
+            <v-image ref="accessories"
               :config="{image:accessories, x:accessoriesPosX,y:accessoriesPosY, scale:{x:.38,y:.38}}"
             ></v-image>
-            <v-image :config="{image:beard, x:beardPosX,y:beardPosY, scale:{x:.38,y:.38}}"></v-image>
-            <v-image :config="{image:hair, x:hairPosX,y:hairPosY, scale:{x:.38,y:.38}}"></v-image>
-            <v-image :config="{image:vehicle, x:vehiclePosX,y:vehiclePosY, scale:{x:.38,y:.38}}"></v-image>
+            <v-image ref="beard" :config="{image:beard, x:beardPosX,y:beardPosY, scale:{x:.38,y:.38}}"></v-image>
+            <v-image ref="hair" :config="{image:hair, x:hairPosX,y:hairPosY, scale:{x:.38,y:.38}}"></v-image>
+            <v-image ref="vehicle" :config="{image:vehicle, x:vehiclePosX,y:vehiclePosY, scale:{x:.38,y:.38}}"></v-image>
           </v-layer>
         </v-stage>
       </section>
@@ -60,6 +61,7 @@ export default {
       stageHeight: 1282,
       human: null,
       hair: null,
+      question: null,
       hairPosX: 0,
       hairPosY: 0,
       beard: null,

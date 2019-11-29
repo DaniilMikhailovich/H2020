@@ -148,7 +148,13 @@ export default {
 		},
 		gender() {
           return this.$store.getters.GENDER;
-        },
+		},
+		respondentGender(){
+			return this.$store.getters.RESPONDENT_GENDER
+		},
+		respondentAge(){
+			return this.$store.getters.RESPONDENT_AGE
+		},
         humanHead() {
           return this.$store.getters.HUMAN_HEAD;
         },
@@ -440,6 +446,8 @@ export default {
 		},
 		async pushToDynamo() {
 			const answer = {
+				respondentGender: this.respondentGender,
+				respondentAge: this.respondentAge,
 				gender: this.gender,
 				humanName: this.humanName,
 				humanHead: this.humanHead,
